@@ -1,0 +1,18 @@
+- @selected = :layouts
+
+%h1 Remove Layout
+
+%p Are you sure you want to <strong class="warning">permanently remove</strong> the following layout?
+
+%table.index#layouts{:cellpadding=>0, :cellspacing=>0, :border=>0}
+  %tbody
+    %tr.node.level-1#layout-4
+      %td.layout
+        %img.icon{:src=>"/admin/images/layout.png", :alt=>"layout-icon", :title=>""}/
+        %span.title XML Feed
+
+%form{:method=>"post", :action=>"/admin/layouts/index_after_layout_removed.haml"}
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Delete Layout"}/
+    or
+    %a{:href=>"/admin/layouts"} Cancel

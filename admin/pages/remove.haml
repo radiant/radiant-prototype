@@ -1,0 +1,39 @@
+- @selected = :pages
+
+%h1 Remove Pages
+
+%p Are you sure you want to <strong class="warning">permanently remove</strong> the following pages?
+
+%table.index#site-map{:cellpadding=>0, :cellspacing=>0, :border=>0}
+  %tbody
+    %tr.node.level-0.children-visible#page-4
+      %td.page{:style=>"padding-left: 4px"}
+        %span.w1
+          %img.icon{:src=>"/admin/images/page.png", :alt=>"page-icon", :title=>""}/
+          %span.title Articles
+    %tr.node.level-1.no-children.virtual#page-10
+      %td.page{:style=>"padding-left: 26px"}
+        %span.w1
+          %img.icon{:src=>"/admin/images/virtual-page.png", :alt=>"page-icon", :title=>""}/
+          %span.title %B %Y Archives
+    %tr.node.level-1.no-children#page-5
+      %td.page{:style=>"padding-left: 26px"}
+        %span.w1
+          %img.icon{:src=>"/admin/images/page.png", :alt=>"page-icon", :title=>""}/
+          %span.title First Post
+    %tr.node.level-1.no-children#page-6
+      %td.page{:style=>"padding-left: 26px"}
+        %span.w1
+          %img.icon{:src=>"/admin/images/page.png", :alt=>"page-icon", :title=>""}/
+          %span.title Second Post
+    %tr.node.level-1.no-children#page-8
+      %td.page{:style=>"padding-left: 26px"}
+        %span.w1
+          %img.icon{:src=>"/admin/images/page.png", :alt=>"page-icon", :title=>""}/
+          %span.title Third Post
+
+%form{:method=>"post", :action=>"/admin/pages/index_after_pages_removed.haml"}
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Delete Pages"}/
+    or
+    %a{:href=>"/admin/pages"} Cancel

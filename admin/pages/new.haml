@@ -1,0 +1,13 @@
+- @selected = :pages
+
+%h1 New Page
+
+%form{:enctype=>"multipart/form-data", :action=>"/admin/pages/", :method=>"post"}
+  
+  = render :partial => "fields"
+  
+  %p.buttons
+    %input.button{:name=>"commit", :type=>"submit", :value=>"Create Page"}/
+    %input.button{:name=>"continue", :type=>"submit", :value=>"Save and Continue Editing"}/
+    or
+    %a{:href=>"/admin/pages"} Cancel

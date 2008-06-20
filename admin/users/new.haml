@@ -1,0 +1,14 @@
+- @selected = :users
+- @new_record = true
+
+%h1 New User
+
+%form{:method=>"post", :action=>"/admin/users/"}
+  
+  = render :partial => "fields"
+  
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Create User"}/
+    %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
+    or
+    %a{:href=>"/admin/users/"} Cancel

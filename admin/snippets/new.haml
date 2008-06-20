@@ -1,0 +1,14 @@
+- @selected = :snippets
+- @new_record = true
+
+%h1 New Snippet
+
+%form{:method=>"post", :action=>"/admin/snippets/"}
+  
+  = render :partial => "fields"
+  
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Create Snippet"}/
+    %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
+    or
+    %a{:href=>"/admin/snippets/"} Cancel

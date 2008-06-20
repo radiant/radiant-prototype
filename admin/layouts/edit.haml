@@ -1,0 +1,13 @@
+- @selected = :layouts
+
+%h1 Edit Layout
+
+%form{:method=>"post", :action=>"/admin/layouts/"}
+  
+  = render :partial => "fields"
+  
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Save Changes"}/
+    %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
+    or
+    %a{:href=>"/admin/layouts/"} Cancel

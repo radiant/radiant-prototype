@@ -1,0 +1,18 @@
+- @selected = :snippet
+
+%h1 Remove Snippet
+
+%p Are you sure you want to <strong class="warning">permanently remove</strong> the following snippet?
+
+%table.index#snippets{:cellpadding=>0, :cellspacing=>0, :border=>0}
+  %tbody
+    %tr.node.level-1#snippet-4
+      %td.snippet
+        %img.icon{:src=>"/admin/images/snippet.png", :alt=>"snippet-icon", :title=>""}/
+        %span.title footer
+
+%form{:method=>"post", :action=>"/admin/snippets/index_after_snippet_removed.haml"}
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Delete Snippet"}/
+    or
+    %a{:href=>"/admin/snippets"} Cancel

@@ -1,0 +1,520 @@
+<div class="popup" id="tag_reference_popup">
+<h3 class="title">Available Tags for Page</h3>
+<p>
+  <label for="search-tag-reference" class="inline">Filter Tags</label>
+  <input type="search" name="search-tag-reference" id="search-tag-reference" value="" />
+</p>
+
+<div class="reference">
+<div class="tag-description">
+  <h4>&lt;r:author /&gt;</h4>
+  <div><p>Renders the name of the author of the current page.</p></div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:breadcrumb /&gt;</h4>
+  <div><p>Renders the <code>breadcrumb</code> attribute of the current page.</p></div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:breadcrumbs /&gt;</h4>
+  <div>
+    <p>Renders a trail of breadcrumbs to the current page. The separator attribute
+    specifies the <span class="caps">HTML</span> fragment that is inserted between each of the breadcrumbs. By
+    default it is set to <code>&gt;</code>. The boolean nolinks attribute can be specified to render
+    breadcrumbs in plain text, without any links (useful when generating title tag).</p>
+    
+    
+    <strong>Usage:</strong> 
+    <pre><code>&lt;r:breadcrumbs [separator="separator_string"] [nolinks="true"] /&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:children /&gt;</h4>
+  <div>
+    <p>Gives access to a page&#8217;s children.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:children&gt;...&lt;/r:children&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:children:count /&gt;</h4>
+  <div><p>Renders the total number of children.</p></div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:children:each /&gt;</h4>
+  <div>
+    <p>Cycles through each of the children. Inside this tag all page attribute tags
+    are mapped to the current child page.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:children:each [offset="number"] [limit="number"] [by="attribute"] [order="asc|desc"] 
+     [status="draft|reviewed|published|hidden|all"]&gt;
+     ...
+    &lt;/r:children:each&gt;
+    </code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:children:each:child /&gt;</h4>
+  <div>
+    <p>Page attribute tags inside of this tag refer to the current child. This is occasionally
+    useful if you are inside of another tag (like &lt;r:find&gt;) and need to refer back to the
+    current child.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:children:each&gt;
+      &lt;r:child&gt;...&lt;/r:child&gt;
+    &lt;/r:children:each&gt;
+    </code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:children:each:header /&gt;</h4>
+  <div>
+    <p>Renders the tag contents only if the contents do not match the previous header. This
+    is extremely useful for rendering date headers for a list of child pages.</p>
+    
+    
+      <p>If you would like to use several header blocks you may use the <code>name</code> attribute to
+    name the header. When a header is named it will not restart until another header of
+    the same name is different.</p>
+    
+    
+      <p>Using the <code>restart</code> attribute you can cause other named headers to restart when the
+    present header changes. Simply specify the names of the other headers in a semicolon
+    separated list.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:children:each&gt;
+      &lt;r:header [name="header_name"] [restart="name1[;name2;...]"]&gt;
+        ...
+      &lt;/r:header&gt;
+    &lt;/r:children:each&gt;
+    </code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:children:first /&gt;</h4>
+  <div>
+    <p>Returns the first child. Inside this tag all page attribute tags are mapped to
+    the first child. Takes the same ordering options as <code>&lt;r:children:each&gt;</code>.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:children:first&gt;...&lt;/r:children:first&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:children:last /&gt;</h4>
+  <div>
+    <p>Returns the last child. Inside this tag all page attribute tags are mapped to
+    the last child. Takes the same ordering options as <code>&lt;r:children:each&gt;</code>.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:children:last&gt;...&lt;/r:children:last&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:comment /&gt;</h4>
+  <div>
+    <p>Nothing inside a set of comment tags is rendered.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:comment&gt;...&lt;/r:comment&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:content /&gt;</h4>
+  <div>
+    <p>Renders the main content of a page. Use the <code>part</code> attribute to select a specific
+    page part. By default the <code>part</code> attribute is set to body. Use the <code>inherit</code>
+    attribute to specify that if a page does not have a content part by that name that
+    the tag should render the parent&#8217;s content part. By default <code>inherit</code> is set to
+    <code>false</code>. Use the <code>contextual</code> attribute to force a part inherited from a parent
+    part to be evaluated in the context of the child page. By default &#8216;contextual&#8217;
+    is set to true.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:content [part="part_name"] [inherit="true|false"] [contextual="true|false"] /&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:cycle /&gt;</h4>
+  <div>
+    <p>Renders one of the passed values based on a global cycle counter.  Use the <code>reset</code>
+    attribute to reset the cycle to the beginning.  Use the <code>name</code> attribute to track 
+    multiple cycles; the default is <code>cycle</code>.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:cycle values="first, second, third" [reset="true|false"] [name="cycle"] /&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:date /&gt;</h4>
+  <div>
+    <p>Renders the date based on the current page (by default when it was published or created). 
+    The format attribute uses the same formating codes used by the Ruby <code>strftime</code> function. By
+    default it&#8217;s set to <code>%A, %B %d, %Y</code>.  The <code>for</code> attribute selects which date to render.  Valid
+    options are <code>published_at</code>, <code>created_at</code>, <code>updated_at</code>, and <code>now</code>. <code>now</code> will render the
+    current date/time, regardless of the  page.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:date [format="%A, %B %d, %Y"] [for="published_at"]/&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:escape_html /&gt;</h4>
+  <div>
+    <p>Escapes angle brackets, etc. for rendering in an <span class="caps">HTML</span> document.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:escape_html&gt;...&lt;/r:escape_html&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:find /&gt;</h4>
+  <div>
+    <p>Inside this tag all page related tags refer to the page found at the <code>url</code> attribute.  
+    @url@s may be relative or absolute paths.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:find url="value_to_find"&gt;...&lt;/r:find&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:if_ancestor_or_self /&gt;</h4>
+  <div>
+    <p>Renders the contained elements if the current contextual page is either the actual page or one of its parents.</p>
+    
+    
+      <p>This is typically used inside another tag (like &lt;r:children:each&gt;) to add conditional mark-up if the child element is or descends from the current page.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:if_ancestor_or_self&gt;...&lt;/if_ancestor_or_self&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:if_children /&gt;</h4>
+  <div>
+    <p>Renders the contained elements only if the current contextual page has one or
+    more child pages.  The <code>status</code> attribute limits the status of found child pages
+    to the given status, the default is <code>"published"</code>. <code>status="all"</code> includes all
+    non-virtual pages regardless of status.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:if_children [status="published"]&gt;...&lt;/r:if_children&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:if_content /&gt;</h4>
+  <div>
+    <p>Renders the containing elements only if the part exists on a page. By default the
+    <code>part</code> attribute is set to <code>body</code>.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:if_content [part="part_name"]&gt;...&lt;/r:if_content&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:if_dev /&gt;</h4>
+  <div>
+    <p>Renders the containing elements only if Radiant in is development mode.</p>
+    
+    
+    <strong>Usage:</strong> 
+    <pre><code>&lt;r:if_dev&gt;...&lt;/r:if_dev&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:if_parent /&gt;</h4>
+  <div>
+    <p>Renders the contained elements only if the current contextual page has a parent, i.e. 
+    is not the root page.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:if_parent&gt;...&lt;/r:if_parent&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:if_self /&gt;</h4>
+  <div>
+    <p>Renders the contained elements if the current contextual page is also the actual page.</p>
+    
+    
+      <p>This is typically used inside another tag (like &lt;r:children:each&gt;) to add conditional mark-up if the child element is the current page.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:if_self&gt;...&lt;/if_self&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:if_url /&gt;</h4>
+  <div>
+    <p>Renders the containing elements only if the page&#8217;s url matches the regular expression
+    given in the <code>matches</code> attribute. If the <code>ignore_case</code> attribute is set to false, the
+    match is case sensitive. By default, <code>ignore_case</code> is set to true.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:if_url matches="regexp" [ignore_case="true|false"]&gt;...&lt;/if_url&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:link /&gt;</h4>
+  <div>
+    <p>Renders a link to the page. When used as a single tag it uses the page&#8217;s title
+    for the link name. When used as a double tag the part in between both tags will
+    be used as the link text. The link tag passes all attributes over to the <span class="caps">HTML</span>
+    <code>a</code> tag. This is very useful for passing attributes like the <code>class</code> attribute
+    or <code>id</code> attribute. If the <code>anchor</code> attribute is passed to the tag it will
+    append a pound sign (<code>#</code>) followed by the value of the attribute to
+    the <code>href</code> attribute of the <span class="caps">HTML</span> <code>a</code> tag&#8212;effectively making an <span class="caps">HTML</span> anchor.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:link [anchor="name"] [other attributes...] /&gt;</code></pre>
+    or
+    <pre><code>&lt;r:link [anchor="name"] [other attributes...]&gt;link text here&lt;/r:link&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:meta /&gt;</h4>
+  <div>
+    <p>The namespace for &#8216;meta&#8217; attributes.  If used as a singleton tag, both the description
+    and keywords fields will be output as &lt;meta /&gt; tags unless the attribute &#8216;tag&#8217; is set to &#8216;false&#8217;.</p>
+    
+    
+      <p><strong>Usage</strong>:</p>
+    
+    
+    <pre><code> &lt;r:meta [tag="false"] /&gt; 
+     &lt;r:meta&gt;
+       &lt;r:description [tag="false"] /&gt;
+       &lt;r:keywords [tag="false"] /&gt;
+     &lt;/r:meta&gt;
+    </code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:meta:description /&gt;</h4>
+  <div>
+    <p>Emits the page description field in a meta tag, unless attribute
+    &#8216;tag&#8217; is set to &#8216;false&#8217;.</p>
+    
+    
+      <p><strong>Usage</strong>:</p>
+    
+    
+    <pre><code> &lt;r:meta:description [tag="false"] /&gt; </code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:meta:keywords /&gt;</h4>
+  <div>
+    <p>Emits the page keywords field in a meta tag, unless attribute
+    &#8216;tag&#8217; is set to &#8216;false&#8217;.</p>
+    
+    
+      <p><strong>Usage</strong>:</p>
+    
+    
+    <pre><code> &lt;r:meta:keywords [tag="false"] /&gt; </code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:navigation /&gt;</h4>
+  <div>
+    <p>Renders a list of links specified in the <code>urls</code> attribute according to three
+    states:</p>
+    
+    
+      <ul>
+      <li><code>normal</code> specifies the normal state for the link</li>
+        <li><code>here</code> specifies the state of the link when the url matches the current
+       page&#8217;s <span class="caps">URL</span></li>
+        <li><code>selected</code> specifies the state of the link when the current page matches
+       is a child of the specified url</li>
+      </ul>
+    
+    
+      <p>The <code>between</code> tag specifies what should be inserted in between each of the links.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:navigation urls="[Title: url | Title: url | ...]"&gt;
+      &lt;r:normal&gt;&lt;a href="&lt;r:url /&gt;"&gt;&lt;r:title /&gt;&lt;/a&gt;&lt;/r:normal&gt;
+      &lt;r:here&gt;&lt;strong&gt;&lt;r:title /&gt;&lt;/strong&gt;&lt;/r:here&gt;
+      &lt;r:selected&gt;&lt;strong&gt;&lt;a href="&lt;r:url /&gt;"&gt;&lt;r:title /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/r:selected&gt;
+      &lt;r:between&gt; | &lt;/r:between&gt;
+    &lt;/r:navigation&gt;
+    </code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:page /&gt;</h4>
+  <div>
+    <p>Causes the tags referring to a page&#8217;s attributes to refer to the current page.</p>
+    
+    
+    <strong>Usage:</strong> 
+    <pre><code>&lt;r:page&gt;...&lt;/r:page&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:parent /&gt;</h4>
+  <div>
+    <p>Page attribute tags inside this tag refer to the parent of the current page.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:parent&gt;...&lt;/r:parent&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:random /&gt;</h4>
+  <div>
+    <p>Randomly renders one of the options specified by the <code>option</code> tags.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:random&gt;
+      &lt;r:option&gt;...&lt;/r:option&gt;
+      &lt;r:option&gt;...&lt;/r:option&gt;
+      ...
+    &lt;r:random&gt;
+    </code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:rfc1123_date /&gt;</h4>
+  <div>
+    <p>Outputs the published date using the format mandated by <span class="caps">RFC 1123</span>. (Ideal for <span class="caps">RSS</span> feeds.)</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:rfc1123_date /&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:slug /&gt;</h4>
+  <div><p>Renders the <code>slug</code> attribute of the current page.</p></div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:snippet /&gt;</h4>
+  <div>
+    <p>Renders the snippet specified in the <code>name</code> attribute within the context of a page.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:snippet name="snippet_name" /&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:status /&gt;</h4>
+  <div>
+    <p>Prints the page&#8217;s status as a string.  Optional attribute &#8216;downcase&#8217; 
+    will cause the status to be all lowercase.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:status [downcase='true'] /&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:title /&gt;</h4>
+  <div><p>Renders the <code>title</code> attribute of the current page.</p></div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:unless_children /&gt;</h4>
+  <div>
+    <p>Renders the contained elements only if the current contextual page has no children.
+    The <code>status</code> attribute limits the status of found child pages to the given status,
+    the default is <code>"published"</code>. <code>status="all"</code> includes all non-virtual pages 
+    regardless of status.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:unless_children [status="published"]&gt;...&lt;/r:unless_children&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:unless_content /&gt;</h4>
+  <div>
+    <p>The opposite of the <code>if_content</code> tag.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:unless_content [part="part_name"]&gt;...&lt;/r:unless_content&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:unless_dev /&gt;</h4>
+  <div>
+    <p>The opposite of the <code>if_dev</code> tag.</p>
+    
+    
+    <strong>Usage:</strong> 
+    <pre><code>&lt;r:unless_dev&gt;...&lt;/r:unless_dev&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:unless_parent /&gt;</h4>
+  <div>
+    <p>Renders the contained elements only if the current contextual page has no parent, i.e. 
+    is the root page.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:unless_parent&gt;...&lt;/r:unless_parent&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:unless_url /&gt;</h4>
+  <div>
+    <p>The opposite of the <code>if_url</code> tag.</p>
+    
+    
+    <strong>Usage:</strong>
+    <pre><code>&lt;r:unless_url matches="regexp" [ignore_case="true|false"]&gt;...&lt;/unless_url&gt;</code></pre>
+  </div>
+</div>
+<div class="tag-description">
+  <h4>&lt;r:url /&gt;</h4>
+  <div><p>Renders the <code>url</code> attribute of the current page.</p></div>
+</div>
+</div>
+
+<p class="close-link"><a href="javascript: Element.closePopup('tag_reference_popup')">Close Help</a></p>
+</div>
+<script type="text/javascript">
+  var tags, searchingOn = "";
+  var popup = $('tag_reference_popup');
+  new Form.Element.Observer('search-tag-reference', 0.5, function(element, value) {
+    if (!tags) tags = popup.select('.reference .tag-description');
+    if (value.length < 3 && searchingOn != "") {
+      searchingOn = "";
+      tags.invoke('show');
+    } else if (value.length >= 3 && searchingOn != value) {
+      searchingOn = value;
+      tags.each(function(div) {
+        div[div.hasWord(value) ? 'show' : 'hide']();
+      });
+    }
+  });
+</script>

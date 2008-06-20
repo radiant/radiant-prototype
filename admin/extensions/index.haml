@@ -1,0 +1,44 @@
+- @selected = :extensions
+
+- content_for :meta do
+  %style{:type=>"text/css"}
+    :sass
+      table.index 
+        h4
+          font-size: 110%
+          margin-top: .5em
+          margin-bottom: .25em
+        p
+          margin-top: .25em
+          margin-bottom: .5em
+
+%h1 Extensions
+
+%table#extensions.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+  %thead
+    %tr
+      %th.extension Extension
+      %th.website Website
+      %th.version Version
+  %tbody
+    %tr.node.level-1
+      %td.extension
+        %h4 Archive
+        %p Allows you to create archives for a blog or news site.
+      %td.website
+        %a{:href=>"http://dev.radiantcms.org/", :target=>"_blank"} Website
+      %td.version 1.0
+    %tr.node.level-1
+      %td.extension
+        %h4 Markdown Filter
+        %p Allows you to compose page parts or snippets using the Markdown or SmartyPants text filters.
+      %td.website
+        %a{:href=>"http://daringfireball.net/projects/markdown/", :target=>"_blank"} Website
+      %td.version 1.0
+    %tr.node.level-1
+      %td.extension
+        %h4 Textile Filter
+        %p Allows you to compose page parts or snippets using the Textile text filter.
+      %td.website
+        %a{:href=>"http://textism.com/tools/textile/", :target=>"_blank"} Website
+      %td.version 1.0

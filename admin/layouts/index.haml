@@ -1,0 +1,45 @@
+- @selected = :layouts
+
+%h1 Layouts
+
+%p
+  Use layouts to apply a visual look to a  Web page. Layouts can contain special tags to include
+  page content and other elements such as the header or footer. Click on a layout name below to
+  edit it or click <code>Remove</code> to delete it.
+
+%table#layouts.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0" }
+  %thead
+    %tr
+      %th.layout
+        Layout
+      %th.modify
+        Modify
+  %tbody
+    %tr.node.level-1
+      %td.layout
+        %img{:title=>"", :src=>"/admin/images/layout.png", :alt=>"layout-icon" }/
+        %a{:href=>"/admin/layouts/edit" }
+          Normal
+      %td.remove
+        %a{:href=>"/admin/layouts/remove" }
+          %img{:src=>"/admin/images/remove.png", :alt=>"Remove Layout" }/
+    %tr.node.level-1
+      %td.layout
+        %img{:title=>"", :src=>"/admin/images/layout.png", :alt=>"layout-icon" }/
+        %a{:href=>"/admin/layouts/edit" }
+          Stylesheet
+      %td.remove
+        %a{:href=>"/admin/layouts/remove" }
+          %img{:src=>"/admin/images/remove.png", :alt=>"Remove Layout" }/
+    %tr.node.level-1
+      %td.layout
+        %img{:title=>"", :src=>"/admin/images/layout.png", :alt=>"layout-icon" }/
+        %a{:href=>"/admin/layouts/edit" }
+          XML Feed
+      %td.remove
+        %a{:href=>"/admin/layouts/remove" }
+          %img{:src=>"/admin/images/remove.png", :alt=>"Remove Layout" }/
+
+%p
+  %a{:href=>"/admin/layouts/new" }
+    %img{:src=>"/admin/images/new-layout.png", :alt=>"New Layout" }/

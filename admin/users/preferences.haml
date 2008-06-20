@@ -1,0 +1,34 @@
+- @selected = :preferences
+
+%h1 User Preferences
+
+%form{:method=>"post", :action=>"/admin/pages/"}
+  %table.fieldset{:cellpadding=>0, :cellspacing=>0, :border=>0}
+    %tr
+      %th.label
+        %label{:for=>"user_password"} Password
+      %td.field
+        %input.textbox{:type=>"password", :name=>"user_password", :id=>"user_password", :maxlength=>40}/
+      %td.help{:rowspan=>2}
+        At least 5 characters. Leave password blank for it to remain unchanged.
+    %tr
+      %th.label
+        %label{:for=>"user_password_confirmation"} Confirm Password
+      %th.label
+        %input.textbox{:type=>"password", :name=>"user_password_confirmation", :id=>"user_password_confirmation", :maxlength=>40}/
+    %tr
+      %th.label
+        %label{:for=>"user_email"} E-mail
+      %th.field
+        %input.textbox{:type=>"text", :name=>"user_email", :id=>"user_email", :maxlength=>255}/
+      %th.help Optional.
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Save Changes"}/
+    or
+    %a{:href=>"/admin/pages/"} Cancel
+
+%script{:type=>"text/javascript"}
+  :plain
+    // <![CDATA[
+      Field.focus('user_password');
+    // ]]>

@@ -1,0 +1,45 @@
+== What is this?
+
+This is a simple HTML prototype of Radiant written in HAML that is designed
+to be viewed with serve.
+
+What is serve? Serve is a rapid prototyping framework for Rails
+applications. It is designed to compliment Rails development and enforce a
+strict separation of concerns between designer and developer. Using Serve
+with Rails allows the designer to happily work in his own space creating an
+HTML prototype of the application, while the developer works on the Rails
+application and copies over HTML from the prototype as needed. This allows
+the designer to focus on presentation and flow while the developer can focus
+on the implementation.
+
+We are presently experimenting with using serve in this capacity to speed
+the development and implementation of new features in Radiant.
+
+
+= How do I install and run serve?
+
+Serve is distributed as a gem to make it easy to get up and running. To
+install:
+
+  % sudo gem install serve
+
+To get up and running, open up a terminal, cd to this directory and execute:
+
+  % serve
+
+This will startup serve on port 4000. You can now view the prototype in your
+Web browser at this URL:
+
+  http://localhost:4000
+
+Click around. You will find that serve enables us to prototype most of the
+functionality of Radiant without writing a single line of back end code!
+
+
+= Can I contribute?
+
+Sure! We welcome contributions to the prototype. If you have an idea for a
+new feature this is the perfect place to get the action rolling. Once you
+have it prototyped using serve, create a ticket on the dev site and attach
+your patch. Then give us a holler on the dev mailing list and we can debate
+the merits of your idea there.

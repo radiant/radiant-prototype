@@ -1,0 +1,32 @@
+- @selected = :snippets
+
+%h1 Snippets
+
+%p Snippets are generally small pieces of content which are included in other pages or layouts.
+
+%table#snippets.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+  %thead
+    %tr
+      %th.snippet Snippet
+      %th.modify Modify
+  %tbody
+    %tr.node.level-1
+      %td.snippet
+        %img.icon{:title=>"", :src=>"/admin/images/snippet.png?1202263271", :alt=>"snippet-icon"}/
+        %span
+          %a{:href=>"/admin/snippets/edit"} footer
+      %td.remove
+        %a{:href=>"/admin/snippets/remove"}
+          %img{:src=>"/admin/images/remove.png?1202263271", :alt=>"Remove Snippet"}/
+    %tr.node.level-1
+      %td.snippet
+        %img.icon{:title=>"", :src=>"/admin/images/snippet.png?1202263271", :alt=>"snippet-icon"}/
+        %span
+          %a{:href=>"/admin/snippets/edit"} header
+      %td.remove
+        %a{:href=>"/admin/snippets/remove"}
+          %img{:src=>"/admin/images/remove.png?1202263271", :alt=>"Remove Snippet"}/
+
+%p
+  %a{:href=>"/admin/snippets/new"}
+    %img{:src=>"/admin/images/new-snippet.png?1202263271", :alt=>"New Snippet"}/

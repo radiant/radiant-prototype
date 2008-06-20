@@ -1,0 +1,207 @@
+- content_for :meta do
+  %script{:type=>"text/javascript"}
+    :plain
+      function partAdded() {
+        var partNameField = $('part-name-field');
+        var partIndexField = $('part-index-field');
+        var index = parseInt(partIndexField.value || 0) + 1;
+        var tab = 'tab-' + index;
+        var caption = partNameField.value;
+        var page = 'page-' + index;
+        tabControl.addTab(tab, caption, page);
+        Element.hide('busy');
+        partNameField.value = '';
+        partIndexField.value = (index + 1).toString();
+        $('add-part-button').disabled = false;
+        Field.focus(partNameField);
+        $('add-part-popup').closePopup();
+        tabControl.select(tab);
+      }
+      function partLoading() {
+        $('add-part-button').disabled = true;
+        $('busy').appear();
+      }
+      function validPartName() {
+        var partNameField = $('part-name-field');
+        var name = partNameField.value.downcase().strip();
+        var result = true;
+        if (name == '') {
+          alert('Part name cannot be empty.');
+          return false;
+        }
+        tabControl.tabs.each(function(pair){
+          if (tabControl.tabs.get(pair.key).caption == name) {
+            result = false;
+            alert('Part name must be unique.');
+            throw $break;
+          }
+        })
+        return result;
+      }
+      
+      var lastPageType = "";
+      var tagReferenceWindows = {};
+      function loadTagReference(part) {
+        var pageType = $F('page_class_name');
+        var window = tagReferenceWindows[pageType];
+        if (!tagReferenceWindows[pageType])
+          tagReferenceWindows[pageType] = new Popup.AjaxWindow("/admin/docs/tags/" + encodeURIComponent(pageType));
+        var window = tagReferenceWindows[pageType];
+        if(lastPageType != pageType) {
+          $('tag-reference-link-'+ part).highlight();
+          window.show();
+        } else {
+          window.toggle();
+        }
+        lastPageType = pageType;
+        return false;
+      }
+      
+      var lastFilter = "";
+      var filterWindows = {};
+      function loadFilterReference(part) {
+        var filter = $F("part_" + part + "_filter_id");
+        if (filter != "") {
+          if (!filterWindows[filter]) filterWindows[filter] = new Popup.AjaxWindow("/admin/docs/filters/" + encodeURIComponent(filter), {reload: false});
+          var window = filterWindows[filter];
+          if(lastFilter != filter) {
+            window.show();
+          } else {
+            window.toggle();
+          }
+          lastFilter = filter;
+        } else {
+          alert('No documentation for filter.');
+        }
+        return false;
+      }
+  
+  %style{:type=>"text/css", :media=>"screen"}
+    :sass
+      #content
+        #extended-metadata
+          .fieldset
+            margin-left: 0
+            margin-right: 0
+            margin-bottom: .5em
+            padding: 0
+            td.label
+              text-align: left
+              width: 15%
+              .textbox
+                width: 90%
+
+%input#page_lock_version{:name=>"page[lock_version]", :type=>"hidden", :value=>"0"}/
+.form-area
+  %p.title
+    %label{:for=>"page_title"}
+      Page Title
+    %input#page_title.textbox.activate{:name=>"page[title]", :size=>"255", :type=>"text", :maxlength=>"255"}/
+  
+  #extended-metadata.row{:style=>"display: none"}
+    %table.fieldset
+      %tr
+        %td.label
+          %label{:for=>"page_slug"}
+            Slug
+        %td.field
+          %input#page_slug.textbox{:name=>"page[slug]", :size=>"100", :type=>"text", :value=>"/", :maxlength=>"100"}/
+      %tr
+        %td.label
+          %label{:for=>"page_breadcrumb"}
+            Breadcrumb
+        %td.field
+          %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
+  %p.more-or-less
+    %small
+      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} More
+      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Less
+  
+  #tab-control
+    #tabs.tabs
+      #tab-toolbar
+        %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Tab"}
+          %img{:src=>"/admin/images/plus.png?1202263271", :alt=>"Plus"}/
+        %a{:href=>"#", :title=>"Remove Tab", :onclick=>"if(confirm('Delete the current tab?')) {tabControl.removeTab(tabControl.selected)}; return false;"}
+          %img{:src=>"/admin/images/minus.png?1202263271", :alt=>"Minus"}/
+    #pages.pages
+      #page-1.page
+        #part-1.part
+          %input#part_0_name{:name=>"part[0][name]", :type=>"hidden", :value=>"body"}/
+          %p
+            %label{:for=>"part_0_filter_id"} Filter
+            %select#part_0_filter_id{:name=>"part[0][filter_id]"}
+              %option{:value=>""} &lt;none&gt;
+              %option{:value=>"Markdown"} Markdown
+              %option{:value=>"SmartyPants"} SmartyPants
+              %option{:value=>"Textile"} Textile
+            %span#reference-links
+              Reference:
+              %span#filter-reference-link-0
+                %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
+              %span#tag-reference-link-0
+                %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
+          %div
+            %textarea#part_0_content.textarea{:name=>"part[0][content]", :style=>"width: 100%"}=""
+      #page-2.page
+        #part-2.part
+          %input#part_1_name{:name=>"part[1][name]", :type=>"hidden", :value=>"sidebar"}/
+          %p
+            %label{:for=>"part_1_filter_id"}
+              Filter
+            %select#part_1_filter_id{:name=>"part[1][filter_id]"}
+              %option{:value=>""} &lt;none&gt;
+              %option{:value=>"Markdown"} Markdown
+              %option{:value=>"SmartyPants"} SmartyPants
+              %option{:value=>"Textile"} Textile
+            %span#reference-links
+              Reference:
+              %span#filter-reference-link-1
+                %a{:href=>"#", :onclick=>"loadFilterReference(1); return false;"} Filter
+              %span#tag-reference-link-1
+                %a{:href=>"#", :onclick=>"loadTagReference(1); return false;"} Available Tags
+          %div
+            %textarea#part_1_content.textarea{:name=>"part[1][content]", :style=>"width: 100%"}=""
+  .row
+    %p
+      %label{:for=>"page_layout_id"}
+        Layout
+      %select#page_layout_id{:name=>"page[layout_id]"}
+        %option{:value=>""} &lt;inherit&gt;
+        %option{:selected=>"selected", :value=>"1"} Normal
+        %option{:value=>"2"} Stylesheet
+        %option{:value=>"3"} XML Feed
+    %p
+      %label{:for=>"page_class_name"}
+        Page Type
+      %select#page_class_name{:name=>"page[class_name]"}
+        %option{:value=>"Page"}
+          &lt;normal&gt;
+        %option{:value=>"ArchivePage"}
+          Archive
+        %option{:value=>"ArchiveDayIndexPage"}
+          Archive Day Index
+        %option{:value=>"ArchiveMonthIndexPage"}
+          Archive Month Index
+        %option{:value=>"ArchiveYearIndexPage"}
+          Archive Year Index
+        %option{:value=>"FileNotFoundPage"}
+          File Not Found
+    %p
+      %label{:for=>"page_status_id"}
+        Status
+      %select#page_status_id{:name=>"page[status_id]"}
+        %option{:value=>"1"}
+          Draft
+        %option{:value=>"50"}
+          Reviewed
+        %option{:selected=>"selected", :value=>"100"}
+          Published
+        %option{:value=>"101"}
+          Hidden
+  %span.clear &nbsp;
+  %p{:style=>"clear: left"}
+    %small
+      Last updated by admin at 02:26
+      %small AM
+      on February 22, 2008

@@ -1,0 +1,18 @@
+#page-3.page
+  #part-3.part
+    %input#part_0_name{:name=>"part[0][name]", :type=>"hidden", :value=>"body"}/
+    %p
+      %label{:for=>"part_0_filter_id"} Filter
+      %select#part_0_filter_id{:name=>"part[0][filter_id]"}
+        %option{:value=>""} &lt;none&gt;
+        %option{:value=>"Markdown"} Markdown
+        %option{:value=>"SmartyPants"} SmartyPants
+        %option{:value=>"Textile"} Textile
+      %span#reference-links
+        Reference:
+        %span#filter-reference-link-0
+          %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
+        %span#tag-reference-link-0
+          %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
+    %div
+      %textarea#part_0_content.textarea{:name=>"part[0][content]", :style=>"width: 100%"}=""

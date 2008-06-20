@@ -1,0 +1,13 @@
+- @selected = :users
+
+%h1 Edit User
+
+%form{:method=>"post", :action=>"/admin/users/"}
+  
+  = render :partial => "fields"
+  
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Save Changes"}/
+    %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
+    or
+    %a{:href=>"/admin/users/"} Cancel

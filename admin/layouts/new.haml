@@ -1,0 +1,14 @@
+- @selected = :layouts
+- @new_record = true
+
+%h1 New Layout
+
+%form{:method=>"post", :action=>"/admin/layouts/"}
+  
+  = render :partial => "fields"
+  
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Create Layout"}/
+    %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
+    or
+    %a{:href=>"/admin/layouts/"} Cancel
