@@ -2,7 +2,7 @@
 
 %h1 Edit Page
 
-%form{:enctype=>"multipart/form-data", :action=>"/admin/pages/", :method=>"post"}
+%form{:enctype=>"multipart/form-data", :action=>"/admin/pages/", :method=>"post", :onsubmit_status=>"Saving Changes&#8230;"}
   
   = render :partial => "fields"
   

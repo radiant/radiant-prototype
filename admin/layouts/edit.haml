@@ -2,7 +2,7 @@
 
 %h1 Edit Layout
 
-%form{:method=>"post", :action=>"/admin/layouts/"}
+%form{:method=>"post", :action=>"/admin/layouts/", :onsubmit_status=>"Saving changes&#8230;"}
   
   = render :partial => "fields"
   

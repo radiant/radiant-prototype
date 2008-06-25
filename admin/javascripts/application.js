@@ -5,6 +5,14 @@ Popup.BorderTopRightImage    = '/admin/images/popup_border_top_right.png';
 Popup.BorderBottomLeftImage  = '/admin/images/popup_border_bottom_left.png';
 Popup.BorderBottomRightImage = '/admin/images/popup_border_bottom_right.png';
 
+// Status Images
+Status.SpinnerImage          = '/admin/images/status_spinner.gif';
+Status.BackgroundImage       = '/admin/images/status_background.png';
+Status.TopLeftImage          = '/admin/images/status_top_left.png';
+Status.TopRightImage         = '/admin/images/status_top_right.png';
+Status.BottomLeftImage       = '/admin/images/status_bottom_left.png';
+Status.BottomRightImage      = '/admin/images/status_bottom_right.png';
+
 // Behaviors
 Event.addBehavior({
   'a.popup': Popup.TriggerBehavior(),
@@ -38,6 +46,8 @@ Event.addBehavior({
   },
   
   'table.index': RuledTableBehavior(),
+  
+  'form': Status.FormBehavior(),
   
   'form input.activate': function() {
     this.activate();
