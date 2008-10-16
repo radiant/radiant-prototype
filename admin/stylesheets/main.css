@@ -440,7 +440,7 @@ h1 {
 
 /* tabs */
 
-#content #tabs {
+#tab-control .tabs {
   background-image: url(/admin/images/brown-bottom-line.gif);
   background-position: bottom;
   background-repeat: repeat-x;
@@ -448,7 +448,7 @@ h1 {
   width: 100%;
   margin-right: -4px;
 }
-#content #tabs .tab {
+#tab-control .tabs .tab {
   background-color: #eae3c5;
   border-bottom: 1px solid #cdc295;
   color: black;
@@ -462,7 +462,7 @@ h1 {
   text-decoration: none;
   text-transform: titlecase;
 }
-#content #tabs .tab.here {
+#tab-control .tabs .tab.here {
   background-color: white;
   border: 1px solid #cdc295;
   border-bottom: 1px solid white;
@@ -471,16 +471,16 @@ h1 {
   padding-right: 13px;
   padding-top: 6px;
 }
-#content #tab-toolbar {
+#tab-toolbar {
   float: right;
   margin-top: .35em;
 }
-#content #pages {
+#tab-control .pages {
   background: white;
   width: 100%;
   clear: both;
 }
-#content #pages .page {
+#tab-control .pages .page {
   padding: 20px;
   border: 1px solid #cdc295;
   border-top-width: 0;

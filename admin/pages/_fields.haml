@@ -118,15 +118,15 @@
       %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Less
   
   #tab-control
-    #tabs.tabs
+    .tabs
       #tab-toolbar
         %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Tab"}
           %img{:src=>"/admin/images/plus.png", :alt=>"Plus"}/
         %a{:href=>"#", :title=>"Remove Tab", :onclick=>"if(confirm('Delete the current tab?')) {tabControl.removeTab(tabControl.selected)}; return false;"}
           %img{:src=>"/admin/images/minus.png", :alt=>"Minus"}/
-    #pages.pages
-      #page-1.page
-        #part-1.part
+    .pages
+      .page{:caption=>"body"}
+        .part
           %input#part_0_name{:name=>"part[0][name]", :type=>"hidden", :value=>"body"}/
           %p
             %label{:for=>"part_0_filter_id"} Filter
@@ -143,8 +143,8 @@
                 %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
           %div
             %textarea#part_0_content.textarea{:name=>"part[0][content]", :style=>"width: 100%"}=""
-      #page-2.page
-        #part-2.part
+      .page{:caption=>"sidebar"}
+        .part
           %input#part_1_name{:name=>"part[1][name]", :type=>"hidden", :value=>"sidebar"}/
           %p
             %label{:for=>"part_1_filter_id"}
