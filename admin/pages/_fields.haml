@@ -2,10 +2,12 @@
   %script{:type=>"text/javascript"}
     :plain
       function partAdded() {
+        var tabControl = TabControlBehaviors['tab-control'];
         Element.hide('busy');
         $('add-part-button').disabled = false;
         $('add-part-popup').closePopup();
-        $('tab-control').fire('page:added');
+        tabControl.updateTabs();
+        tabControl.select(tabControl.tabs.last());
       }
       function partLoading() {
         $('add-part-button').disabled = true;
@@ -111,10 +113,10 @@
   #tab-control
     .tabs
       #tab-toolbar
-        %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Tab"}
-          %img{:src=>"/admin/images/plus.png", :alt=>"Plus"}/
-        %a{:href=>"#", :title=>"Remove Tab", :onclick=>"if(confirm('Delete the current tab?')) { $('tab-control').fire('remove:selected') }; Event.stop(event)"}
-          %img{:src=>"/admin/images/minus.png", :alt=>"Minus"}/
+        %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Part"}
+          %img{:src=>"/admin/images/plus.png", :alt=>"Add Part", :title=>""}/
+        %a{:href=>"#", :title=>"Remove Part", :onclick=>"if(confirm('Remove the current part?')) { TabControlBehaviors['tab-control'].removeSelected(); }; Event.stop(event)"}
+          %img{:src=>"/admin/images/minus.png", :alt=>"Remove Part", :title=>""}/
     .pages
       .page{:caption=>"body"}
         .part
