@@ -1,6 +1,13 @@
 var TabControlBehavior = Behavior.create({
   initialize: function() {
-    TabControlBehaviors[this.element.identify()] = this;
+    new TabControl(this.element);
+  }
+})
+
+var TabControl = Class.create({
+  initialize: function(element) {
+    this.element = $(element);
+    TabControls[this.element.identify()] = this;
     this.tabs = $A();
     this.tabContainer = this.element.down('.tabs');
     this.tabContainer.observe('click', this.ontabclick.bind(this));
@@ -12,13 +19,10 @@ var TabControlBehavior = Behavior.create({
     this.element.select('.page').each(function(page) {
       if (!this.findTabByPage(page)) this.addTab(page);
     }.bind(this));
-    this.tabs.each(function(tab) {
-      if (tab.page.parentNode == null) console.log('null parent:' + tab.caption);
-    });
   },
   
   addTab: function(page) {
-    var tab = new TabControlBehavior.Tab(page);
+    var tab = new TabControl.Tab(page);
     this.tabs.push(tab);
     this.tabContainer.insert({bottom: tab});
     page.hide();
@@ -71,7 +75,7 @@ var TabControlBehavior = Behavior.create({
   }
 });
 
-TabControlBehavior.Tab = Class.create({
+TabControl.Tab = Class.create({
   initialize: function(page) {
     this.page = page;
     this.caption = page.readAttribute('caption');
@@ -98,4 +102,4 @@ TabControlBehavior.Tab = Class.create({
   }
 });
 
-var TabControlBehaviors = {};
+var TabControls = {};

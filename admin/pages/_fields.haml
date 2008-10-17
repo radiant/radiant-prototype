@@ -2,8 +2,8 @@
   %script{:type=>"text/javascript"}
     :plain
       function partAdded() {
-        var tabControl = TabControlBehaviors['tab-control'];
-        Element.hide('busy');
+        var tabControl = TabControls['tab-control'];
+        $('busy').hide();
         $('add-part-button').disabled = false;
         $('add-part-popup').closePopup();
         tabControl.updateTabs();
@@ -15,21 +15,16 @@
       }
       function validPartName() {
         var partNameField = $('part-name-field');
-        var name = partNameField.value.downcase().strip();
-        var result = true;
-        if (name == '') {
+        var name = partNameField.value.downcase();
+        if (name.blank()) {
           alert('Part name cannot be empty.');
           return false;
         }
-        $('tab-control').select('.page').each(function(page) {
-          var caption = page.readAttribute('caption');
-          if (caption == name) {
-            result = false;
-            alert('Part name must be unique.');
-            throw $break;
-          }
-        });
-        return result;
+        if (TabControls['tab-control'].findTabByCaption(name)) {
+          alert('Part name must be unique.');
+          return false;
+        }
+        return true;
       }
       
       var lastPageType = "";
@@ -115,7 +110,7 @@
       #tab-toolbar
         %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Part"}
           %img{:src=>"/admin/images/plus.png", :alt=>"Add Part", :title=>""}/
-        %a{:href=>"#", :title=>"Remove Part", :onclick=>"if(confirm('Remove the current part?')) { TabControlBehaviors['tab-control'].removeSelected(); }; Event.stop(event)"}
+        %a{:href=>"#", :title=>"Remove Part", :onclick=>"if(confirm('Remove the current part?')) { TabControls['tab-control'].removeSelected(); }; Event.stop(event)"}
           %img{:src=>"/admin/images/minus.png", :alt=>"Remove Part", :title=>""}/
     .pages
       .page{:caption=>"body"}
