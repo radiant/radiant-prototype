@@ -37,7 +37,7 @@ var TabControlBehavior = Behavior.create({
     if (this.selected) this.selected.unselect();
     this.selected = tab;
     tab.select();
-    cookie = Cookie.set('current_tab', tab.caption, null, '/admin');
+    cookie = Cookie.set('current_tab', tab.caption, 24, '/admin');
   },
   
   autoSelect: function() {
