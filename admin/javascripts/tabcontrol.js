@@ -3,14 +3,17 @@ var TabControlBehavior = Behavior.create({
     this.tabs = $A();
     this.tabContainer = this.element.down('.tabs');
     this.tabContainer.observe('click', this.ontabclick.bind(this));
-    this.detectTabs();
+    this.updateTabs();
     this.autoSelect();
   },
   
-  detectTabs: function(element) {
+  updateTabs: function(element) {
     this.element.select('.page').each(function(page) {
       if (!this.findTabByPage(page)) this.addTab(page);
     }.bind(this));
+    this.tabs.each(function(tab) {
+      if (tab.page.parentNode == null) console.log('null parent:' + tab.caption);
+    });
   },
   
   addTab: function(page) {
@@ -35,7 +38,7 @@ var TabControlBehavior = Behavior.create({
   },
   
   ontabclick: function(event) {
-    var e =  event.target.hasClassName('tab') ?  event.target : event.target.up('.tab');
+    var e = event.target.hasClassName('tab') ?  event.target : event.target.up('.tab');
     if (e) {
       var tab = this.findTabByElement(e);
       if (tab) {
@@ -43,6 +46,19 @@ var TabControlBehavior = Behavior.create({
         event.stop();
       }
     }
+  },
+  
+  'onpage:added': function(event) {
+    this.updateTabs();
+    this.select(this.tabs.last());
+  },
+  
+  'onremove:selected': function(event) {
+    var tab = this.selected;
+    var index = this.tabs.indexOf(tab);
+    tab.remove();
+    this.select(this.tabs[index-1] || this.tabs.first());
+    this.tabs = this.tabs.without(tab);
   },
   
   findTabByCaption: function(caption) {
@@ -72,6 +88,11 @@ TabControlBehavior.Tab = Class.create({
   unselect: function() {
     this.page.hide();
     this.element.removeClassName('here');
+  },
+  
+  remove: function() {
+    this.page.remove();
+    this.element.remove();
   },
   
   toElement: function() {

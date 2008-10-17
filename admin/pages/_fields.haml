@@ -2,20 +2,10 @@
   %script{:type=>"text/javascript"}
     :plain
       function partAdded() {
-        var partNameField = $('part-name-field');
-        var partIndexField = $('part-index-field');
-        var index = parseInt(partIndexField.value || 0) + 1;
-        var tab = 'tab-' + index;
-        var caption = partNameField.value;
-        var page = 'page-' + index;
-        tabControl.addTab(tab, caption, page);
         Element.hide('busy');
-        partNameField.value = '';
-        partIndexField.value = (index + 1).toString();
         $('add-part-button').disabled = false;
-        Field.focus(partNameField);
         $('add-part-popup').closePopup();
-        tabControl.select(tab);
+        $('tab-control').fire('page:added');
       }
       function partLoading() {
         $('add-part-button').disabled = true;
@@ -29,13 +19,14 @@
           alert('Part name cannot be empty.');
           return false;
         }
-        tabControl.tabs.each(function(pair){
-          if (tabControl.tabs.get(pair.key).caption == name) {
+        $('tab-control').select('.page').each(function(page) {
+          var caption = page.readAttribute('caption');
+          if (caption == name) {
             result = false;
             alert('Part name must be unique.');
             throw $break;
           }
-        })
+        });
         return result;
       }
       
@@ -122,7 +113,7 @@
       #tab-toolbar
         %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Tab"}
           %img{:src=>"/admin/images/plus.png", :alt=>"Plus"}/
-        %a{:href=>"#", :title=>"Remove Tab", :onclick=>"if(confirm('Delete the current tab?')) {tabControl.removeTab(tabControl.selected)}; return false;"}
+        %a{:href=>"#", :title=>"Remove Tab", :onclick=>"if(confirm('Delete the current tab?')) { $('tab-control').fire('remove:selected') }; Event.stop(event)"}
           %img{:src=>"/admin/images/minus.png", :alt=>"Minus"}/
     .pages
       .page{:caption=>"body"}

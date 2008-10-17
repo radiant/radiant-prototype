@@ -1,5 +1,4 @@
 var RuledTableBehavior = Behavior.create({
-  
   initialize: function() {
     if (Prototype.Browser.IE)
       this.element.
@@ -11,5 +10,4 @@ var RuledTableBehavior = Behavior.create({
     var row = event.findElement('tr');
     if (row) row[method]('highlight');
   }
-  
 });
