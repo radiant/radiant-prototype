@@ -1,4 +1,4 @@
-.page{:caption=>"test"}
+.page{:caption=>params['part[name]'] || "test"}
   .part
     %input#part_2_name{:name=>"part[2][name]", :type=>"hidden", :value=>"body"}/
     %p
