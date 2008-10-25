@@ -92,18 +92,30 @@
         %td.label
           %label{:for=>"page_slug"}
             Slug
-        %td.field
+        %td.field{:colspan => "2"}
           %input#page_slug.textbox{:name=>"page[slug]", :size=>"100", :type=>"text", :value=>"/", :maxlength=>"100"}/
       %tr
         %td.label
           %label{:for=>"page_breadcrumb"}
             Breadcrumb
-        %td.field
+        %td.field{:colspan => "2"}
           %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
+      %tr
+        %td.label
+          %label{:for=>"custom_field"}
+            Custom Field
+        %td.field
+          %input#custom_field.textbox{:name=>"custom[field]", :size=>"160", :type=>"text", :value=>"Custom Field", :maxlength=>"160"}/
+        %td.icons
+          %a{:href=>"#", :title=>"Remove Part", :onclick=>"if(confirm('Remove the current part?')) { TabControls['tab-control'].removeSelected(); }; Event.stop(event)"}
+            %img{:src=>"/admin/images/minus.png", :alt=>"Remove Part", :title=>""}/
+          %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Part"}
+            %img{:src=>"/admin/images/plus.png", :alt=>"Add Part", :title=>""}/
+
   %p.more-or-less
     %small
-      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} More
-      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Less
+      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Show Metadata
+      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Hide Metadata
   
   #tab-control
     .tabs
