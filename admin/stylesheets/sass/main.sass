@@ -1,0 +1,611 @@
+body
+  :font-size 95%
+  :font-family "Lucida Grande", "Bitstream Vera Sans", Helvetica, Verdana, Arial, sans-serif
+  :margin 0
+  :padding 0
+
+img
+  :border none
+  :vertical-align middle
+
+input[type=image]
+  :border none
+  :vertical-align middle
+
+input.big
+  :font-size 120%
+
+h3
+  :font-size 130%
+  :margin-top 1.25em
+  :margin-bottom .5em
+
+.hidden
+  :display none
+
+.clear
+  :font-size 1px
+  :clear both
+
+.warning
+  :color red
+
+table
+  :border-collapse collapse
+
+.status_window
+  :color #e5e5e5
+  :font-family "Lucida Grande", "Bitstream Vera Sans", Helvetica, Verdana, Arial, sans-serif
+  :font-size 90%
+  :text-shadow black 0 0 0
+
+.status_content
+  :padding 2px 10px 2px 5px
+
+#header
+  :background-color #c00
+  :color white
+  :width 100%
+  :padding-top 1px
+  :padding-bottom 20px
+  a
+    :color white
+    :text-decoration none
+    &:visited
+      :color white
+      :text-decoration none
+    &:hover, &:visited:hover
+      :text-decoration underline
+
+#site-title
+  :font-size 150%
+  :font-weight bold
+  :margin-top 19px
+  :margin-left 20px
+
+#site-subtitle
+  :color #fc6
+  :font-size 90%
+  :font-style italic
+  :margin-left 20px
+
+#navigation
+  :font-size 90%
+  :margin-top -5px
+  :margin-bottom -20px
+  :line-height 100%
+  :padding .5em
+  :padding-right 20px
+  :border-bottom 2px solid #c00
+  :_border-bottom 0
+  :text-align right
+  a
+    :background-color #eae3c5
+    :color black
+    :display inline
+    :padding .5em
+    :padding-left .9em
+    :padding-right .9em
+    :text-decoration none
+    &:hover
+      :text-decoration underline
+  strong a
+    :background-color white
+  .separator
+    :display none
+  a:visited
+    :background-color #eae3c5
+    :color black
+    :display inline
+    :padding .5em
+    :padding-left .9em
+    :padding-right .9em
+    :text-decoration none
+    &:hover
+      :text-decoration underline
+  strong a:visited
+    :background-color white
+
+#main
+  :float left
+  :width 100%
+
+#content
+  :font-size 95%
+  :padding 20px
+  table
+    &.index
+      :font-size 90%
+      :width 100%
+      :margin-bottom 2em
+      :border-bottom 1px solid #eaeaea
+      td
+        :text-align left
+        :border-top 1px solid #eaeaea
+        :padding 4px
+        &.status
+          :color #9eb3bf
+          &.draft-status
+            :color #c00
+          &.published-status
+            :color black
+          &.hidden-stats
+            :color #0c0
+        &.note
+          :color silver
+          :font-size 85%
+          :font-style italic
+          :padding 3em
+          :text-align center
+      th
+        :background-color #f5f5f5
+        :font-size 90%
+        :font-weight normal
+        :padding 4px
+        :padding-top 2px
+        :padding-bottom 2px
+      .status
+        :width 8em
+      .add-child
+        :width 100px
+        :padding-left 0
+      .remove
+        :width 100px
+        :padding-left 0
+      .node
+        .layout
+          :font-size 115%
+          :font-weight bold
+        .user small
+          :color #666
+          :font-size 90%
+          :font-style italic
+          :font-weight normal
+          :margin-left .5em
+        &.level-0 .page
+          :font-size 120%
+          :font-weight bold
+        &.level-1 .page
+          :font-size 115%
+          :font-weight bold
+        &.level-2 .page
+          :font-size 115%
+        &.level-3 .page
+          :font-size 105%
+        .page
+          a
+            :text-decoration none
+            .title
+              :color black
+              :text-decoration none
+            &:hover .title
+              :color blue
+              :text-decoration underline
+          .info
+            :color #9eb3bf
+            :font-style italic
+            :font-weight normal
+        &.virtual .page a .title
+          :color #9eb3bf
+      tr.highlight
+        :background-color #ffffb3
+      .no-children .w1
+        :padding-left 23px
+      .page
+        .title
+          :position relative
+          :top 2px
+        img.expander
+          :padding 3px
+          :padding-top 6px
+          :padding-bottom 6px
+    &.fieldset
+      :border-bottom 1px solid #DFD3C3
+      :margin-bottom .3em
+      :width 100%
+      td
+        :background-color white
+        :border-top 1px solid #DFD3C3
+        :padding 6px
+        &.field
+          :padding-left 0px
+          :padding-right 10px
+          :text-align right
+          .textbox
+            :width 99.5%
+            :margin-right -5px
+        &.help
+          :background-color #F5F1E2
+          :font-size 80%
+          :padding 0 10px
+          :width 31%
+      th.label
+        :padding-top 10px
+        :padding-right 8px
+        :vertical-align top
+        :whitespace nowrap
+        :width 1%
+        :text-align left
+        .optional
+          :color #929488
+      input
+        :font-size 100%
+      .checkbox
+        :display block
+        :float left
+        :padding-top 4px
+        :padding-left 10px
+        :width 10em
+        :text-align left
+      textarea
+        :font-family "Lucida Grande", "Bitstream Vera Sans", Helvetica, Verdana, Arial, sans-serif
+        :font-size 100%
+        :width 100%
+        :height 3.75em
+        :margin-top 4px
+        :margin-bottom 4px
+      .error-with-field small
+        :color red
+  .form-area
+    :background-color #f5f1e2
+    :margin-left -20px
+    :margin-right -20px
+    :padding 20px
+    :padding-top 15px
+    :padding-bottom 10px
+    :width 100%
+    h3
+      :font-size 100%
+      :margin-bottom 0
+    p
+      :margin-top 0
+    small
+      :font-size 75%
+    label
+      :font-weight bold
+    .textbox
+      :font-size 100%
+    .title
+      :margin-bottom 0
+      :width 100%
+      label
+        :display block
+        :position relative
+      .textbox
+        :font-family Georgia, Palatino, "Times New Roman", Times, serif
+        :font-size 200%
+        :width 100%
+    .content
+      :margin-top 1em
+      :margin-bottom 1em
+    .row
+      :clear both
+      :margin 1em 0
+      :width 100%
+      p
+        :float left
+        :margin-right 2em
+        :margin-bottom 1em
+    .more-or-less
+      :float left
+      :margin-top 0
+      :margin-bottom 1em
+      :width 100%
+    .fieldset
+      :margin-right .5em
+    .error-with-field .error
+      :color #f00
+      :display block
+      :padding 2px
+      :padding-top 0
+  .buttons
+    :font-size 80%
+    :margin-top 2.5em
+  .button
+    :font-size 150%
+  .fieldset label
+    :font-weight normal
+  #extended-metadata .fieldset td.field
+    :width 100%
+  .textarea
+    :height 280px
+    :border 1px solid #cdc295
+    :font-family Monaco, "Courier New", Courier, monospace
+    :font-size 95%
+  #pages label
+    :font-size 85%
+    :font-weight normal !important
+
+#footer
+  :color #999
+  :background-color #f7f7f7
+  :border-top 1px solid #eaeaea
+  :font-size 80%
+  :float left
+  :padding-top 20px
+  :padding-bottom 20px
+  :width 100%
+  p
+    :padding-left 20px
+    :padding-right 20px
+
+#site-links
+  :color #f5cbcb
+  :font-size 90%
+  :margin 0
+  :position absolute
+  :right 0
+  :top 20px
+  a
+    :color white
+    &:hover
+      :text-decoration none
+  strong a
+    :text-decoration none
+  a:visited
+    :color white
+    &:hover
+      :text-decoration none
+  strong a:visited
+    :text-decoration none
+
+#notice
+  :color white
+  :margin-top 25px
+  :margin-left 20px
+  :margin-right 20px
+  :padding .75em
+  :padding-top 0
+  :padding-bottom 0
+  :background-color #0c3
+  :border 3px solid #7FE699
+
+#error
+  :color white
+  :margin-top 25px
+  :margin-left 20px
+  :margin-right 20px
+  :padding .75em
+  :padding-top 0
+  :padding-bottom 0
+  :background-color #c00
+  :border 3px solid #e67f00
+
+h1
+  :margin-top 0
+
+table.index th
+  :text-align left
+
+#content table
+  &.index
+    .node
+      .snippet
+        :font-size 115%
+        :font-weight bold
+        a
+          :color black
+          :text-decoration none
+          &:visited
+            :color black
+            :text-decoration none
+            &:hover
+              :color blue
+              :text-decoration underline
+          &:hover
+            :color blue
+            :text-decoration underline
+      .user
+        :font-size 115%
+        :font-weight bold
+        a
+          :color black
+          :text-decoration none
+          &:visited
+            :color black
+            :text-decoration none
+            &:hover
+              :color blue
+              :text-decoration underline
+          &:hover
+            :color blue
+            :text-decoration underline
+      .page a:visited
+        .title
+          :color black
+          :text-decoration none
+        &:hover .title
+          :color blue
+          :text-decoration underline
+      .layout a
+        :color black
+        :text-decoration none
+        &:visited
+          :color black
+          :text-decoration none
+          &:hover
+            :color blue
+            :text-decoration underline
+        &:hover
+          :color blue
+          :text-decoration underline
+      &.virtual .page a:visited .title
+        :color #9eb3bf
+    tr:hover
+      :background-color #ffffb3
+    .page .info
+      :position relative
+      :top 2px
+  &.fieldset
+    th
+      :background-color white
+      :border-top 1px solid #DFD3C3
+      :padding 6px
+    td.field textarea
+      :width 99.5%
+      :margin-right -5px
+
+#tab-control
+  .tabs
+    :background-image url(/admin/images/brown-bottom-line.gif)
+    :background-position bottom
+    :background-repeat repeat-x
+    :float left
+    :width 100%
+    :margin-right -4px
+    .tab
+      :background-color #eae3c5
+      :border-bottom 1px solid #cdc295
+      :color black
+      :display inline-block
+      :font-size 100%
+      :text-align left
+      :margin-right 3px
+      :padding 15px
+      :padding-top 7px
+      :padding-bottom 4px
+      :text-decoration none
+      :text-transform titlecase
+      &.here
+        :background-color white
+        :border 1px solid #cdc295
+        :border-bottom 1px solid white
+        :font-weight bold
+        :padding-left 13px
+        :padding-right 13px
+        :padding-top 6px
+  .pages
+    :background white
+    :width 100%
+    :clear both
+    .page
+      :padding 20px
+      :border 1px solid #cdc295
+      :border-top-width 0
+
+#tab-toolbar
+  :float right
+  :margin-top .35em
+
+div.popup
+  :background-color white
+  :border 1px solid #777
+  :padding 0 10px
+  :font-size 90%
+  .busy
+    :float right
+    :margin-top 9px
+  h3.title
+    :background #ecf4ff
+    :border-bottom 1px solid #bcd8f4
+    :font-size 120%
+    :margin 0 -10px 10px -10px
+    :padding 6px 10px
+  label
+    :display block
+    :font-size 90%
+    &.inline
+      :display inline
+  input.button
+    :font-size 120%
+  .buttons
+    :font-size 90%
+    input.button
+      :font-size 130%
+  .tag-description
+    :border-bottom 1px dotted silver
+    :font-size 95%
+    :padding 12px 0
+    h4
+      :color green
+      :font-size 120%
+      :margin-top 0
+      :margin-bottom 8px
+    code
+      :background-color #f5f5f5
+      :color #666
+      :font-family Monaco, "Courier New", Courier, monospace
+      :padding-top 1px
+      :padding-bottom 1px
+    pre
+      :background-color #f5f5f5
+      :border 1px solid #ddd
+      :color #666
+      :font-family Monaco, "Courier New", Courier, monospace
+      :overflow hidden
+      :padding 10px
+  .reference
+    :font-size 90%
+    :border 1px solid silver
+    :overflow auto
+    :overflow-y auto
+    :overflow-x hidden
+    :line-height 140%
+    :padding 12px
+    :padding-top 1px
+    :height 300px
+    :width 40em
+    code
+      :background-color #f5f5f5
+      :color #666
+      :font-family Monaco, "Courier New", Courier, monospace
+      :padding-top 1px
+      :padding-bottom 1px
+    pre
+      :background-color #f5f5f5
+      :border 1px solid #ddd
+      :color #666
+      :font-family Monaco, "Courier New", Courier, monospace
+      :overflow hidden
+      :padding 10px
+    h4
+      :color green
+      :font-size 120%
+      :margin-top 0
+      :margin-bottom 8px
+    table
+      :width 100%
+      th
+        :color green
+        :font-size 120%
+        :padding 5px
+        :padding-left 0
+        :padding-right 0
+      td
+        :border-bottom 1px dotted silver
+        :padding-top 8px
+        :padding-bottom 8px
+        :text-align left
+      h1
+        :color black
+        :margin 0
+        :margin-bottom .5em
+      acronym
+        :border-bottom 1px dotted silver
+      blockquote
+        :border-left 4px solid silver
+        :padding-left 1em
+        :padding-right 1em
+        :margin 0
+        :margin-top 1em
+        :margin-bottom 1em
+  .close-link
+    :text-align center
+
+div.popup .reference table
+  th
+    :border-bottom 1px dotted silver
+    :padding-top 8px
+    :padding-bottom 8px
+    :text-align left
+  h2, h3, h4
+    :color black
+    :margin 0
+    :margin-bottom .5em
+
+#reference-links
+  :margin-left 2em
+  :font-size 85%
+
+#tag-reference-link
+  :margin 0 0.5em
