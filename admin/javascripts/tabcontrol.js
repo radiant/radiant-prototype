@@ -2,7 +2,7 @@ var TabControlBehavior = Behavior.create({
   initialize: function() {
     new TabControl(this.element);
   }
-})
+});
 
 var TabControl = Class.create({
   initialize: function(element) {
