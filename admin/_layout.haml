@@ -15,59 +15,36 @@
     %script{:src=>"/admin/javascripts/ruledtable.js", :type=>"text/javascript"}
     %script{:src=>"/admin/javascripts/sitemap.js", :type=>"text/javascript"}
     %script{:src=>"/admin/javascripts/application.js", :type=>"text/javascript"}
-    <!--[if lt IE 7]>
-    %script{:type=>"text/javascript", :src=>"/admin/javascripts/pngfix.js"}
-    <![endif]-->
+    /[if lt IE 7]
+      %script{:type=>"text/javascript", :src=>"/admin/javascripts/pngfix.js"}
     = yield :meta
   %body
     #page
       #header
-        #site-title
-          %a{:href=>"/admin/"} Radiant CMS
-        #site-subtitle
-          Publishing for Small Teams 
         - unless @logged_out
-          #navigation
-            - if @selected == :pages
-              %strong
-                %a{:href=>"/admin/pages/"} Pages
-            - else
-              %a{:href=>"/admin/pages/"} Pages
-            %span.separator=" | "
-            - if @selected == :snippets
-              %strong
-                %a{:href=>"/admin/snippets/"} Snippets
-            - else
-              %a{:href=>"/admin/snippets/"} Snippets
-            %span.separator=" | "
-            - if @selected == :layouts
-              %strong
-                %a{:href=>"/admin/layouts/"} Layouts
-            - else
-              %a{:href=>"/admin/layouts/"} Layouts
-      %hr{:class=>"hidden"}/
+          #site-links
+            Logged in as
+            %a{:href=>"/admin/users/edit"}Sean Cribbs
+            %span &nbsp;|&nbsp;
+            %a{:href=>"/admin/logout/"}Log Out
+            %span &nbsp;|&nbsp;
+            %a{:href=>"#view-site-popup", :id=>"view-site", :onclick=>"return false"}View Site
+          %ul#navigation
+            - nav_tabs.each do |primary_item|
+              %li{:class=>(primary_item[@selected] ? 'current' : nil)}
+                %a{:href=>(primary_item.first.url unless primary_item.first.nil?)}
+                  = primary_item.proper_name
+                  %b
+                - if primary_item[@selected]
+                  %ul#nav-sub
+                    - primary_item.each do |sub_item|
+                      %li
+                        %a{:href=>sub_item.url, :class=>(sub_item.name == @selected ? 'current' : nil)}>
+                          %span
+                            = sub_item.proper_name
+          #header-bottom
+            %div
       #main
         = yield :flash_message
         #content
           = yield
-      %hr{:class=>"hidden"}/
-      #footer
-        %p This site was made with Ruby and is powered by <a href="http://radiantcms.org">Radiant CMS</a> version 0.6.x.
-        %p#site-links
-          - unless @logged_out
-            - if @selected == :users
-              %strong
-                %a{:href=>"/admin/users/"} Users
-            - else
-              %a{:href=>"/admin/users/"} Users
-            %span.separator=" | "
-            - if @selected == :extensions
-              %strong
-                %a{:href=>"/admin/extensions/"} Extensions
-            - else
-              %a{:href=>"/admin/extensions/"} Extensions
-            %span.separator=" | "
-            %a{:href=>"/admin/logout/"} Log Out
-            %span.separator=" | "
-          %a{:href=>"/"}
-            %img{:src=>"/admin/images/view-site.gif", :alt=>"View Site", :title=>""}/
