@@ -3,9 +3,10 @@
     :plain
       function partAdded() {
         var tabControl = TabControls['tab-control'];
-        $('busy').hide();
+        var popup = $('add-part-popup');
+        popup.select('.busy').invoke('hide');
         $('add-part-button').disabled = false;
-        $('add-part-popup').closePopup();
+        popup.closePopup();
         tabControl.updateTabs();
         tabControl.select(tabControl.tabs.last());
       }
@@ -27,6 +28,19 @@
         return true;
       }
       
+      function attributeAdded() {
+        var popup = $('add-attribute-popup');
+        popup.down('.busy').hide();
+        $('add-attribute-button').disabled = false;
+        popup.closePopup();
+      }
+      function attributeLoading() {
+        
+      }
+      function validAttributeName() {
+        return true;
+      }
+      
       var lastPageType = "";
       var tagReferenceWindows = {};
       function loadTagReference(part) {
@@ -36,7 +50,7 @@
           tagReferenceWindows[pageType] = new Popup.AjaxWindow("/admin/docs/tags/" + encodeURIComponent(pageType));
         var window = tagReferenceWindows[pageType];
         if(lastPageType != pageType) {
-          $('tag-reference-link-'+ part).highlight();
+          $('tag-reference-link-' + part).highlight();
           window.show();
         } else {
           window.toggle();
@@ -92,30 +106,23 @@
         %td.label
           %label{:for=>"page_slug"}
             Slug
-        %td.field{:colspan => "2"}
+        %td.field
           %input#page_slug.textbox{:name=>"page[slug]", :size=>"100", :type=>"text", :value=>"/", :maxlength=>"100"}/
+        %td.actions
       %tr
         %td.label
           %label{:for=>"page_breadcrumb"}
             Breadcrumb
-        %td.field{:colspan => "2"}
-          %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
-      %tr
-        %td.label
-          %label{:for=>"custom_field"}
-            Custom Field
         %td.field
-          %input#custom_field.textbox{:name=>"custom[field]", :size=>"160", :type=>"text", :value=>"Custom Field", :maxlength=>"160"}/
-        %td.icons
-          %a.remove_meta_field{:href=>"#", :title=>"Remove Custom Field"}
-            %img{:src=>"/admin/images/minus.png", :alt=>"Remove Part", :title=>""}/
-          %a.add_meta_field{:href=>"/admin/pages/attributes/new", :title=>"Add Custom Field"}
-            %img{:src=>"/admin/images/plus.png", :alt=>"Add Part", :title=>""}/
+          %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
+        %td.actions
+          %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
+            %img{:src=>"/admin/images/plus.png", :alt=>"Add Attribute", :title=>""}/
 
   %p.more-or-less
     %small
-      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Show Metadata
-      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Hide Metadata
+      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Metadata
+      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Hide
   
   #tab-control
     .tabs

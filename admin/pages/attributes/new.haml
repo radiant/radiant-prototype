@@ -1,11 +1,13 @@
-%tr
-  %td.label
-    %label{:for=>"custom_field"}
-      Custom Field
-  %td.field
-    %input#custom_field.textbox{:name=>"custom[field]", :size=>"160", :type=>"text", :value=>"Custom Field", :maxlength=>"160"}/
-  %td.icons
-    %a.remove_meta_field{:href=>"#", :title=>"Remove Custom Field"}
-      %img{:src=>"/admin/images/minus.png", :alt=>"Remove Part", :title=>""}/
-    %a.add_meta_field{:href=>"/admin/pages/attributes/new", :title=>"Add Custom Field"}
-      %img{:src=>"/admin/images/plus.png", :alt=>"Add Part", :title=>""}/
+#add-attribute-popup.popup
+  .busy{:style=>"display: none"}
+    %img{:src=>"/admin/images/spinner.gif", :alt=>"Spinner"}/
+  %h3.title Add Attribute
+  %form{:action=>"/admin/pages/attributes/create/", :method=>"post", :onsubmit=>"Event.stop(event); if (validAttributeName()) {new Ajax.Updater($('extended-metadata').down('table'), '/admin/pages/attributes/create/', {asynchronous: true, evalScripts: true, insertion: Insertion.Bottom, onComplete: function(request){ attributeAdded() }, onLoading: function(request){ attributeLoading() }, parameters: Form.serialize(this)});}"}
+    %p
+      %label{:for=>"attribute-name-field"} Name
+      %input.textbox.big#attribute-name-field{:name=>"attribute[name]", :type=>"text", :value=>"", :maxlength=>"100", :style=>"width: 15em"}/
+      %input#attribute-index-field{:name=>"index", :type=>"hidden", :value=>"2"}/
+    %p.buttons
+      %input.button#add-attribute-button{:name=>"commit", :type=>"submit", :value=>"Add Attribute"}/
+      or
+      %a{:href=>"javascript: Element.closePopup('add-attribute-popup')"} Cancel
