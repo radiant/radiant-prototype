@@ -43,6 +43,7 @@ module ViewHelpers
     design << NavSubItem.new(:layouts, "Layouts", "/admin/layouts/")
   
     settings = NavTab.new(:settings, "Settings")
+    settings << NavSubItem.new(:preferences, "Personal", "/admin/users/preferences/")
     settings << NavSubItem.new(:users, "Users", "/admin/users/")
     settings << NavSubItem.new(:extensions, "Extensions", "/admin/extensions/")
   

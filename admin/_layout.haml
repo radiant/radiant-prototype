@@ -24,11 +24,11 @@
         - unless @logged_out
           #site-links
             Logged in as
-            %a{:href=>"/admin/users/edit"}Sean Cribbs
+            %a{:href=>"/admin/users/preferences/"} Sean Cribbs
             %span &nbsp;|&nbsp;
-            %a{:href=>"/admin/logout/"}Log Out
+            %a{:href=>"/admin/logout/"} Log Out
             %span &nbsp;|&nbsp;
-            %a{:href=>"#view-site-popup", :id=>"view-site", :onclick=>"return false"}View Site
+            %a{:href=>"#view-site-popup", :id=>"view-site", :onclick=>"return false"} View Site
           %ul#navigation
             - nav_tabs.each do |primary_item|
               %li{:class=>(primary_item[@selected] ? 'current' : nil)}
