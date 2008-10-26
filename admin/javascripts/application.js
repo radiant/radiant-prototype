@@ -13,8 +13,24 @@ Status.TopRightImage         = '/admin/images/status_top_right.png';
 Status.BottomLeftImage       = '/admin/images/status_bottom_left.png';
 Status.BottomRightImage      = '/admin/images/status_bottom_right.png';
 
+Event.addBehavior.reassignAfterAjax = true;
+
 // Behaviors
 Event.addBehavior({
+  'a.remove_meta_field:click': function(){
+    Element.remove($(this).up('tr'))
+  },
+
+  'a.add_meta_field:click': function(e){
+    e.stop();
+
+    new Ajax.Request($(this).href, {
+      method : 'get',
+      onSuccess : function(transport){
+        $(this).up('tr').insert( { 'after' :  transport.responseText });
+      }.bind(this)
+    });
+  },
   'a.popup': Popup.TriggerBehavior(),
   
   'table#site-map': SiteMapBehavior(),
