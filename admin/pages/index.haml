@@ -1,157 +1,154 @@
 - @selected = :pages
-
-%h1 Pages
-
-%table#site-map.index{:summary=>"Page hierarchy of the current site"}
-  %thead
-    %tr
-      %th.page Page
-      %th.status Status
-      %th.modify{:colspan=>"2"} Modify
-  %tbody
-    %tr#page-1.node.level-0.children-visible
-      %td.page{:style=>"padding-left: 4px"}
-        %span.w1
-          %img.expander{:title=>"", :src=>"/admin/images/collapse.png", :alt=>"toggle children"}/
-          %a{:href=>"/admin/pages/edit", :title=>"/"}
-            %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon"}/
-            %span.title Home Page
-          %img#busy-1.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
-    %tr#page-2.node.level-1.no-children.virtual
-      %td.page{:style=>"padding-left: 26px"}
-        %span.w1
-          %a{:href=>"/admin/pages/edit", :title=>"/file-not-found/"}
-            %img.icon{:title=>"", :src=>"/admin/images/virtual-page.png", :alt=>"page-icon"}/
-            %span.title File Not Found
-          %small.info (File Not Found)
-          %img#busy-2.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
-    %tr#page-9.node.level-1.no-children
-      %td.page{:style=>"padding-left: 26px"}
-        %span.w1
-          %a{:href=>"/admin/pages/edit", :title=>"/about/"}
-            %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon"}/
-            %span.title About
-          %img#busy-9.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
-    %tr#page-4.node.level-1.children-visible
-      %td.page{:style=>"padding-left: 26px"}
-        %span.w1
-          %img.expander{:title=>"", :src=>"/admin/images/collapse.png", :alt=>"toggle children"}/
-          %a{:href=>"/admin/pages/edit", :title=>"/articles/"}
-            %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon"}/
-            %span.title Articles
-          %small.info (Archive)
-          %img#busy-4.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
-    %tr#page-10.node.level-2.no-children.virtual
-      %td.page{:style=>"padding-left: 48px"}
-        %span.w1
-          %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/monthly-archives/"}
-            %img.icon{:title=>"", :src=>"/admin/images/virtual-page.png", :alt=>"page-icon"}/
-            %span.title %B %Y Archives
-          %small.info (Archive Month Index)
-          %img#busy-10.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
-    %tr#page-5.node.level-2.no-children
-      %td.page{:style=>"padding-left: 48px"}
-        %span.w1
-          %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/09/first-post/"}
-            %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon"}/
-            %span.title First Post
-          %img#busy-5.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
-    %tr#page-6.node.level-2.no-children
-      %td.page{:style=>"padding-left: 48px"}
-        %span.w1
-          %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/10/second-post/"}
-            %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon"}/
-            %span.title
-              Second Post
-          %img#busy-6.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
-    %tr#page-8.node.level-2.no-children
-      %td.page{:style=>"padding-left: 48px"}
-        %span.w1
-          %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/third-post/"}
-            %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon"}/
-            %span.title Third Post
-          %img#busy-8.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
-    %tr#page-3.node.level-1.no-children
-      %td.page{:style=>"padding-left: 26px"}
-        %span.w1
-          %a{:href=>"/admin/pages/edit", :title=>"/rss/"}
-            %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon"}/
-            %span.title RSS Feed
-          %img#busy-3.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
-    %tr#page-7.node.level-1.no-children
-      %td.page{:style=>"padding-left: 26px"}
-        %span.w1
-          %a{:href=>"/admin/pages/edit", :title=>"/styles.css/"}
-            %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon"}/
-            %span.title Styles
-          %img#busy-7.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
-      %td.status.published-status Published
-      %td.add-child
-        %a{:href=>"/admin/pages/new"}
-          %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
-      %td.remove
-        %a{:href=>"/admin/pages/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+.outset
+  %table#site-map.index{:summary=>"Page hierarchy of the current site"}
+    %thead
+      %tr
+        %th.page Page
+        %th.status Status
+        %th.modify{:colspan=>"2"} Modify
+    %tbody
+      %tr#page-1.node.level-0.children-visible
+        %td.page{:style=>"padding-left: 9px"}
+          %span.w1
+            %a{:href=>"/admin/pages/edit", :title=>"/"}
+              %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon", :width=>25, :height=>30}/
+              %span.title Home Page
+            %img#busy-1.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+      %tr#page-2.node.level-1.no-children.virtual
+        %td.page{:style=>"padding-left: 32px"}
+          %span.w1
+            %a{:href=>"/admin/pages/edit", :title=>"/file-not-found/"}
+              %img.icon{:title=>"", :src=>"/admin/images/virtual-page.png", :alt=>"page-icon"}/
+              %span.title File Not Found
+            %small.info (File Not Found)
+            %img#busy-2.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+      %tr#page-9.node.level-1.no-children
+        %td.page{:style=>"padding-left: 32px"}
+          %span.w1
+            %a{:href=>"/admin/pages/edit", :title=>"/about/"}
+              %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon", :width=>25, :height=>30}/
+              %span.title About
+            %img#busy-9.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+      %tr#page-4.node.level-1.children-visible
+        %td.page{:style=>"padding-left: 32px"}
+          %span.w1
+            %img.expander{:title=>"", :src=>"/admin/images/collapse.png", :alt=>"toggle children"}/
+            %a{:href=>"/admin/pages/edit", :title=>"/articles/"}
+              %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon", :width=>25, :height=>30}/
+              %span.title Articles
+            %small.info (Archive)
+            %img#busy-4.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+      %tr#page-10.node.level-2.no-children.virtual
+        %td.page{:style=>"padding-left: 55px"}
+          %span.w1
+            %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/monthly-archives/"}
+              %img.icon{:title=>"", :src=>"/admin/images/virtual-page.png", :alt=>"page-icon"}/
+              %span.title %B %Y Archives
+            %small.info (Archive Month Index)
+            %img#busy-10.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+      %tr#page-5.node.level-2.no-children
+        %td.page{:style=>"padding-left: 55px"}
+          %span.w1
+            %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/09/first-post/"}
+              %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon", :width=>25, :height=>30}/
+              %span.title First Post
+            %img#busy-5.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+      %tr#page-6.node.level-2.no-children
+        %td.page{:style=>"padding-left: 55px"}
+          %span.w1
+            %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/10/second-post/"}
+              %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon", :width=>25, :height=>30}/
+              %span.title
+                Second Post
+            %img#busy-6.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+      %tr#page-8.node.level-2.no-children
+        %td.page{:style=>"padding-left: 55px"}
+          %span.w1
+            %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/third-post/"}
+              %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon", :width=>25, :height=>30}/
+              %span.title Third Post
+            %img#busy-8.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+      %tr#page-3.node.level-1.no-children
+        %td.page{:style=>"padding-left: 32px"}
+          %span.w1
+            %a{:href=>"/admin/pages/edit", :title=>"/rss/"}
+              %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon", :width=>25, :height=>30}/
+              %span.title RSS Feed
+            %img#busy-3.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
+      %tr#page-7.node.level-1.no-children
+        %td.page{:style=>"padding-left: 32px"}
+          %span.w1
+            %a{:href=>"/admin/pages/edit", :title=>"/styles.css/"}
+              %img.icon{:title=>"", :src=>"/admin/images/page.png", :alt=>"page-icon", :width=>25, :height=>30}/
+              %span.title Styles
+            %img#busy-7.busy{:title=>"", :src=>"/admin/images/spinner.gif", :alt=>"", :style=>"display: none;"}/
+        %td.status.published-status Published
+        %td.add-child
+          %a{:href=>"/admin/pages/new"}
+            %img{:src=>"/admin/images/add-child.png", :alt=>"add child"}/
+        %td.remove
+          %a{:href=>"/admin/pages/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"remove page"}/
