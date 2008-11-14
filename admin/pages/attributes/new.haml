@@ -1,5 +1,5 @@
 #add-attribute-popup.popup
-  .busy{:style=>"display: none"}
+  #add-attribute-busy.busy{:style=>"display: none"}
     %img{:src=>"/admin/images/spinner.gif", :alt=>"Spinner"}/
   %h3.title Add Attribute
   %form{:action=>"/admin/pages/attributes/create/", :method=>"post", :onsubmit=>"Event.stop(event); if (validAttributeName()) {new Ajax.Updater($('extended-metadata').down('table'), '/admin/pages/attributes/create/', {asynchronous: true, evalScripts: true, insertion: Insertion.Bottom, onComplete: function(request){ attributeAdded() }, onLoading: function(request){ attributeLoading() }, parameters: Form.serialize(this)});}"}

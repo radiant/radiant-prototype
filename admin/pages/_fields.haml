@@ -3,16 +3,15 @@
     :plain
       function partAdded() {
         var tabControl = TabControls['tab-control'];
-        var popup = $('add-part-popup');
-        popup.select('.busy').invoke('hide');
+        $('add-part-busy').hide();
         $('add-part-button').disabled = false;
-        popup.closePopup();
+        $('add-part-popup').closePopup();
         tabControl.updateTabs();
         tabControl.select(tabControl.tabs.last());
       }
       function partLoading() {
         $('add-part-button').disabled = true;
-        $('busy').appear();
+        $('add-part-busy').appear();
       }
       function validPartName() {
         var partNameField = $('part-name-field');
@@ -29,13 +28,13 @@
       }
       
       function attributeAdded() {
-        var popup = $('add-attribute-popup');
-        popup.down('.busy').hide();
+        $('add-attribute-busy').hide();
         $('add-attribute-button').disabled = false;
-        popup.closePopup();
+        $('add-attribute-popup').closePopup();
       }
       function attributeLoading() {
-        
+        $('add-attribute-button').disabled = true;
+        $('add-attribute-busy').appear();
       }
       function validAttributeName() {
         return true;
@@ -121,8 +120,8 @@
 
   %p.more-or-less
     %small
-      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Metadata
-      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Hide
+      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Show Metadata
+      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Hide Metadata
   
   #tab-control
     .tabs
