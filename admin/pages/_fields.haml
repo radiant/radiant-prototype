@@ -1,6 +1,27 @@
 - content_for :meta do
   %script{:type=>"text/javascript"}
     :plain
+      function addPart(form) {
+         if (validPartName()) {
+          new Ajax.Updater(
+            $('tab-control').down('.pages'),
+            '/admin/pages/parts/create/',
+            {
+              asynchronous: true,
+              evalScripts: true,
+              insertion: Insertion.Bottom,
+              onComplete: function(request){ partAdded() },
+              onLoading: function(request){ partLoading() },
+              parameters: Form.serialize(form)
+            }
+          );
+        }
+      }
+      function removePart() {
+        if(confirm('Remove the current part?')) {
+          TabControls['tab-control'].removeSelected();
+        }
+      }
       function partAdded() {
         var tabControl = TabControls['tab-control'];
         $('add-part-busy').hide();
@@ -27,6 +48,25 @@
         return true;
       }
       
+      function addAttribute(form) {
+        if (validAttributeName()) {
+          new Ajax.Updater(
+            $('extended-metadata').down('table'),
+            '/admin/pages/attributes/create/',
+            {
+              asynchronous: true,
+              evalScripts: true,
+              insertion: Insertion.Bottom,
+              onComplete: function(request){ attributeAdded() },
+              onLoading: function(request){ attributeLoading() },
+              parameters: Form.serialize(form)
+            }
+          );
+        }
+      }
+      function removeAttribute(button) {
+        Element.remove($(button).up('tr'));
+      }
       function attributeAdded() {
         $('add-attribute-busy').hide();
         $('add-attribute-button').disabled = false;
@@ -93,31 +133,28 @@
                 width: 90%
 
 %input#page_lock_version{:name=>"page[lock_version]", :type=>"hidden", :value=>"0"}/
+
 .form-area
   %p.title
-    %label{:for=>"page_title"}
-      Page Title
+    %label{:for=>"page_title"} Page Title
     %input#page_title.textbox.activate{:name=>"page[title]", :size=>"255", :type=>"text", :maxlength=>"255"}/
   
   #extended-metadata.row{:style=>"display: none"}
     %table.fieldset
       %tr
         %td.label
-          %label{:for=>"page_slug"}
-            Slug
+          %label{:for=>"page_slug"} Slug
         %td.field
           %input#page_slug.textbox{:name=>"page[slug]", :size=>"100", :type=>"text", :value=>"/", :maxlength=>"100"}/
         %td.actions
       %tr
         %td.label
-          %label{:for=>"page_breadcrumb"}
-            Breadcrumb
+          %label{:for=>"page_breadcrumb"} Breadcrumb
         %td.field
           %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
         %td.actions
           %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
             %img{:src=>"/admin/images/plus.png", :alt=>"Add Attribute", :title=>""}/
-
   %p.more-or-less
     %small
       %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Show Metadata
@@ -128,7 +165,7 @@
       #tab-toolbar
         %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Part"}
           %img{:src=>"/admin/images/plus.png", :alt=>"Add Part", :title=>""}/
-        %a{:href=>"#", :title=>"Remove Part", :onclick=>"if(confirm('Remove the current part?')) { TabControls['tab-control'].removeSelected(); }; Event.stop(event)"}
+        %a{:href=>"#", :title=>"Remove Part", :onclick=>"Event.stop(event); removePart()"}
           %img{:src=>"/admin/images/minus.png", :alt=>"Remove Part", :title=>""}/
     .pages
       .page{:caption=>"body"}
@@ -170,42 +207,29 @@
             %textarea#part_1_content.textarea{:name=>"part[1][content]", :style=>"width: 100%"}=""
   .row
     %p
-      %label{:for=>"page_layout_id"}
-        Layout
+      %label{:for=>"page_layout_id"} Layout
       %select#page_layout_id{:name=>"page[layout_id]"}
         %option{:value=>""} &lt;inherit&gt;
         %option{:selected=>"selected", :value=>"1"} Normal
         %option{:value=>"2"} Stylesheet
         %option{:value=>"3"} XML Feed
     %p
-      %label{:for=>"page_class_name"}
-        Page Type
+      %label{:for=>"page_class_name"} Page Type
       %select#page_class_name{:name=>"page[class_name]"}
-        %option{:value=>"Page"}
-          &lt;normal&gt;
-        %option{:value=>"ArchivePage"}
-          Archive
-        %option{:value=>"ArchiveDayIndexPage"}
-          Archive Day Index
-        %option{:value=>"ArchiveMonthIndexPage"}
-          Archive Month Index
-        %option{:value=>"ArchiveYearIndexPage"}
-          Archive Year Index
-        %option{:value=>"FileNotFoundPage"}
-          File Not Found
+        %option{:value=>"Page"} &lt;normal&gt;
+        %option{:value=>"ArchivePage"} Archive
+        %option{:value=>"ArchiveDayIndexPage"} Archive Day Index
+        %option{:value=>"ArchiveMonthIndexPage"} Archive Month Index
+        %option{:value=>"ArchiveYearIndexPage"} Archive Year Index
+        %option{:value=>"FileNotFoundPage"} File Not Found
     %p
-      %label{:for=>"page_status_id"}
-        Status
+      %label{:for=>"page_status_id"} Status
       %select#page_status_id{:name=>"page[status_id]"}
-        %option{:value=>"1"}
-          Draft
-        %option{:value=>"50"}
-          Reviewed
-        %option{:selected=>"selected", :value=>"100"}
-          Published
-        %option{:value=>"101"}
-          Hidden
-  %span.clear &nbsp;
+        %option{:value=>"1"} Draft
+        %option{:value=>"50"} Reviewed
+        %option{:selected=>"selected", :value=>"100"} Published
+        %option{:value=>"101"} Hidden
+  
   %p{:style=>"clear: left"}
     %small
       Last updated by admin at 02:26

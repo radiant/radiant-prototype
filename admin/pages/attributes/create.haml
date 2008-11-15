@@ -1,10 +1,10 @@
 %tr
   %td.label
-    %label{:for=>"custom_field"} Custom Field
+    %label{:for=>"custom_field"}= params['attribute[name]']
   %td.field
-    %input#custom_field.textbox{:name=>"custom[]", :size=>"160", :type=>"text", :value=>"Custom Field", :maxlength=>"160"}/
+    %input#custom_field.textbox{:name=>"page[attributes][]", :size=>"160", :type=>"text", :maxlength=>"160"}/
   %td.actions
-    %a.add_meta_field{:href=>"/admin/pages/attributes/new", :title=>"Add Custom Field"}
+    %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Custom Field"}
       %img{:src=>"/admin/images/plus.png", :alt=>"Add Part", :title=>""}/
-    %a.remove_meta_field{:href=>"#", :title=>"Remove Custom Field"}
+    %a{:href=>"#", :title=>"Remove Custom Field", :onclick=>"removeAttribute(this); Event.stop(event)"}
       %img{:src=>"/admin/images/minus.png", :alt=>"Remove Part", :title=>""}/

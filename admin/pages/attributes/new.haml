@@ -2,7 +2,7 @@
   #add-attribute-busy.busy{:style=>"display: none"}
     %img{:src=>"/admin/images/spinner.gif", :alt=>"Spinner"}/
   %h3.title Add Attribute
-  %form{:action=>"/admin/pages/attributes/create/", :method=>"post", :onsubmit=>"Event.stop(event); if (validAttributeName()) {new Ajax.Updater($('extended-metadata').down('table'), '/admin/pages/attributes/create/', {asynchronous: true, evalScripts: true, insertion: Insertion.Bottom, onComplete: function(request){ attributeAdded() }, onLoading: function(request){ attributeLoading() }, parameters: Form.serialize(this)});}"}
+  %form{:action=>"/admin/pages/attributes/create/", :method=>"post", :onsubmit=>"Event.stop(event); addAttribute(this)"}
     %p
       %label{:for=>"attribute-name-field"} Name
       %input.textbox.big#attribute-name-field{:name=>"attribute[name]", :type=>"text", :value=>"", :maxlength=>"100", :style=>"width: 15em"}/
