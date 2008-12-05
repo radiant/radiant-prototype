@@ -352,7 +352,7 @@ table
       margin-bottom: 1em
     .row
       clear: both
-      margin: 1em 0
+      margin-top: 20px
       width: 100%
       p
         float: left
@@ -363,6 +363,20 @@ table
       margin-top: 0
       margin-bottom: 1em
       width: 100%
+      a
+        display: block
+        float: left
+        padding: 5px
+    #extended-metadata.row
+      background: #eae3c5
+      margin-top: 15px
+      table.fieldset
+        margin-bottom: 0
+        td.actions
+          min-width: 30px
+          text-align: left
+          vertical-align: middle
+
     .fieldset
       margin-right: .5em
     .error-with-field .error
@@ -377,8 +391,13 @@ table
     font-size: 150%
   .fieldset label
     font-weight: normal
-  #extended-metadata .fieldset td.field
-    width: 100%
+    font-size: 85%
+  #extended-metadata
+    background: #fff
+    .fieldset
+      clear: both
+    .fieldset td.field
+      width: 100%
   .textarea
     height: 280px
     border: 1px solid #cdc295
@@ -515,9 +534,12 @@ table.index
       border: 1px solid #cdc295
       border-top-width: 0
 
-#tab-toolbar
-  float: right
-  margin-top: .35em
+.tabs
+  #tab-toolbar
+    float: right
+    overflow: hidden
+    margin-top: .35em
+    padding: 3px
 
 div.popup
   background-color: white
@@ -640,4 +662,4 @@ div.popup .reference table
   font-size: 85%
 
 #tag-reference-link
-  margin: 0 0.5em
+  margin: 0 0.5em 

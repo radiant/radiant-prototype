@@ -1,8 +1,8 @@
 #add-part-popup.popup
-  #busy.busy{:style=>"display: none"}
+  #add-part-busy.busy{:style=>"display: none"}
     %img{:src=>"/admin/images/spinner.gif", :alt=>"Spinner"}/
   %h3.title Add Part
-  %form{:action=>"/admin/pages/parts/create/", :method=>"post", :onsubmit=>"Event.stop(event); if (validPartName()) {new Ajax.Updater($('tab-control').down('.pages'), '/admin/pages/parts/create/', {asynchronous: true, evalScripts: true, insertion: Insertion.Bottom, onComplete: function(request){ partAdded() }, onLoading: function(request){ partLoading() }, parameters: Form.serialize(this)});}"}
+  %form{:action=>"/admin/pages/parts/create/", :method=>"post", :onsubmit=>"Event.stop(event); addPart(this)"}
     %p
       %label{:for=>"part-name-field"} Name
       %input.textbox.big#part-name-field{:name=>"part[name]", :type=>"text", :value=>"", :maxlength=>"100", :style=>"width: 15em"}/

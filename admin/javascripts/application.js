@@ -13,6 +13,8 @@ Status.TopRightImage         = '/admin/images/status_top_right.png';
 Status.BottomLeftImage       = '/admin/images/status_bottom_left.png';
 Status.BottomRightImage      = '/admin/images/status_bottom_right.png';
 
+Event.addBehavior.reassignAfterAjax = true;
+
 // Behaviors
 Event.addBehavior({
   'a.popup': Popup.TriggerBehavior(),
@@ -35,17 +37,6 @@ Event.addBehavior({
   },
   
   'div#tab-control': TabControlBehavior(),
-  
-  // 'div#tab-control': function() {
-  //   tabControl = new TabControl(this);
-  //   
-  //   $$('#pages div.part > input[type=hidden]:first-child').each(function(part, index) {
-  //     var page = part.up('.page');
-  //     tabControl.addTab('tab-' + (index + 1), part.value, page.id);
-  //   });
-  //   
-  //   tabControl.autoSelect();
-  // },
   
   'table.index': RuledTableBehavior(),
   
