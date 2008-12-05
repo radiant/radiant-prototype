@@ -57,14 +57,14 @@
               asynchronous: true,
               evalScripts: true,
               insertion: Insertion.Bottom,
-              onComplete: function(request){ attributeAdded() },
+              onComplete: function(response){ attributeAdded() },
               onLoading: function(request){ attributeLoading() },
               parameters: Form.serialize(form)
             }
           );
         }
       }
-      function removeAttribute(button) {
+      function removeAttribute(button) {  
         Element.remove($(button).up('tr'));
       }
       function attributeAdded() {

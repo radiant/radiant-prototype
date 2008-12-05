@@ -38,17 +38,6 @@ Event.addBehavior({
   
   'div#tab-control': TabControlBehavior(),
   
-  // 'div#tab-control': function() {
-  //   tabControl = new TabControl(this);
-  //   
-  //   $$('#pages div.part > input[type=hidden]:first-child').each(function(part, index) {
-  //     var page = part.up('.page');
-  //     tabControl.addTab('tab-' + (index + 1), part.value, page.id);
-  //   });
-  //   
-  //   tabControl.autoSelect();
-  // },
-  
   'table.index': RuledTableBehavior(),
   
   'form': Status.FormBehavior(),
