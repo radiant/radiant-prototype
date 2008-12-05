@@ -8,6 +8,6 @@ var RuledTableBehavior = Behavior.create({
   
   onMouseOverRow: function(event, method) {
     var row = event.findElement('tr');
-    if (row) row[method]('highlight');
+    if (row) row[method]('hover');
   }
 });

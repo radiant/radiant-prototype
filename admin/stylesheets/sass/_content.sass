@@ -87,8 +87,6 @@
             font-weight: normal
         &.virtual .page a .title
           color: #9eb3bf
-      tr.highlight
-        background-color: #ffffb3
       .page
         .w1
           position: relative
@@ -297,8 +295,9 @@ table.index
           text-decoration: underline
       &.virtual .page a:visited .title
         color: #9eb3bf
-    tr:hover
-      background-color: #ffffb3
+    tr
+      &:hover, &.hover
+        background-color: #ecf4ff
     .page .info
       font-size: 90%
       position: relative
