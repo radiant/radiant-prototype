@@ -1,31 +1,27 @@
 - @selected = :snippets
-
-%h1 Snippets
-
-%p Snippets are generally small pieces of content which are included in other pages or layouts.
-
-%table#snippets.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
-  %thead
-    %tr
-      %th.snippet Snippet
-      %th.modify Modify
-  %tbody
-    %tr.node.level-1
-      %td.snippet
-        %img.icon{:title=>"", :src=>"/admin/images/snippet.png", :alt=>"snippet-icon"}/
-        %span
-          %a{:href=>"/admin/snippets/edit"} footer
-      %td.remove
-        %a{:href=>"/admin/snippets/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"Remove Snippet"}/
-    %tr.node.level-1
-      %td.snippet
-        %img.icon{:title=>"", :src=>"/admin/images/snippet.png", :alt=>"snippet-icon"}/
-        %span
-          %a{:href=>"/admin/snippets/edit"} header
-      %td.remove
-        %a{:href=>"/admin/snippets/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"Remove Snippet"}/
+.outset
+  %table#snippets.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+    %thead
+      %tr
+        %th.snippet Snippet
+        %th.modify Modify
+    %tbody
+      %tr.node.level-1
+        %td.snippet
+          %img.icon{:title=>"", :src=>"/admin/images/snippet.png", :alt=>"snippet-icon"}/
+          %span
+            %a{:href=>"/admin/snippets/edit"} footer
+        %td.remove
+          %a{:href=>"/admin/snippets/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"Remove Snippet"}/
+      %tr.node.level-1
+        %td.snippet
+          %img.icon{:title=>"", :src=>"/admin/images/snippet.png", :alt=>"snippet-icon"}/
+          %span
+            %a{:href=>"/admin/snippets/edit"} header
+        %td.remove
+          %a{:href=>"/admin/snippets/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"Remove Snippet"}/
 
 %p
   %a{:href=>"/admin/snippets/new"}
