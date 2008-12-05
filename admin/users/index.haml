@@ -1,59 +1,52 @@
 - @selected = :users
 
-%h1 Users
-
-%table#users.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
-  %thead
-    %tr
-      %th.user Name / Login
-      %th.roles Roles
-      %th.modify Modify
-  %tbody
-    %tr.node.level-1
-      %td.user
-        %a{:href=>"/admin/users/edit"} Administrator
-        %small.login admin
-      %td.roles Admin
-      %td.remove
-        %img{:src=>"/admin/images/remove-disabled.png", :alt=>"Remove User"}/
-    %tr.node.level-1
-      %td.user
-        %a{:href=>"/admin/users/edit"} Jim
-        %small.login jim
-      %td.roles Developer
-      %td.remove
-        %a{:href=>"/admin/users/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"Remove User"}/
-    %tr.node.level-1
-      %td.user
-        %a{:href=>"/admin/users/edit"} Lisa
-        %small.login lisa
-      %td.roles Developer
-      %td.remove
-        %a{:href=>"/admin/users/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"Remove User"}/
-    %tr.node.level-1
-      %td.user
-        %a{:href=>"/admin/users/edit"} Ralph
-        %small.login ralph
-      %td.roles Developer
-      %td.remove
-        %a{:href=>"/admin/users/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"Remove User"}/
-    %tr.node.level-1
-      %td.user
-        %a{:href=>"/admin/users/edit"} Susan
-        %small.login susan
-      %td.roles Developer
-      %td.remove
-        %a{:href=>"/admin/users/remove"}
-          %img{:src=>"/admin/images/remove.png", :alt=>"Remove"}/
-
-%script{:type=>"text/javascript"}
-  :plain
-    // <![CDATA[
-    new RuledTable('users');
-    // ]]>
+.outset
+  %table#users.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+    %thead
+      %tr
+        %th.user Name / Login
+        %th.roles Roles
+        %th.modify Modify
+    %tbody
+      %tr.node.level-1
+        %td.user
+          %a{:href=>"/admin/users/edit"} Administrator
+          %small.login admin
+        %td.roles Admin
+        %td.remove
+          %img{:src=>"/admin/images/remove-disabled.png", :alt=>"Remove User"}/
+      %tr.node.level-1
+        %td.user
+          %a{:href=>"/admin/users/edit"} Jim
+          %small.login jim
+        %td.roles Developer
+        %td.remove
+          %a{:href=>"/admin/users/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"Remove User"}/
+      %tr.node.level-1
+        %td.user
+          %a{:href=>"/admin/users/edit"} Lisa
+          %small.login lisa
+        %td.roles Developer
+        %td.remove
+          %a{:href=>"/admin/users/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"Remove User"}/
+      %tr.node.level-1
+        %td.user
+          %a{:href=>"/admin/users/edit"} Ralph
+          %small.login ralph
+        %td.roles Developer
+        %td.remove
+          %a{:href=>"/admin/users/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"Remove User"}/
+      %tr.node.level-1
+        %td.user
+          %a{:href=>"/admin/users/edit"} Susan
+          %small.login susan
+        %td.roles Developer
+        %td.remove
+          %a{:href=>"/admin/users/remove"}
+            %img{:src=>"/admin/images/remove.png", :alt=>"Remove"}/
 
 %p
   %a{:href=>"/admin/users/new"}
