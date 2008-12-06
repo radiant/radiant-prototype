@@ -18,7 +18,7 @@
     /[if lt IE 7]
       %script{:type=>"text/javascript", :src=>"/admin/javascripts/pngfix.js"}
     = yield :meta
-  %body
+  %body{:class=>body_classes.join(" ")}
     #page
       #header
         - unless @logged_out

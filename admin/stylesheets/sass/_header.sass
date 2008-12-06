@@ -1,6 +1,6 @@
 #header
   font-size: 90%
-  background: #c00 url(/admin/images/nav-bkgd.gif) repeat-x
+  background: #c00 url(/admin/images/navigation_background.gif) repeat-x
   width: 100%
   position: relative
   height: auto
@@ -18,7 +18,7 @@
     
 #view-site 
   font-size: 90%
-  background: url(/admin/images/view-site.png) no-repeat
+  background: url(/admin/images/view_site.png) no-repeat
   display: block
   position: absolute
   right: 12px
@@ -30,18 +30,18 @@
   text-align: center
   text-decoration: none
   
-#navigation
+ul#navigation
+  font-size: 100%
   float: left
   margin-top: 6px
   postion: relative
-  // Primary Nav (Tabs)
   li
     float: left
     height: 30px
     margin: 4px 20px 0 8px
     white-space: nowrap
     a 
-      background: url(/admin/images/nav-tabs.png) left top no-repeat
+      background: url(/admin/images/navigation_tabs.png) left top no-repeat
       color: #edd
       display: block
       height: 30px
@@ -50,7 +50,7 @@
       position: relative
       text-decoration: none
       b 
-        background: url(/admin/images/nav-tabs.png) right top no-repeat
+        background: url(/admin/images/navigation_tabs.png) right top no-repeat
         position: absolute
         right: -20px
         top: 0
@@ -72,55 +72,54 @@
       background-position: left -31px
       b
         background-position: right -31px
-    // Secondary Nav (Button Bar)
-    ul#nav-sub
-      background: url(/admin/images/nav-secondary-bkgd.gif) repeat-x
-      clear: both
-      font-size: 95%
-      left: 0
-      bottom: 0
+  ul#nav-sub
+    background: url(/admin/images/navigation_secondary_background.gif) repeat-x
+    font-size: 95%
+    clear: both
+    left: 0
+    bottom: 0
+    margin: 0
+    padding: 0
+    position: absolute
+    width: 100%
+    height: 38px
+    z-index: 10
+    li
       margin: 0
-      padding: 0
-      position: absolute
-      width: 100%
-      height: 40px
-      z-index: 10
-      li
+      a
+        background: url(/admin/images/navigation_secondary_background.gif) repeat-x
+        color: #555
+        display: -moz-inline-stack
+        display: inline-block
+        font-weight: normal
+        line-height: 38px
         margin: 0
-        a
-          background: url(/admin/images/nav-secondary-bkgd.gif) repeat-x
-          color: #555
-          display: -moz-inline-stack
-          display: inline-block
-          font-weight: normal
-          line-height: 40px
-          margin: 0
-          padding: 0
-          height: 40px
+        padding: 0
+        height: 38px
+        &:hover
+          background-position: left -40px
+          color: #444
+        &.current        
+          background: url(/admin/images/navigation_secondary_background.gif) left -80px repeat-x
+          color: #333
+          font-weight: bold
           &:hover
-            background-position: left -40px
-            color: #444
-          &.current        
-            background: url(/admin/images/nav-secondary-bkgd.gif) left -80px repeat-x
-            color: #333
-            font-weight: bold
-            &:hover
-              background-position: left -120px
-              color: #222
-          span
-            background: url(/admin/images/nav-secondary-separator.gif) right bottom no-repeat
-            display: block
-            margin: 0
-            padding: 0 26px
-            height: 40px
+            background-position: left -120px
+            color: #222
+        span
+          background: url(/admin/images/navigation_secondary_separator.gif) right bottom no-repeat
+          display: block
+          margin: 0
+          padding: 0 26px
+          height: 38px
 
 #header-bottom
   clear: both
-  height: 40px
+  height: 38px
   position: relative
   div
-    background: url(/admin/images/nav-shadow.png) repeat-x
+    background: url(/admin/images/navigation_shadow.png) repeat-x
     position: absolute
-    top: 40px
+    top: 38px
     width: 100%
     height: 4px
