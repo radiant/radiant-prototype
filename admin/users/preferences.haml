@@ -3,19 +3,26 @@
 
 %h1 Personal Preferences
 
-%form{:method=>"post", :action=>"/admin/pages/", :onsubmit_status=>"Saving changes&#8230;"}
-  .set
-    %p
-      %label{:for=>"user_password"} Password
-      %input.textbox.big.activate{:type=>"password", :name=>"user_password", :id=>"user_password", :maxlength=>40}/
-      %span.hint At least 5 characters.
-    %p
-      %label{:for=>"user_password_confirmation"} Confirm Password
-      %input.textbox.big{:type=>"password", :name=>"user_password_confirmation", :id=>"user_password_confirmation", :maxlength=>40}/
+%form{:method=>"post", :action=>"/admin/users/preferences/", :onsubmit_status=>"Saving changes&#8230;"}
+  %p
+    %label{:for=>"user_login"} Username
+    %input.textbox.big{:type=>"text", :name=>"user_email", :id=>"user_email", :size=>30, :maxlength=>255}/
   %p
     %label{:for=>"user_email"} E-mail
-    %input.textbox.big{:type=>"text", :name=>"user_email", :id=>"user_email", :maxlength=>255}/
-    %span.hint Optional.
+    %input.textbox.big{:type=>"text", :name=>"user_email", :id=>"user_email", :size=>30, :maxlength=>255}/
+  %p#display_password
+    %label Password
+    %span.value &bull;&bull;&bull;&bull;&bull;
+    %a.action{:href=>"#", :onclick=>" $('display_password').hide(); $('change_password').show()"} Change
+  .set#change_password{:style=>"display: none"}
+    %p
+      %label{:for=>"user_password"} Password
+      %input.textbox.big.activate{:type=>"password", :name=>"user_password", :id=>"user_password", :size=>20, :maxlength=>40}/
+    %p
+      %label{:for=>"user_password_confirmation"} Confirm Password
+      %input.textbox.big{:type=>"password", :name=>"user_password_confirmation", :id=>"user_password_confirmation", :size=>20, :maxlength=>40}/
+      or
+      %a{:href=>"#", :onclick=>" $('display_password').show(); $('change_password').hide()"} Cancel
   %p.buttons
     %input.button{:type=>"submit", :value=>"Save Changes"}/
     or

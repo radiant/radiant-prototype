@@ -1,3 +1,13 @@
+=clearfix
+  display: inline-block
+  &:after
+    content: "." 
+    height: 0
+    clear: both
+    visibility: hidden
+  * html &
+    height: 1px
+
 #main
   float: left
   width: 100%
@@ -329,6 +339,36 @@ body.reversed
         input.textbox.big
           font-family: Georgia, Palatino, "Times New Roman", Times, serif
           font-size: 140%
-      .hint
-        font-size: 90%
-        display: inline
+        .value
+          text-shadow: #666 1px 1px 0
+        .hint
+          font-size: 90%
+          display: inline
+          text-shadow: white 0 0 0
+        a.action
+          background-color: #7e7e7e
+          color: white
+          font-size: 75%
+          padding: 0.2em 0.5em 0.30em
+          border-radius: 5px
+          -moz-border-radius: 4px
+          -webkit-border-radius: 4px
+          text-decoration: none
+          text-shadow: white 0 0 0
+          &:hover
+            background-color: #555
+      .set
+        +clearfix
+        p
+          float: left
+          margin-right: 1em
+          margin-top: 0
+      .buttons
+        background: url(/admin/images/buttons_background.png)
+        border-radius: 8px
+        -moz-border-radius: 8px
+        -webkit-border-radius: 8px
+        color: #666
+        padding: 12px 10px
+        a
+          color: red
