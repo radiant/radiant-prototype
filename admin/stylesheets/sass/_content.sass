@@ -8,6 +8,8 @@
   padding: 20px
   .outset
     margin: -20px
+  h1
+    margin-top: 0.25em
   table
     &.index
       font-size: 90%
@@ -234,9 +236,6 @@
     font-size: 85%
     font-weight: normal !important
 
-h1
-  margin-top: 0.25em
-
 table.index
   th
     text-align: left
@@ -305,8 +304,31 @@ table.index
   &.fieldset
     th
       background-color: white
-      border-top: 1px solid #DFD3C3
+      border-top: 1px solid #dfd3c3
       padding: 6px
     td.field textarea
       width: 99.5%
       margin-right: -5px
+
+body.reversed
+  #content
+    h1
+      background: #7e7e7e
+      font-size: 125%
+      margin: -20px -20px 20px
+      padding: 15px 20px
+      text-shadow: white 0 0 0
+    form
+      p
+        label
+          display: block
+          font-weight: bold
+          text-shadow: #666 1px 1px 0
+        input.textbox
+          font-size: 100%
+        input.textbox.big
+          font-family: Georgia, Palatino, "Times New Roman", Times, serif
+          font-size: 140%
+      .hint
+        font-size: 90%
+        display: inline

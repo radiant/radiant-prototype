@@ -1,28 +1,21 @@
 - body_classes << "reversed"
 - @selected = :preferences
 
-%h1 User Preferences
+%h1 Personal Preferences
 
 %form{:method=>"post", :action=>"/admin/pages/", :onsubmit_status=>"Saving changes&#8230;"}
-  %table.fieldset{:cellpadding=>0, :cellspacing=>0, :border=>0}
-    %tr
-      %th.label
-        %label{:for=>"user_password"} Password
-      %td.field
-        %input.textbox.activate{:type=>"password", :name=>"user_password", :id=>"user_password", :maxlength=>40}/
-      %td.help{:rowspan=>2}
-        At least 5 characters. Leave password blank for it to remain unchanged.
-    %tr
-      %th.label
-        %label{:for=>"user_password_confirmation"} Confirm Password
-      %th.label
-        %input.textbox{:type=>"password", :name=>"user_password_confirmation", :id=>"user_password_confirmation", :maxlength=>40}/
-    %tr
-      %th.label
-        %label{:for=>"user_email"} E-mail
-      %th.field
-        %input.textbox{:type=>"text", :name=>"user_email", :id=>"user_email", :maxlength=>255}/
-      %td.help Optional.
+  .set
+    %p
+      %label{:for=>"user_password"} Password
+      %input.textbox.big.activate{:type=>"password", :name=>"user_password", :id=>"user_password", :maxlength=>40}/
+      %span.hint At least 5 characters.
+    %p
+      %label{:for=>"user_password_confirmation"} Confirm Password
+      %input.textbox.big{:type=>"password", :name=>"user_password_confirmation", :id=>"user_password_confirmation", :maxlength=>40}/
+  %p
+    %label{:for=>"user_email"} E-mail
+    %input.textbox.big{:type=>"text", :name=>"user_email", :id=>"user_email", :maxlength=>255}/
+    %span.hint Optional.
   %p.buttons
     %input.button{:type=>"submit", :value=>"Save Changes"}/
     or
