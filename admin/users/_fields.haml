@@ -1,62 +1,26 @@
-%table.fieldset{:cellpadding=>0, :cellspacing=>0, :border=>0}
-  %tr
-    %th.label
-      %label{:for=>"user_name"} Name
-    %td.field
-      %input.textbox.activate{:type=>"text", :name=>"user_name", :id=>"user_name", :maxlength=>100}/
-    %td.help Required.
-  %tr
-    %th.label
-      %label.optional{:for=>"user_email"} E-mail
-    %td.field
-      %input.textbox{:type=>"text", :name=>"user_email", :id=>"user_email", :maxlength=>255}/
-    %td.help
-      Optional. Please use a valid e-mail address.
-  %tr
-    %th.label
-      %label{:for=>"user_login"} Username
-    %td.field
-      %input.textbox{:type=>"text", :name=>"user_login", :id=>"user_login", :maxlength=>255}/
-    %td.help
-      At least 3 characters. Must be unique.
-  %tr
-    %th.label
-      %label{:for=>"user_password"} Password
-    %td.field
-      %input.textbox{:type=>"password", :name=>"user_password", :id=>"user_password", :maxlength=>40}
-    %td.help{:rowspan=>2}
-      At least 5 characters.
-      - unless @new_record
-        Leave password blank for it to remain unchanged.
-  %tr
-    %th.label
-      %label{:for=>"user_password_confirmation"} Confirm&nbsp;Password
-    %td.field
-      %input.textbox{:type=>"password", :name=>"user_password_confirmation", :id=>"user_password", :maxlength=>40}
-  %tr
-    %th.label
-      %label{:for=>"user_admin"} Roles
-    %td.field
-      %span.checkbox
-        <input type="checkbox" name="user_admin" id="user_admin" />&nbsp;<label for="user_admin">Administrator</label>
-      %span.checkbox
-        <input type="checkbox" name="user_developer" id="user_developer" />&nbsp;<label for="user_developer">Developer</label>
-    %td.help
-      Roles restrict user privileges and turn parts of the administrative interface on or off.
-  %tr
-    %th.label
-      %label.optional{:for=>"user_notes"} Notes
-    %td.field
-      %textarea.textarea{:name=>"user_notes", :id=>"user_notes", :rows=>"4", :cols=>"40"}=""
-    %td.help
-      Optional.
+%p
+  %label{:for=>"user_name"} Name
+  %input.textbox.activate{:type=>"text", :name=>"user_name", :id=>"user_name", :size=>32, :maxlength=>100}/
+%p
+  %label{:for=>"user_email"} E-mail
+  %input.textbox{:type=>"text", :name=>"user_email", :id=>"user_email", :size=>32, :maxlength=>255}/
+%p
+  %label{:for=>"user_login"} Username
+  %input.textbox{:type=>"text", :name=>"user_login", :id=>"user_login", :size=>32, :maxlength=>255}/
 
-- unless @new_record
-  %p{:style=>"clear: left"}
-    %small
-      Last updated by Administrator at 03:25
-      %small PM
-      on April 19, 2008
+= render :partial => "password_fields"
+
+%p
+  %label.optional{:for=>"user_notes"} Notes
+  %textarea.textarea{:name=>"user_notes", :id=>"user_notes", :rows=>"4", :cols=>"53"}=""
+
+%p
+  %label Roles
+  %input.checkbox{:type=>"checkbox", :name=>"user_admin", :id=>"user_admin"}
+  %label.checkbox{:type=>"checkbox", :for=>"user_admin"} Administrator
+  &nbsp;
+  %input.checkbox{:type=>"checkbox", :name=>"user_developer", :id=>"user_developer"}
+  %label.checkbox{:for=>"user_developer"} Developer
 
 %div
   %input{:type=>"hidden", :name=>"lock_version"}/

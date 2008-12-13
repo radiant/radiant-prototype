@@ -1,3 +1,4 @@
+- body_classes << "reversed"
 - @selected = :users
 
 %h1 Edit User
@@ -11,3 +12,7 @@
     %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
     or
     %a{:href=>"/admin/users/"} Cancel
+  
+  %p{:style=>"clear: left"}
+    %small
+      Last updated by Administrator at 3:25 pm on April 19, 2009
