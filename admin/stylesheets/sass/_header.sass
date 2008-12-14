@@ -38,40 +38,32 @@ ul#navigation
   li
     float: left
     height: 30px
-    margin: 4px 20px 0 8px
+    margin: 4px 0 0 8px
     white-space: nowrap
     a 
-      background: url(/admin/images/navigation_tabs.png) left top no-repeat
+      -webkit-border-top-left-radius: 6px
+      -webkit-border-top-right-radius: 6px
+      -moz-border-radius-topleft: 6px
+      -moz-border-radius-topright: 6px
+      border-top-left-radius: 6px
+      border-top-right-radius: 6px
+      background: url(/admin/images/navigation_tabs.png) left top repeat-x
       color: #edd
       display: block
       height: 30px
       line-height: 30px
-      padding: 0 0 0 20px
+      padding: 0 20px
       position: relative
       text-decoration: none
-      b 
-        background: url(/admin/images/navigation_tabs.png) right top no-repeat
-        position: absolute
-        right: -20px
-        top: 0
-        width: 20px
-        height: 30px
     &:hover a
-      background-position: left -31px
+      background-position: left -48px
       color: white
-      b 
-        background-position: right -31px
-        color: #333
     &.current a
-      background-position: left -62px
+      background-position: left -96px
       color: #333
       font-weight: bold
-      b 
-        background-position: right -62px
     &.dimmed a
-      background-position: left -31px
-      b
-        background-position: right -31px
+      background-position: 0 -48px
   ul#nav-sub
     background: url(/admin/images/navigation_secondary_background.gif) repeat-x
     font-size: 95%

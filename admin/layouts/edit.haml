@@ -1,3 +1,4 @@
+- body_classes << "reversed"
 - @selected = :layouts
 
 %h1 Edit Layout
@@ -6,8 +7,15 @@
   
   = render :partial => "fields"
   
-  %p.buttons
+  %p.buttons{:style=>"clear: left"}
     %input.button{:type=>"submit", :value=>"Save Changes"}/
     %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
     or
     %a{:href=>"/admin/layouts/"} Cancel
+  
+  - unless @new_record
+    %p
+      %small
+        Last updated by Administrator at 03:25
+        %small PM
+        on April 19, 2008
