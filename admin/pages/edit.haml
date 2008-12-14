@@ -1,3 +1,4 @@
+- body_classes << "reversed"
 - @selected = :pages
 
 %h1 Edit Page
@@ -6,8 +7,14 @@
   
   = render :partial => "fields"
   
-  %p.buttons
+  %p.buttons{:style=>"clear: left"}
     %input.button{:name=>"commit", :type=>"submit", :value=>"Save Changes"}/
     %input.button{:name=>"continue", :type=>"submit", :value=>"Save and Continue Editing"}/
     or
     %a{:href=>"/admin/pages"} Cancel
+
+  %p
+    %small
+      Last updated by admin at 02:26
+      %small AM
+      on February 22, 2008

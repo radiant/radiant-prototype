@@ -34,7 +34,6 @@
               %li{:class=>(primary_item[@selected] ? 'current' : nil)}
                 %a{:href=>(primary_item.first.url unless primary_item.first.nil?)}
                   = primary_item.proper_name
-                  %b
                 - if primary_item[@selected]
                   %ul#nav-sub
                     - primary_item.each do |sub_item|

@@ -116,21 +116,6 @@
         }
         return false;
       }
-  
-  %style{:type=>"text/css", :media=>"screen"}
-    :sass
-      #content
-        #extended-metadata
-          .fieldset
-            margin-left: 0
-            margin-right: 0
-            margin-bottom: .5em
-            padding: 0
-            td.label
-              text-align: left
-              width: 15%
-              .textbox
-                width: 90%
 
 %input#page_lock_version{:name=>"page[lock_version]", :type=>"hidden", :value=>"0"}/
 
@@ -139,7 +124,7 @@
     %label{:for=>"page_title"} Page Title
     %input#page_title.textbox.activate{:name=>"page[title]", :size=>"255", :type=>"text", :maxlength=>"255"}/
   
-  #extended-metadata.row{:style=>"display: none"}
+  #extended-metadata.row{:style=>"display: none; width: 100%"}
     %table.fieldset
       %tr
         %td.label
@@ -154,19 +139,17 @@
           %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
         %td.actions
           %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
-            %img{:src=>"/admin/images/plus.png", :alt=>"Add Attribute", :title=>""}/
+            %img{:src=>"/admin/images/plus_grey.png", :alt=>"Add Attribute", :title=>""}/
   %p.more-or-less
     %small
-      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Show Metadata
-      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Hide Metadata
+      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Metadata
+      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Hide
   
   #tab-control
     .tabs
       #tab-toolbar
         %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Part"}
-          %img{:src=>"/admin/images/plus.png", :alt=>"Add Part", :title=>""}/
-        %a{:href=>"#", :title=>"Remove Part", :onclick=>"Event.stop(event); removePart()"}
-          %img{:src=>"/admin/images/minus.png", :alt=>"Remove Part", :title=>""}/
+          %img{:src=>"/admin/images/add_tab.png", :alt=>"Add Part", :title=>""}/
     .pages
       .page{:caption=>"body"}
         .part
@@ -229,9 +212,3 @@
         %option{:value=>"50"} Reviewed
         %option{:selected=>"selected", :value=>"100"} Published
         %option{:value=>"101"} Hidden
-  
-  %p{:style=>"clear: left"}
-    %small
-      Last updated by admin at 02:26
-      %small AM
-      on February 22, 2008

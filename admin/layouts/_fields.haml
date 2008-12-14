@@ -19,13 +19,6 @@
   %p.content
     %label{:for=>"layout_content"} Body
     %textarea.textarea{:name=>"layout_content", :id=>"layout_content", :style=>"width: 100%", :cols=>40, :rows=>20}=""
-    
-  - unless @new_record
-    %p{:style=>"clear: left"}
-      %small
-        Last updated by Administrator at 03:25
-        %small PM
-        on April 19, 2008
 
 %div
   %input{:type=>"hidden", :name=>"lock_version"}/

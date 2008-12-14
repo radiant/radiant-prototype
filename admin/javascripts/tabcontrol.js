@@ -52,11 +52,20 @@ var TabControl = Class.create({
   },
   
   ontabclick: function(event) {
-    var e = event.target.hasClassName('tab') ? event.target : event.target.up('.tab');
+    var e = event.findElement('.tab');
     if (e) {
       var tab = this.findTabByElement(e);
       if (tab) {
-        this.select(tab);
+        if(event.target.hasClassName('close')) {
+          if(confirm("Remove the '" + tab.caption + "' part?")){
+            var lastSelected = this.selected;
+            this.select(tab);
+            this.removeSelected();
+            if(lastSelected != tab)
+              this.select(lastSelected);
+          }
+        } else
+          this.select(tab);
         event.stop();
       }
     }
@@ -97,7 +106,7 @@ TabControl.Tab = Class.create({
   },
   
   toElement: function() {
-    this.element = $a({'class': 'tab', 'href': '#'}, $span(this.caption));
+    this.element = $a({'class': 'tab', 'href': '#'}, $span(this.caption), $img({'src': '/admin/images/tab_close.png', 'class': 'close', 'alt': 'Remove part', 'title': 'Remove part'}));
     return this.element;
   }
 });

@@ -159,12 +159,9 @@
       .error-with-field small
         color: red
   .form-area
-    background-color: #f5f1e2
     margin-left: -20px
     margin-right: -20px
-    padding: 20px
-    padding-top: 15px
-    padding-bottom: 10px
+    padding: 0px 20px 10px
     width: 100%
     h3
       font-size: 100%
@@ -177,6 +174,7 @@
       font-weight: bold
     .textbox
       font-size: 100%
+      margin: 0
     .title
       margin-bottom: 0
       width: 100%
@@ -184,12 +182,17 @@
         display: block
         position: relative
       .textbox
+        margin-top: 4px
         font-family: Georgia, Palatino, "Times New Roman", Times, serif
         font-size: 200%
-        width: 100%
+        width: 99.5%
     .content
+      clear: left
       margin-top: 1em
       margin-bottom: 1em
+      label
+        display: inline
+        text-shadow: #666 1px 1px 0
     .row
       clear: both
       margin-top: 20px
@@ -198,20 +201,64 @@
         float: left
         margin-right: 2em
         margin-bottom: 1em
+        font-size: 95%
+        label
+          display: inline
+          text-shadow: #666 1px 1px 0
     .more-or-less
       float: left
-      margin-top: 0
       margin-bottom: 1em
-      width: 100%
+      background: #7e7e7e
+      -webkit-border-bottom-left-radius: 6px
+      -webkit-border-bottom-right-radius: 6px
+      -moz-border-radius-bottomleft: 6px
+      -moz-border-radius-bottomright: 6px
+      border-bottom-left-radius: 6px
+      border-bottom-right-radius: 6px
       a
+        font-size: 95%
         display: block
         float: left
-        padding: 5px
-    #extended-metadata.row
-      background: #eae3c5
-      margin-top: 15px
+        text-shadow: #666 1px 1px 0
+        text-decoration: none
+        padding: 2px 21px 5px 10px
+        &:hover
+          text-decoration: underline
+      #more-extended-metadata
+        background: url(/admin/images/metadata_toggle.png) no-repeat 90% 9px
+      #less-extended-metadata
+        background: url(/admin/images/metadata_toggle.png) no-repeat 85% -20px
+    #extended-metadata
+      padding-top: 6px
+      background: #7e7e7e url(/admin/images/navigation_shadow.png) repeat-x
+      margin-top: 0
+      -webkit-border-bottom-right-radius: 6px
+      border-bottom-right-radius: 6px
+      -moz-border-radius-bottomright: 6px
+      padding-bottom: 6px
+      table.fieldset
+        margin-left: 0
+        margin-right: 0
+        margin-bottom: .5em
+        border-bottom: none
+        padding: 0
+        td.label
+          text-align: left
+          width: 15%
+          label
+            padding-left: 6px
+        td
+          background: #7e7e7e
+          border-top: 1px #999 solid
+        td.field
+          width: 80%
+        tr:first-child
+          td
+            border-top: none
       table.fieldset
         margin-bottom: 0
+        td.field
+          
         td.actions
           min-width: 30px
           text-align: left
@@ -313,8 +360,6 @@ table.index
       top: 2px
   &.fieldset
     th
-      background-color: white
-      border-top: 1px solid #dfd3c3
       padding: 6px
     td.field textarea
       width: 99.5%
@@ -323,6 +368,7 @@ table.index
 body.reversed
   #content
     h1
+      border-bottom: 1px solid #ababab
       background: #7e7e7e
       font-size: 125%
       margin: -20px -20px 20px
@@ -333,6 +379,7 @@ body.reversed
         label
           display: block
           font-weight: bold
+        &.title label
           text-shadow: #666 1px 1px 0
           &.checkbox, &.radio
             display: inline
