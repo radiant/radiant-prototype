@@ -1,8 +1,10 @@
+- field_id = "page_attributes_#{params['attribute[name]']}"
 %tr
   %td.label
-    %label{:for=>"custom_field"}= params['attribute[name]']
+    %label{:for=> field_id }= params['attribute[name]']
   %td.field
-    %input#custom_field.textbox{:name=>"page[attributes][]", :size=>"160", :type=>"text", :maxlength=>"160"}/
+    %input{:name => "page[attributes][][name]", :type => "hidden", :value => params['attribute[name]']}/
+    %input.textbox{:id => field_id, :name=>"page[attributes][][value]", :size=>"160", :type=>"text", :maxlength=>"160"}/
   %td.actions
     %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Custom Field"}
       %img{:src=>"/admin/images/plus_grey.png", :alt=>"Add Attribute", :title=>""}/
