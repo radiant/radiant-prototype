@@ -15,7 +15,7 @@ var TabControl = Class.create({
     this.autoSelect();
   },
   
-  updateTabs: function(element) {
+  updateTabs: function() {
     this.element.select('.page').each(function(page) {
       if (!this.findTabByPage(page)) this.addTab(page);
     }.bind(this));
