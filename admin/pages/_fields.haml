@@ -8,7 +8,7 @@
           {
             asynchronous: true,
             evalScripts: true,
-            insertion: Insertion.Bottom,
+            insertion: 'bottom',
             onComplete: function(request){ partAdded() },
             onLoading: function(request){ partLoading() },
             parameters: Form.serialize(form)
@@ -55,25 +55,25 @@
           {
             asynchronous: true,
             evalScripts: true,
-            insertion: Insertion.Bottom,
-            onComplete: function(response){ attributeAdded() },
-            onLoading: function(request){ attributeLoading() },
+            insertion: 'bottom',
+            onComplete: function(response){ attributeAdded(form) },
+            onLoading: function(request){ attributeLoading(form) },
             parameters: Form.serialize(form)
           }
         );
       }
     }
     function removeAttribute(button) {  
-      Element.remove($(button).up('tr'));
+      $(button).up('tr').remove();
     }
-    function attributeAdded() {
-      $('add-attribute-busy').hide();
-      $('add-attribute-button').disabled = false;
-      $('add-attribute-popup').closePopup();
+    function attributeAdded(element) {
+      $(element).previous('.busy').hide();
+      $(element).down('.button').enable();
+      $(element).up('.popup').closePopup();
     }
-    function attributeLoading() {
-      $('add-attribute-button').disabled = true;
-      $('add-attribute-busy').appear();
+    function attributeLoading(element) {
+      $(element).down('.button').disable();
+      $(element).previous('.busy').appear();
     }
     function validAttributeName() {
       return true;

@@ -2,7 +2,7 @@
   #add-attribute-busy.busy{:style=>"display: none"}
     %img{:src=>"/admin/images/spinner.gif", :alt=>"Spinner"}/
   %h3.title Add Attribute
-  %form{:action=>"/admin/pages/attributes/create/", :method=>"post", :onsubmit=>"Event.stop(event); addAttribute(this)"}
+  %form{:action=>"/admin/pages/attributes/create/", :method=>"post", :onsubmit=>"event.stop(); addAttribute(this)"}
     %p
       %label{:for=>"attribute-name-field"} Name
       %input.textbox.big#attribute-name-field{:name=>"attribute[name]", :type=>"text", :value=>"", :maxlength=>"100", :style=>"width: 15em"}/
@@ -10,4 +10,4 @@
     %p.buttons
       %input.button#add-attribute-button{:name=>"commit", :type=>"submit", :value=>"Add Attribute"}/
       or
-      %a{:href=>"javascript: Element.closePopup('add-attribute-popup')"} Cancel
+      %a{:href => "#add-attribute-popup", :onclick=>"event.stop(); this.up('.popup').closePopup()"} Cancel
