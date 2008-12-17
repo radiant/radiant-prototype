@@ -16,11 +16,12 @@
 
 %p
   %label Roles
-  %input.checkbox{:type=>"checkbox", :name=>"user_admin", :id=>"user_admin"}
-  %label.checkbox{:type=>"checkbox", :for=>"user_admin"} Administrator
-  &nbsp;
-  %input.checkbox{:type=>"checkbox", :name=>"user_developer", :id=>"user_developer"}
-  %label.checkbox{:for=>"user_developer"} Developer
+  %span.checkbox
+    %input{:type =>"checkbox", :name=>"user_admin", :id=>"user_admin"}/
+    %label{:for=>"user_admin"} Administrator
+  %span.checkbox
+    %input{:type =>"checkbox", :name=>"user[developer]", :id=>"user_developer"}/
+    %label{:for=>"user_developer"} Developer
 
 %div
   %input{:type=>"hidden", :name=>"lock_version"}/
