@@ -13,8 +13,8 @@
           %input.textbox{:type=>"text", :name=>"layout_content_type", :id=>"layout_content_type", :maxlenght=>40}/
   %p.more-or-less
     %small
-      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} More
-      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Less
+      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Metadata
+      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Hide
   
   %p.content
     %label{:for=>"layout_content"} Body
