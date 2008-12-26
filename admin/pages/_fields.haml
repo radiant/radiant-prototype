@@ -64,7 +64,9 @@
       }
     }
     function removeAttribute(button) {  
-      $(button).up('tr').remove();
+      var row = $(button).up('tr');
+      var name = row.down('label').innerHTML;
+      if (confirm('Remove the "' + name + '" attribute?')) row.remove();
     }
     function attributeAdded(element) {
       $(element).previous('.busy').hide();

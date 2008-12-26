@@ -57,7 +57,7 @@ var TabControl = Class.create({
       var tab = this.findTabByElement(e);
       if (tab) {
         if(event.target.hasClassName('close')) {
-          if(confirm("Remove the '" + tab.caption + "' part?")){
+          if(confirm('Remove the "' + tab.caption + '" part?')){
             var lastSelected = this.selected;
             this.select(tab);
             this.removeSelected();
