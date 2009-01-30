@@ -38,13 +38,19 @@ module ViewHelpers
     
     design = NavTab.new(:design, "Design")
     design << NavSubItem.new(:layouts, "Layouts", "/admin/layouts/")
+    design << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
+    design << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
+    
+    media = NavTab.new(:assets, "Assets")
+    media << NavSubItem.new(:all, "All", "/admin/assets/")
+    media << NavSubItem.new(:all, "Unattached", "/admin/assets/unattached/")
     
     settings = NavTab.new(:settings, "Settings")
     settings << NavSubItem.new(:preferences, "Personal", "/admin/users/preferences/")
     settings << NavSubItem.new(:users, "Users", "/admin/users/")
     settings << NavSubItem.new(:extensions, "Extensions", "/admin/extensions/")
     
-    [content, design, settings]
+    [content, design, media, settings]
   end
   
   def body_classes
