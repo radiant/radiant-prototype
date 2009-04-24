@@ -1,13 +1,13 @@
-#add-attribute-popup.popup
-  #add-attribute-busy.busy{:style=>"display: none"}
+#add_attribute_popup.popup
+  #add_attribute_busy.busy{:style=>"display: none"}
     %img{:src=>"/admin/images/spinner.gif", :alt=>"Spinner"}/
   %h3.title Add Attribute
   %form{:action=>"/admin/pages/attributes/create/", :method=>"post", :onsubmit=>"event.stop(); addAttribute(this)"}
     %p
-      %label{:for=>"attribute-name-field"} Name
-      %input.textbox.big#attribute-name-field{:name=>"attribute[name]", :type=>"text", :value=>"", :maxlength=>"100", :style=>"width: 15em"}/
-      %input#attribute-index-field{:name=>"index", :type=>"hidden", :value=>"2"}/
+      %label{:for=>"attribute_name_field"} Name
+      %input.textbox.big#attribute_name_field{:name=>"attribute[name]", :type=>"text", :value=>"", :maxlength=>"100", :style=>"width: 15em"}/
+      %input#attribute_index_field{:name=>"index", :type=>"hidden", :value=>"2"}/
     %p.buttons
-      %input.button#add-attribute-button{:name=>"commit", :type=>"submit", :value=>"Add Attribute"}/
+      %input.button#add_attribute_button{:name=>"commit", :type=>"submit", :value=>"Add Attribute"}/
       or
-      %a{:href => "#add-attribute-popup", :onclick=>"event.stop(); this.up('.popup').closePopup()"} Cancel
+      %a{:href => "#add_attribute_popup", :onclick=>"event.stop(); this.up('.popup').closePopup()"} Cancel

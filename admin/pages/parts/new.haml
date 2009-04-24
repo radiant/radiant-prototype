@@ -1,13 +1,13 @@
-#add-part-popup.popup
-  #add-part-busy.busy{:style=>"display: none"}
+#add_part_popup.popup
+  #add_part_busy.busy{:style=>"display: none"}
     %img{:src=>"/admin/images/spinner.gif", :alt=>"Spinner"}/
   %h3.title Add Part
   %form{:action=>"/admin/pages/parts/create/", :method=>"post", :onsubmit=>"Event.stop(event); addPart(this)"}
     %p
-      %label{:for=>"part-name-field"} Name
-      %input.textbox.big#part-name-field{:name=>"part[name]", :type=>"text", :value=>"", :maxlength=>"100", :style=>"width: 15em"}/
-      %input#part-index-field{:name=>"index", :type=>"hidden", :value=>"2"}/
+      %label{:for=>"part_name_field"} Name
+      %input.textbox.big#part_name_field{:name=>"part[name]", :type=>"text", :value=>"", :maxlength=>"100", :style=>"width: 15em"}/
+      %input#part_index_field{:name=>"index", :type=>"hidden", :value=>"2"}/
     %p.buttons
-      %input.button#add-part-button{:name=>"commit", :type=>"submit", :value=>"Add Part"}/
+      %input.button#add_part_button{:name=>"commit", :type=>"submit", :value=>"Add Part"}/
       or
-      %a{:href=>"javascript: Element.closePopup('add-part-popup')"} Cancel
+      %a{:href=>"javascript: Element.closePopup('add_part_popup')"} Cancel

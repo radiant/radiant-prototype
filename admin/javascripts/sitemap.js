@@ -8,7 +8,7 @@
  *  To use, simply add the following lines to application.js:
  *  
  *     Event.addBehavior({
- *       'table#site-map': SiteMapBehavior()
+ *       'table#site_map': SiteMapBehavior()
  *     });
  *
  */
@@ -29,7 +29,7 @@ var SiteMapBehavior = Behavior.create({
   },
   
   hasChildren: function(row) {
-    return !row.hasClassName('no-children');
+    return !row.hasClassName('no_children');
   },
   
   isExpander: function(element) {
@@ -37,7 +37,7 @@ var SiteMapBehavior = Behavior.create({
   },
   
   isExpanded: function(row) {
-    return row.hasClassName('children-visible');
+    return row.hasClassName('children_visible');
   },
   
   isRow: function(element) {
@@ -45,12 +45,12 @@ var SiteMapBehavior = Behavior.create({
   },
   
   extractLevel: function(row) {
-    if (/level-(\d+)/i.test(row.className))
+    if (/level_(\d+)/i.test(row.className))
       return RegExp.$1.toInteger();
   },
   
   extractPageId: function(row) {
-    if (/page-(\d+)/i.test(row.id))
+    if (/page_(\d+)/i.test(row.id))
       return RegExp.$1.toInteger();
   },
   
@@ -82,13 +82,13 @@ var SiteMapBehavior = Behavior.create({
     if (!img) img = this.getExpanderImageForRow(row);
     if (this.isExpanded(row)) {
       img.src = img.src.replace('collapse', 'expand');
-      row.removeClassName('children-visible');
-      row.addClassName('children-hidden');
+      row.removeClassName('children_visible');
+      row.addClassName('children_hidden');
       this.persistCollapsed(row);
     } else {
       img.src = img.src.replace('expand', 'collapse');
-      row.removeClassName('children-hidden');
-      row.addClassName('children-visible');
+      row.removeClassName('children_hidden');
+      row.addClassName('children_visible');
       this.persistExpanded(row);
     }
   },
@@ -124,7 +124,7 @@ var SiteMapBehavior = Behavior.create({
   getBranch: function(row) {
     var id = this.extractPageId(row);
     var level = this.extractLevel(row);
-    var spinner = $('busy-' + id);
+    var spinner = $('busy_' + id);
         
     new Ajax.Updater(
       row,

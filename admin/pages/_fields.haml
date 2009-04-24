@@ -3,7 +3,7 @@
     function addPart(form) {
        if (validPartName()) {
         new Ajax.Updater(
-          $('tab-control').down('.pages'),
+          $('tab_control').down('.pages'),
           '/admin/pages/parts/create/',
           {
             asynchronous: true,
@@ -18,29 +18,29 @@
     }
     function removePart() {
       if(confirm('Remove the current part?')) {
-        TabControls['tab-control'].removeSelected();
+        TabControls['tab_control'].removeSelected();
       }
     }
     function partAdded() {
-      var tabControl = TabControls['tab-control'];
-      $('add-part-busy').hide();
-      $('add-part-button').disabled = false;
-      $('add-part-popup').closePopup();
+      var tabControl = TabControls['tab_control'];
+      $('add_part_busy').hide();
+      $('add_part_button').disabled = false;
+      $('add_part_popup').closePopup();
       tabControl.updateTabs();
       tabControl.select(tabControl.tabs.last());
     }
     function partLoading() {
-      $('add-part-button').disabled = true;
-      $('add-part-busy').appear();
+      $('add_part_button').disabled = true;
+      $('add_part_busy').appear();
     }
     function validPartName() {
-      var partNameField = $('part-name-field');
+      var partNameField = $('part_name_field');
       var name = partNameField.value.downcase();
       if (name.blank()) {
         alert('Part name cannot be empty.');
         return false;
       }
-      if (TabControls['tab-control'].findTabByCaption(name)) {
+      if (TabControls['tab_control'].findTabByCaption(name)) {
         alert('Part name must be unique.');
         return false;
       }
@@ -50,7 +50,7 @@
     function addAttribute(form) {
       if (validAttributeName()) {
         new Ajax.Updater(
-          $('extended-metadata').down('table'),
+          $('extended_metadata').down('table'),
           '/admin/pages/attributes/create/',
           {
             asynchronous: true,
@@ -90,7 +90,7 @@
         tagReferenceWindows[pageType] = new Popup.AjaxWindow("/admin/docs/tags/" + encodeURIComponent(pageType));
       var window = tagReferenceWindows[pageType];
       if(lastPageType != pageType) {
-        $('tag-reference-link-' + part).highlight();
+        $('tag_reference_link_' + part).highlight();
         window.show();
       } else {
         window.toggle();
@@ -120,12 +120,12 @@
 
 %input#page_lock_version{:name=>"page[lock_version]", :type=>"hidden", :value=>"0"}/
 
-.form-area
+.form_area
   %p.title
     %label{:for=>"page_title"} Page Title
     %input#page_title.textbox.activate{:name=>"page[title]", :size=>"255", :type=>"text", :maxlength=>"255"}/
   
-  #extended-metadata.row{:style=>"display: none; width: 100%"}
+  #extended_metadata.row{:style=>"display: none; width: 100%"}
     %table.fieldset
       %tr
         %td.label
@@ -141,14 +141,14 @@
         %td.actions
           %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
             %img{:src=>"/admin/images/plus_grey.png", :alt=>"Add Attribute", :title=>""}/
-  %p.more-or-less
+  %p.more_or_less
     %small
-      %a{:id=>"more-extended-metadata", :href=>"javascript: $('extended-metadata').show(); $('less-extended-metadata').show(); $('more-extended-metadata').hide(); this.stop()"} Metadata
-      %a{:id=>"less-extended-metadata", :href=>"javascript: $('extended-metadata').hide(); $('more-extended-metadata').show(); $('less-extended-metadata').hide(); this.stop()", :style=>"display: none"} Hide
+      %a{:id=>"more_extended_metadata", :href=>"javascript: $('extended_metadata').show(); $('less_extended_metadata').show(); $('more_extended_metadata').hide(); this.stop()"} Metadata
+      %a{:id=>"less_extended_metadata", :href=>"javascript: $('extended_metadata').hide(); $('more_extended_metadata').show(); $('less_extended_metadata').hide(); this.stop()", :style=>"display: none"} Hide
   
-  #tab-control
+  #tab_control
     .tabs
-      #tab-toolbar
+      #tab_toolbar
         %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Part"}
           %img{:src=>"/admin/images/add_tab.png", :alt=>"Add Part", :title=>""}/
     .pages
@@ -162,11 +162,11 @@
               %option{:value=>"Markdown"} Markdown
               %option{:value=>"SmartyPants"} SmartyPants
               %option{:value=>"Textile"} Textile
-            %span#reference-links
+            %span#reference_links
               Reference:
-              %span#filter-reference-link-0
+              %span#filter_reference_link_0
                 %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
-              %span#tag-reference-link-0
+              %span#tag_reference_link_0
                 %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
           %div
             %textarea#part_0_content.textarea{:name=>"part[0][content]", :style=>"width: 100%"}=""
@@ -181,11 +181,11 @@
               %option{:value=>"Markdown"} Markdown
               %option{:value=>"SmartyPants"} SmartyPants
               %option{:value=>"Textile"} Textile
-            %span#reference-links
+            %span#reference_links
               Reference:
-              %span#filter-reference-link-1
+              %span#filter_reference_link_1
                 %a{:href=>"#", :onclick=>"loadFilterReference(1); return false;"} Filter
-              %span#tag-reference-link-1
+              %span#tag_reference_link_1
                 %a{:href=>"#", :onclick=>"loadTagReference(1); return false;"} Available Tags
           %div
             %textarea#part_1_content.textarea{:name=>"part[1][content]", :style=>"width: 100%"}=""

@@ -19,7 +19,7 @@ Event.addBehavior.reassignAfterAjax = true;
 Event.addBehavior({
   'a.popup': Popup.TriggerBehavior(),
   
-  'table#site-map': SiteMapBehavior(),
+  'table#site_map': SiteMapBehavior(),
   
   'input#page_title': function() {
     var title = this;
@@ -36,7 +36,7 @@ Event.addBehavior({
     });
   },
   
-  'div#tab-control': TabControlBehavior(),
+  'div#tab_control': TabControlBehavior(),
   
   'table.index': RuledTableBehavior(),
   

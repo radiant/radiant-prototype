@@ -22,26 +22,26 @@
     #page
       #header
         - unless @logged_out
-          #site-links
+          #site_links
             Logged in as
             %a{:href=>"/admin/users/preferences/"} Sean Cribbs
             %span &nbsp;|&nbsp;
             %a{:href=>"/admin/logout/"} Log Out
             %span &nbsp;|&nbsp;
-            %a{:href=>"#view-site-popup", :id=>"view-site", :onclick=>"return false"} View Site
+            %a{:href=>"#view_site_popup", :id=>"view_site", :onclick=>"return false"} View Site
           %ul#navigation
             - nav_tabs.each do |primary_item|
               %li{:class=>(primary_item[@selected] ? 'current' : nil)}
                 %a{:href=>(primary_item.first.url unless primary_item.first.nil?)}
                   = primary_item.proper_name
                 - if primary_item[@selected]
-                  %ul#nav-sub
+                  %ul#nav_sub
                     - primary_item.each do |sub_item|
                       %li
                         %a{:href=>sub_item.url, :class=>(sub_item.name == @selected ? 'current' : nil)}>
                           %span
                             = sub_item.proper_name
-          #header-bottom
+          #header_bottom
             %div
       #main
         = yield :flash_message
