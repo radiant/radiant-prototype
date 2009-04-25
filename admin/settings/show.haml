@@ -1,0 +1,61 @@
+- body_classes << "reversed"
+- @selected = :general
+
+.box#preferences
+  %h3
+    .actions
+      %button{:onclick=>"window.location = '/admin/users/preferences/'"} Edit
+    Personal Preferences
+  %img.avatar{:src=>gravatar_url('seancribbs@gmail.com', :size=>"64px"), :width=>64, :height=>64, :alt=>""}
+  %p.ruled
+    %label Name
+    Sean Cribbs
+  %p.ruled
+    %label Email
+    %span.uri seancribbs@gmail.com
+  %p.ruled
+    %label Password
+    %big &bull;&bull;&bull;&bull;&bull;
+
+.box
+  %h3
+    .actions
+      %button{:onclick=>"window.location = '/admin/configuration/'"} Edit
+    Configuration
+  %p.ruled
+    %label Dev Host
+    %span.uri dev.mysite.com
+  %p.ruled
+    %label Timezone
+    Eastern Time (US & Canada)
+  
+  %h4 Defaults
+  %p.ruled
+    %label Filter
+    Textile
+  %p.ruled
+    %label Page Parts
+    body, extended
+  %p.ruled
+    %label Page Status
+    Draft
+  
+  %h4 Custom
+  %p.ruled
+    %label Site Title
+    Radiant CMS Website
+.box
+  %h3
+    .actions
+      %button{:onclick=>"window.location = '/admin/users/'"} Edit
+    Users
+  %p.ruled
+    5 users
+
+.box
+  %h3
+    .actions
+      %button{:onclick=>"window.location = '/admin/extensions/'"} Edit
+    Extensions
+  %p.ruled
+    3 extensions installed

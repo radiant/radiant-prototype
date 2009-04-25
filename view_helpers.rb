@@ -45,7 +45,8 @@ module ViewHelpers
     media << NavSubItem.new(:all, "All", "/admin/assets/")
     media << NavSubItem.new(:all, "Unattached", "/admin/assets/unattached/")
     
-    settings = NavTab.new(:settings, "Settings")
+    settings = NavTab.new(:settings, "Overview")
+    settings << NavSubItem.new(:general, "General", "/admin/settings/")
     settings << NavSubItem.new(:preferences, "Personal", "/admin/users/preferences/")
     settings << NavSubItem.new(:users, "Users", "/admin/users/")
     settings << NavSubItem.new(:extensions, "Extensions", "/admin/extensions/")
@@ -55,6 +56,28 @@ module ViewHelpers
   
   def body_classes
     @body_classes ||= []
+  end
+  
+  # Returns a Gravatar URL associated with the email parameter.
+  # See: http://douglasfshearer.com/blog/gravatar-for-ruby-and-ruby-on-rails
+  def gravatar_url(email, options={})
+    # Default to highest rating. Rating can be one of G, PG, R X.
+    options[:rating] ||= "G"
+    
+    # Default size of the image.
+    options[:size] ||= "32px"
+    
+    # Default image url to be used when no gravatar is found
+    # or when an image exceeds the rating parameter.
+    options[:default] ||= "http://localhost:4000/admin/images/avatar_32x32.png"
+    
+    # Build the Gravatar url.
+    url = 'http://www.gravatar.com/avatar.php?'
+    url << "gravatar_id=#{Digest::MD5.new.update(email)}" 
+    url << "&rating=#{options[:rating]}" if options[:rating]
+    url << "&size=#{options[:size]}" if options[:size]
+    url << "&default=#{options[:default]}" if options[:default]
+    url
   end
 end
 
