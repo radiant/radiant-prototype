@@ -23,11 +23,8 @@
       #header
         - unless @logged_out
           #site_links
-            Logged in as
-            %a{:href=>"/admin/users/preferences/"} Sean Cribbs
-            %span &nbsp;|&nbsp;
-            %a{:href=>"/admin/logout/"} Log Out
-            %span &nbsp;|&nbsp;
+            = %{Logged in as <a href="/admin/users/preferences">Sean Cribbs</a> &nbsp; (<a href="/admin/logout/">Logout</a>)}
+            &nbsp;
             %a{:href=>"#view_site_popup", :id=>"view_site", :onclick=>"return false"} View Site
           %ul#navigation
             - nav_tabs.each do |primary_item|
