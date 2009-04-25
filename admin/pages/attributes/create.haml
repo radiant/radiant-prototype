@@ -1,6 +1,6 @@
 - field_id = "page_attributes_#{params['attribute[name]']}"
 %tr
-  %td.label
+  %th.label
     %label{:for=> field_id }= params['attribute[name]']
   %td.field
     %input{:name => "page[attributes][][name]", :type => "hidden", :value => params['attribute[name]']}/

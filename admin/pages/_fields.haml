@@ -118,98 +118,97 @@
       return false;
     }
 
-%input#page_lock_version{:name=>"page[lock_version]", :type=>"hidden", :value=>"0"}/
+%p.title
+  %label{:for=>"page_title"} Page Title
+  %input#page_title.textbox.activate{:name=>"page[title]", :size=>"255", :type=>"text", :maxlength=>"255"}/
 
-.form_area
-  %p.title
-    %label{:for=>"page_title"} Page Title
-    %input#page_title.textbox.activate{:name=>"page[title]", :size=>"255", :type=>"text", :maxlength=>"255"}/
-  
-  #extended_metadata.row{:style=>"display: none; width: 100%"}
-    %table.fieldset
-      %tr
-        %td.label
-          %label{:for=>"page_slug"} Slug
-        %td.field
-          %input#page_slug.textbox{:name=>"page[slug]", :size=>"100", :type=>"text", :value=>"/", :maxlength=>"100"}/
-        %td.actions
-      %tr
-        %td.label
-          %label{:for=>"page_breadcrumb"} Breadcrumb
-        %td.field
-          %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
-        %td.actions
-          %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
-            %img{:src=>"/admin/images/plus_grey.png", :alt=>"Add Attribute", :title=>""}/
-  %p.more_or_less
-    %small
-      %a{:id=>"more_extended_metadata", :href=>"javascript: $('extended_metadata').show(); $('less_extended_metadata').show(); $('more_extended_metadata').hide(); this.stop()"} Metadata
-      %a{:id=>"less_extended_metadata", :href=>"javascript: $('extended_metadata').hide(); $('more_extended_metadata').show(); $('less_extended_metadata').hide(); this.stop()", :style=>"display: none"} Hide
-  
-  #tab_control
-    .tabs
-      #tab_toolbar
-        %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Part"}
-          %img{:src=>"/admin/images/add_tab.png", :alt=>"Add Part", :title=>""}/
-    .pages
-      .page{:caption=>"body"}
-        .part
-          %input#part_0_name{:name=>"part[0][name]", :type=>"hidden", :value=>"body"}/
-          %p
-            %label{:for=>"part_0_filter_id"} Filter
-            %select#part_0_filter_id{:name=>"part[0][filter_id]"}
-              %option{:value=>""} &lt;none&gt;
-              %option{:value=>"Markdown"} Markdown
-              %option{:value=>"SmartyPants"} SmartyPants
-              %option{:value=>"Textile"} Textile
-            %span#reference_links
-              Reference:
-              %span#filter_reference_link_0
-                %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
-              %span#tag_reference_link_0
-                %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
-          %div
-            %textarea#part_0_content.textarea{:name=>"part[0][content]", :style=>"width: 100%"}=""
-      .page{:caption=>"sidebar"}
-        .part
-          %input#part_1_name{:name=>"part[1][name]", :type=>"hidden", :value=>"sidebar"}/
-          %p
-            %label{:for=>"part_1_filter_id"}
-              Filter
-            %select#part_1_filter_id{:name=>"part[1][filter_id]"}
-              %option{:value=>""} &lt;none&gt;
-              %option{:value=>"Markdown"} Markdown
-              %option{:value=>"SmartyPants"} SmartyPants
-              %option{:value=>"Textile"} Textile
-            %span#reference_links
-              Reference:
-              %span#filter_reference_link_1
-                %a{:href=>"#", :onclick=>"loadFilterReference(1); return false;"} Filter
-              %span#tag_reference_link_1
-                %a{:href=>"#", :onclick=>"loadTagReference(1); return false;"} Available Tags
-          %div
-            %textarea#part_1_content.textarea{:name=>"part[1][content]", :style=>"width: 100%"}=""
-  .row
-    %p
-      %label{:for=>"page_layout_id"} Layout
-      %select#page_layout_id{:name=>"page[layout_id]"}
-        %option{:value=>""} &lt;inherit&gt;
-        %option{:selected=>"selected", :value=>"1"} Normal
-        %option{:value=>"2"} Stylesheet
-        %option{:value=>"3"} XML Feed
-    %p
-      %label{:for=>"page_class_name"} Page Type
-      %select#page_class_name{:name=>"page[class_name]"}
-        %option{:value=>"Page"} &lt;normal&gt;
-        %option{:value=>"ArchivePage"} Archive
-        %option{:value=>"ArchiveDayIndexPage"} Archive Day Index
-        %option{:value=>"ArchiveMonthIndexPage"} Archive Month Index
-        %option{:value=>"ArchiveYearIndexPage"} Archive Year Index
-        %option{:value=>"FileNotFoundPage"} File Not Found
-    %p
-      %label{:for=>"page_status_id"} Status
-      %select#page_status_id{:name=>"page[status_id]"}
-        %option{:value=>"1"} Draft
-        %option{:value=>"50"} Reviewed
-        %option{:selected=>"selected", :value=>"100"} Published
-        %option{:value=>"101"} Hidden
+#extended_metadata{:style=>"display: none"}
+  %table.fieldset
+    %tr
+      %th.label
+        %label{:for=>"page_slug"} Slug
+      %td.field
+        %input#page_slug.textbox{:name=>"page[slug]", :size=>"100", :type=>"text", :value=>"/", :maxlength=>"100"}/
+      %td.actions
+    %tr
+      %th.label
+        %label{:for=>"page_breadcrumb"} Breadcrumb
+      %td.field
+        %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
+      %td.actions
+        %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
+          %img{:src=>"/admin/images/plus_grey.png", :alt=>"Add Attribute", :title=>""}/
+%p.more_or_less
+  %a{:id=>"more_extended_metadata", :href=>"javascript: $('extended_metadata').show(); $('less_extended_metadata').show(); $('more_extended_metadata').hide(); this.stop()"} Metadata
+  %a{:id=>"less_extended_metadata", :href=>"javascript: $('extended_metadata').hide(); $('more_extended_metadata').show(); $('less_extended_metadata').hide(); this.stop()", :style=>"display: none"} Hide
+
+#tab_control
+  .tabs
+    #tab_toolbar
+      %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Part"}
+        %img{:src=>"/admin/images/add_tab.png", :alt=>"Add Part", :title=>""}/
+  .pages
+    .page{:caption=>"body"}
+      .part
+        %input#part_0_name{:name=>"part[0][name]", :type=>"hidden", :value=>"body"}/
+        %p
+          %label{:for=>"part_0_filter_id"} Filter
+          %select#part_0_filter_id{:name=>"part[0][filter_id]"}
+            %option{:value=>""} &lt;none&gt;
+            %option{:value=>"Markdown"} Markdown
+            %option{:value=>"SmartyPants"} SmartyPants
+            %option{:value=>"Textile"} Textile
+          %span#reference_links
+            Reference:
+            %span#filter_reference_link_0
+              %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
+            %span#tag_reference_link_0
+              %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
+        %div
+          %textarea#part_0_content.textarea{:name=>"part[0][content]", :style=>"width: 100%"}=""
+    .page{:caption=>"sidebar"}
+      .part
+        %input#part_1_name{:name=>"part[1][name]", :type=>"hidden", :value=>"sidebar"}/
+        %p
+          %label{:for=>"part_1_filter_id"}
+            Filter
+          %select#part_1_filter_id{:name=>"part[1][filter_id]"}
+            %option{:value=>""} &lt;none&gt;
+            %option{:value=>"Markdown"} Markdown
+            %option{:value=>"SmartyPants"} SmartyPants
+            %option{:value=>"Textile"} Textile
+          %span#reference_links
+            Reference:
+            %span#filter_reference_link_1
+              %a{:href=>"#", :onclick=>"loadFilterReference(1); return false;"} Filter
+            %span#tag_reference_link_1
+              %a{:href=>"#", :onclick=>"loadTagReference(1); return false;"} Available Tags
+        %div
+          %textarea#part_1_content.textarea{:name=>"part[1][content]", :style=>"width: 100%"}=""
+.row
+  %p
+    %label{:for=>"page_layout_id"} Layout
+    %select#page_layout_id{:name=>"page[layout_id]"}
+      %option{:value=>""} &lt;inherit&gt;
+      %option{:selected=>"selected", :value=>"1"} Normal
+      %option{:value=>"2"} Stylesheet
+      %option{:value=>"3"} XML Feed
+  %p
+    %label{:for=>"page_class_name"} Page Type
+    %select#page_class_name{:name=>"page[class_name]"}
+      %option{:value=>"Page"} &lt;normal&gt;
+      %option{:value=>"ArchivePage"} Archive
+      %option{:value=>"ArchiveDayIndexPage"} Archive Day Index
+      %option{:value=>"ArchiveMonthIndexPage"} Archive Month Index
+      %option{:value=>"ArchiveYearIndexPage"} Archive Year Index
+      %option{:value=>"FileNotFoundPage"} File Not Found
+  %p
+    %label{:for=>"page_status_id"} Status
+    %select#page_status_id{:name=>"page[status_id]"}
+      %option{:value=>"1"} Draft
+      %option{:value=>"50"} Reviewed
+      %option{:selected=>"selected", :value=>"100"} Published
+      %option{:value=>"101"} Hidden
+
+%div
+  %input{:type=>"hidden", :id=>"page_lock_version", :name=>"page[lock_version]", :value=>"0"}/

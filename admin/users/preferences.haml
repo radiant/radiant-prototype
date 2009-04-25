@@ -5,8 +5,11 @@
 
 %form{:method=>"post", :action=>"/admin/users/preferences/", :onsubmit_status=>"Saving changes&#8230;"}
   %p
+    %label{:for=>"user_name"} Name
+    %input.textbox{:type=>"text", :name=>"user_name", :id=>"user_name", :size=>32, :maxlength=>255}/
+  %p
     %label{:for=>"user_login"} Username
-    %input.textbox{:type=>"text", :name=>"user_email", :id=>"user_email", :size=>32, :maxlength=>255}/
+    %input.textbox{:type=>"text", :name=>"user_login", :id=>"user_login", :size=>32, :maxlength=>255}/
   
   %p
     %label{:for=>"user_email"} E-mail

@@ -15,13 +15,13 @@
   %textarea.textarea{:name=>"user_notes", :id=>"user_notes", :rows=>"4", :cols=>"53"}=""
 
 %p
-  %label Roles
-  %span.checkbox
-    %input{:type =>"checkbox", :name=>"user_admin", :id=>"user_admin"}/
-    %label{:for=>"user_admin"} Administrator
-  %span.checkbox
-    %input{:type =>"checkbox", :name=>"user[developer]", :id=>"user_developer"}/
-    %label{:for=>"user_developer"} Developer
+  %label.multi_option Roles
+  
+  %input.checkbox{:type =>"checkbox", :name=>"user_admin", :id=>"user_admin"}/
+  %label.checkbox{:for=>"user_admin"} Administrator
+  
+  %input.checkbox{:type =>"checkbox", :name=>"user[developer]", :id=>"user_developer"}/
+  %label.checkbox{:for=>"user_developer"} Developer
 
 %div
   %input{:type=>"hidden", :name=>"lock_version"}/

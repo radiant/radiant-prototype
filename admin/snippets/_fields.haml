@@ -1,13 +1,12 @@
-.form_area
-  
-  %p.title
-    %label{:for=>"snippet_name"} Name
-    %input.textbox.activate{:name=>"snippet_name", :id=>"snippet_name", :maxlength=>100}/
-  
-  %p.content
-    %label{:for=>"snippet_content"} Body
-    %textarea.textarea{:name=>"snippet_content", :id=>"snippet_content", :style=>"width: 100%", :cols=>40, :rows=>20}=""
-  
+%p.title
+  %label{:for=>"snippet_name"} Name
+  %input.textbox.activate{:name=>"snippet_name", :id=>"snippet_name", :maxlength=>100}/
+
+%p.content
+  %label{:for=>"snippet_content"} Body
+  %textarea.textarea{:name=>"snippet_content", :id=>"snippet_content", :style=>"width: 100%", :cols=>40, :rows=>20}=""
+
+.row
   %p
     %label{:for=>"snippet_filter"} Filter
     %select{:id=>"snippet_filter", :name=>"snippet_filter_id"}
@@ -15,6 +14,6 @@
       %option{:value=>"Markdown"} Markdown
       %option{:value=>"SmartyPants"} SmartyPants
       %option{:value=>"Textile"} Textile
-  
+
 %div
-  %input{:type=>"hidden", :name=>"lock_version"}/
+  %input{:type=>"hidden", :id=>"snippet_lock_version", :name=>"snippet[lock_version]", :value=>"0"}/

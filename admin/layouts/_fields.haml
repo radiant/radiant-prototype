@@ -1,24 +1,21 @@
-.form_area
-  
-  %p.title
-    %label{:for=>"layout_name"} Name
-    %input.textbox.activate{:name=>"layout_name", :id=>"layout_name", :maxlength=>100}/
-  
-  #extended_metadata.row{:style=>"display: none"}
-    %table.fieldset{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
-      %tr
-        %th.label
-          %label{:for=>"layout_content_type"} Content&#8209;Type
-        %td.field
-          %input.textbox{:type=>"text", :name=>"layout_content_type", :id=>"layout_content_type", :maxlenght=>40}/
-  %p.more_or_less
-    %small
-      %a{:id=>"more_extended_metadata", :href=>"javascript: $('extended_metadata').show(); $('less_extended_metadata').show(); $('more_extended_metadata').hide(); this.stop()"} Metadata
-      %a{:id=>"less_extended_metadata", :href=>"javascript: $('extended_metadata').hide(); $('more_extended_metadata').show(); $('less_extended_metadata').hide(); this.stop()", :style=>"display: none"} Hide
-  
-  %p.content
-    %label{:for=>"layout_content"} Body
-    %textarea.textarea{:name=>"layout_content", :id=>"layout_content", :style=>"width: 100%", :cols=>40, :rows=>20}=""
+%p.title
+  %label{:for=>"layout_name"} Name
+  %input.textbox.activate{:name=>"layout_name", :id=>"layout_name", :maxlength=>100}/
+
+#extended_metadata{:style=>"display: none"}
+  %table.fieldset{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
+    %tr
+      %th.label
+        %label{:for=>"layout_content_type"} Content&#8209;Type
+      %td.field
+        %input.textbox{:type=>"text", :name=>"layout_content_type", :id=>"layout_content_type", :maxlenght=>40}/
+%p.more_or_less
+  %a{:id=>"more_extended_metadata", :href=>"javascript: $('extended_metadata').show(); $('less_extended_metadata').show(); $('more_extended_metadata').hide(); this.stop()"} Metadata
+  %a{:id=>"less_extended_metadata", :href=>"javascript: $('extended_metadata').hide(); $('more_extended_metadata').show(); $('less_extended_metadata').hide(); this.stop()", :style=>"display: none"} Hide
+
+%p.content
+  %label{:for=>"layout_content"} Body
+  %textarea.textarea{:name=>"layout_content", :id=>"layout_content", :style=>"width: 100%", :cols=>40, :rows=>20}=""
 
 %div
-  %input{:type=>"hidden", :name=>"lock_version"}/
+  %input{:type=>"hidden", :id=>"layout_lock_version", :name=>"layout[lock_version]", :value=>"0"}/
