@@ -1,0 +1,34 @@
+- body_classes << "reversed"
+- @selected = :general
+
+%h1 Configuration
+
+%form{:method=>"post", :action=>"/admin/users/preferences/", :onsubmit_status=>"Saving changes&#8230;"}
+  %p
+    %label{:for=>"dev_host"} Dev Host
+    %input.textbox{:type=>"text", :name=>"dev_host", :id=>"dev_host", :size=>32, :maxlength=>255}/
+  %p
+    %label{:for=>"timezone"} Timezone
+    %select{:name=>"timezone", :id=>"timezone"}
+      - for option in ["Abu Dhabi", "Adelaide", "Alaska", "Almaty", "Amsterdam", "Arizona", "Astana", "Athens", "Atlantic Time (Canada)", "Auckland", "Azores", "Baghdad", "Baku", "Bangkok", "Beijing", "Belgrade", "Berlin", "Bern", "Bogota", "Brasilia", "Bratislava", "Brisbane", "Brussels", "Bucharest", "Budapest", "Buenos Aires", "Cairo", "Canberra", "Cape Verde Is.", "Caracas", "Casablanca", "Central America", "Central Time (US & Canada)", "Chennai", "Chihuahua", "Chongqing", "Copenhagen", "Darwin", "Dhaka", "Dublin", "Eastern Time (US & Canada)", "Edinburgh", "Ekaterinburg", "Fiji", "Georgetown", "Greenland", "Guadalajara", "Guam", "Hanoi", "Harare", "Hawaii", "Helsinki", "Hobart", "Hong Kong", "Indiana (East)", "International Date Line West", "Irkutsk", "Islamabad", "Istanbul", "Jakarta", "Jerusalem", "Kabul", "Kamchatka", "Karachi", "Kathmandu", "Kolkata", "Krasnoyarsk", "Kuala Lumpur", "Kuwait", "Kyev", "La Paz", "Lima", "Lisbon", "Ljubljana", "London", "Madrid", "Magadan", "Marshall Is.", "Mazatlan", "Melbourne", "Mexico City", "Mid-Atlantic", "Midway Island", "Minsk", "Monrovia", "Monterrey", "Moscow", "Mountain Time (US & Canada)", "Mumbai", "Muscat", "Nairobi", "New Caledonia", "New Delhi", "Newfoundland", "Novosibirsk", "Nuku'alofa", "Osaka", "Pacific Time (US & Canada)", "Paris", "Perth", "Port Moresby", "Prague", "Pretoria", "Quito", "Rangoon", "Riga", "Riyadh", "Rome", "Samoa", "Santiago", "Sapporo", "Sarajevo", "Saskatchewan", "Seoul", "Singapore", "Skopje", "Sofia", "Solomon Is.", "Sri Jayawardenepura", "St. Petersburg", "Stockholm", "Sydney", "Taipei", "Tallinn", "Tashkent", "Tbilisi", "Tehran", "Tijuana", "Tokyo", "Ulaan Bataar", "Urumqi", "Vienna", "Vilnius", "Vladivostok", "Volgograd", "Warsaw", "Wellington", "West Central Africa", "Yakutsk", "Yerevan", "Zagreb"]
+        %option{:selected=>(option == "Eastern Time (US & Canada)")}= option
+  
+  %h3 Defaults
+  %p
+    %label{:for=>"default_filter"} Filter
+    %select{:name=>"default_filter", :id=>"default_filter"}
+      - for option in ["&lt;none&gt;)", "Markdown", "Smarty Pants", "Textile"]
+        %option{:selected=>(option == "Textile")}=option
+  %p
+    %label{:for=>"default_page_parts"} Page Parts
+    %input.textbox{:type=>"text", :name=>"default_page_parts", :id=>"default_page_parts", :size=>32, :maxlength=>255, :value=>"body, extended"}/
+  %p
+    %label{:for=>"default_page_status"} Page Status
+    %select{:name=>"default_page_status", :id=>"default_page_status"}
+      - for option in ["Draft", "Hidden", "Published"]
+        %option{:selected=>(option == "Draft")}=option
+    
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Save Changes"}/
+    or
+    %a{:href=>"/admin/settings/"} Cancel

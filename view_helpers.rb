@@ -46,8 +46,7 @@ module ViewHelpers
     media << NavSubItem.new(:all, "Unattached", "/admin/assets/unattached/")
     
     settings = NavTab.new(:settings, "Settings")
-    settings << NavSubItem.new(:general, "Overview", "/admin/settings/")
-    settings << NavSubItem.new(:preferences, "Personal", "/admin/users/preferences/")
+    settings << NavSubItem.new(:general, "General", "/admin/settings/")
     settings << NavSubItem.new(:users, "Users", "/admin/users/")
     settings << NavSubItem.new(:extensions, "Extensions", "/admin/extensions/")
     

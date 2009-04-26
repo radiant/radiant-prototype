@@ -1,5 +1,5 @@
 - body_classes << "reversed"
-- @selected = :preferences
+- @selected = :general
 
 %h1 Personal Preferences
 
@@ -15,9 +15,9 @@
     %label{:for=>"user_email"} E-mail
     %input.textbox{:type=>"text", :name=>"user_email", :id=>"user_email", :size=>32, :maxlength=>255}/
   
-  = render :partial => "password_fields"
+  = render :partial => "../users/password_fields"
   
   %p.buttons
     %input.button{:type=>"submit", :value=>"Save Changes"}/
     or
-    %a{:href=>"/admin/pages/"} Cancel
+    %a{:href=>"/admin/settings/"} Cancel
