@@ -1,17 +1,17 @@
 // Popup Images
-Popup.BorderImage            = '/admin/images/popup_border_background.png';
-Popup.BorderTopLeftImage     = '/admin/images/popup_border_top_left.png';
-Popup.BorderTopRightImage    = '/admin/images/popup_border_top_right.png';
-Popup.BorderBottomLeftImage  = '/admin/images/popup_border_bottom_left.png';
-Popup.BorderBottomRightImage = '/admin/images/popup_border_bottom_right.png';
+Popup.BorderImage            = '/images/admin/popup_border_background.png';
+Popup.BorderTopLeftImage     = '/images/admin/popup_border_top_left.png';
+Popup.BorderTopRightImage    = '/images/admin/popup_border_top_right.png';
+Popup.BorderBottomLeftImage  = '/images/admin/popup_border_bottom_left.png';
+Popup.BorderBottomRightImage = '/images/admin/popup_border_bottom_right.png';
 
 // Status Images
-Status.SpinnerImage          = '/admin/images/status_spinner.gif';
-Status.BackgroundImage       = '/admin/images/status_background.png';
-Status.TopLeftImage          = '/admin/images/status_top_left.png';
-Status.TopRightImage         = '/admin/images/status_top_right.png';
-Status.BottomLeftImage       = '/admin/images/status_bottom_left.png';
-Status.BottomRightImage      = '/admin/images/status_bottom_right.png';
+Status.SpinnerImage          = '/images/admin/status_spinner.gif';
+Status.BackgroundImage       = '/images/admin/status_background.png';
+Status.TopLeftImage          = '/images/admin/status_top_left.png';
+Status.TopRightImage         = '/images/admin/status_top_right.png';
+Status.BottomLeftImage       = '/images/admin/status_bottom_left.png';
+Status.BottomRightImage      = '/images/admin/status_bottom_right.png';
 
 Event.addBehavior.reassignAfterAjax = true;
 

@@ -1,6 +1,6 @@
 #add_part_popup.popup
   #add_part_busy.busy{:style=>"display: none"}
-    %img{:src=>"/admin/images/spinner.gif", :alt=>"Spinner"}/
+    %img{:src=>"/images/admin/spinner.gif", :alt=>"Spinner"}/
   %h3.title Add Part
   %form{:action=>"/admin/pages/parts/create/", :method=>"post", :onsubmit=>"Event.stop(event); addPart(this)"}
     %p

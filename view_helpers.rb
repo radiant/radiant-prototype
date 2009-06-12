@@ -68,7 +68,7 @@ module ViewHelpers
     
     # Default image url to be used when no gravatar is found
     # or when an image exceeds the rating parameter.
-    options[:default] ||= "http://localhost:4000/admin/images/avatar_32x32.png"
+    options[:default] ||= "http://localhost:4000/images/admin/avatar_32x32.png"
     
     # Build the Gravatar url.
     url = 'http://www.gravatar.com/avatar.php?'
