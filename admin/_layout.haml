@@ -4,19 +4,19 @@
     %meta{"http-equiv"=>"Content-type", :content=>"text/html; charset=utf-8"}/
     %title= @title || "Radiant CMS - Publishing for Small Teams"
     %link{:href=>"/stylesheets/admin/sass/styles.sass", :media=>"screen", :rel=>"stylesheet", :type=>"text/css"}/
-    %script{:src=>"/admin/javascripts/prototype.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/effects.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/lowpro.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/cookie.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/popup.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/status.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/utility.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/tabcontrol.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/ruledtable.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/sitemap.js", :type=>"text/javascript"}
-    %script{:src=>"/admin/javascripts/application.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/prototype.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/effects.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/lowpro.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/cookie.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/popup.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/status.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/utility.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/tabcontrol.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/ruledtable.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/sitemap.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/application.js", :type=>"text/javascript"}
     /[if lt IE 7]
-      %script{:type=>"text/javascript", :src=>"/admin/javascripts/pngfix.js"}
+      %script{:type=>"text/javascript", :src=>"/javascripts/admin/pngfix.js"}
     = yield :meta
   %body{:class=>body_classes.join(" ")}
     #page
