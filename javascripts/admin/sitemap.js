@@ -128,7 +128,7 @@ var SiteMapBehavior = Behavior.create({
         
     new Ajax.Updater(
       row,
-      '../admin/ui/pages/children/' + id + '/' + level,
+      '../admin/pages/' + id + '/children/?level=' + level,
       {
         insertion: "after",
         onLoading:  function() { spinner.show(); this.updating = true  }.bind(this),
