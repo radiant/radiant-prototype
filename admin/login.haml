@@ -5,21 +5,20 @@
   %h1 Please Login
   
   %form{:method=>"post", :action=>"/admin/pages/"}
-    %table
-      %tr
-        %td.label
-          %label{:for=>"user_login"} Username
-        %td.field{:colspan=>2}
-          %input.textbox.activate{:name=>"user[login]", :id=>"user_login", :type=>"text", :value=>"", :maxlength=>"40", :size=>"40"}/
-      %tr
-        %td.label
-          %label{:for=>"user_password"} Password
-        %td.field{:colspan=>2}
-          %input.textbox{:name=>"user[password]", :id=>"user_password", :type=>"password", :value=>"", :maxlength=>"40", :size=>"40"}/
-      %tr
-        %td
-        %td.checkbox
-          %input.checkbox{:name=>"user[remember_me]", :id=>"user_remember_me", :type=>"checkbox"}/
-          %label.checkbox{:for=>"user_remember_me"} Remember me
-        %td.buttons
-          %input.button{:type=>"submit", :value=>"Login"}/
+    %p
+      %label{:for=>"user_login"} Username or E-mail Address
+      %input.textbox.activate{:name=>"user[login]", :id=>"user_login", :type=>"text", :value=>"", :maxlength=>"40", :size=>"40"}/
+    %p
+      %label{:for=>"user_password"} Password
+      %input.textbox.password{:name=>"user[password]", :id=>"user_password", :type=>"password", :value=>"", :maxlength=>"40", :size=>"40"}/
+      &nbsp;
+      %span.remember_me
+        %input.checkbox{:name=>"user[remember_me]", :id=>"user_remember_me", :type=>"checkbox"}/
+        %label.checkbox{:for=>"user_remember_me"} Remember me
+    %p.buttons
+      %input.button{:type=>"submit", :value=>"Login"}/
+
+%p.version
+  Powered by
+  %a{:href=>"http://radiantcms.org"} Radiant CMS
+  version 0.9.0
