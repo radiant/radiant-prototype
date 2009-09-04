@@ -1,44 +1,5 @@
+- body_classes << "login"
 - @logged_out = true
-
-- content_for :meta do
-  %style{:type=>"text/css"}
-    :sass
-      #content
-        text-align: center
-        #login
-          background-color: #f5f1e2
-          border: 5px solid #efead3
-          text-align: left
-          margin: 2em
-          margin-left: auto
-          margin-right: auto
-          padding: 5px 20px
-          padding-right: 22px
-          position: relative
-          width: 23.5em
-          h1
-            font-size: 140%    
-            margin: 0
-            margin-top: 13px
-          table
-            width: 100%
-            margin: 15px 0 10px 0
-            td
-              text-align: left
-              padding: 6px 0
-              &.label
-                width: 6em
-              &.field
-                input.textbox
-                  font-size: 100%
-                  width: 98%
-              &.checkbox
-                font-size: 85%
-              &.buttons
-                background: none
-                text-align: right
-                input
-                  font-size: 140%
 
 #login
   %h1 Please Login
