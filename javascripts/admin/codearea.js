@@ -23,8 +23,7 @@ var CodeArea = Class.create({
         element.value = element.value.substring(0, sS) + "\t" + element.value.substr(sE);
         element.setSelectionRange(sS + 1, sS + 1);
         element.focus();
-      }
-      else if (element.createTextRange) {
+      } else if (element.createTextRange) {
         document.selection.createRange().text = "\t";
         event.returnValue = false;
       }
