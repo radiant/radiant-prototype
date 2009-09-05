@@ -17,8 +17,7 @@ var CodeArea = Class.create({
     var keyCode = event.keyCode ? event.keyCode : event.charCode ? event.charCode : event.which;
     if (keyCode == Event.KEY_TAB && !event.shiftKey && !event.ctrlKey && !event.altKey) {
       var oS = element.scrollTop;
-      if (element.setSelectionRange)
-      {
+      if (element.setSelectionRange) {
         var sS = element.selectionStart;
         var sE = element.selectionEnd;
         element.value = element.value.substring(0, sS) + "\t" + element.value.substr(sE);
