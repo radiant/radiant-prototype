@@ -13,7 +13,7 @@ var CodeArea = Class.create({
   },
   
   onkeydown: function(event) {
-    // Set desired tab- defaults to four space softtab
+    // Set desired tab - defaults to two space softtab
     var tab = "  ";
     
     var t = event.target;
