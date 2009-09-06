@@ -1,0 +1,40 @@
+- @selected = :javascripts
+.outset
+  %table#javascripts.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+    %thead
+      %tr
+        %th.javascript Javascripts
+        %th.modify Modify
+    %tbody
+      %tr.node.level_1
+        %td.javascript
+          %img.icon{:title=>"", :src=>"/images/admin/javascript.png", :alt=>"javascript_icon"}/
+          %span
+            %a{:href=>"/admin/javascripts/edit"} controls.js
+        %td.remove
+          %a{:href=>"/admin/javascripts/remove"}
+            %img{:src=>"/images/admin/remove.png", :alt=>"Remove Javascript"}/
+      %tr.node.level_1
+        %td.javascript
+          %img.icon{:title=>"", :src=>"/images/admin/javascript.png", :alt=>"javascript_icon"}/
+          %span
+            %a{:href=>"/admin/javascripts/edit"} effects.js
+        %td.remove
+          %a{:href=>"/admin/javascripts/remove"}
+            %img{:src=>"/images/admin/remove.png", :alt=>"Remove Javascript"}/
+      %tr.node.level_1
+        %td.javascript
+          %img.icon{:title=>"", :src=>"/images/admin/javascript.png", :alt=>"javascript_icon"}/
+          %span
+            %a{:href=>"/admin/javascripts/edit"} prototype.js
+        %td.remove
+          %a{:href=>"/admin/javascripts/remove"}
+            %img{:src=>"/images/admin/remove.png", :alt=>"Remove Javascript"}/
+
+#actions
+  %ul
+    %li
+      %a{:href=>"/admin/javascripts/new"} New Javascript
+    %li
+      %a{:href=>"#"} Upload
+    

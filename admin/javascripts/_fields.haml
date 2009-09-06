@@ -1,0 +1,11 @@
+%p.title
+  %label{:for=>"javascript_name"} Filename
+  %input.textbox.activate{:name=>"javascript_name", :id=>"javascript_name", :maxlength=>100, :value=>"effect.js"}/
+  %span.hint Path: <span id="full_url">/javascripts/effects.js</span>
+
+%p.content
+  %label{:for=>"javascript_content"} Content
+  %textarea.large{:name=>"javascript_content", :id=>"javascript_content", :style=>"width: 100%", :cols=>40, :rows=>20}=""
+
+%div
+  %input{:type=>"hidden", :id=>"javascript_lock_version", :name=>"javascript[lock_version]", :value=>"0"}/

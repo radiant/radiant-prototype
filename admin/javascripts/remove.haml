@@ -1,0 +1,18 @@
+- @selected = :javascripts
+
+%h1 Remove Javascript
+
+%p Are you sure you want to <strong class="warning">permanently remove</strong> the following javascript?
+
+%table.index#javascripts{:cellpadding=>0, :cellspacing=>0, :border=>0}
+  %tbody
+    %tr.node.level_1#javascript_4
+      %td.javascript
+        %img.icon{:src=>"/images/admin/javascript.png", :alt=>"javascript_icon", :title=>""}/
+        %span.title screen.css
+
+%form{:method=>"post", :action=>"/admin/javascripts/index.haml", :onsubmit_status=>"Removing javascript&#8230;"}
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Delete Javascript"}/
+    or
+    %a{:href=>"/admin/javascripts"} Cancel

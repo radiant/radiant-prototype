@@ -1,0 +1,15 @@
+- body_classes << "reversed"
+- @selected = :javascripts
+- @new_record = true
+
+%h1 New Stylesheet
+
+%form{:method=>"post", :action=>"/admin/javascripts/", :onsubmit_status=>"Creating javascript&#8230;"}
+  
+  = render :partial => "fields"
+  
+  %p.buttons{:style => "clear: left"}
+    %input.button{:type=>"submit", :value=>"Create Javascript"}/
+    %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
+    or
+    %a{:href=>"/admin/javascripts/"} Cancel
