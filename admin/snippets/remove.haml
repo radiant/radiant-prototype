@@ -11,7 +11,7 @@
         %img.icon{:src=>"/images/admin/snippet.png", :alt=>"snippet_icon", :title=>""}/
         %span.title footer
 
-%form{:method=>"post", :action=>"/admin/snippets/index_after_snippet_removed.haml"}
+%form{:method=>"post", :action=>"/admin/snippets/", :onsubmit_status=>"Removing snippet&#8230;"}
   %p.buttons
     %input.button{:type=>"submit", :value=>"Delete Snippet"}/
     or

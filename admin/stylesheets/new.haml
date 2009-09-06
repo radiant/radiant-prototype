@@ -1,0 +1,15 @@
+- body_classes << "reversed"
+- @selected = :stylesheets
+- @new_record = true
+
+%h1 New Stylesheet
+
+%form{:method=>"post", :action=>"/admin/stylesheets/", :onsubmit_status=>"Creating stylesheet&#8230;"}
+  
+  = render :partial => "fields"
+  
+  %p.buttons{:style => "clear: left"}
+    %input.button{:type=>"submit", :value=>"Create Stylesheet"}/
+    %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
+    or
+    %a{:href=>"/admin/stylesheets/"} Cancel

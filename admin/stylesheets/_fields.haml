@@ -1,0 +1,11 @@
+%p.title
+  %label{:for=>"stylesheet_name"} Filename
+  %input.textbox.activate{:name=>"stylesheet_name", :id=>"stylesheet_name", :maxlength=>100, :value=>"screen.css"}/
+  %span.hint Path: <span id="full_url">/stylesheets/screen.css</span>
+
+%p.content
+  %label{:for=>"stylesheet_content"} Content
+  %textarea.large{:name=>"stylesheet_content", :id=>"stylesheet_content", :style=>"width: 100%", :cols=>40, :rows=>20}=""
+
+%div
+  %input{:type=>"hidden", :id=>"stylesheet_lock_version", :name=>"stylesheet[lock_version]", :value=>"0"}/

@@ -139,7 +139,7 @@
         %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
           %img{:src=>"/images/admin/plus_grey.png", :alt=>"Add Attribute", :title=>""}/
 %p.more_or_less
-  %a{:id=>"more_extended_metadata", :href=>"javascript: $('extended_metadata').show(); $('less_extended_metadata').show(); $('more_extended_metadata').hide(); this.stop()"} Metadata
+  %a{:id=>"more_extended_metadata", :href=>"javascript: $('extended_metadata').show(); $('less_extended_metadata').show(); $('more_extended_metadata').hide(); this.stop()"} More
   %a{:id=>"less_extended_metadata", :href=>"javascript: $('extended_metadata').hide(); $('more_extended_metadata').show(); $('less_extended_metadata').hide(); this.stop()", :style=>"display: none"} Hide
 
 #tab_control
@@ -189,9 +189,9 @@
   %p
     %label{:for=>"page_layout_id"} Layout
     %select#page_layout_id{:name=>"page[layout_id]"}
-      %option{:value=>""} &lt;inherit&gt;
-      %option{:selected=>"selected", :value=>"1"} Normal
-      %option{:value=>"2"} Stylesheet
+      %option{:selected=>"selected", :value=>""} &lt;inherit&gt;
+      %option{:value=>"1"} Home Page
+      %option{:value=>"2"} Normal Page
       %option{:value=>"3"} XML Feed
   %p
     %label{:for=>"page_class_name"} Page Type

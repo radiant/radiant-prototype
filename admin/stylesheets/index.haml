@@ -1,0 +1,40 @@
+- @selected = :stylesheets
+.outset
+  %table#stylesheets.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+    %thead
+      %tr
+        %th.stylesheet Stylesheets
+        %th.modify Modify
+    %tbody
+      %tr.node.level_1
+        %td.stylesheet
+          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>"stylesheet_icon"}/
+          %span
+            %a{:href=>"/admin/stylesheets/edit"} print.css
+        %td.remove
+          %a{:href=>"/admin/stylesheets/remove"}
+            %img{:src=>"/images/admin/remove.png", :alt=>"Remove Stylesheet"}/
+      %tr.node.level_1
+        %td.stylesheet
+          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>"stylesheet_icon"}/
+          %span
+            %a{:href=>"/admin/stylesheets/edit"} screen.css
+        %td.remove
+          %a{:href=>"/admin/stylesheets/remove"}
+            %img{:src=>"/images/admin/remove.png", :alt=>"Remove Stylesheet"}/
+      %tr.node.level_1
+        %td.stylesheet
+          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>"stylesheet_icon"}/
+          %span
+            %a{:href=>"/admin/stylesheets/edit"} shared.css
+        %td.remove
+          %a{:href=>"/admin/stylesheets/remove"}
+            %img{:src=>"/images/admin/remove.png", :alt=>"Remove Stylesheet"}/
+
+#actions
+  %ul
+    %li
+      %a{:href=>"/admin/stylesheets/new"} New Stylesheet
+    %li
+      %a{:href=>"#"} Upload
+    
