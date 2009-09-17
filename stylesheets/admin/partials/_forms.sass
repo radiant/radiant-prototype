@@ -38,7 +38,6 @@
         font-size: 90%
         display: block
         margin-top: 0.25em
-        color: #ddd
         text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) 
       a
         color: white
@@ -46,9 +45,9 @@
           background-color: #7e7e7e
           font-size: 75%
           padding: 0.2em 0.5em 0.30em
-          +round-corners(4px)
           text-decoration: none
           text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) 
+          +round-corners(4px)
           &:hover
             background-color: #555
       &.title
@@ -217,8 +216,11 @@ body.reversed
     form
       p
         label
+          color: #f5f5f5
           font-weight: bold
-          text-shadow: #666 1px 1px 0
+          text-shadow: 1px 1px 0 #888
+      .hint
+        color: #e5e5e5
       .buttons
         background: white url(/images/admin/buttons_background.png) bottom repeat-x
         border-radius: 8px
