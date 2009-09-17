@@ -3,7 +3,6 @@ module ViewHelpers
     request.query.dup
   end
   
-  
   # The NavTab Class holds the structure of a navigation tab (including
   # its sub-nav items).
   class NavTab < Array
@@ -68,7 +67,7 @@ module ViewHelpers
     
     # Default image url to be used when no gravatar is found
     # or when an image exceeds the rating parameter.
-    options[:default] ||= "http://localhost:4000/images/admin/avatar_32x32.png"
+    options[:default] ||= "http://localhost:4000/images/admin/avatar_#{([options[:size].to_i] * 2).join('x')}.png"
     
     # Build the Gravatar url.
     url = 'http://www.gravatar.com/avatar.php?'

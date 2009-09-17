@@ -46,9 +46,7 @@
           background-color: #7e7e7e
           font-size: 75%
           padding: 0.2em 0.5em 0.30em
-          border-radius: 5px
-          -moz-border-radius: 4px
-          -webkit-border-radius: 4px
+          +round-corners(4px)
           text-decoration: none
           text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) 
           &:hover
@@ -141,14 +139,12 @@
 .box
   color: #333
   background: #f5f1e2 url(/images/admin/vertical_tan_gradient.png) top left repeat-x
-  border-radius: 10px
-  -moz-border-radius: 10px
-  -webkit-border-radius: 10px
   font-size: 90%
   padding: 1px 15px 10px
   margin: 3px 0 20px
   height: 1%
   overflow-y: auto
+  +round-corners(10px)
   h3
     color: #333
     margin: 15px 0 0
@@ -234,22 +230,18 @@ body.reversed
     textarea
       border: 1px solid white
     .box
-      box-shadow: 4px 4px 4px black
-      -moz-box-shadow: 1px 1px 3px #666
-      -webkit-box-shadow: 1px 1px 3px #666
+      +box-shadow(2px, 2px, 5px, rgba(0,0,0,0.3))
 
 body.login
   #content
     #login
       background: #f5f1e2 url(/images/admin/vertical_tan_gradient.png) center -15px repeat-x
       border: 0.35em solid #efead3
-      border-radius: 10px
-      -moz-border-radius: 10px
-      -webkit-border-radius: 10px
       padding: 0.5em 1.5em
       padding-right: 22px
       position: relative
       width: 26em
+      +round-corners(6px)
       h1
         font-size: 140%    
         margin: 0.75em 0 1.25em
@@ -269,3 +261,14 @@ body.login
       font-size: 80%
       padding-top: 10px
       margin-top: 0
+
+body.edit_user, body.edit_personal_preferences
+  #avatar
+    left: 32em
+    position: absolute
+    text-align: center
+    width: 102px
+    p.caption
+      font-size: 70%
+      color: #e5e5e5
+      line-height: 1.3
