@@ -4,7 +4,7 @@
 .box#preferences
   %h3
     .actions
-      %button{:onclick=>"window.location = '/admin/preferences/edit/'"} Edit
+      = button_to "Edit", "/admin/preferences/edit/"
     Personal Preferences
   %img.avatar{:src=>gravatar_url('seancribbs@gmail.com', :size=>"64px"), :width=>64, :height=>64, :alt=>""}
   %p.ruled
@@ -24,7 +24,7 @@
   %h3
     -# People without admin priviledges should not see the edit button
     .actions
-      %button{:onclick=>"window.location = '/admin/configuration/edit/'"} Edit
+      = button_to "Edit", "/admin/configuration/edit/"
     Configuration
   %p.ruled
     %label Dev Host
@@ -48,8 +48,11 @@
   %p.ruled
     %label Compress
     Yes
-  
-  %h4 Custom
+.box
+  %h3
+    Custom
+    .actions
+      = button_to "Edit", "/admin/settings/"
   %p.ruled
     %label Site Title
     Radiant CMS Website
