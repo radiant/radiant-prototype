@@ -1,0 +1,39 @@
+- @selected = :images
+- @title = 'Images - Radiant CMS - Publishing for Small Teams'
+
+.outset
+  %table#images.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+    %thead
+      %tr
+        %th.images Images
+        %th.modify Modify
+    %tbody
+      %tr.node.level_1
+        %td.image
+          %img.icon{:title=>"", :src=>"/images/admin/image.png", :alt=>"image_icon"}/
+          %span
+            %a{:href=>"/admin/images/edit", :title=>"/images/logo.png"} logo.png
+        %td.remove
+          %a{:href=>"/admin/images/remove"}
+            %img{:src=>"/images/admin/remove.png", :alt=>"Remove Image"}/
+      %tr.node.level_1
+        %td.image
+          %img.icon{:title=>"", :src=>"/images/admin/image.png", :alt=>"image_icon"}/
+          %span
+            %a{:href=>"/admin/images/edit", :title=>"/images/john.jpg"} john.jpg
+        %td.remove
+          %a{:href=>"/admin/images/remove"}
+            %img{:src=>"/images/admin/remove.png", :alt=>"Remove Image"}/
+      %tr.node.level_1
+        %td.image
+          %img.icon{:title=>"", :src=>"/images/admin/image.png", :alt=>"image_icon"}/
+          %span
+            %a{:href=>"/admin/images/edit", :title=>"/images/sean.jpg"} sean.jpg
+        %td.remove
+          %a{:href=>"/admin/images/remove"}
+            %img{:src=>"/images/admin/remove.png", :alt=>"Remove Image"}/
+
+#actions
+  %ul
+    %li
+      %a{:href=>"#"} Upload Image

@@ -32,16 +32,16 @@ module ViewHelpers
   def nav_tabs
     content = NavTab.new(:content, "Content")
     content << NavSubItem.new(:pages, "Pages", "/admin/pages/")
-    content << NavSubItem.new(:snippets, "Snippets", "/admin/snippets/")
     
     design = NavTab.new(:design, "Design")
     design << NavSubItem.new(:layouts, "Layouts", "/admin/layouts/")
-    design << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
-    design << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
+    design << NavSubItem.new(:snippets, "Snippets", "/admin/snippets/")
     
     media = NavTab.new(:assets, "Assets")
-    media << NavSubItem.new(:all, "All", "/admin/assets/")
-    media << NavSubItem.new(:all, "Unattached", "/admin/assets/unattached/")
+    media << NavSubItem.new(:images, "Images", "/admin/images/")
+    media << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
+    media << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
+    media << NavSubItem.new(:files, "Other Files", "/admin/files/")
     
     settings = NavTab.new(:settings, "Settings")
     settings << NavSubItem.new(:general, "General", "/admin/settings/")
