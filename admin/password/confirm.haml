@@ -1,0 +1,11 @@
+- body_classes << "single_form"
+- @logged_out = true
+
+#single_form
+  %h1 Check Your Inbox
+  %p.intro
+    Once you have the <strong>confirmation message</strong>, click the link it contains to finish changing your password.
+  %p
+    Please allow a couple of minutes for message delivery.
+
+= render :partial => "../version"

@@ -1,0 +1,22 @@
+- body_classes << "single_form"
+- @logged_out = true
+
+#single_form
+  %h1 Change Your Password
+  
+  %form{:method=>"post", :action=>"/admin/pages"}
+    %p.intro
+      Excellent! Now, to finish changing your password, just enter it twice below.
+    %p
+      %label{:for=>"user_password"} New Password
+      %input.textbox.password{:name=>"user[password]", :id=>"user_password", :type=>"password", :value=>"", :maxlength=>"40", :size=>"40"}/
+    %p
+      %label{:for=>"user_password"} Confirm New Password
+      %input.textbox.password{:name=>"user[password_confirmation]", :id=>"user_password_confirmation", :type=>"password", :value=>"", :maxlength=>"40", :size=>"40"}/
+    %p.buttons
+      - # Change their password and log them in
+      %input.button{:type=>"submit", :value=>"Change Password"}/
+      or
+      %a{:href=>"/admin/login"} Cancel
+
+= render :partial => "../version"

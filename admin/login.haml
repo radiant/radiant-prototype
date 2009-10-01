@@ -1,24 +1,25 @@
-- body_classes << "login"
+- body_classes << "single_form"
 - @logged_out = true
 
-#login
+- # For toggling the prototype
+- allow_password_reset = boolean_param(:password_reset, true)
+
+#single_form
   %h1 Please Login
-  
   %form{:method=>"post", :action=>"/admin/pages/"}
     %p
       %label{:for=>"user_login"} Username or E-mail Address
       %input.textbox.activate{:name=>"user[login]", :id=>"user_login", :type=>"text", :value=>"", :maxlength=>"40", :size=>"40"}/
     %p
       %label{:for=>"user_password"} Password
-      %input.textbox.password{:name=>"user[password]", :id=>"user_password", :type=>"password", :value=>"", :maxlength=>"40", :size=>"40"}/
-      &nbsp;
-      %span.remember_me
-        %input.checkbox{:name=>"user[remember_me]", :id=>"user_remember_me", :type=>"checkbox"}/
-        %label.checkbox{:for=>"user_remember_me"} Remember me
+      %input.textbox.password{:name=>"user[password]", :id=>"user_password", :type=>"password", :value=>"", :maxlength=>"40", :size=>"40", :style=>('width: 60%' if allow_password_reset)}/
+      - if allow_password_reset
+        %span.forgot_password
+          %a{:href=>"/admin/password/reset"} I forgot my password
+    %p.remember_me
+      %input.checkbox{:name=>"user[remember_me]", :id=>"user_remember_me", :type=>"checkbox"}/
+      %label.checkbox{:for=>"user_remember_me"} Remember me in this browser
     %p.buttons
       %input.button{:type=>"submit", :value=>"Login"}/
 
-%p.version
-  Powered by
-  %a{:href=>"http://radiantcms.org"} Radiant CMS
-  version 0.9.0
+= render :partial => "version"

@@ -159,6 +159,8 @@ module ViewHelpers
   include FlashHelper
   
   module ParamsHelper
+    
+    # Key based access to query parameters. Keys can be strings or symbols.
     def params
       @params ||= begin
         q = request.query.dup
@@ -166,6 +168,23 @@ module ViewHelpers
         q
       end
     end
+    
+    # Extract the value for a bool param. Handy for rendering templates in
+    # different states.
+    def boolean_param(key, default = false)
+      key = key.to_s.intern
+      value = params[key]
+      return default if value.nil?
+      case value.strip.downcase
+      when 'true'
+        true
+      when 'false'
+        false
+      else
+        raise 'Invalid value'
+      end
+    end
+
   end
   include ParamsHelper
   

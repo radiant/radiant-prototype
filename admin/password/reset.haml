@@ -1,0 +1,27 @@
+- body_classes << "single_form"
+- @logged_out = true
+
+- content_for :flash_message do
+  #error
+    %p
+      That username or e-mail address doesn&#8217;t match anyone in the
+      system. Please try again.
+    -# %p
+    -#   That account does not have an e-mail address associated with it. Contact
+    -#   your website administrator to change your password.
+
+#single_form
+  %h1 Reset Your Password
+  %form{:method=>"post", :action=>"/admin/password/confirm"}
+    %p
+      %label{:for=>"user_login"} Enter your username or e-mail address:
+      %input.textbox{:name=>"user[login]", :id=>"user_login", :type=>"text", :value=>"", :maxlength=>"40", :size=>"40"}/
+    %p
+      Next, we&#8217;ll send you a confirmation e-mail with a link to
+      change your password.
+    %p.buttons
+      %input.button{:type=>"submit", :value=>"Submit"}/
+      or
+      %a{:href=>"/admin/login"} Cancel
+
+= render :partial => "../version"

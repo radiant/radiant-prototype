@@ -3,10 +3,12 @@ body
   font-family: "Lucida Grande", "Bitstream Vera Sans", Helvetica, Verdana, Arial, sans-serif
 
 a
-  color: #0066cc
+  +default-link
+  &.alt
+    +alt-link
 
-a:hover
-  text-decoration: none
+big
+  font-size: 110%
 
 h1
   font-size: 180%

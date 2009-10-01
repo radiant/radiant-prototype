@@ -1,0 +1,20 @@
+- body_classes << "single_form"
+- @logged_out = true
+
+#single_form
+  %h1 Oops! Something went wrong!
+  %p.error
+    Invalid confirmation code
+  %ul
+    %li
+      You may have entered or copied the confirmation link into your web
+      browser incorrectly
+    %li
+      Your e-mail program may have garbled the link
+    %li
+      You or someone else, may have used that link to change your password in
+      the past and it is no longer valid
+  %p
+    We suggest that you try <a href="/admin/password/reset">resetting your password</a> again.
+
+= render :partial => "../version"

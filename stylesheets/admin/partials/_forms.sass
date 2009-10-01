@@ -70,7 +70,7 @@
       button, input.button
         font-size: 150%
       a
-        color: red
+        +alt-link
     p.more_or_less
       margin: 0 0 1em
       padding: 4px 0 5px
@@ -227,31 +227,57 @@ body.reversed
     .box
       +box-shadow(2px, 2px, 5px, rgba(0,0,0,0.3))
 
-body.login
+body.single_form
   #content
-    #login
+    #single_form
       background: #f5f1e2 url(/images/admin/vertical_tan_gradient.png) center -15px repeat-x
       border: 0.35em solid #efead3
       padding: 0.5em 1.5em
       padding-right: 22px
       position: relative
-      width: 26em
+      width: 28em
       +round-corners(6px)
       h1
         font-size: 140%    
         margin: 0.75em 0 1.25em
+      p
+        font-size: 90%
+        &.intro, &.error
+          font-size: 100%
+          line-height: 1.4
+        &.error
+          color: #cc0000
+        label
+          font-size: 105%
+          &.checkbox
+            font-size: 90%
+      ul
+        font-size: 90%
+        list-style: disc
+        padding-left: 2em
+        li
+          margin-bottom: 0.5em
       input.textbox
         width: 98.5%
-        &.password
-          width: 60%
       span.remember_me
-        position: relative
+        color: #333
         font-size: 95%
+        margin-left: 1em
+        label
+          margin: 0
+        a
+          margin: 0
+          +default-link
+      span.forgot_password
+        position: relative
         top: -3px
+        margin: 0 1em
+        a
+          +default-link
       .buttons
         margin: 1.75em 0 1em
     p.version
-      background: url(/images/admin/login_shadow.png) top center no-repeat
+      background: url(/images/admin/single_form_shadow.png) top center no-repeat
       color: #666
       font-size: 80%
       padding-top: 10px
