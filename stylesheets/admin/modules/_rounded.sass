@@ -4,7 +4,14 @@
 // values for position: "top-left", "top-right", "bottom-left", "bottom-right"
 =round-corner(!position, !amount = !default_rounded_amount)
   border-#{!position}-radius= !amount
-  -moz-border-#{!position}-radius= !amount
+  @if !position == "top-left"
+    -moz-border-radius-topleft= !amount
+  @if !position == "top-right"
+    -moz-border-radius-topright= !amount
+  @if !position == "bottom-left"
+    -moz-border-radius-bottomleft= !amount
+  @if !position == "bottom-right"
+    -moz-border-radius-bottomright= !amount
   -webkit-border-#{!position}-radius= !amount
 
 // Round left corners by amount
