@@ -1,0 +1,55 @@
+- content_for 'popups' do
+  #link-popup.popup{:style => "display:none;"}
+    %h3 Add Link
+    
+    %form#link_transform_form.transform_form{:name => "transform_form"}
+      .transform_container
+        .transform_title
+          %strong 1. Link to:
+        .add_border_container
+          .transform_choice_container
+            #link_transform_choice_web.transform_choice.transform_current
+              %label
+                %input{:type => "radio", :name => "transform_choice", :value => "web", :checked => true}
+                \ Web Address
+            - if Page.instance_methods.include?("tag:enkode_mailto")
+              #link_transform_choice_email.transform_choice
+                %label
+                  %input{:type => "radio", :name => "transform_choice", :value => "email"}
+                  \ Email Address
+            - if @page && @page.respond_to?(:attachments)
+              #link_transform_choice_attachment.transform_choice
+                %label
+                  %input{:type => "radio", :name => "transform_choice", :value => "attachment"}
+                  \ Attachment
+          .transform_input_container
+            #transform_input_web.transform_input
+              %input#web_text{:type => "text", :name => "web_text", :value => "", :size => "30"}
+              %br/
+              %p.help
+                %strong Not sure what to put in the box above? 
+                First, find the page on the web you want to link to. Then, copy the web address from your browser's address bar, and paste it into in the box above.
+            - if Page.instance_methods.include?("tag:enkode_mailto")
+              #transform_input_email.transform_input{:style => "display:none;"}
+                %input#email_text{:type => "text", :name => "email_text", :value => "", :size => "30"}
+                %p.help
+                  %strong.warning Spam warning:
+                  The &#8220;enkode&#8221; tag that this form inserts is the only safe way to put email addresses on the Web.  Without the protection it provides, the address is vulnerable to harvesting by spammers.
+            - if @page && @page.respond_to?(:attachments)
+              #transform_input_attachment.transform_input{:style => "display:none;"}
+                = hidden_field(:page, :ancestor_attachments_count)
+                = select_tag('attachment_text',  option_groups_from_collection_for_select(@page.self_and_ancestors, :attachments, :title, :filename, :filename))
+                %p.help.advisory
+                  %strong Should it be a PDF instead?
+                  Your document will be accessible to a wider audience if you publish your Word, Powerpoint, or other document type as a PDF.
+                %p.help.no-files{:style => 'display:none;'}
+                  %strong There are no files attached to this page.
+                  Attach one and then return here to add a link to it.
+          %br{:clear => "all"}/
+      .transform_container
+        .transform_title
+          %strong 2. Text to display: 
+          %input#display_text{:type => "text", :size => "25", :name => "display_text"}
+      %button#link-popup-submit.submit{:type => "button"} OK
+      or
+      = link_to_function('Cancel', :class => 'close-link') {|page| page.hide 'link-popup' }

@@ -1,0 +1,41 @@
+- content_for 'popups' do
+  #image-popup.popup{:style => "display: none"}
+    %h3 Add Image
+    %form#image_transform_form.transform_form{ :name => "transform_form" }
+      .transform_container
+        .transform_title
+          %strong 1. Link to:
+        .add_border_container
+          .transform_choice_container
+            #image_transform_choice_web.transform_choice.transform_current
+              %label
+                %input{:type => "radio", :name => "transform_choice", :value => "web", :checked => true}
+                \ Web Address
+            - if @page && @page.respond_to?(:attachments)
+              #image_transform_choice_attachment.transform_choice
+                %label
+                  %input{:type => "radio", :name => "transform_choice", :value => "attachment"}
+                  \ Attachment
+          .transform_input_container
+            #image_transform_input_web.transform_input
+              %input#img_web_text{:type => "text", :name => "img_web_text", :value => "", :size => "30"}
+              %p.help
+                Paste the URL of an existing image on your site.
+            - if @page && @page.respond_to?(:attachments)
+              #image_transform_input_attachment.transform_input{:style => "display:none;"}
+                = hidden_field(:page, :ancestor_attachments_count)
+                = select_tag('img_attachment_text',  option_groups_from_collection_for_select(@page.self_and_ancestors, :attachments, :title, :filename, :filename))
+                %p.help.advisory
+                  %strong Is your image the right size and type?
+                  Images need to be resized and compressed for the web using a graphics program like Photoshop.
+                %p.help.no-files{:style => 'display:none;'}
+                  %strong There are no images attached to this page.
+                  Attach one and save changes, then return here to insert it.
+          %br{:clear => "all"}/
+      .transform_container
+        .transform_title
+          %strong 2. Alternate text:
+          %input#alt_text{:type => "text", :size => "25", :name => "alt_text"}
+      %button#image-popup-submit.submit{:type=>"button"} Submit
+      or
+      = link_to_function('Cancel', :class => 'close-link') {|page| page.hide 'image-popup' }

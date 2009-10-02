@@ -90,7 +90,6 @@
         tagReferenceWindows[pageType] = new Popup.AjaxWindow("/admin/docs/tags/" + encodeURIComponent(pageType));
       var window = tagReferenceWindows[pageType];
       if(lastPageType != pageType) {
-        $('tag_reference_link_' + part).highlight();
         window.show();
       } else {
         window.toggle();
@@ -114,6 +113,17 @@
         lastFilter = filter;
       } else {
         alert('No documentation for filter.');
+      }
+      return false;
+    }
+    
+    var snippetsWindow = undefined;
+    function loadSnippetReference(part) {
+      if (snippetsWindow) {
+        snippetsWindow.toggle();
+      } else {
+        snippetsWindow = new Popup.AjaxWindow("/admin/docs/snippets/show");
+        snippetsWindow.show();
       }
       return false;
     }
@@ -151,38 +161,23 @@
     .page{:caption=>"body"}
       .part
         %input#part_0_name{:name=>"part[0][name]", :type=>"hidden", :value=>"body"}/
-        %p
-          %label{:for=>"part_0_filter_id"} Filter
+        #part_0_toolbar.toolbar
           %select#part_0_filter_id{:name=>"part[0][filter_id]"}
             %option{:value=>""} &lt;none&gt;
             %option{:value=>"Markdown"} Markdown
             %option{:value=>"SmartyPants"} SmartyPants
-            %option{:value=>"Textile"} Textile
-          %span.reference_links
-            Reference:
-            %span#filter_reference_link_0
-              %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
-            %span#tag_reference_link_0
-              %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
+            %option{:value=>"Textile", :selected => "selected"} Textile
         %div
           %textarea.large#part_0_content{:name=>"part[0][content]", :style=>"width: 100%"}=""
     .page{:caption=>"sidebar"}
       .part
         %input#part_1_name{:name=>"part[1][name]", :type=>"hidden", :value=>"sidebar"}/
-        %p
-          %label{:for=>"part_1_filter_id"}
-            Filter
+        #part_1_toolbar.toolbar
           %select#part_1_filter_id{:name=>"part[1][filter_id]"}
             %option{:value=>""} &lt;none&gt;
             %option{:value=>"Markdown"} Markdown
             %option{:value=>"SmartyPants"} SmartyPants
             %option{:value=>"Textile"} Textile
-          %span.reference_links
-            Reference:
-            %span#filter_reference_link_1
-              %a{:href=>"#", :onclick=>"loadFilterReference(1); return false;"} Filter
-            %span#tag_reference_link_1
-              %a{:href=>"#", :onclick=>"loadTagReference(1); return false;"} Available Tags
         %div
           %textarea.large#part_1_content{:name=>"part[1][content]", :style=>"width: 100%"}=""
 .row

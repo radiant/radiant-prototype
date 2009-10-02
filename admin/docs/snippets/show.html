@@ -1,0 +1,59 @@
+<div class="popup" id="snippet_reference_popup">
+<h3 class="title">Available Snippets</h3>
+<p>
+  <label for="search_snippet_reference" class="inline">Filter Snippets</label>
+  <input type="search" name="search_snippet_reference" id="search_snippet_reference" value="" />
+</p>
+
+<div class="reference">
+<div class="snippet">
+  <img class="expander" src="/images/admin/expand.png" />
+  <h4>header</h4>
+  <div class="snippet_description"><pre><code>&lt;r:content part=&quot;navigation&quot; /&gt;
+&lt;h1&gt;&lt;r:title /&gt;&lt;/h1&gt;</code></pre></div>
+</div>
+<div class="snippet">
+  <img class="expander" src="/images/admin/expand.png" />
+  <h4>footer</h4>
+  <div class="snippet_description"><pre><code>&lt;div id=&quot;footer&quot;&gt;
+  Copyright &amp;copy; 2009 | Powered by Radiant CMS
+&lt;/div&gt;</code></pre></div>
+</div>
+</div>
+
+<p class="close_link"><a href="javascript: Element.closePopup('snippet_reference_popup')">Close Help</a></p>
+</div>
+<script type="text/javascript">
+  var snippets, searchingOn = "";
+  var popup = $('snippet_reference_popup');
+  new Form.Element.Observer('search_snippet_reference', 0.5, function(element, value) {
+    if (!snippets) snippets = popup.select('.reference .snippet');
+    if (value.length < 3 && searchingOn != "") {
+      searchingOn = "";
+      snippets.invoke('show');
+    } else if (value.length >= 3 && searchingOn != value) {
+      searchingOn = value;
+      snippets.each(function(div) {
+        div[div.hasWord(value) ? 'show' : 'hide']();
+      });
+    }
+  });
+  $$('img.expander').each(function(element) {
+    element.observe('click', function(event) {
+      var snippetDescription = this.next('.snippet_description');
+      if (snippetDescription.hasClassName('expanded')) {
+        this.src = this.src.replace('collapse', 'expand');
+        snippetDescription.removeClassName('expanded');
+      } else {
+        this.src = this.src.replace('expand', 'collapse');
+        snippetDescription.addClassName('expanded');
+      }
+    });
+  });
+  $$('h4').each(function(snippet) {
+    snippet.observe('click', function(event) {
+      Element.closePopup('snippet_reference_popup');
+      alert("Inserting a snippet not yet implemented.");
+    }).writeAttribute("title", "Insert " + snippet.innerText + " snippet.");
+  });
+</script>
