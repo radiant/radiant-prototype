@@ -15,7 +15,8 @@
           %small.login admin
         %td.roles Administrator
         %td.remove
-          %img{:src=>"/images/admin/remove_disabled.png", :alt=>"Remove User"}/
+          %span.disabled 
+            Remove
       %tr.node.level_1
         %td.user
           %a{:href=>"/admin/users/edit"} Jim
@@ -23,7 +24,7 @@
         %td.roles Administrator, Designer
         %td.remove
           %a{:href=>"/admin/users/remove"}
-            %img{:src=>"/images/admin/remove.png", :alt=>"Remove User"}/
+            Remove
       %tr.node.level_1
         %td.user
           %a{:href=>"/admin/users/edit"} Lisa
@@ -31,7 +32,7 @@
         %td.roles Designer
         %td.remove
           %a{:href=>"/admin/users/remove"}
-            %img{:src=>"/images/admin/remove.png", :alt=>"Remove User"}/
+            Remove
       %tr.node.level_1
         %td.user
           %a{:href=>"/admin/users/edit"} Ralph
@@ -39,7 +40,7 @@
         %td.roles Designer
         %td.remove
           %a{:href=>"/admin/users/remove"}
-            %img{:src=>"/images/admin/remove.png", :alt=>"Remove User"}/
+            Remove
       %tr.node.level_1
         %td.user
           %a{:href=>"/admin/users/edit"} Susan
@@ -47,7 +48,7 @@
         %td.roles 
         %td.remove
           %a{:href=>"/admin/users/remove"}
-            %img{:src=>"/images/admin/remove.png", :alt=>"Remove"}/
+            Remove
 
 #actions
   %ul
