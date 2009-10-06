@@ -24,9 +24,18 @@
   %fieldset
     %h3 Defaults
     %p
+      %label{:for=>"default_language"} Language
+      %select{:name=>"default_language", :id=>"default_language"}
+        %option{:value=>"en"} English
+        %option{:value=>"ga"} Gaelic
+        %option{:value=>"ge"} German
+        %option{:value=>"fr"} French
+        %option{:value=>"it"} Italian
+        %option{:value=>"ru"} Russian
+    %p
       %label{:for=>"default_filter"} Filter
       %select{:name=>"default_filter", :id=>"default_filter"}
-        - for option in ["&lt;none&gt;)", "Markdown", "Smarty Pants", "Textile"]
+        - for option in ["&lt;none&gt;", "Markdown", "Smarty Pants", "Textile"]
           %option{:selected=>(option == "Textile")}= option
     %p
       %label{:for=>"default_page_parts"} Page Parts <span class="hint">(separate part names with commas)</span>
