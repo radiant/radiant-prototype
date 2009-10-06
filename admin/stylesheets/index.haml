@@ -1,7 +1,7 @@
 - @selected = :stylesheets
 - @title = 'Stylesheets - Radiant CMS - Publishing for Small Teams'
 .outset
-  %table#stylesheets.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+  %table#stylesheets.index
     %thead
       %tr
         %th.stylesheet Stylesheet
@@ -9,7 +9,7 @@
     %tbody
       %tr.node.level_1
         %td.stylesheet
-          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>"stylesheet_icon"}/
+          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
           %span
             %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/print.css"} print.css
         %td.remove
@@ -17,7 +17,7 @@
             %img{:src=>"/images/admin/remove.png", :alt=>"Remove Stylesheet"}/
       %tr.node.level_1
         %td.stylesheet
-          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>"stylesheet_icon"}/
+          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
           %span
             %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/screen.css"} screen.css
         %td.remove
@@ -25,7 +25,7 @@
             %img{:src=>"/images/admin/remove.png", :alt=>"Remove Stylesheet"}/
       %tr.node.level_1
         %td.stylesheet
-          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>"stylesheet_icon"}/
+          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
           %span
             %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/shared.css"} shared.css
         %td.remove

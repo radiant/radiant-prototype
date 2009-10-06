@@ -2,7 +2,7 @@
 - @title = 'Snippets - Radiant CMS - Publishing for Small Teams'
 
 .outset
-  %table#snippets.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+  %table#snippets.index
     %thead
       %tr
         %th.snippet Snippet
@@ -10,7 +10,7 @@
     %tbody
       %tr.node.level_1
         %td.snippet
-          %img.icon{:title=>"", :src=>"/images/admin/snippet.png", :alt=>"snippet_icon"}/
+          %img.icon{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
           %span
             %a{:href=>"/admin/snippets/edit"} footer
         %td.remove
@@ -18,7 +18,7 @@
             %img{:src=>"/images/admin/remove.png", :alt=>"Remove Snippet"}/
       %tr.node.level_1
         %td.snippet
-          %img.icon{:title=>"", :src=>"/images/admin/snippet.png", :alt=>"snippet_icon"}/
+          %img.icon{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
           %span
             %a{:href=>"/admin/snippets/edit"} header
         %td.remove
