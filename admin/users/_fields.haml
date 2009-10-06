@@ -1,14 +1,8 @@
-%p
-  %label{:for=>"user_name"} Name
-  %input.textbox.activate{:type=>"text", :name=>"user_name", :id=>"user_name", :size=>32, :maxlength=>100}/
-%p
-  %label{:for=>"user_email"} E-mail Address
-  %input.textbox{:type=>"text", :name=>"user_email", :id=>"user_email", :size=>32, :maxlength=>255}/
-%p
-  %label{:for=>"user_login"} Username
-  %input.textbox{:type=>"text", :name=>"user_login", :id=>"user_login", :size=>32, :maxlength=>255}/
+= render :partial => "name_email_username_fields"
 
 = render :partial => "password_fields"
+
+= render :partial => "language_fields"
 
 %p
   %label.optional{:for=>"user_notes"} Notes
