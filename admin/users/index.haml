@@ -2,7 +2,7 @@
 - @title = 'Users - Radiant CMS - Publishing for Small Teams'
 
 .outset
-  %table#users.index{:cellspacing=>"0", :border=>"0", :cellpadding=>"0"}
+  %table#users.index
     %thead
       %tr
         %th.user Name / Login
@@ -12,7 +12,7 @@
       %tr.node.level_1
         %td.user
           %a{:href=>"/admin/users/edit"} Administrator
-          %small.login admin
+          %span.login admin
         %td.roles Administrator
         %td.remove
           %span.disabled 
@@ -20,7 +20,7 @@
       %tr.node.level_1
         %td.user
           %a{:href=>"/admin/users/edit"} Jim
-          %small.login jim
+          %span.login jim
         %td.roles Administrator, Designer
         %td.remove
           %a{:href=>"/admin/users/remove"}
@@ -28,7 +28,7 @@
       %tr.node.level_1
         %td.user
           %a{:href=>"/admin/users/edit"} Lisa
-          %small.login lisa
+          %span.login lisa
         %td.roles Designer
         %td.remove
           %a{:href=>"/admin/users/remove"}
@@ -36,7 +36,7 @@
       %tr.node.level_1
         %td.user
           %a{:href=>"/admin/users/edit"} Ralph
-          %small.login ralph
+          %span.login ralph
         %td.roles Designer
         %td.remove
           %a{:href=>"/admin/users/remove"}
@@ -44,7 +44,7 @@
       %tr.node.level_1
         %td.user
           %a{:href=>"/admin/users/edit"} Susan
-          %small.login susan
+          %span.login susan
         %td.roles 
         %td.remove
           %a{:href=>"/admin/users/remove"}
