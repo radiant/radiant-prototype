@@ -57,18 +57,10 @@ teButtons.push(new EditorButton('strong',     'bold.png',          '*',   '*',  
 teButtons.push(new EditorButton('emphasis',   'italic.png',        '_',   '_',  'i', 'Italicize','s'));
 teButtons.push(new EditorButton('ol',         'list_numbers.png',  '# ', '\n', ',', 'Numbered List'));
 teButtons.push(new EditorButton('ul',         'list_bullets.png',  '* ', '\n', '.', 'Bulleted List'));
-teButtons.push(new EditorButton('p',          'paragraph.png',     'p',   '\n', 'p', 'Paragraph'));
 teButtons.push(new EditorButton('h1',         'h1.png',            'h1',  '\n', '1', 'Header 1'));
 teButtons.push(new EditorButton('h2',         'h2.png',            'h2',  '\n', '2', 'Header 2'));
 teButtons.push(new EditorButton('h3',         'h3.png',            'h3',  '\n', '3', 'Header 3'));
-teButtons.push(new EditorButton('h4',         'h4.png',            'h4',  '\n', '4', 'Header 4'));
 teButtons.push(new EditorButton('block',      'blockquote.png',    'bq',  '\n', 'q', 'Blockquote'));
-teButtons.push(new EditorButton('outdent',    'outdent.png',       ')',   '\n', ']', 'Outdent'));
-teButtons.push(new EditorButton('indent',     'indent.png',        '(',   '\n', '[', 'Indent'));
-teButtons.push(new EditorButton('justifyl',   'left.png',          '<',   '\n', 'l', 'Left Justify'));
-teButtons.push(new EditorButton('justifyc',   'center.png',        '=',   '\n', 'e', 'Center Text'));
-teButtons.push(new EditorButton('justifyr',   'right.png',         '>',   '\n', 'r', 'Right Justify'));
-teButtons.push(new EditorButton('justify',    'justify.png',       '<>',  '\n', 'j', 'Justify'));
 teButtons.push(new EditorButtonSeparator(''));
 teButtons.push("<button class=\"link\" onclick=\"alert('not yet ported from textile_editor');return false; new LinkPopup(this);return false;\" accesskey=\"a\" class=\"standard\"><img src=\"/images/admin/toolbar/link.png\" title=\"Link\" alt=\"Link\" /></button>");
 teButtons.push("<button class=\"img\" onclick=\"alert('not yet ported from textile_editor');return false; new ImagePopup(this);return false;\" accesskey=\"m\" class=\"standard\"><img src=\"/images/admin/toolbar/image.png\" title=\"Image\" alt=\"Image\" /></button>");
