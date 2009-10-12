@@ -51,8 +51,6 @@ Event.addBehavior({
 
 // Toolbars
 var teButtons = TextileEditor.prototype.buttons;
-teButtons.push("<button class=\"link\" onclick=\"loadFilterReference(0); return false;\" accesskey=\"h\" class=\"standard\"><img src=\"/images/admin/toolbar/help.png\" title=\"Filter Reference\" alt=\"Filter Reference\" /></button>");
-teButtons.push(new EditorButtonSeparator(''));
 teButtons.push(new EditorButton('strong',     'bold.png',          '*',   '*',  'b', 'Bold','s'));
 teButtons.push(new EditorButton('emphasis',   'italic.png',        '_',   '_',  'i', 'Italicize','s'));
 teButtons.push(new EditorButton('ol',         'list_numbers.png',  '# ', '\n', ',', 'Numbered List'));
@@ -66,8 +64,6 @@ teButtons.push("<button class=\"link\" onclick=\"alert('not yet ported from text
 teButtons.push("<button class=\"img\" onclick=\"alert('not yet ported from textile_editor');return false; new ImagePopup(this);return false;\" accesskey=\"m\" class=\"standard\"><img src=\"/images/admin/toolbar/image.png\" title=\"Image\" alt=\"Image\" /></button>");
 
 var meButtons = MarkdownEditor.prototype.buttons;
-meButtons.push("<button class=\"link\" onclick=\"loadFilterReference(0); return false;\" accesskey=\"h\" class=\"standard\"><img src=\"/images/admin/toolbar/help.png\" title=\"Filter Reference\" alt=\"Filter Reference\" /></button>");
-meButtons.push(new EditorButtonSeparator(''));
 meButtons.push(new EditorButton('strong',     'bold.png',          '**',   '**',  'b', 'Bold','s'));
 meButtons.push(new EditorButton('emphasis',   'italic.png',        '_',   '_',  'i', 'Italicize','s'));
 

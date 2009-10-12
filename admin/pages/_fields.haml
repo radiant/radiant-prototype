@@ -167,6 +167,12 @@
             %option{:value=>"Markdown"} Markdown
             %option{:value=>"SmartyPants"} SmartyPants
             %option{:value=>"Textile", :selected => "selected"} Textile
+        %span.reference_links
+          Reference:
+          %span#filter_reference_link_0
+            %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
+          %span#tag_reference_link_0
+            %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
         %div
           %textarea.large#part_0_content{:name=>"part[0][content]", :style=>"width: 100%"}=""
     .page{:caption=>"sidebar"}
@@ -178,6 +184,12 @@
             %option{:value=>"Markdown"} Markdown
             %option{:value=>"SmartyPants"} SmartyPants
             %option{:value=>"Textile"} Textile
+        %span.reference_links
+          Reference:
+          %span#filter_reference_link_0
+            %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
+          %span#tag_reference_link_0
+            %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
         %div
           %textarea.large#part_1_content{:name=>"part[1][content]", :style=>"width: 100%"}=""
 .row
