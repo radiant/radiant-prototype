@@ -1,3 +1,52 @@
+- content_for :meta do
+  :javascript
+    var lastPageType = "";
+    var tagReferenceWindows = {};
+    function loadTagReference(part) {
+      var pageType = 'Page';
+      var window = tagReferenceWindows[pageType];
+      if (!tagReferenceWindows[pageType])
+        tagReferenceWindows[pageType] = new Popup.AjaxWindow("/admin/docs/tags/" + encodeURIComponent(pageType));
+      var window = tagReferenceWindows[pageType];
+      if(lastPageType != pageType) {
+        window.show();
+      } else {
+        window.toggle();
+      }
+      lastPageType = pageType;
+      return false;
+    }
+    
+    var lastFilter = "";
+    var filterWindows = {};
+    function loadFilterReference(part) {
+      var filter = $F("snippet_filter");
+      if (filter != "") {
+        if (!filterWindows[filter]) filterWindows[filter] = new Popup.AjaxWindow("/admin/docs/filters/" + encodeURIComponent(filter), {reload: false});
+        var window = filterWindows[filter];
+        if(lastFilter != filter) {
+          window.show();
+        } else {
+          window.toggle();
+        }
+        lastFilter = filter;
+      } else {
+        alert('No documentation for filter.');
+      }
+      return false;
+    }
+    
+    var snippetsWindow = undefined;
+    function loadSnippetReference(part) {
+      if (snippetsWindow) {
+        snippetsWindow.toggle();
+      } else {
+        snippetsWindow = new Popup.AjaxWindow("/admin/docs/snippets/show");
+        snippetsWindow.show();
+      }
+      return false;
+    }
+
 %p.title
   %label{:for=>"snippet_name"} Name
   %input.textbox.activate{:name=>"snippet_name", :id=>"snippet_name", :maxlength=>100}/
@@ -14,6 +63,12 @@
       %option{:value=>"Markdown"} Markdown
       %option{:value=>"SmartyPants"} SmartyPants
       %option{:value=>"Textile"} Textile
+    %span.reference_links
+      Reference:
+      %span#filter_reference_link
+        %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
+      %span#tag_reference_link
+        %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
 
 %div
   %input{:type=>"hidden", :id=>"snippet_lock_version", :name=>"snippet[lock_version]", :value=>"0"}/
