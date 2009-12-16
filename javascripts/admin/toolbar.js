@@ -45,7 +45,7 @@
  *  DEALINGS IN THE SOFTWARE.
  *  
  */
-
+if(typeof(relative_url_root) !== 'undefined'){ relative_url_root = ''}
 // Define Button Object
 function EditorButton(id, display, tagStart, tagEnd, access, title, sve, open) {
 	this.id = id;				// used to name the toolbar button
@@ -137,7 +137,7 @@ var RadiusEditor = Class.create({
    	  theButton.setAttribute('open', button.open);
 
 		  var img = document.createElement('img');
-		  img.src = '/images/admin/toolbar/' + button.display;
+		  img.src = relative_url_root+'/images/admin/toolbar/' + button.display;
 		  theButton.appendChild(img);
 	  } else {
 	    return button;

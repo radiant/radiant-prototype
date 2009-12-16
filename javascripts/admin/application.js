@@ -1,17 +1,18 @@
+if(typeof(relative_url_root) !== 'undefined'){ relative_url_root = ''}
 // Popup Images
-Popup.BorderImage            = '/images/admin/popup_border_background.png';
-Popup.BorderTopLeftImage     = '/images/admin/popup_border_top_left.png';
-Popup.BorderTopRightImage    = '/images/admin/popup_border_top_right.png';
-Popup.BorderBottomLeftImage  = '/images/admin/popup_border_bottom_left.png';
-Popup.BorderBottomRightImage = '/images/admin/popup_border_bottom_right.png';
+Popup.BorderImage            = relative_url_root + '/images/admin/popup_border_background.png';
+Popup.BorderTopLeftImage     = relative_url_root + '/images/admin/popup_border_top_left.png';
+Popup.BorderTopRightImage    = relative_url_root + '/images/admin/popup_border_top_right.png';
+Popup.BorderBottomLeftImage  = relative_url_root + '/images/admin/popup_border_bottom_left.png';
+Popup.BorderBottomRightImage = relative_url_root + '/images/admin/popup_border_bottom_right.png';
 
 // Status Images
-Status.SpinnerImage          = '/images/admin/status_spinner.gif';
-Status.BackgroundImage       = '/images/admin/status_background.png';
-Status.TopLeftImage          = '/images/admin/status_top_left.png';
-Status.TopRightImage         = '/images/admin/status_top_right.png';
-Status.BottomLeftImage       = '/images/admin/status_bottom_left.png';
-Status.BottomRightImage      = '/images/admin/status_bottom_right.png';
+Status.SpinnerImage          = relative_url_root + '/images/admin/status_spinner.gif';
+Status.BackgroundImage       = relative_url_root + '/images/admin/status_background.png';
+Status.TopLeftImage          = relative_url_root + '/images/admin/status_top_left.png';
+Status.TopRightImage         = relative_url_root + '/images/admin/status_top_right.png';
+Status.BottomLeftImage       = relative_url_root + '/images/admin/status_bottom_left.png';
+Status.BottomRightImage      = relative_url_root + '/images/admin/status_bottom_right.png';
 
 Event.addBehavior.reassignAfterAjax = true;
 
@@ -60,8 +61,8 @@ teButtons.push(new EditorButton('h2',         'h2.png',            'h2',  '\n', 
 teButtons.push(new EditorButton('h3',         'h3.png',            'h3',  '\n', '3', 'Header 3'));
 teButtons.push(new EditorButton('block',      'blockquote.png',    'bq',  '\n', 'q', 'Blockquote'));
 teButtons.push(new EditorButtonSeparator(''));
-teButtons.push("<button class=\"link\" onclick=\"alert('not yet ported from textile_editor');return false; new LinkPopup(this);return false;\" accesskey=\"a\" class=\"standard\"><img src=\"/images/admin/toolbar/link.png\" title=\"Link\" alt=\"Link\" /></button>");
-teButtons.push("<button class=\"img\" onclick=\"alert('not yet ported from textile_editor');return false; new ImagePopup(this);return false;\" accesskey=\"m\" class=\"standard\"><img src=\"/images/admin/toolbar/image.png\" title=\"Image\" alt=\"Image\" /></button>");
+teButtons.push("<button class=\"link\" onclick=\"alert('not yet ported from textile_editor');return false; new LinkPopup(this);return false;\" accesskey=\"a\" class=\"standard\"><img src=\""+relative_url_root+"/images/admin/toolbar/link.png\" title=\"Link\" alt=\"Link\" /></button>");
+teButtons.push("<button class=\"img\" onclick=\"alert('not yet ported from textile_editor');return false; new ImagePopup(this);return false;\" accesskey=\"m\" class=\"standard\"><img src=\""+relative_url_root+"/images/admin/toolbar/image.png\" title=\"Image\" alt=\"Image\" /></button>");
 
 var meButtons = MarkdownEditor.prototype.buttons;
 meButtons.push(new EditorButton('strong',     'bold.png',          '**',   '**',  'b', 'Bold','s'));
@@ -69,8 +70,8 @@ meButtons.push(new EditorButton('emphasis',   'italic.png',        '_',   '_',  
 
 var reButtons = RadiusEditor.prototype.buttons;
 reButtons.push(new EditorButtonSeparator(''));
-reButtons.push("<button class=\"snippet\" onclick=\"loadSnippetReference(0); return false;\" accesskey=\"s\" class=\"standard\"><img src=\"/images/admin/toolbar/snippet.png\" title=\"Snippets\" alt=\"Snippets\" /></button>");
-reButtons.push("<button class=\"tag\" onclick=\"loadTagReference(0); return false;\" accesskey=\"t\" class=\"standard\"><img src=\"/images/admin/toolbar/tag.png\" title=\"Tags\" alt=\"Tags\" /></button>");
+reButtons.push("<button class=\"snippet\" onclick=\"loadSnippetReference(0); return false;\" accesskey=\"s\" class=\"standard\"><img src=\""+relative_url_root+"/images/admin/toolbar/snippet.png\" title=\"Snippets\" alt=\"Snippets\" /></button>");
+reButtons.push("<button class=\"tag\" onclick=\"loadTagReference(0); return false;\" accesskey=\"t\" class=\"standard\"><img src=\""+relative_url_root+"/images/admin/toolbar/tag.png\" title=\"Tags\" alt=\"Tags\" /></button>");
 
 function load_toolbars() {
   parts = $$('.pages textarea').each(function(textarea) {

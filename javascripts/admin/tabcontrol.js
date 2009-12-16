@@ -1,3 +1,4 @@
+if(typeof(relative_url_root) !== 'undefined'){ relative_url_root = ''}
 var TabControlBehavior = Behavior.create({
   initialize: function() {
     new TabControl(this.element);
@@ -106,7 +107,7 @@ TabControl.Tab = Class.create({
   },
   
   toElement: function() {
-    this.element = $a({'class': 'tab', 'href': '#'}, $span(this.caption), $img({'src': '/images/admin/tab_close.png', 'class': 'close', 'alt': 'Remove part', 'title': 'Remove part'}));
+    this.element = $a({'class': 'tab', 'href': '#'}, $span(this.caption), $img({'src': relative_url_root+'/images/admin/tab_close.png', 'class': 'close', 'alt': 'Remove part', 'title': 'Remove part'}));
     return this.element;
   }
 });

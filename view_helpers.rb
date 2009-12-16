@@ -200,6 +200,10 @@ module ViewHelpers
     def image_tag(src, html_options = {})
       tag(:img, html_options.merge({:src=>src}))
     end
+
+    def image(name, options = {})
+      image_tag(append_image_extension("/images/admin/#{name}"), options)
+    end
     
     def javascript_tag(content = nil, html_options = {})
       content_tag(:script, javascript_cdata_section(content), html_options.merge(:type => "text/javascript"))
@@ -285,6 +289,14 @@ module ViewHelpers
             end
           end
           " #{attrs.sort * ' '}" unless attrs.empty?
+        end
+      end
+      
+      def append_image_extension(name)
+        unless name =~ /\.(.*?)$/
+          name + '.png'
+        else
+          name
         end
       end
   end
