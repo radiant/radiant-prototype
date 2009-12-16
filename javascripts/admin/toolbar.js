@@ -45,7 +45,7 @@
  *  DEALINGS IN THE SOFTWARE.
  *  
  */
-if(typeof(relative_url_root) !== 'undefined'){ relative_url_root = ''}
+if(typeof(relative_url_root) === 'undefined'){ relative_url_root = ''}
 // Define Button Object
 function EditorButton(id, display, tagStart, tagEnd, access, title, sve, open) {
 	this.id = id;				// used to name the toolbar button
