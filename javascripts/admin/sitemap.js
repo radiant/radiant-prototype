@@ -130,6 +130,7 @@ var SiteMapBehavior = Behavior.create({
       '../admin/pages/' + id + '/children/?level=' + level,
       {
         insertion: "after",
+        method: "get",
         onLoading:  function() { spinner.show(); this.updating = true  }.bind(this),
         onComplete: function() { spinner.fade(); this.updating = false }.bind(this)
       }

@@ -4,7 +4,7 @@
 
 %h1 New Layout
 
-%form{:method=>"post", :action=>"/admin/layouts/", :onsubmit_status=>"Creating layout&#8230;"}
+%form{:method=>"post", :action=>"/admin/layouts/", "data-onsubmit_status"=>"Creating layout&#8230;"}
   
   = render :partial => "fields"
   

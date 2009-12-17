@@ -158,7 +158,7 @@
       %a.popup{:href=>"/admin/pages/parts/new", :title=>"Add Part"}
         =image('add_tab', :alt=>"Add Part", :title=>"")
   .pages
-    .page{:caption=>"body"}
+    .page{'data-caption'=>"body"}
       .part
         %input#part_0_name{:name=>"part[0][name]", :type=>"hidden", :value=>"body"}/
         #part_0_toolbar.toolbar
@@ -175,7 +175,7 @@
             %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
         %div
           %textarea.large#part_0_content{:name=>"part[0][content]", :style=>"width: 100%"}=""
-    .page{:caption=>"sidebar"}
+    .page{'data-caption'=>"sidebar"}
       .part
         %input#part_1_name{:name=>"part[1][name]", :type=>"hidden", :value=>"sidebar"}/
         #part_1_toolbar.toolbar
