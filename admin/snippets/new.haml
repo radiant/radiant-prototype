@@ -4,7 +4,7 @@
 
 %h1 New Snippet
 
-%form{:method=>"post", :action=>"/admin/snippets/", :onsubmit_status=>"Creating snippet&#8230;"}
+%form{:method=>"post", :action=>"/admin/snippets/", "data-onsubmit_status"=>"Creating snippet&#8230;"}
   
   = render :partial => "fields"
   

@@ -1,4 +1,5 @@
 if(typeof(relative_url_root) === 'undefined'){ relative_url_root = ''}
+
 var TabControlBehavior = Behavior.create({
   initialize: function() {
     new TabControl(this.element);
@@ -88,7 +89,7 @@ var TabControl = Class.create({
 TabControl.Tab = Class.create({
   initialize: function(page) {
     this.page = page;
-    this.caption = page.readAttribute('caption');
+    this.caption = page.readAttribute('data-caption');
   },
   
   select: function() {

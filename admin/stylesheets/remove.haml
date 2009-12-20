@@ -11,7 +11,7 @@
         %img.icon{:src=>"/images/admin/stylesheet.png", :alt=>"", :title=>""}/
         %span.title screen.css
 
-%form{:method=>"post", :action=>"/admin/stylesheets/index.haml", :onsubmit_status=>"Removing stylesheet&#8230;"}
+%form{:method=>"post", :action=>"/admin/stylesheets/index.haml", "data-onsubmit_status"=>"Removing stylesheet&#8230;"}
   %p.buttons
     %input.button{:type=>"submit", :value=>"Delete Stylesheet"}/
     or
