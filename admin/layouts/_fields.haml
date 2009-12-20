@@ -1,3 +1,33 @@
+- content_for :meta do
+  :javascript
+    var lastPageType = "";
+    var tagReferenceWindows = {};
+    function loadTagReference(part) {
+      var pageType = 'Page';
+      var window = tagReferenceWindows[pageType];
+      if (!tagReferenceWindows[pageType])
+        tagReferenceWindows[pageType] = new Popup.AjaxWindow("/admin/docs/tags/" + encodeURIComponent(pageType));
+      var window = tagReferenceWindows[pageType];
+      if(lastPageType != pageType) {
+        window.show();
+      } else {
+        window.toggle();
+      }
+      lastPageType = pageType;
+      return false;
+    }
+    
+    var snippetsWindow = undefined;
+    function loadSnippetReference(part) {
+      if (snippetsWindow) {
+        snippetsWindow.toggle();
+      } else {
+        snippetsWindow = new Popup.AjaxWindow("/admin/docs/snippets/show");
+        snippetsWindow.show();
+      }
+      return false;
+    }
+    
 %p.title
   %label{:for=>"layout_name"} Name
   %input.textbox.activate{:name=>"layout_name", :id=>"layout_name", :maxlength=>100}/
@@ -16,6 +46,11 @@
 %p.content
   %label{:for=>"layout_content"} Body
   %textarea.large{:name=>"layout_content", :id=>"layout_content", :style=>"width: 100%", :cols=>40, :rows=>20}=""
+%p
+  %span.reference_links
+    Reference:
+    %span#tag_reference_link
+      %a{:href=>"#", :onclick=>"loadTagReference(0); return false;"} Available Tags
 
 %div
   %input{:type=>"hidden", :id=>"layout_lock_version", :name=>"layout[lock_version]", :value=>"0"}/
