@@ -3,6 +3,7 @@
 <p>
   <label for="search_tag_reference" class="inline">Filter Tags</label>
   <input type="search" name="search_tag_reference" id="search_tag_reference" value="" />
+  <span id="tag_search_found_count" class="info"></span>
 </p>
 
 <div class="reference">
@@ -504,17 +505,23 @@
 </div>
 <script type="text/javascript">
   var tags, searchingOn = "";
+  var found_count = 0;
   var popup = $('tag_reference_popup');
   new Form.Element.Observer('search_tag_reference', 0.5, function(element, value) {
     if (!tags) tags = popup.select('.reference .tag_description');
     if (value.length < 3 && searchingOn != "") {
       searchingOn = "";
+      found_count = tags.length;
       tags.invoke('show');
+      $('tag_search_found_count').update('Found '+found_count+' tags').highlight();
     } else if (value.length >= 3 && searchingOn != value) {
       searchingOn = value;
+      found_count = tags.length;
       tags.each(function(div) {
+        if (!div.hasWord(value)) found_count=--found_count;
         div[div.hasWord(value) ? 'show' : 'hide']();
       });
+      $('tag_search_found_count').update('Found '+found_count+' tags').highlight();
     }
   });
 </script>
