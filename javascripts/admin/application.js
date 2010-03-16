@@ -52,6 +52,20 @@ Event.addBehavior({
     });
   },
   
+  'p.more_or_less a': function(event){
+    var element = this;
+    element.observe('click', function(event){
+      if (element.hasClassName('more')) {
+        element.update('Less');
+      } else {
+        element.update('More');
+      }
+      element.toggleClassName('more').toggleClassName('less');
+      $('extended_metadata').toggle();
+      event.stop();
+    });
+  },
+  
   'div#tab_control': TabControlBehavior(),
   
   'table.index': RuledTableBehavior(),

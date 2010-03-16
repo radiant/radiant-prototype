@@ -149,8 +149,7 @@
         %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
           %img{:src=>"/images/admin/plus_grey.png", :alt=>"Add Attribute", :title=>""}/
 %p.more_or_less
-  %a{:id=>"more_extended_metadata", :href=>"javascript: $('extended_metadata').show(); $('less_extended_metadata').show(); $('more_extended_metadata').hide(); this.stop()"} More
-  %a{:id=>"less_extended_metadata", :href=>"javascript: $('extended_metadata').hide(); $('more_extended_metadata').show(); $('less_extended_metadata').hide(); this.stop()", :style=>"display: none"} Hide
+  %a{:href=>"#", :class=>"more"} More
 
 #tab_control
   .tabs
