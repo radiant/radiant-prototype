@@ -216,6 +216,10 @@
       %option{:value=>"50"} Reviewed
       %option{:selected=>"selected", :value=>"100"} Published
       %option{:value=>"101"} Hidden
+  %p#published_at
+    %label{:for=>"page_published_at"} Published On
+    %input.date#page_published_at{:type=>"text", :value => Date.today.to_formatted_s(:long)}/
+  
 
 %div
   %input{:type=>"hidden", :id=>"page_lock_version", :name=>"page[lock_version]", :value=>"0"}/

@@ -62,7 +62,11 @@ Event.addBehavior({
     this.activate();
   },
   
-  'form textarea': CodeAreaBehavior()
+  'form textarea': CodeAreaBehavior(),
+  
+  'input.date': DateInputBehavior(),
+  
+  'select#page_status_id':  PageStatusBehavior()
 });
 
 // Toolbars
