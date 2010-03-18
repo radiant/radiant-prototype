@@ -37,18 +37,25 @@ module ViewHelpers
     design << NavSubItem.new(:layouts, "Layouts", "/admin/layouts/")
     design << NavSubItem.new(:snippets, "Snippets", "/admin/snippets/")
     
-    media = NavTab.new(:assets, "Assets")
-    media << NavSubItem.new(:images, "Images", "/admin/images/")
-    media << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
-    media << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
-    media << NavSubItem.new(:files, "Other Files", "/admin/files/")
+    assets = NavTab.new(:assets, "Assets")
+    assets << NavSubItem.new(:images, "Images", "/admin/images/")
+    assets << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
+    assets << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
+    assets << NavSubItem.new(:files, "Other Files", "/admin/files/")
+    
+    custom = NavTab.new(:acme, "Acme")
+    custom << NavSubItem.new(:acme_intro, "Intro", "/admin/acme/")
+    custom << NavSubItem.new(:acme_widgets, "Widgets", "/admin/acme/widgets/")
+    custom << NavSubItem.new(:acme_orders, "Orders", "/admin/acme/orders/")
+    custom << NavSubItem.new(:acme_shipping, "Shipping", "/admin/acme/shipping/")
+    custom << NavSubItem.new(:acme_shipping, "Depreciated", "/admin/acme/depreciated/")
     
     settings = NavTab.new(:settings, "Settings")
     settings << NavSubItem.new(:general, "General", "/admin/settings/")
     settings << NavSubItem.new(:users, "Users", "/admin/users/")
     settings << NavSubItem.new(:extensions, "Extensions", "/admin/extensions/")
     
-    [content, design, media, settings]
+    [content, design, assets, custom, settings]
   end
   
   def body_classes
@@ -58,6 +65,13 @@ module ViewHelpers
   def button_to(title, url, html_options={})
     html_options.update(:onclick=>"window.location = '#{url}'")
     content_tag :button, title, html_options
+  end
+  
+  def widget(name, short_description, attributes={})
+    fixture(attributes.merge(:name => name, :short_description => short_description), WidgetFixtureMethods)
+  end
+  
+  module WidgetFixtureMethods
   end
   
   module GravatarHelper

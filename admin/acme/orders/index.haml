@@ -1,0 +1,28 @@
+- @selected = :acme_orders
+
+- @orders = []
+
+.outset
+  %table#orders.index
+    %thead
+      %tr
+        %th.order Order
+        %th.modify Modify
+    %tbody
+      - unless @orders.empty?
+        - @orders.each do |order|
+          %tr.node.level_1
+            %td.order
+              = image('order', :alt => '')
+              %span= link_to order.title, "/admin/acme/orders/edit"
+            %td.remove
+              = link_to "Remove", "/admin/acme/orders/remove"
+      - else
+        %tr
+          %td.empty{:colspan=>2} No Orders
+
+#actions
+  %ul
+    %li= link_to image('plus.png') + " New Order", "/admin/acme/orders/new"
+
+- sleep(1) # provide a bit of a delay when loading to simulate the real app

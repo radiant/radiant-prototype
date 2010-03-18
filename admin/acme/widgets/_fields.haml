@@ -1,0 +1,32 @@
+.form_area
+  %p.title
+    %label{:for=>"name"} Name
+    %input.textbox{:name=>"name", :id=>"name", :type=>"text", :size=>30, :value=>""}/
+  .set
+    %p
+      %label{:for=>"manufacturer"} Manufacturer
+      %input.textbox{:name=>"manufacturer", :id=>"manufacturer", :type=>"text", :size=>30, :value=>""}/
+    %p
+      %label{:for=>"in_stock"} Number in Stock
+      %input.textbox{:name=>"in_stock", :id=>"in_stock", :type=>"text", :size=>30, :value=>""}/
+  .set
+    %p
+      %label{:for=>"url"} Product URL
+      %input.textbox.date{:name=>"url", :id=>"url", :type=>"text", :size=>30, :value=>""}/
+    %p
+      %label{:for=>"item_number"} Item Number
+      %input.textbox.date{:name=>"item_number", :id=>"item_number", :type=>"text", :size=>30, :value=>""}/
+  .set
+    %p
+      %label{:for=>"manufactured_on"} Manufactured On
+      %input.textbox{:name=>"manufactured_on", :id=>"manufactured_on", :type=>"text", :size=>30, :value=>""}/
+    %p
+      %label{:for=>"delivered_on"} Delivered On
+      %input.textbox{:name=>"delivered_on", :id=>"delivered_on", :type=>"text", :size=>30, :value=>""}/
+  %p
+    %label{:for=>"short_description"} Short Description
+    %textarea{:name=>"short_description", :id=>"short_description", :style=>"width: 99.5%; height: 7em"}
+  %p
+    %label{:for=>"long_description"} Long Description
+    %textarea.large{:name=>"long_description", :id=>"long_description", :style=>"width: 99.5%"}
+  

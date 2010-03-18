@@ -1,0 +1,30 @@
+- @selected = :acme_widgets
+
+- @widgets = []
+- @widgets << widget("Acme Sprocket Wiget", "We manufacture these ourselves.")
+- @widgets << widget("Widget 111", "The standard widget. Great for almost anything.")
+
+.outset
+  %table.index
+    %thead
+      %tr
+        %th Widget
+        %th Short Description
+        %th.modify Modify
+    %tbody
+      - unless @widgets.empty?
+        - @widgets.each do |widget|
+          %tr.node.level_1
+            %td= link_to widget.name, "/admin/acme/widgets/edit"
+            %td= widget.short_description
+            %td.remove
+              = link_to "Remove", "/admin/acme/widgets/remove"
+      - else
+        %tr
+          %td.empty{:colspan=>2} No Widgets
+
+#actions
+  %ul
+    %li= link_to image('plus.png') + " New Widget", "/admin/acme/widgets/new"
+
+- sleep(1) # provide a bit of a delay when loading to simulate the real app

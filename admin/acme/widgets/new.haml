@@ -1,0 +1,20 @@
+- @selected = :acme_widgets
+- body_classes << "reversed"
+
+%h1 New Widget
+
+%form{:action =>"/admin/acme/widgets/edit/"}
+
+  = render :partial => "fields"
+  
+  %p.buttons
+    %input.button{:type=>"submit", :value=>"Save Changes"}/
+    %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
+    or
+    %a{:href=>"/admin/acme/widgets/"} Cancel
+  
+  %p.updated_line
+    Last updated by
+    %strong Administrator
+    at 3:25 pm
+    on April 19, 2008

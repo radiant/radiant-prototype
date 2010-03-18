@@ -34,8 +34,6 @@
 
 #actions
   %ul
-    %li
-      %a{:href=>"/admin/javascripts/new"} New Javascript
-    %li
-      %a{:href=>"#"} Upload
+    %li= link_to image('plus.png') + " New Javascript", "/admin/javascripts/new"
+    %li= link_to "Upload", "#"
     
