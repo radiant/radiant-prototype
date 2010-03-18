@@ -60,7 +60,8 @@ Event.addBehavior({
       } else {
         element.update('More');
       }
-      element.toggleClassName('more').toggleClassName('less');
+      element.toggleClassName('more');
+      element.toggleClassName('less');
       $('extended_metadata').toggle();
       event.stop();
     });

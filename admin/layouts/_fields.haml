@@ -40,8 +40,7 @@
       %td.field
         %input.textbox{:type=>"text", :name=>"layout_content_type", :id=>"layout_content_type", :maxlenght=>40, :value=>"text/html"}/
 %p.more_or_less
-  %a{:id=>"more_extended_metadata", :href=>"javascript: $('extended_metadata').show(); $('less_extended_metadata').show(); $('more_extended_metadata').hide(); this.stop()"} More
-  %a{:id=>"less_extended_metadata", :href=>"javascript: $('extended_metadata').hide(); $('more_extended_metadata').show(); $('less_extended_metadata').hide(); this.stop()", :style=>"display: none"} Hide
+  %a{:href=>"#", :class=>"more"} More
 
 %p.content
   %label{:for=>"layout_content"} Body
