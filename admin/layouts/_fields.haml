@@ -32,15 +32,16 @@
   %label{:for=>"layout_name"} Name
   %input.textbox.activate{:name=>"layout_name", :id=>"layout_name", :maxlength=>100}/
 
-#extended_metadata{:style=>"display: none"}
-  %table.fieldset
-    %tr
-      %th.label
-        %label{:for=>"layout_content_type"} Content&#8209;Type
-      %td.field
-        %input.textbox{:type=>"text", :name=>"layout_content_type", :id=>"layout_content_type", :maxlenght=>40, :value=>"text/html"}/
-%p.more_or_less
-  %a{:href=>"#", :class=>"more"} More
+.drawer
+  .drawer_contents#attributes
+    %table.fieldset
+      %tr
+        %th.label
+          %label{:for=>"layout_content_type"} Content&#8209;Type
+        %td.field
+          %input.textbox{:type=>"text", :name=>"layout_content_type", :id=>"layout_content_type", :maxlenght=>40, :value=>"text/html"}/
+  .drawer_handle
+    %a.toggle.more{:href=>"#attributes", :rel=>"toggle[attributes]"} More
 
 %p.content
   %label{:for=>"layout_content"} Body

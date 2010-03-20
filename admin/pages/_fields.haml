@@ -50,7 +50,7 @@
     function addAttribute(form) {
       if (validAttributeName()) {
         new Ajax.Updater(
-          $('extended_metadata').down('table'),
+          $('attributes').down('table'),
           '/admin/pages/attributes/create/',
           {
             asynchronous: true,
@@ -132,24 +132,25 @@
   %label{:for=>"page_title"} Page Title
   %input#page_title.textbox.activate{:name=>"page[title]", :size=>"255", :type=>"text", :maxlength=>"255"}/
 
-#extended_metadata{:style=>"display: none"}
-  %table.fieldset
-    %tr
-      %th.label
-        %label{:for=>"page_slug"} Slug
-      %td.field
-        %input#page_slug.textbox{:name=>"page[slug]", :size=>"100", :type=>"text", :value=>"/", :maxlength=>"100"}/
-      %td.actions
-    %tr
-      %th.label
-        %label{:for=>"page_breadcrumb"} Breadcrumb
-      %td.field
-        %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
-      %td.actions
-        %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
-          %img{:src=>"/images/admin/plus_grey.png", :alt=>"Add Attribute", :title=>""}/
-%p.more_or_less
-  %a{:href=>"#", :class=>"more"} More
+.drawer
+  .drawer_contents#attributes
+    %table.fieldset
+      %tr
+        %th.label
+          %label{:for=>"page_slug"} Slug
+        %td.field
+          %input#page_slug.textbox{:name=>"page[slug]", :size=>"100", :type=>"text", :value=>"/", :maxlength=>"100"}/
+        %td.actions
+      %tr
+        %th.label
+          %label{:for=>"page_breadcrumb"} Breadcrumb
+        %td.field
+          %input#page_breadcrumb.textbox{:name=>"page[breadcrumb]", :size=>"160", :type=>"text", :value=>"Home", :maxlength=>"160"}/
+        %td.actions
+          %a.popup{:href=>"/admin/pages/attributes/new", :title=>"Add Attribute"}
+            %img{:src=>"/images/admin/plus_grey.png", :alt=>"Add Attribute", :title=>""}/
+  .drawer_handle
+    %a.toggle.more{:href=>"#attributes", :rel=>"toggle[attributes]"} More
 
 #tab_control
   .tabs
