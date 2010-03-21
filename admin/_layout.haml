@@ -22,8 +22,6 @@
     %script{:src=>"/javascripts/admin/shortcuts.js", :type=>"text/javascript"}
     %script{:src=>"/javascripts/admin/toolbar.js", :type=>"text/javascript"}
     %script{:src=>"/javascripts/admin/application.js", :type=>"text/javascript"}
-    /[if lt IE 7]
-      %script{:type=>"text/javascript", :src=>"/javascripts/admin/pngfix.js"}
     = yield :meta
   %body{:class=>body_classes.join(" ")}
     #page
