@@ -203,6 +203,9 @@ var Toggle = {
  *  - effect: This option specifies the effect that should be used when
  *    toggling. The default is "slide", but it can also be set to
  *    "blind", "appear", or "none".
+ *  - onLoad: Called after the behavior is initialized. The function is
+ *    automatically bound to the behavior (so "this" referes to the
+ *    behavior).
  *  - beforeToggle: Called after the link is clicked, but before the effect is
  *    started. The link is passed as the first parameter and the
  *    function is automatically bound to the behavior (so "this"
@@ -217,6 +220,9 @@ Toggle.LinkBehavior = Behavior.create({
     
     this.effect = options.effect || Toggle.DefaultEffect;
     
+    this.onLoad = options.onLoad || Prototype.emptyFunction;
+    this.onLoad.bind(this);
+    
     this.beforeToggle = options.beforeToggle || Prototype.emptyFunction;
     this.beforeToggle.bind(this);
     
@@ -226,9 +232,11 @@ Toggle.LinkBehavior = Behavior.create({
     var elements = Toggle.extractToggleObjects(this.element.readAttribute('rel'));
     this.toggleWrappers = elements.map(function(e) { return Toggle.wrapElement(e) });
     
-    this.toggleID = Toggle.extractAnchor(this.element.href)
+    this.toggleID = Toggle.extractAnchor(this.element.href);
     this.element.behavior = this; // a bit of a hack
-    Toggle.addLink(this.toggleID, this.element)
+    Toggle.addLink(this.toggleID, this.element);
+    
+    this.onLoad(this.element);
   },
   
   onclick: function() {

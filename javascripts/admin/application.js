@@ -53,6 +53,9 @@ Event.addBehavior({
   },
   
   'a.toggle': Toggle.LinkBehavior({
+    onLoad: function(link) {
+      if (/less/i.match(link.innerHTML)) Toggle.toggle(this.toggleWrappers, this.effect);
+    },
     afterToggle: function(link) {
       link.toggleClassName('more');
       link.toggleClassName('less');
