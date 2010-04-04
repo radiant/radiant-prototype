@@ -1,0 +1,123 @@
+table.index
+  font-size: 90%
+  margin-bottom: 2em
+  width: 100%
+  tr
+    &.hover, &:hover
+      background-color: #e0f0ff
+      +v-gradient(#e5f5ff, #c5dff5)
+  th
+    text-align: left
+    background-color: #9e9e9e
+    color: white
+    font-size: 90%
+    font-weight: normal
+    padding: 2px 9px
+    text-shadow: 1px 1px 0 #666
+  td
+    text-align: left
+    padding: 4px 9px
+    border-bottom: 1px solid #f0f0f0
+    a.action
+      color: black
+      display: block
+      font-size: 80%
+      padding: 4px 4px 2px
+      text-decoration: none
+      &.selected
+        background-color: #d5d5d5 !important
+        +round-top-corners
+    &.empty
+      color: silver
+      font-size: 85%
+      font-style: italic
+      padding: 3em
+      text-align: center
+    &.name
+      font-size: 115%
+      font-weight: bold
+      img
+        vertical-align: -35%
+      a
+        color: black
+        text-decoration: none
+        &:hover
+          color: #0066cc
+          text-decoration: underline
+    &.remove
+      width: 8em
+      a.action
+        width: 5.25em
+        padding-left: 20px
+        background: url(../../images/admin/minus.png) 4px center no-repeat
+        &.disabled
+          color: #ccc
+          font-size: 80%
+          background: url(../../images/admin/minus_disabled.png) 4px center no-repeat
+
+table.index#pages
+  tr.page
+    &.level_0 td.name
+      font-size: 120%
+      font-weight: bold
+    &.level_1 td.name
+      font-size: 115%
+      font-weight: bold
+    &.level_2 td.name
+      font-size: 115%
+    &.level_3 td.name
+      font-size: 105%
+  td.name
+    font-size: 105%
+    a
+      text-decoration: none
+      .title
+        color: black
+        text-decoration: none
+      &:hover .title
+        color: #0066cc
+        text-decoration: underline
+    .info
+      color: #9eb3bf
+      font-style: italic
+      font-weight: normal
+      font-size: 90%
+  tr.page.virtual td.name a .title
+    color: #9eb3bf
+  td.name
+    .w1
+      position: relative
+      img.expander
+        left: -25px
+        position: absolute
+        padding: 3px
+        padding-top: 6px
+        padding-bottom: 6px
+  td.status
+    color: #9eb3bf
+    width: 8em
+    &.draft_status
+      color: #c00
+    &.published_status
+      color: black
+    &.hidden_status
+      color: #0c0
+  td.add_child
+    width: 8em
+    a
+      width: 5.25em
+      background: url(../../images/admin/plus.png) 4px center no-repeat
+      padding-left: 20px
+
+table.index#users
+  td.name
+    padding-top: 8px
+    padding-bottom: 8px
+    img.avatar
+      margin-right: 4px
+      vertical-align: -35%
+    .login
+      color: #9eb3bf
+      font-size: 90%
+      font-style: italic
+      font-weight: normal

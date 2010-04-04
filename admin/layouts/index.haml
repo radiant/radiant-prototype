@@ -5,35 +5,27 @@
   %table#layouts.index
     %thead
       %tr
-        %th.layout
-          Layout
-        %th.modify
-          Modify
+        %th.name Layout
+        %th.modify Modify
     %tbody
-      %tr.node.level_1
-        %td.layout
+      %tr.layout#layout_1
+        %td.name
           %img{:title=>"", :src=>"/images/admin/layout.png", :alt=>"" }/
-          %a{:href=>"/admin/layouts/edit" }
-            Home Page
+          %a{:href=>"/admin/layouts/edit" } Two Column
         %td.remove
-          %a{:href=>"/admin/layouts/remove" }
-            Remove
-      %tr.node.level_1
-        %td.layout
+          %a{:href=>"/admin/layouts/remove" } Remove
+      %tr.layout#layout_2
+        %td.name
           %img{:title=>"", :src=>"/images/admin/layout.png", :alt=>"" }/
-          %a{:href=>"/admin/layouts/edit" }
-            Normal Page
+          %a{:href=>"/admin/layouts/edit" } Three Column
         %td.remove
-          %a{:href=>"/admin/layouts/remove" }
-            Remove
-      %tr.node.level_1
-        %td.layout
+          %a{:href=>"/admin/layouts/remove" } Remove
+      %tr.layout#layout_3
+        %td.name
           %img{:title=>"", :src=>"/images/admin/layout.png", :alt=>"" }/
-          %a{:href=>"/admin/layouts/edit" }
-            XML Feed
+          %a{:href=>"/admin/layouts/edit" } XML Feed
         %td.remove
-          %a{:href=>"/admin/layouts/remove" }
-            Remove
+          %a{:href=>"/admin/layouts/remove" } Remove
 
 #actions
   %ul

@@ -11,10 +11,10 @@
     %tbody
       - unless @orders.empty?
         - @orders.each do |order|
-          %tr.node.level_1
-            %td.order
+          %tr.order
+            %td.name
               = image('order', :alt => '')
-              %span= link_to order.title, "/admin/acme/orders/edit"
+              = link_to order.title, "/admin/acme/orders/edit"
             %td.remove
               = link_to "Remove", "/admin/acme/orders/remove"
       - else

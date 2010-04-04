@@ -197,18 +197,9 @@
     %label{:for=>"page_layout_id"} Layout
     %select#page_layout_id{:name=>"page[layout_id]"}
       %option{:selected=>"selected", :value=>""} &lt;inherit&gt;
-      %option{:value=>"1"} Home Page
-      %option{:value=>"2"} Normal Page
+      %option{:value=>"1"} Two Column
+      %option{:value=>"2"} Three Column
       %option{:value=>"3"} XML Feed
-  %p
-    %label{:for=>"page_class_name"} Page Type
-    %select#page_class_name{:name=>"page[class_name]"}
-      %option{:value=>"Page"} &lt;normal&gt;
-      %option{:value=>"ArchivePage"} Archive
-      %option{:value=>"ArchiveDayIndexPage"} Archive Day Index
-      %option{:value=>"ArchiveMonthIndexPage"} Archive Month Index
-      %option{:value=>"ArchiveYearIndexPage"} Archive Year Index
-      %option{:value=>"FileNotFoundPage"} File Not Found
   %p
     %label{:for=>"page_status_id"} Status
     %select#page_status_id{:name=>"page[status_id]"}

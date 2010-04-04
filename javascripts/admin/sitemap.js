@@ -8,7 +8,7 @@
  *  To use, simply add the following lines to application.js:
  *  
  *     Event.addBehavior({
- *       'table#site_map': SiteMapBehavior()
+ *       'table#pages': SiteMapBehavior()
  *     });
  *
  */

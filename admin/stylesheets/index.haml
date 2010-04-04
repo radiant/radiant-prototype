@@ -1,36 +1,31 @@
 - @selected = :stylesheets
 - @title = 'Stylesheets - Radiant CMS - Publishing for Small Teams'
+
 .outset
-  %table#stylesheets.index
+  %table.index#stylesheets
     %thead
       %tr
-        %th.stylesheet Stylesheet
+        %th.name Stylesheet
         %th.modify Modify
     %tbody
-      %tr.node.level_1
-        %td.stylesheet
-          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
-          %span
-            %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/print.css"} print.css
+      %tr.stylesheet#stylesheet_1
+        %td.name
+          %img{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
+          %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/print.css"} print.css
         %td.remove
-          %a{:href=>"/admin/stylesheets/remove"}
-            Remove
-      %tr.node.level_1
-        %td.stylesheet
-          %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
-          %span
-            %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/screen.css"} screen.css
+          %a{:href=>"/admin/stylesheets/remove"} Remove
+      %tr.stylesheet#stylesheet_2
+        %td.name
+          %img{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
+          %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/screen.css"} screen.css
         %td.remove
-          %a{:href=>"/admin/stylesheets/remove"}
-            Remove
-      %tr.node.level_1
-        %td.stylesheet
+          %a{:href=>"/admin/stylesheets/remove"} Remove
+      %tr.stylesheet#stylesheet_3
+        %td.name
           %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
-          %span
-            %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/shared.css"} shared.css
+          %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/shared.css"} shared.css
         %td.remove
-          %a{:href=>"/admin/stylesheets/remove"}
-            Remove
+          %a{:href=>"/admin/stylesheets/remove"} Remove
 
 #actions
   %ul

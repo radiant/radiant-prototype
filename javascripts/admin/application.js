@@ -33,9 +33,11 @@ Event.addBehavior.reassignAfterAjax = true;
 Event.addBehavior({
   'body': ShortcutKeysBehavior(),
   
+  'a.dropdown': Dropdown.TriggerBehavior(),
+  
   'a.popup': Popup.TriggerBehavior(),
   
-  'table#site_map': SiteMapBehavior(),
+  'table#pages': SiteMapBehavior(),
   
   'input#page_title': function() {
     var title = this;

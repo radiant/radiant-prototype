@@ -2,28 +2,24 @@
 - @title = 'Snippets - Radiant CMS - Publishing for Small Teams'
 
 .outset
-  %table#snippets.index
+  %table.index#snippets
     %thead
       %tr
-        %th.snippet Snippet
+        %th.name Snippet
         %th.modify Modify
     %tbody
-      %tr.node.level_1
-        %td.snippet
-          %img.icon{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
-          %span
-            %a{:href=>"/admin/snippets/edit"} footer
+      %tr.snippet
+        %td.name
+          %img{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
+          %a{:href=>"/admin/snippets/edit"} footer
         %td.remove
-          %a{:href=>"/admin/snippets/remove"}
-            Remove
-      %tr.node.level_1
-        %td.snippet
-          %img.icon{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
-          %span
-            %a{:href=>"/admin/snippets/edit"} header
+          %a{:href=>"/admin/snippets/remove"} Remove
+      %tr.snippet
+        %td.name
+          %img{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
+          %a{:href=>"/admin/snippets/edit"} header
         %td.remove
-          %a{:href=>"/admin/snippets/remove"}
-            Remove
+          %a{:href=>"/admin/snippets/remove"} Remove
 
 #actions
   %ul

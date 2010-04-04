@@ -2,157 +2,151 @@
 - @title = 'Pages - Radiant CMS - Publishing for Small Teams'
 
 .outset
-  %table#site_map.index{:summary=>"Page hierarchy of the current site"}
+  %table.index#pages
     %thead
       %tr
-        %th.page Page
+        %th.name Page
         %th.status Status
         %th.modify{:colspan=>"2"} Modify
     %tbody
-      %tr#page_1.node.level_0.children_visible
-        %td.page{:style=>"padding-left: 9px"}
+      %tr.page.level_0.children_visible#page_1
+        %td.name{:style=>"padding-left: 9px"}
           %span.w1
             %a{:href=>"/admin/pages/edit", :title=>"/"}
-              %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
               %span.title Home Page
             %img#busy_1.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
-        %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
-      %tr#page_2.node.level_1.no_children.virtual
-        %td.page{:style=>"padding-left: 32px"}
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
+        %td.action.remove
+          %a.action{:href=>"/admin/pages/remove"} Remove
+      %tr.page.level_1.no_children.virtual#page_2
+        %td.name{:style=>"padding-left: 32px"}
           %span.w1
             %a{:href=>"/admin/pages/edit", :title=>"/file-not-found/"}
-              %img.icon{:title=>"", :src=>"/images/admin/virtual_page.png", :alt=>""}/
+              %img{:title=>"", :src=>"/images/admin/virtual_page.png", :alt=>""}/
               %span.title File Not Found
             %span.info (File Not Found)
             %img#busy_2.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
         %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
-      %tr#page_9.node.level_1.no_children
-        %td.page{:style=>"padding-left: 32px"}
+          %a.action{:href=>"/admin/pages/remove"} Remove
+      %tr.page.level_1.no_children#page_9
+        %td.name{:style=>"padding-left: 32px"}
           %span.w1
             %a{:href=>"/admin/pages/edit", :title=>"/about/"}
-              %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
               %span.title About
             %img#busy_9.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
         %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
-      %tr#page_4.node.level_1.children_visible
-        %td.page{:style=>"padding-left: 32px"}
+          %a.action{:href=>"/admin/pages/remove"} Remove
+      %tr.page.level_1.children_visible#page_4
+        %td.name{:style=>"padding-left: 32px"}
           %span.w1
             %img.expander{:title=>"", :src=>"/images/admin/collapse.png", :alt=>"toggle children"}/
             %a{:href=>"/admin/pages/edit", :title=>"/articles/"}
-              %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
               %span.title Articles
             %span.info (Archive)
             %img#busy_4.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
         %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
-      %tr#page_10.node.level_2.no_children.virtual
-        %td.page{:style=>"padding-left: 55px"}
+          %a.action{:href=>"/admin/pages/remove"} Remove
+      %tr.page.level_2.no_children.virtual#page_10
+        %td.name{:style=>"padding-left: 55px"}
           %span.w1
             %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/monthly-archives/"}
-              %img.icon{:title=>"", :src=>"/images/admin/virtual_page.png", :alt=>""}/
+              %img{:title=>"", :src=>"/images/admin/virtual_page.png", :alt=>""}/
               %span.title %B %Y Archives
             %span.info (Archive Month Index)
             %img#busy_10.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
         %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
-      %tr#page_5.node.level_2.no_children
-        %td.page{:style=>"padding-left: 55px"}
+          %a.action{:href=>"/admin/pages/remove"} Remove
+      %tr.page.level_2.no_children#page_5
+        %td.name{:style=>"padding-left: 55px"}
           %span.w1
             %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/09/first-post/"}
-              %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
               %span.title First Post
             %img#busy_5.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
         %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
-      %tr#page_6.node.level_2.no_children
-        %td.page{:style=>"padding-left: 55px"}
+          %a.action{:href=>"/admin/pages/remove"} Remove
+      %tr.page.level_2.no_children#page_6
+        %td.name{:style=>"padding-left: 55px"}
           %span.w1
             %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/10/second-post/"}
-              %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title
-                Second Post
+              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+              %span.title Second Post
             %img#busy_6.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
         %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
-      %tr#page_8.node.level_2.no_children
-        %td.page{:style=>"padding-left: 55px"}
+          %a.action{:href=>"/admin/pages/remove"} Remove
+      %tr.page.level_2.no_children#page_8
+        %td.name{:style=>"padding-left: 55px"}
           %span.w1
             %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/third-post/"}
-              %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
               %span.title Third Post
             %img#busy_8.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
         %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
-      %tr#page_3.node.level_1.no_children
-        %td.page{:style=>"padding-left: 32px"}
+          %a.action{:href=>"/admin/pages/remove"} Remove
+      %tr.page.level_1.no_children#page_3
+        %td.name{:style=>"padding-left: 32px"}
           %span.w1
             %a{:href=>"/admin/pages/edit", :title=>"/rss/"}
-              %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
               %span.title RSS Feed
             %img#busy_3.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
         %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
-      %tr#page_7.node.level_1.no_children
-        %td.page{:style=>"padding-left: 32px"}
+          %a.action{:href=>"/admin/pages/remove"} Remove
+      %tr.page.level_1.no_children#page_7
+        %td.name{:style=>"padding-left: 32px"}
           %span.w1
             %a{:href=>"/admin/pages/edit", :title=>"/styles.css/"}
-              %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
               %span.title Styles
             %img#busy_7.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status.published_status Published
         %td.add_child
-          %a{:href=>"/admin/pages/new"}
-            Add Child
+          %a.action.dropdown{:href=>"#add_child_dropdown"} Add Child
         %td.remove
-          %a{:href=>"/admin/pages/remove"}
-            Remove
+          %a.action{:href=>"/admin/pages/remove"} Remove
+
+%ul.menu#add_child_dropdown
+  %li
+    %a{:href=>"/admin/pages/new"} Normal Page
+  %li.separator
+  %li
+    %a{:href=>"/admin/pages/new"} Archive
+  %li
+    %a{:href=>"/admin/pages/new"} Archive Day Index
+  %li
+    %a{:href=>"/admin/pages/new"} Archive Month Index
+  %li
+    %a{:href=>"/admin/pages/new"} Archive Year Index
+  %li
+    %a{:href=>"/admin/pages/new"} File Not Found
 
 - sleep(1)
