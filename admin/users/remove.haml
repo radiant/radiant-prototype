@@ -6,9 +6,11 @@
 
 %table.index#users
   %tbody
-    %tr.node.level_1#user_2
-      %td.user
-        %span.title Jim
+    %tr.user#user_2
+      %td.name
+        %img.avatar.avatar_32x32{:src=>gravatar_url('unknown.user@example.com', :size=>"32px"), :width=>32, :height=>32, :alt=>""}
+        Jim
+        %span.login (jim)
 
 %form{:method=>"post", :action=>"/admin/users/index_after_user_removed.haml"}
   %p.buttons
