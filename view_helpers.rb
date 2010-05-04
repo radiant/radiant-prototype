@@ -48,7 +48,7 @@ module ViewHelpers
     custom << NavSubItem.new(:acme_widgets, "Widgets", "/admin/acme/widgets/")
     custom << NavSubItem.new(:acme_orders, "Orders", "/admin/acme/orders/")
     custom << NavSubItem.new(:acme_shipping, "Shipping", "/admin/acme/shipping/")
-    custom << NavSubItem.new(:acme_shipping, "Depreciated", "/admin/acme/depreciated/")
+    custom << NavSubItem.new(:deprecated, "Deprecated", "/admin/acme/deprecated/")
     
     settings = NavTab.new(:settings, "Settings")
     settings << NavSubItem.new(:general, "General", "/admin/settings/")
