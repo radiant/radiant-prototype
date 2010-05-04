@@ -87,11 +87,11 @@ Dropdown.Menu = Class.create({
   
   open: function(trigger, options) {
     this.wrapper.hide();
+    trigger.addClassName('selected');
     this.position(trigger, options);
     var name = options.effect;
     var effect = Effect[Dropdown.EffectPairs[name][0]];
     effect(this.wrapper, {duration: options.duration});
-    trigger.addClassName('selected');
   },
   
   close: function(trigger, options) {
