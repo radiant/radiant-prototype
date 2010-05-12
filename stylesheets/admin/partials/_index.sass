@@ -27,7 +27,6 @@ table.index
         border: 1px solid #a5c9df
         margin: 0
         +round-corners
-        +v-gradient(white, black)
       &.selected
         background-color: #c5e0f5 !important
         border: 1px solid #a5c0d0
@@ -65,9 +64,9 @@ table.index
     &:first-child
       border-top: 1px solid white
     &.hover, &:hover
-      background: #c5dff5 url(../../images/admin/row_highlight.png) top center repeat-x
-      +v-gradient(#e5f5ff, #c5dff5)
       td
+        background: #c5dff5 url(../../images/admin/row_highlight.png) repeat-x center top
+        +v-gradient(#e5f5ff, #c5dff5)
         border-top: 1px solid #d5f0ff
         border-bottom: 1px solid #c5dff5
 
