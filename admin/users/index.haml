@@ -7,7 +7,7 @@
       %tr
         %th.user Name / Login
         %th.roles Roles
-        %th.modify Modify
+        %th.actions Modify
     %tbody
       %tr.user#user_1
         %td.name
@@ -16,8 +16,8 @@
           %a{:href=>"/admin/users/edit"} Sean Cribbs
           %span.login (sean)
         %td.roles Administrator
-        %td.remove
-          %span.action.disabled Remove
+        %td.actions
+          %span.action.disabled= image('minus_disabled.png') + " Remove"
       %tr.user#user_2
         %td.name
           %a{:href=>"/admin/users/edit"}
@@ -25,8 +25,8 @@
           %a{:href=>"/admin/users/edit"} Jim
           %span.login (jim)
         %td.roles Administrator, Designer
-        %td.remove
-          %a.action{:href=>"/admin/users/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/users/remove", :class=>"action"
       %tr.user#user_3
         %td.name
           %a{:href=>"/admin/users/edit"}
@@ -34,8 +34,8 @@
           %a{:href=>"/admin/users/edit"} Lisa
           %span.login (lisa)
         %td.roles Designer
-        %td.remove
-          %a.action{:href=>"/admin/users/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/users/remove", :class=>"action"
       %tr.user#user_4
         %td.name
           %a{:href=>"/admin/users/edit"}
@@ -43,8 +43,8 @@
           %a{:href=>"/admin/users/edit"} Ralph
           %span.login (ralph)
         %td.roles Designer
-        %td.remove
-          %a.action{:href=>"/admin/users/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/users/remove", :class=>"action"
       %tr.user#user_5
         %td.name
           %a{:href=>"/admin/users/edit"}
@@ -52,8 +52,8 @@
           %a{:href=>"/admin/users/edit"} Susan
           %span.login (susan)
         %td.roles 
-        %td.remove
-          %a.action{:href=>"/admin/users/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/users/remove", :class=>"action"
 
 #actions
   %ul

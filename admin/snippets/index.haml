@@ -6,20 +6,24 @@
     %thead
       %tr
         %th.name Snippet
-        %th.modify Modify
+        %th.actions Modify
     %tbody
       %tr.snippet
         %td.name
           %img{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
           %a{:href=>"/admin/snippets/edit"} footer
-        %td.remove
-          %a.action{:href=>"/admin/snippets/remove"} Remove
+        %td.actions
+          %a.action{:href=>"/admin/snippets/remove"}
+            = image('minus.png')
+            Remove
       %tr.snippet
         %td.name
           %img{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
           %a{:href=>"/admin/snippets/edit"} header
-        %td.remove
-          %a.action{:href=>"/admin/snippets/remove"} Remove
+        %td.actions
+          %a.action{:href=>"/admin/snippets/remove"}
+            = image('minus.png')
+            Remove
 
 #actions
   %ul

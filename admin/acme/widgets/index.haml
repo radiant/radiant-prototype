@@ -10,14 +10,17 @@
       %tr
         %th Widget
         %th.description Short Description
-        %th.modify Modify
+        %th.actions Modify
     %tbody
       - unless @widgets.empty?
         - @widgets.each do |widget|
           %tr.widget
-            %td= link_to widget.name, "/admin/acme/widgets/edit"
-            %td.description= widget.short_description
-            %td.remove= link_to "Remove", "/admin/acme/widgets/remove"
+            %td.name
+              = link_to widget.name, "/admin/acme/widgets/edit"
+            %td.description
+              = widget.short_description
+            %td.actions
+              = link_to image('minus.png') + " Remove", "/admin/acme/widgets/remove", :class=>"action"
       - else
         %tr
           %td.empty{:colspan=>2} No Widgets

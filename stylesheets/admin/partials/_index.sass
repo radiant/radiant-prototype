@@ -2,6 +2,7 @@ table.index
   font-size: 90%
   margin-bottom: 2em
   width: 100%
+  border-bottom: 1px solid white
   th
     text-align: left
     background-color: #9e9e9e
@@ -9,30 +10,31 @@ table.index
     font-size: 90%
     font-weight: normal
     padding: 2px 9px
-    text-shadow: 1px 1px 0 #666
+    &.actions
+      padding-left: 15px
   td
     text-align: left
     padding: 4px 9px
     border-top: 1px solid #f0f0f0
     a.action, span.action.disabled
-      display: block
-      font-size: 80%
-      padding: 4px 4px 3px
-      margin: 0 1px
+      padding: 6px
+      margin: 0 25px 0 1px
+      img
+        vertical-align: -18%
     a.action
       color: black
       text-decoration: none
       &:hover
         background-color: #f5f5f5 !important
         border: 1px solid #a5c9df
-        margin: 0
+        margin: 0 24px 0 0
         +round-corners
       &.selected
         background-color: #c5e0f5 !important
         border: 1px solid #a5c0d0
-        margin: 0
+        margin: 0 24px 0 0
         +round-top-corners
-        +round-bottom-corners(0px)
+        +round-bottom-corners(0)
     span.action.disabled
       color: #ccc
     &.empty
@@ -52,23 +54,17 @@ table.index
         &:hover
           color: #0066cc
           text-decoration: underline
-    &.remove
-      width: 8em
-      a.action, span.action.disabled
-        width: 5.25em
-        padding-left: 20px
-        background: url(../../images/admin/minus.png) 4px center no-repeat
-      span.action.disabled
-        background: url(../../images/admin/minus_disabled.png) 4px center no-repeat
+    &.actions
+      font-size: 85%
   tr
     &:first-child
       border-top: 1px solid white
     &.hover, &:hover
       td
         background: #c5dff5 url(../../images/admin/row_highlight.png) repeat-x center top
-        +v-gradient(#e5f5ff, #c5dff5)
         border-top: 1px solid #d5f0ff
         border-bottom: 1px solid #c5dff5
+        +v-gradient(#e5f5ff, #c5dff5)
 
 table.index#pages
   tr.page
@@ -107,20 +103,29 @@ table.index#pages
         position: absolute
         padding: 6px 3px
   td.status
-    color: #9eb3bf
-    width: 8em
-    &.draft_status
-      color: #c00
-    &.published_status
-      color: black
-    &.hidden_status
-      color: #0c0
-  td.add_child
-    width: 8em
-    a
-      width: 5.25em
-      background: url(../../images/admin/plus.png) 4px center no-repeat
-      padding-left: 20px
+    width: 10em
+    font-size: 85%
+    .status
+      color: white
+      display: block
+      text-align: center
+      width: 4.5em
+      background-color: #9eb3bf
+      padding: 0 6px
+      +round-corners(100px)
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.25)
+      &.draft_status
+        background-color: #cc494c
+      &.published_status
+        background: none
+        color: #666
+        font-size: 110%
+        padding: 0
+        text-align: left
+        text-shadow: none
+        width: auto
+      &.hidden_status
+        background-color: #49cc4c
 
 table.index#users
   td.name
@@ -128,7 +133,7 @@ table.index#users
     padding-bottom: 8px
     img.avatar
       margin-right: 4px
-      vertical-align: -35%
+      vertical-align: center
     .login
       color: #9eb3bf
       font-size: 90%

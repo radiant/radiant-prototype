@@ -3,11 +3,11 @@
 - @orders = []
 
 .outset
-  %table#orders.index
+  %table.index#orders
     %thead
       %tr
         %th.order Order
-        %th.modify Modify
+        %th.actions Modify
     %tbody
       - unless @orders.empty?
         - @orders.each do |order|
@@ -15,8 +15,8 @@
             %td.name
               = image('order', :alt => '')
               = link_to order.title, "/admin/acme/orders/edit"
-            %td.remove
-              = link_to "Remove", "/admin/acme/orders/remove"
+            %td.actions
+              = link_to image('minus.png') + " Remove", "/admin/acme/orders/remove"
       - else
         %tr
           %td.empty{:colspan=>2} No Orders

@@ -5,26 +5,26 @@
     %thead
       %tr
         %th.name Javascript
-        %th.modify Modify
+        %th.actions Modify
     %tbody
       %tr.javascript#javascript_1
         %td.name
           %img{:title=>"", :src=>"/images/admin/javascript.png", :alt=>"javascript_icon"}/
           %a{:href=>"/admin/javascripts/edit", :title=>"/javascripts/controls.js"} controls.js
-        %td.remove
-          %a.action{:href=>"/admin/javascripts/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/javascripts/remove", :class=>"action"
       %tr.javascript#javascript_2
         %td.name
           %img{:title=>"", :src=>"/images/admin/javascript.png", :alt=>"javascript_icon"}/
           %a{:href=>"/admin/javascripts/edit", :title=>"/javascripts/effects.js"} effects.js
-        %td.remove
-          %a.action{:href=>"/admin/javascripts/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/javascripts/remove", :class=>"action"
       %tr.javascript#javascript_3
         %td.name
           %img{:title=>"", :src=>"/images/admin/javascript.png", :alt=>"javascript_icon"}/
           %a{:href=>"/admin/javascripts/edit", :title=>"/javascripts/prototype.js"} prototype.js
-        %td.remove
-          %a.action{:href=>"/admin/javascripts/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/javascripts/remove", :class=>"action"
 
 #actions
   %ul

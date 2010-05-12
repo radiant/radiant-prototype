@@ -6,26 +6,26 @@
     %thead
       %tr
         %th.name Stylesheet
-        %th.modify Modify
+        %th.actions Modify
     %tbody
       %tr.stylesheet#stylesheet_1
         %td.name
           %img{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
           %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/print.css"} print.css
-        %td.remove
-          %a.action{:href=>"/admin/stylesheets/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/stylesheets/remove", :class=>"action"
       %tr.stylesheet#stylesheet_2
         %td.name
           %img{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
           %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/screen.css"} screen.css
-        %td.remove
-          %a.action{:href=>"/admin/stylesheets/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/stylesheets/remove", :class=>"action"
       %tr.stylesheet#stylesheet_3
         %td.name
           %img.icon{:title=>"", :src=>"/images/admin/stylesheet.png", :alt=>""}/
           %a{:href=>"/admin/stylesheets/edit", :title=>"/stylesheets/shared.css"} shared.css
-        %td.remove
-          %a.action{:href=>"/admin/stylesheets/remove"} Remove
+        %td.actions
+          = link_to image('minus.png') + " Remove", "/admin/stylesheets/remove", :class=>"action"
 
 #actions
   %ul
