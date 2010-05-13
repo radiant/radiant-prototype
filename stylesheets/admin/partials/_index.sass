@@ -35,13 +35,14 @@ table.index
       color: black
       text-decoration: none
       &:hover
-        background-color: #f5f5f5 !important
+        background: #eee url(../../images/admin/buttons_background.png) repeat-x
         border: 1px solid #a5c9df
         margin: 0 24px 0 0
         +round-corners
       &.selected
-        background-color: #c5e0f5 !important
-        border: 1px solid #a5c0d0
+        background-color: #c5e0f5
+        +v-gradient(#e5f5ff, #c5e0ff)
+        border: 1px solid #a5c9df
         margin: 0 24px 0 0
         +round-top-corners
         +round-bottom-corners(0)
