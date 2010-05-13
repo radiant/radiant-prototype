@@ -164,7 +164,6 @@ Dropdown.Menu.findOrCreate = function(element) {
 Dropdown.Menu.controls = {};
 
 Event.observe(window, 'resize', function(event) {
-  console.log('resizing');
   for (key in Dropdown.Menu.controls) {
     var menu = Dropdown.Menu.controls[key];
     if (menu.visible()) menu.reposition();
