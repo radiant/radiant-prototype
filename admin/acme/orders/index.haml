@@ -7,7 +7,7 @@
     %thead
       %tr
         %th.order Order
-        %th.actions Modify
+        %th.actions{:style=>"width:9em"} Modify
     %tbody
       - unless @orders.empty?
         - @orders.each do |order|
