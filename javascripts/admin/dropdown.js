@@ -121,6 +121,7 @@ Dropdown.Menu = Class.create({
       case 'bottom':  this.positionBottom(trigger);  break;
       default:        this.positionBottom(trigger);
     }
+    this.lastOptions = options;
   },
   
   positionTop: function(trigger) {
@@ -130,6 +131,7 @@ Dropdown.Menu = Class.create({
       left: offset.left + 'px',
       top:  (offset.top - height) + 'px'
     });
+    this.lastTrigger = trigger;
   },
   
   positionBottom: function(trigger) {
@@ -139,6 +141,15 @@ Dropdown.Menu = Class.create({
       left: offset.left + 'px',
       top:  (offset.top + height) + 'px'
     });
+    this.lastTrigger = trigger;
+  },
+  
+  reposition: function() {
+    if (this.lastTrigger) this.position(this.lastTrigger, this.lastOptions);
+  },
+  
+  visible: function() {
+    return this.wrapper.visible();
   }
   
 });
@@ -151,3 +162,11 @@ Dropdown.Menu.findOrCreate = function(element) {
   return menu;
 }
 Dropdown.Menu.controls = {};
+
+Event.observe(window, 'resize', function(event) {
+  console.log('resizing');
+  for (key in Dropdown.Menu.controls) {
+    var menu = Dropdown.Menu.controls[key];
+    if (menu.visible()) menu.reposition();
+  }
+});
