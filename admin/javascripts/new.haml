@@ -6,7 +6,7 @@
 
 %form{:method=>"post", :action=>"/admin/javascripts/", "data-onsubmit_status"=>"Creating javascript&#8230;"}
   
-  = render :partial => "fields"
+  = render "fields"
   
   %p.buttons{:style => "clear: left"}
     %input.button{:type=>"submit", :value=>"Create Javascript"}/
