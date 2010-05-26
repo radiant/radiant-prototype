@@ -11,4 +11,7 @@ root = File.dirname(__FILE__)
 use Rack::CommonLogger
 use Rack::ShowStatus
 use Rack::ShowExceptions
-run Serve::RackAdapter.new(root)
+run Rack::Cascade.new([
+  Serve::RackAdapter.new(root),
+  Rack::Directory.new(root)
+])
