@@ -1,0 +1,1 @@
+public/ and tmp/ are necessary for running a Rack application on passenger
