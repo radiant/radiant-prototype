@@ -1,6 +1,6 @@
 #\ -p 4000
 
-gem 'activesupport', '>= 2.3.5' # version required by Serve
+gem 'activesupport', '>= 2.3.5'
 gem 'serve', '>= 0.11.6'
 
 require 'serve'

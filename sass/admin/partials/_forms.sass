@@ -77,7 +77,7 @@
   margin-top: -1em
   margin-bottom: 1em
 .drawer_contents
-  background: #7e7e7e url(../../images/admin/navigation_shadow.png) repeat-x
+  background: #7e7e7e image_url('admin/navigation_shadow.png') repeat-x
   +border-bottom-right-radius(6px)
   margin: 0
   margin-right: 2px
@@ -132,13 +132,13 @@
     &:hover, &:active, &:focus
       text-decoration: underline
     &.more
-      background: #7e7e7e url(../../images/admin/metadata_toggle.png) no-repeat 85% 8px
+      background: #7e7e7e image_url('admin/metadata_toggle.png') no-repeat 85% 8px
     &.less
-      background: #7e7e7e url(../../images/admin/metadata_toggle.png) no-repeat 85% -21px
+      background: #7e7e7e image_url('admin/metadata_toggle.png') no-repeat 85% -21px
 
 .box
   color: #333
-  background: #f5f1e2 url(../../images/admin/vertical_tan_gradient.png) top left repeat-x
+  background: #f5f1e2 image_url('admin/vertical_tan_gradient.png') top left repeat-x
   font-size: 90%
   padding: 1px 15px 10px
   margin: 3px 0 20px
@@ -215,7 +215,7 @@ body.reversed
         color: #d0d0d0
         text-shadow: none
       .buttons
-        background: white url(../../images/admin/buttons_background.png) bottom repeat-x
+        background: white image_url('admin/buttons_background.png') bottom repeat-x
         padding: 12px 10px
         +border-radius(8px)
         +box-shadow(2px, 2px, 3px, rgba(0,0,0,0.15))
@@ -244,7 +244,7 @@ body.reversed
 body.single_form
   #content
     #single_form
-      background: #f5f1e2 url(../../images/admin/vertical_tan_gradient.png) center -15px repeat-x
+      background: #f5f1e2 image_url('admin/vertical_tan_gradient.png') center -15px repeat-x
       border: 0.35em solid #efead3
       padding: 0.5em 1.5em
       padding-right: 22px
@@ -291,7 +291,7 @@ body.single_form
       .buttons
         margin: 1.75em 0 1em
     p.version
-      background: url(../../images/admin/single_form_shadow.png) top center no-repeat
+      background: image_url('admin/single_form_shadow.png') top center no-repeat
       color: #666
       font-size: 80%
       padding-top: 10px
