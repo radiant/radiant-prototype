@@ -31,10 +31,9 @@
     %li= link_to image('plus.png') + " New Javascript", "/admin/javascripts/new"
     %li
       = link_to 'Upload', '#uploader', :class => 'replace'
-      #uploader
-        - form_for :upload, :url => '', :html => { :class => 'button_form', :multipart => true } do |f|
-          %span
-            = f.label :upload
-            = f.file_field :upload 
-            = f.submit 'Create Javascript'
+      %form{:method=>"post", :action=>"/admin/javascripts/", "data-onsubmit_status"=>"Saving changes&#8230;", :id => 'uploader', :class => 'button_form'}
+        %span
+          %label{:for=>"upload"} Upload
+          %input{:type => 'file', :name=>"uploaded_javascript", :id=>"upload"}/
+          %input{:type => 'submit', :value => 'Create Javascript'}
     

@@ -75,6 +75,16 @@ Event.addBehavior({
   'form input.activate': function() {
     this.activate();
   },
+    
+  'a.replace:click': function(){
+    var ref = this.readAttribute('href').sub(/\#/,'')
+    $(ref).show();
+    this.hide();
+  },
+  
+  'form.button_form input[type=file]:change': function(){
+    this.up('form').highlight().down('input[type=submit]').show();
+  },
   
   'form textarea': CodeAreaBehavior(),
   
@@ -82,6 +92,11 @@ Event.addBehavior({
   
   'select#page_status_id':  PageStatusBehavior()
 });
+
+document.observe('dom:loaded', function(){
+  $('uploader').down('input[type=submit]').hide()
+  $('uploader').hide()
+})
 
 // Toolbars
 var teButtons = TextileEditor.prototype.buttons;
