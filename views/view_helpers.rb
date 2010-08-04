@@ -36,11 +36,11 @@ module ViewHelpers
     design = NavTab.new(:design, "Design")
     design << NavSubItem.new(:layouts, "Layouts", "/admin/layouts/")
     design << NavSubItem.new(:snippets, "Snippets", "/admin/snippets/")
+    assets << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
+    assets << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
     
     assets = NavTab.new(:assets, "Assets")
     assets << NavSubItem.new(:images, "Images", "/admin/images/")
-    assets << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
-    assets << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
     assets << NavSubItem.new(:files, "Other Files", "/admin/files/")
     
     custom = NavTab.new(:acme, "Acme")
