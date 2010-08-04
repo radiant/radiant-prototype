@@ -30,4 +30,10 @@
 #actions
   %ul
     %li= link_to image('plus.png') + " New Stylesheet", "/admin/stylesheets/new"
-    %li= link_to "Upload", "#"    
+    %li
+      = link_to 'Upload', '#uploader', :class => 'replace'
+      %form{:method=>"post", :action=>"/admin/stylesheets/", "data-onsubmit_status"=>"Saving changes&#8230;", :id => 'uploader', :class => 'button_form'}
+        %span
+          %label{:for=>"upload"} Upload
+          %input{:type => 'file', :name=>"uploaded_stylesheet", :id=>"upload"}/
+          %input{:type => 'submit', :value => 'Create Stylesheet'}
