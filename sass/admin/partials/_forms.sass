@@ -47,7 +47,7 @@
           padding: 0.2em 0.5em 0.30em
           text-decoration: none
           text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) 
-          +round-corners(4px)
+          +border-radius(4px)
           &:hover
             background-color: #555
       &.title
@@ -78,7 +78,7 @@
   margin-bottom: 1em
 .drawer_contents
   background: #7e7e7e url(../../images/admin/navigation_shadow.png) repeat-x
-  +round-corner("bottom-right", 6px)
+  +border-bottom-right-radius(6px)
   margin: 0
   margin-right: 2px
   padding-bottom: 2px
@@ -128,7 +128,7 @@
     top: -1px
     text-shadow: #666 1px 1px 0
     text-decoration: none
-    +round-bottom-corners(6px)
+    +border-bottom-radius(6px)
     &:hover, &:active, &:focus
       text-decoration: underline
     &.more
@@ -144,7 +144,7 @@
   margin: 3px 0 20px
   height: 1%
   overflow-y: auto
-  +round-corners(8px)
+  +border-radius(8px)
   h3
     color: #333
     margin: 15px 0 0
@@ -217,7 +217,7 @@ body.reversed
       .buttons
         background: white url(../../images/admin/buttons_background.png) bottom repeat-x
         padding: 12px 10px
-        +round-corners(8px)
+        +border-radius(8px)
         +box-shadow(2px, 2px, 3px, rgba(0,0,0,0.15))
       fieldset
         background: #858585
@@ -225,7 +225,7 @@ body.reversed
         margin-bottom: 20px
         overflow: hidden
         +box-shadow(1px, 1px, 0, #ababab)
-        +round-corners(8px)
+        +border-radius(8px)
         h3
           font-weight: bold
           font-size: 120%
@@ -250,7 +250,7 @@ body.single_form
       padding-right: 22px
       position: relative
       width: 28em
-      +round-corners(6px)
+      +border-radius(6px)
       h1
         font-size: 140%    
         margin: 0.75em 0 1.25em

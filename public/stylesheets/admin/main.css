@@ -1,0 +1,1785 @@
+/* line 14, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+body {
+  font-size: 95%;
+  font-family: "Lucida Grande", "Bitstream Vera Sans", Helvetica, Verdana, Arial, sans-serif;
+}
+
+/* line 5, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+/* line 4, ../../../sass/admin/modules/_links.sass */
+a:hover {
+  text-decoration: none;
+}
+/* line 7, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+a.alt {
+  color: red;
+  text-decoration: underline;
+}
+/* line 10, ../../../sass/admin/modules/_links.sass */
+a.alt:hover {
+  text-decoration: none;
+}
+
+/* line 10, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+big {
+  font-size: 110%;
+}
+
+/* line 13, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+h1 {
+  font-size: 180%;
+  font-weight: bold;
+  margin: 0.75em 0;
+}
+
+/* line 18, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+h3 {
+  font-weight: bold;
+  font-size: 130%;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+/* line 24, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+h4 {
+  font-weight: bold;
+}
+
+/* line 27, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+p {
+  margin: 1em 0;
+}
+
+/* line 30, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+td {
+  vertical-align: middle;
+}
+
+/* line 33, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+/* line 37, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+/* line 41, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+input[type=image] {
+  border: none;
+  vertical-align: middle;
+}
+
+/* line 45, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+input.big {
+  font-size: 120%;
+}
+
+/* line 48, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+#change_password span, span.info, span.error {
+  font-size: 80%;
+}
+
+/* line 51, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+.clear {
+  font-size: 1px;
+  clear: both;
+}
+
+/* line 55, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+.warning {
+  color: red;
+}
+
+/* line 58, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_base.sass */
+table {
+  border-collapse: collapse;
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_layout.sass */
+body.reversed {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+/* line 6, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_layout.sass */
+body.single_form #content {
+  text-align: center;
+}
+/* line 8, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_layout.sass */
+body.single_form #content #single_form {
+  margin: 6em auto 0;
+  text-align: left;
+}
+
+/* line 1, ../../../sass/admin/partials/_header.sass */
+#header {
+  font-size: 90%;
+  background: #cc0000 url(../../images/admin/navigation_background.gif) repeat-x;
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+/* line 8, ../../../sass/admin/partials/_header.sass */
+#site_links {
+  color: #f5cbcb;
+  font-size: 80%;
+  float: right;
+  padding: 15px 80px 0 5px;
+  height: 16px;
+}
+/* line 14, ../../../sass/admin/partials/_header.sass */
+#site_links a, #site_links a:visited {
+  color: white;
+}
+/* line 16, ../../../sass/admin/partials/_header.sass */
+#site_links a:hover, #site_links strong a {
+  text-decoration: none;
+}
+
+/* line 19, ../../../sass/admin/partials/_header.sass */
+#view_site {
+  font-size: 90%;
+  background: url(../../images/admin/view_site.png) no-repeat;
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  height: 17px;
+  width: 64px;
+  line-height: 17px;
+  padding-left: 1px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* line 33, ../../../sass/admin/partials/_header.sass */
+ul#navigation {
+  font-size: 100%;
+  float: left;
+  margin-top: 6px;
+  postion: relative;
+}
+/* line 38, ../../../sass/admin/partials/_header.sass */
+ul#navigation li {
+  float: left;
+  height: 30px;
+  margin: 4px 0 0 8px;
+  white-space: nowrap;
+}
+/* line 43, ../../../sass/admin/partials/_header.sass */
+ul#navigation li a {
+  background: url(../../images/admin/navigation_tabs.png) left top repeat-x;
+  color: #eedddd;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;
+  position: relative;
+  text-decoration: none;
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -o-border-top-left-radius: 6px;
+  -ms-border-top-left-radius: 6px;
+  -khtml-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -o-border-top-right-radius: 6px;
+  -ms-border-top-right-radius: 6px;
+  -khtml-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+/* line 53, ../../../sass/admin/partials/_header.sass */
+ul#navigation li:hover a {
+  background-position: left -48px;
+  color: white;
+}
+/* line 56, ../../../sass/admin/partials/_header.sass */
+ul#navigation li.current a {
+  background-position: left -96px;
+  color: #333333;
+  font-weight: bold;
+}
+/* line 60, ../../../sass/admin/partials/_header.sass */
+ul#navigation li.dimmed a {
+  background-position: 0 -48px;
+}
+/* line 62, ../../../sass/admin/partials/_header.sass */
+ul#navigation ul#nav_sub {
+  background: url(../../images/admin/navigation_secondary_background.png) repeat-x;
+  font-size: 95%;
+  clear: both;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 38px;
+  z-index: 10;
+}
+/* line 74, ../../../sass/admin/partials/_header.sass */
+ul#navigation ul#nav_sub li {
+  margin: 0;
+}
+/* line 76, ../../../sass/admin/partials/_header.sass */
+ul#navigation ul#nav_sub li a {
+  background: url(../../images/admin/navigation_secondary_background.png) repeat-x;
+  color: #555555;
+  display: -moz-inline-stack;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 38px;
+  margin: 0;
+  padding: 0;
+  height: 38px;
+}
+/* line 86, ../../../sass/admin/partials/_header.sass */
+ul#navigation ul#nav_sub li a:hover {
+  background-position: left -40px;
+  color: #444444;
+}
+/* line 89, ../../../sass/admin/partials/_header.sass */
+ul#navigation ul#nav_sub li a.current {
+  background: url(../../images/admin/navigation_secondary_background.png) left -80px repeat-x;
+  color: #333333;
+  font-weight: bold;
+}
+/* line 93, ../../../sass/admin/partials/_header.sass */
+ul#navigation ul#nav_sub li a.current:hover {
+  background-position: left -120px;
+  color: #222222;
+}
+/* line 96, ../../../sass/admin/partials/_header.sass */
+ul#navigation ul#nav_sub li a span {
+  background: url(../../images/admin/navigation_secondary_separator.gif) right bottom no-repeat;
+  display: block;
+  margin: 0;
+  padding: 0 26px;
+  height: 38px;
+}
+
+/* line 103, ../../../sass/admin/partials/_header.sass */
+#header_bottom {
+  clear: both;
+  height: 38px;
+  position: relative;
+}
+/* line 107, ../../../sass/admin/partials/_header.sass */
+#header_bottom div {
+  background: url(../../images/admin/navigation_shadow.png) repeat-x;
+  position: absolute;
+  top: 38px;
+  width: 100%;
+  height: 4px;
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_avatars.sass */
+img.avatar {
+  background: white;
+  border: none;
+  padding: 4px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+}
+/* line 7, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_avatars.sass */
+img.avatar.avatar_32x32 {
+  padding: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* line 1, ../../../sass/admin/partials/_dropdown.sass */
+.dropdown_wrapper {
+  border: 1px solid #b3b3b3;
+  border-top: 1px solid #c3c3c3;
+  -moz-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35);
+  -o-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35);
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -khtml-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* line 8, ../../../sass/admin/partials/_dropdown.sass */
+ul.menu {
+  background: white;
+  font-size: 80%;
+  padding: 5px 20px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -khtml-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* line 14, ../../../sass/admin/partials/_dropdown.sass */
+ul.menu li {
+  margin: 0 -20px;
+}
+/* line 16, ../../../sass/admin/partials/_dropdown.sass */
+ul.menu li.separator {
+  margin: 5px -18px;
+  border-top: 1px solid #e5e5e5;
+}
+/* line 19, ../../../sass/admin/partials/_dropdown.sass */
+ul.menu a {
+  color: black;
+  display: block;
+  padding: 6px 20px 7px;
+  text-decoration: none;
+  border-top: 1px solid white;
+}
+/* line 25, ../../../sass/admin/partials/_dropdown.sass */
+ul.menu a:hover {
+  background: #e0f0ff url(../../images/admin/menu_highlight.png) top center repeat-x;
+  border-top: 1px solid #d5f0ff;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e5f5ff), color-stop(100%, #b5d0f5));
+  background-image: -moz-linear-gradient(top, #e5f5ff 0%, #b5d0f5 100%);
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_messages.sass */
+#notice, #error {
+  padding: 1px 1em;
+}
+
+/* line 4, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_messages.sass */
+#notice {
+  background-color: #b2e5b2;
+  color: #006600;
+}
+
+/* line 8, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_messages.sass */
+#error {
+  background-color: #f3c2c2;
+  color: #770000;
+}
+
+/* line 14, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p label {
+  display: block;
+}
+/* line 16, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p label.checkbox, #content form p label.radio {
+  display: inline;
+  font-weight: normal;
+  font-size: 95%;
+  text-shadow: none;
+  margin-right: 1em;
+}
+/* line 22, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p label.multi_option {
+  margin-bottom: 0.3em;
+}
+/* line 24, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p input.textbox {
+  font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+  font-size: 140%;
+  margin-bottom: 0;
+}
+/* line 28, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p input.checkbox, #content form p input.radio {
+  margin-top: 0.3em;
+}
+/* line 30, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p textarea {
+  font-size: 100%;
+  margin-top: 0.3em;
+}
+/* line 33, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p .value {
+  display: block;
+  margin-top: 0.25em;
+  text-shadow: #666666 1px 1px 0;
+}
+/* line 37, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p .hint {
+  font-size: 90%;
+  display: block;
+  margin-top: 0.25em;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+}
+/* line 42, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p a {
+  color: white;
+}
+/* line 44, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p a.action {
+  background-color: #7e7e7e;
+  font-size: 75%;
+  padding: 0.2em 0.5em 0.3em;
+  text-decoration: none;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 51, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p a.action:hover {
+  background-color: #555555;
+}
+/* line 54, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form p.title input.textbox {
+  margin-top: 4px;
+  font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+  font-size: 200%;
+  width: 99.5%;
+}
+/* line 59, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form .set {
+  float: left;
+  width: 100%;
+  margin-bottom: 1em;
+  clear: both;
+}
+/* line 64, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form .set p {
+  float: left;
+  margin: 0 1em 0 0;
+}
+/* line 67, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form .buttons {
+  color: #666666;
+  font-size: 80%;
+  margin-top: 2.5em;
+}
+/* line 71, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form .buttons button, #content form .buttons input.button {
+  font-size: 150%;
+}
+/* line 73, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+#content form .buttons a {
+  color: red;
+  text-decoration: underline;
+}
+/* line 10, ../../../sass/admin/modules/_links.sass */
+#content form .buttons a:hover {
+  text-decoration: none;
+}
+
+/* line 76, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer {
+  margin-top: -1em;
+  margin-bottom: 1em;
+}
+
+/* line 79, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_contents {
+  background: #7e7e7e url(../../images/admin/navigation_shadow.png) repeat-x;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -o-border-bottom-right-radius: 6px;
+  -ms-border-bottom-right-radius: 6px;
+  -khtml-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin: 0;
+  margin-right: 2px;
+  padding-bottom: 2px;
+  overflow: hidden;
+}
+/* line 86, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_contents table.fieldset {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 90, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_contents table.fieldset th, .drawer_contents table.fieldset td {
+  border-top: 1px #999999 solid;
+  padding: 6px;
+}
+/* line 94, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_contents table.fieldset th.label {
+  font-size: 85%;
+  padding: 0 15px 0 10px !important;
+  whitespace: nowrap;
+  width: 1%;
+  vertical-align: middle;
+  text-align: left;
+}
+/* line 102, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_contents table.fieldset td.field {
+  padding-left: 0px;
+  padding-right: 10px;
+  text-align: right;
+  width: auto;
+}
+/* line 107, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_contents table.fieldset td.field input.textbox {
+  font-size: 110%;
+  width: 99.5%;
+}
+/* line 110, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_contents table.fieldset td.actions {
+  width: 40px;
+  text-align: left;
+  vertical-align: middle;
+}
+/* line 115, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_contents table.fieldset tr:first-child td, .drawer_contents table.fieldset tr:first-child th {
+  border-top: none;
+}
+
+/* line 117, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_handle {
+  padding: 4px 0 5px;
+  margin-top: -1px;
+}
+/* line 120, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_handle a {
+  background: #7e7e7e;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  color: #f0f0f0;
+  font-size: 80%;
+  padding: 4px 21px 5px 10px;
+  position: relative;
+  top: -1px;
+  text-shadow: #666666 1px 1px 0;
+  text-decoration: none;
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -o-border-bottom-left-radius: 6px;
+  -ms-border-bottom-left-radius: 6px;
+  -khtml-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -o-border-bottom-right-radius: 6px;
+  -ms-border-bottom-right-radius: 6px;
+  -khtml-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+/* line 132, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_handle a:hover, .drawer_handle a:active, .drawer_handle a:focus {
+  text-decoration: underline;
+}
+/* line 134, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_handle a.more {
+  background: #7e7e7e url(../../images/admin/metadata_toggle.png) no-repeat 85% 8px;
+}
+/* line 136, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.drawer_handle a.less {
+  background: #7e7e7e url(../../images/admin/metadata_toggle.png) no-repeat 85% -21px;
+}
+
+/* line 139, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box {
+  color: #333333;
+  background: #f5f1e2 url(../../images/admin/vertical_tan_gradient.png) top left repeat-x;
+  font-size: 90%;
+  padding: 1px 15px 10px;
+  margin: 3px 0 20px;
+  height: 1%;
+  overflow-y: auto;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 148, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box h3 {
+  color: #333333;
+  margin: 15px 0 0;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 8px;
+}
+/* line 153, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box h3 .actions {
+  float: right;
+}
+/* line 155, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box h3 .actions button {
+  font-size: 13px;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: relative;
+  top: -4px;
+}
+/* line 161, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box h4 {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 4px;
+  font-size: 110%;
+  margin-top: 1.5em;
+}
+/* line 166, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box p.ruled {
+  border-bottom: 1px solid #dddddd;
+  margin: 0;
+  padding: 0.5em 0;
+}
+/* line 170, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box p.ruled:last-child {
+  border: none;
+}
+/* line 172, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box label {
+  color: #888888;
+  width: 12em;
+  display: inline-block;
+}
+/* line 176, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box span.uri {
+  color: #3399cc;
+}
+/* line 178, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box:last-child {
+  margin: 0;
+}
+/* line 181, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.box#preferences img.avatar {
+  float: right;
+  margin: 10px 0px;
+}
+
+/* line 185, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+.error_with_field .error {
+  color: red;
+  display: block;
+  padding: 2px;
+  padding-top: 0;
+}
+
+/* line 191, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+textarea {
+  border: 1px solid #cdc295;
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 95%;
+}
+/* line 195, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+textarea.large {
+  height: 280px;
+}
+
+/* line 198, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+p.updated_line {
+  background-color: inherit;
+  font-size: 80%;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+  margin-bottom: 0;
+}
+
+/* line 208, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content form p label {
+  color: #f5f5f5;
+  font-weight: normal;
+  text-shadow: 1px 1px 0 #888888;
+}
+/* line 212, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content form p label .hint {
+  display: inline;
+}
+/* line 214, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content form .hint {
+  color: #d0d0d0;
+  text-shadow: none;
+}
+/* line 217, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content form .buttons {
+  background: white url(../../images/admin/buttons_background.png) bottom repeat-x;
+  padding: 12px 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+/* line 222, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content form fieldset {
+  background: #858585;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  -moz-box-shadow: 1px 1px 0 #ababab;
+  -webkit-box-shadow: 1px 1px 0 #ababab;
+  -o-box-shadow: 1px 1px 0 #ababab;
+  box-shadow: 1px 1px 0 #ababab;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 229, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content form fieldset h3 {
+  font-weight: bold;
+  font-size: 120%;
+  margin: -20px -20px 0 -20px;
+  padding: 15px 20px 0 20px;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+}
+/* line 235, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content form fieldset p {
+  margin-bottom: 0;
+}
+/* line 237, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content p.updated_line {
+  color: #eeeeee;
+}
+/* line 239, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content textarea {
+  border: 1px solid white;
+}
+/* line 241, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.reversed #content .box {
+  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* line 246, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form {
+  background: #f5f1e2 url(../../images/admin/vertical_tan_gradient.png) center -15px repeat-x;
+  border: 0.35em solid #efead3;
+  padding: 0.5em 1.5em;
+  padding-right: 22px;
+  position: relative;
+  width: 28em;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+}
+/* line 254, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form h1 {
+  font-size: 140%;
+  margin: 0.75em 0 1.25em;
+}
+/* line 257, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form p {
+  font-size: 90%;
+}
+/* line 259, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form p.intro, body.single_form #content #single_form p.error {
+  font-size: 100%;
+  line-height: 1.4;
+}
+/* line 262, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form p.error {
+  color: #cc0000;
+}
+/* line 264, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form p label {
+  font-size: 105%;
+}
+/* line 266, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form p label.checkbox {
+  font-size: 90%;
+}
+/* line 268, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form ul {
+  font-size: 90%;
+  list-style: disc;
+  padding-left: 2em;
+}
+/* line 272, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form ul li {
+  margin-bottom: 0.5em;
+}
+/* line 274, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form input.textbox {
+  width: 98.5%;
+}
+/* line 276, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form span.remember_me {
+  color: #333333;
+  font-size: 95%;
+  margin-left: 1em;
+}
+/* line 280, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form span.remember_me label {
+  margin: 0;
+}
+/* line 282, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form span.remember_me a {
+  margin: 0;
+  color: #0066cc;
+  text-decoration: underline;
+}
+/* line 4, ../../../sass/admin/modules/_links.sass */
+body.single_form #content #single_form span.remember_me a:hover {
+  text-decoration: none;
+}
+/* line 285, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form span.forgot_password {
+  position: relative;
+  top: -3px;
+  margin: 0 1em;
+}
+/* line 289, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form span.forgot_password a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+/* line 4, ../../../sass/admin/modules/_links.sass */
+body.single_form #content #single_form span.forgot_password a:hover {
+  text-decoration: none;
+}
+/* line 291, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content #single_form .buttons {
+  margin: 1.75em 0 1em;
+}
+/* line 293, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.single_form #content p.version {
+  background: url(../../images/admin/single_form_shadow.png) top center no-repeat;
+  color: #666666;
+  font-size: 80%;
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+/* line 301, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.edit_user #avatar, body.edit_personal_preferences #avatar {
+  left: 26em;
+  position: absolute;
+  text-align: center;
+  width: 102px;
+}
+/* line 306, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_forms.sass */
+body.edit_user #avatar p.caption, body.edit_personal_preferences #avatar p.caption {
+  font-size: 70%;
+  color: #e5e5e5;
+  line-height: 1.3;
+}
+
+/* line 11, ../../../sass/admin/partials/_index.sass */
+table.index {
+  font-size: 90%;
+  margin-bottom: 2em;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+/* line 16, ../../../sass/admin/partials/_index.sass */
+table.index th {
+  text-align: left;
+  background-color: #9e9e9e;
+  color: white;
+  font-size: 90%;
+  font-weight: normal;
+  padding: 2px 9px;
+}
+/* line 23, ../../../sass/admin/partials/_index.sass */
+table.index th.actions {
+  padding-left: 15px;
+}
+/* line 25, ../../../sass/admin/partials/_index.sass */
+table.index td {
+  text-align: left;
+  padding: 4px 9px;
+  border-top: 1px solid #f0f0f0;
+}
+/* line 29, ../../../sass/admin/partials/_index.sass */
+table.index td a.action, table.index td span.action.disabled {
+  padding: 6px;
+  margin: 0 25px 0 1px;
+}
+/* line 32, ../../../sass/admin/partials/_index.sass */
+table.index td a.action img, table.index td span.action.disabled img {
+  vertical-align: -18%;
+}
+/* line 34, ../../../sass/admin/partials/_index.sass */
+table.index td a.action {
+  color: black;
+  text-decoration: none;
+}
+/* line 37, ../../../sass/admin/partials/_index.sass */
+table.index td a.action:hover {
+  background: #eeeeee url(../../images/admin/buttons_background.png) repeat-x;
+  border: 1px solid #a5c9df;
+  margin: 0 24px 0 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 42, ../../../sass/admin/partials/_index.sass */
+table.index td a.action.selected {
+  background: #c5e0f5;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e5f5ff), color-stop(100%, #c5e0ff));
+  background-image: -moz-linear-gradient(top, #e5f5ff 0%, #c5e0ff 100%);
+  border: 1px solid #a5c9df;
+  margin: 0 24px 0 0;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -o-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  -khtml-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -khtml-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -o-border-bottom-left-radius: 0;
+  -ms-border-bottom-left-radius: 0;
+  -khtml-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -o-border-bottom-right-radius: 0;
+  -ms-border-bottom-right-radius: 0;
+  -khtml-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* line 49, ../../../sass/admin/partials/_index.sass */
+table.index td span.action.disabled {
+  color: #cccccc;
+}
+/* line 51, ../../../sass/admin/partials/_index.sass */
+table.index td.empty {
+  color: silver;
+  font-size: 85%;
+  font-style: italic;
+  padding: 3em;
+  text-align: center;
+}
+/* line 57, ../../../sass/admin/partials/_index.sass */
+table.index td.name {
+  font-size: 115%;
+  font-weight: bold;
+}
+/* line 60, ../../../sass/admin/partials/_index.sass */
+table.index td.name img {
+  vertical-align: center;
+}
+/* line 62, ../../../sass/admin/partials/_index.sass */
+table.index td.name a {
+  color: black;
+  text-decoration: none;
+}
+/* line 65, ../../../sass/admin/partials/_index.sass */
+table.index td.name a:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
+/* line 68, ../../../sass/admin/partials/_index.sass */
+table.index td.actions {
+  font-size: 85%;
+}
+/* line 71, ../../../sass/admin/partials/_index.sass */
+table.index tr:first-child {
+  border-top: 1px solid white;
+}
+/* line 74, ../../../sass/admin/partials/_index.sass */
+table.index tr.hover td, table.index tr:hover td {
+  background: #c5dff5 url(../../images/admin/row_highlight.png) repeat-x center top;
+  border-top: 1px solid #d5f0ff;
+  border-bottom: 1px solid #c5dff5;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e5f5ff), color-stop(100%, #c5dff5));
+  background-image: -moz-linear-gradient(top, #e5f5ff 0%, #c5dff5 100%);
+}
+
+/* line 82, ../../../sass/admin/partials/_index.sass */
+table.index#pages tr.page.level_0 td.name {
+  font-size: 120%;
+  font-weight: bold;
+}
+/* line 85, ../../../sass/admin/partials/_index.sass */
+table.index#pages tr.page.level_1 td.name {
+  font-size: 115%;
+  font-weight: bold;
+}
+/* line 88, ../../../sass/admin/partials/_index.sass */
+table.index#pages tr.page.level_2 td.name {
+  font-size: 115%;
+}
+/* line 90, ../../../sass/admin/partials/_index.sass */
+table.index#pages tr.page.level_3 td.name {
+  font-size: 105%;
+}
+/* line 92, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.name {
+  font-size: 105%;
+}
+/* line 94, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.name a {
+  text-decoration: none;
+}
+/* line 96, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.name a .title {
+  color: black;
+  text-decoration: none;
+}
+/* line 99, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.name a:hover .title {
+  color: #0066cc;
+  text-decoration: underline;
+}
+/* line 102, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.name .info {
+  color: #9eb3bf;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 90%;
+}
+/* line 107, ../../../sass/admin/partials/_index.sass */
+table.index#pages tr.page.virtual td.name a .title {
+  color: #9eb3bf;
+}
+/* line 110, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.name .w1 {
+  position: relative;
+}
+/* line 112, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.name .w1 img.expander {
+  left: -25px;
+  position: absolute;
+  padding: 6px 3px;
+}
+/* line 116, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.status {
+  font-size: 85%;
+}
+/* line 119, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.status .status.draft_status {
+  color: white;
+  background: #cc494c;
+  display: block;
+  padding: 0 6px;
+  width: 4.5em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -o-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -khtml-border-radius: 100px;
+  border-radius: 100px;
+}
+/* line 121, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.status .status.published_status {
+  color: #666666;
+  font-size: 110%;
+}
+/* line 124, ../../../sass/admin/partials/_index.sass */
+table.index#pages td.status .status.hidden_status {
+  color: white;
+  background: #9eb3bf;
+  display: block;
+  padding: 0 6px;
+  width: 4.5em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -o-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -khtml-border-radius: 100px;
+  border-radius: 100px;
+}
+
+/* line 128, ../../../sass/admin/partials/_index.sass */
+table.index#users td.name {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+/* line 131, ../../../sass/admin/partials/_index.sass */
+table.index#users td.name img.avatar {
+  margin-right: 4px;
+  vertical-align: center;
+}
+/* line 134, ../../../sass/admin/partials/_index.sass */
+table.index#users td.name .login {
+  color: #9eb3bf;
+  font-size: 90%;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_content.sass */
+#main {
+  float: left;
+  width: 100%;
+}
+
+/* line 5, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_content.sass */
+#content {
+  font-size: 95%;
+  line-height: 1.2em;
+  padding: 20px;
+}
+/* line 9, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_content.sass */
+#content .outset {
+  margin: -20px;
+  margin-bottom: 20px;
+}
+/* line 12, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_content.sass */
+#content h1 {
+  margin-top: 0.25em;
+}
+
+/* line 16, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_content.sass */
+table.fieldset th {
+  padding: 6px;
+}
+/* line 18, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_content.sass */
+table.fieldset td.field textarea {
+  width: 99.5%;
+  margin-right: -5px;
+}
+
+/* line 24, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_content.sass */
+body.reversed #content h1 {
+  border-bottom: 1px solid #ababab;
+  background: #7e7e7e;
+  font-size: 125%;
+  margin: -20px -20px 20px;
+  padding: 15px 20px;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_actions.sass */
+#actions {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #777777;
+}
+/* line 7, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_actions.sass */
+#actions ul {
+  padding: 14px 8px;
+}
+/* line 9, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_actions.sass */
+#actions li {
+  display: inline;
+  margin-right: 5px;
+}
+/* line 12, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_actions.sass */
+#actions a {
+  background: #eeeeee url(../../images/admin/buttons_background.png) repeat-x;
+  color: #333333;
+  font-size: 80%;
+  padding: 8px 12px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #eeeeee;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 20, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_actions.sass */
+#actions a:hover {
+  background: white;
+  color: black;
+  text-shadow: 1px 1px 1px white;
+}
+/* line 24, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_actions.sass */
+#actions a img {
+  vertical-align: -20%;
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_footer.sass */
+#footer {
+  color: #999999;
+  background-color: #f7f7f7;
+  border-top: 1px solid #eaeaea;
+  font-size: 80%;
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+/* line 10, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_footer.sass */
+#footer p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup {
+  color: #333333;
+  background-color: white;
+  border: 1px solid #777777;
+  padding: 0 10px;
+  font-size: 90%;
+}
+/* line 7, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .busy {
+  float: right;
+  margin-top: 9px;
+}
+/* line 10, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup h3.title {
+  background: #ecf4ff;
+  border-bottom: 1px solid #bcd8f4;
+  font-size: 120%;
+  margin: 0 -10px 10px -10px;
+  padding: 6px 10px;
+}
+/* line 16, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup label {
+  display: block;
+  font-size: 90%;
+}
+/* line 19, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup label.inline {
+  display: inline;
+}
+/* line 21, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup input.button {
+  font-size: 120%;
+}
+/* line 23, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .buttons {
+  font-size: 90%;
+}
+/* line 25, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .buttons input.button {
+  font-size: 130%;
+}
+/* line 27, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .tag_description,
+div.popup .snippet_description {
+  border-bottom: 1px dotted silver;
+  font-size: 95%;
+  padding: 12px 0;
+}
+/* line 32, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .tag_description h4,
+div.popup .snippet_description h4 {
+  color: green;
+  font-size: 120%;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+/* line 37, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .tag_description code,
+div.popup .snippet_description code {
+  background-color: #f5f5f5;
+  color: #666666;
+  font-family: Monaco, "Courier New", Courier, monospace;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+/* line 43, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .tag_description pre,
+div.popup .snippet_description pre {
+  background-color: #f5f5f5;
+  border: 1px solid #dddddd;
+  color: #666666;
+  font-family: Monaco, "Courier New", Courier, monospace;
+  overflow: hidden;
+  padding: 10px;
+}
+/* line 50, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference {
+  font-size: 90%;
+  border: 1px solid silver;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  line-height: 140%;
+  padding: 12px;
+  padding-top: 1px;
+  height: 300px;
+  width: 40em;
+}
+/* line 61, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference code {
+  background-color: #f5f5f5;
+  color: #666666;
+  font-family: Monaco, "Courier New", Courier, monospace;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+/* line 67, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference pre {
+  background-color: #f5f5f5;
+  border: 1px solid #dddddd;
+  color: #666666;
+  font-family: Monaco, "Courier New", Courier, monospace;
+  overflow: hidden;
+  padding: 10px;
+}
+/* line 74, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference h4 {
+  color: green;
+  font-size: 120%;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+/* line 79, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference table {
+  width: 100%;
+}
+/* line 81, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference table th {
+  color: green;
+  font-size: 120%;
+  padding: 5px;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 87, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference table td {
+  border-bottom: 1px dotted silver;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+}
+/* line 92, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference table h1 {
+  color: black;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+/* line 96, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference table acronym {
+  border-bottom: 1px dotted silver;
+}
+/* line 98, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference table blockquote {
+  border-left: 4px solid silver;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* line 105, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .close_link {
+  text-align: center;
+}
+
+/* line 109, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference table th {
+  border-bottom: 1px dotted silver;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+}
+/* line 114, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_popup.sass */
+div.popup .reference table h2, div.popup .reference table h3, div.popup .reference table h4 {
+  color: black;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control {
+  color: #333333;
+  margin-bottom: 1em;
+}
+/* line 4, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .tabs {
+  float: left;
+  width: 100%;
+  margin-right: -4px;
+}
+/* line 8, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .tabs .tab {
+  background-color: #cac8c0;
+  color: #7f7f7f;
+  display: inline-block;
+  font-size: 90%;
+  text-align: left;
+  margin-right: 5px;
+  padding: 8px 15px 5px;
+  text-decoration: none;
+  text-transform: titlecase;
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -o-border-top-left-radius: 6px;
+  -ms-border-top-left-radius: 6px;
+  -khtml-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -o-border-top-right-radius: 6px;
+  -ms-border-top-right-radius: 6px;
+  -khtml-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+/* line 19, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .tabs .tab.here {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+/* line 23, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .tabs .tab span:hover {
+  color: black;
+}
+/* line 25, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .tabs .tab .close {
+  margin-top: -4px;
+  margin-left: 5px;
+  margin-right: -5px;
+}
+/* line 29, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .pages {
+  background: white;
+  width: 100%;
+  clear: both;
+}
+/* line 33, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .pages .page {
+  padding: 12px 20px 20px;
+  background: url(../../images/admin/vertical_tan_gradient.png) top left repeat-x #f5f1e2;
+  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+/* line 37, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .pages .page p {
+  margin-top: 0;
+}
+/* line 39, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .pages .page label {
+  display: inline;
+  color: #333333;
+  font-weight: normal;
+  font-size: 80%;
+  text-shadow: none;
+}
+/* line 45, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .pages .reference_links {
+  font-size: 85%;
+  margin-left: 1em;
+  float: right;
+}
+/* line 49, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tab_control .pages .reference_links a {
+  color: #0066cc;
+}
+
+/* line 52, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+.tabs #tab_toolbar {
+  float: right;
+  overflow: hidden;
+  margin-top: 0.2em;
+  padding: 3px;
+}
+
+/* line 58, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+.reference_links {
+  font-size: 85%;
+}
+/* line 60, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+.reference_links span {
+  padding: 0 0 0 4px;
+}
+/* line 62, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+.reference_links span a {
+  color: #4444ee;
+}
+
+/* line 65, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+#tag_reference_link {
+  margin: 0 0.5em;
+}
+
+/* line 70, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_tabcontrol.sass */
+body.reversed #tab_control textarea {
+  border: 1px solid #cccccc;
+}
+
+/* line 1, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+input.date {
+  background: white url(../../images/admin/calendar_down.gif) right no-repeat;
+  padding-right: 26px;
+  width: 11em;
+}
+
+/* line 6, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup {
+  -moz-box-shadow: #333333 1px 1px 5px;
+  -webkit-box-shadow: #333333 1px 1px 5px;
+  -o-box-shadow: #333333 1px 1px 5px;
+  box-shadow: #333333 1px 1px 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 1000;
+  border: 1px solid #b2b2b2;
+  background-color: white;
+  padding: 5px;
+  line-height: 140% !important;
+}
+/* line 15, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup a {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 18, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar {
+  font-size: 90%;
+  margin: 0 !important;
+}
+/* line 22, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar tr.day_header th {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  color: #cccccc;
+  padding: 2px;
+}
+/* line 28, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar th, .calendar_popup table.calendar td {
+  text-align: center;
+}
+/* line 32, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar th.back, .calendar_popup table.calendar th.month_year, .calendar_popup table.calendar th.forward {
+  padding-bottom: 3px;
+}
+/* line 35, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar td {
+  height: 1em;
+  padding: 3px !important;
+  margin: 0;
+}
+/* line 39, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar td.today {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+}
+/* line 42, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar td.today a {
+  background-color: white;
+}
+/* line 44, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar td.selected a {
+  color: white;
+  background-color: #dd6600;
+}
+/* line 48, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar a {
+  color: black;
+  display: block;
+  font-family: "Lucida Grande", Tahoma, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  width: 2.25em;
+  padding: 0.2em 0;
+}
+/* line 56, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+.calendar_popup table.calendar a:hover {
+  color: white !important;
+  background-color: #3257f4 !important;
+}
+
+/* line 61, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_dateinput.sass */
+body.reversed .calendar_popup {
+  border: 1px solid white;
+}
+
+/* line 2, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_toolbar.sass */
+.toolbar select {
+  float: left;
+}
+
+/* line 4, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_toolbar.sass */
+div.textarea_toolbar {
+  float: left;
+  margin-bottom: 8px;
+}
+/* line 7, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_toolbar.sass */
+div.textarea_toolbar span.separator {
+  padding: 0;
+  height: 6px;
+  width: 2px;
+  margin: 0 2px;
+  border-left: solid 1px #d5d5d5;
+  border-right: solid 1px #f5f5f5;
+}
+/* line 14, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_toolbar.sass */
+div.textarea_toolbar button,
+div.textarea_toolbar button.unselected {
+  margin: 0;
+  background: none;
+  border: none;
+  padding: 2px 0;
+  text-align: center;
+  width: 24px;
+}
+/* line 22, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_toolbar.sass */
+div.textarea_toolbar button img,
+div.textarea_toolbar button.unselected img {
+  vertical-align: text-bottom;
+}
+/* line 24, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_toolbar.sass */
+div.textarea_toolbar button:hover,
+div.textarea_toolbar button.unselected:hover {
+  border: 1px solid #999999;
+  padding: 1px 0;
+}
+/* line 28, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_toolbar.sass */
+div.textarea_toolbar button.selected {
+  border: 1px solid #ce9100;
+  background-color: white;
+  padding: 1px 0;
+}
+
+/* line 8, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_deprecated.sass */
+table.index td.note {
+  color: silver;
+  font-size: 85%;
+  font-style: italic;
+  padding: 3em;
+  text-align: center;
+}
+
+/* line 16, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_deprecated.sass */
+.row {
+  clear: both;
+  margin-top: 20px;
+  width: 100%;
+}
+/* line 20, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_deprecated.sass */
+.row p {
+  float: left;
+  margin: 0 2em 1.25em 0;
+  font-size: 95%;
+}
+/* line 24, /Users/jlong/Workspaces/radiant/prototype/sass/admin/partials/_deprecated.sass */
+.row p label {
+  display: inline;
+  text-shadow: #666666 1px 1px 0;
+}

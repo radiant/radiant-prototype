@@ -6,7 +6,7 @@
   width: $width
   text-shadow: 1px 1px 1px rgba(0,0,0,0.25)
   text-align: center
-  +round-corners(100px)
+  +border-radius(100px)
 
 table.index
   font-size: 90%
@@ -38,14 +38,14 @@ table.index
         background: #eee url(../../images/admin/buttons_background.png) repeat-x
         border: 1px solid #a5c9df
         margin: 0 24px 0 0
-        +round-corners
+        +border-radius
       &.selected
         background: #c5e0f5
-        +v-gradient(#e5f5ff, #c5e0ff)
+        +linear-gradient(color_stops(#e5f5ff, #c5e0ff))
         border: 1px solid #a5c9df
         margin: 0 24px 0 0
-        +round-top-corners
-        +round-bottom-corners(0)
+        +border-top-radius
+        +border-bottom-radius(0)
     span.action.disabled
       color: #ccc
     &.empty
@@ -75,7 +75,7 @@ table.index
         background: #c5dff5 url(../../images/admin/row_highlight.png) repeat-x center top
         border-top: 1px solid #d5f0ff
         border-bottom: 1px solid #c5dff5
-        +v-gradient(#e5f5ff, #c5dff5)
+        +linear-gradient(color_stops(#e5f5ff, #c5dff5))
 
 table.index#pages
   tr.page
