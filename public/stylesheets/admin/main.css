@@ -1303,6 +1303,20 @@ body.reversed h1 {
   vertical-align: -20%;
 }
 
+/* line 27, ../../../sass/admin/partials/_actions.sass */
+.button_form {
+  display: inline;
+  font-size: 80%;
+  background: white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
 /* line 1, ../../../sass/admin/partials/_footer.sass */
 #footer {
   color: #999999;
