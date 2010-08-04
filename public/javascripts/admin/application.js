@@ -123,7 +123,9 @@ reButtons.push("<button class=\"tag\" onclick=\"loadTagReference(0); return fals
 
 function load_toolbars() {
   parts = $$('.pages textarea').each(function(textarea) {
-    new RadiusEditor(textarea.id, "extended");
+    if(!textarea.hasClassName('no_radius_toolbar')){
+      new RadiusEditor(textarea.id, "extended")
+    }
     new filterObserver(textarea);
   });
 }

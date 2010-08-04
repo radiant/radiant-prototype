@@ -23,6 +23,39 @@
     %p
       %label{:for=>"delivered_on"} Delivered On
       %input.textbox.date{:name=>"delivered_on", :id=>"delivered_on", :type=>"text", :size=>30, :value=>""}/
+  #tab_control
+    .tabs
+    .pages
+      .page{'data-caption'=>"details"}
+        .part
+          %input#part_0_name{:name=>"part[0][name]", :type=>"hidden", :value=>"details"}/
+          #part_0_toolbar.toolbar.no_radius
+            %select#part_0_filter_id{:name=>"part[0][filter_id]"}
+              %option{:value=>""} &lt;none&gt;
+              %option{:value=>"Markdown"} Markdown
+              %option{:value=>"SmartyPants"} SmartyPants
+              %option{:value=>"Textile", :selected => "selected"} Textile
+          %span.reference_links
+            Reference:
+            %span#filter_reference_link_0
+              %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
+          %div
+            %textarea.large.no_radius_toolbar#part_0_content{:name=>"part[0][content]", :style=>"width: 100%"}=""
+      .page{'data-caption'=>"warranty"}
+        .part
+          %input#part_1_name{:name=>"part[1][name]", :type=>"hidden", :value=>"warranty"}/
+          #part_1_toolbar.toolbar
+            %select#part_1_filter_id{:name=>"part[1][filter_id]"}
+              %option{:value=>""} &lt;none&gt;
+              %option{:value=>"Markdown"} Markdown
+              %option{:value=>"SmartyPants"} SmartyPants
+              %option{:value=>"Textile"} Textile
+          %span.reference_links
+            Reference:
+            %span#filter_reference_link_0
+              %a{:href=>"#", :onclick=>"loadFilterReference(0); return false;"} Filter
+          %div
+            %textarea.large.no_radius_toolbar#part_1_content{:name=>"part[1][content]", :style=>"width: 100%"}=""
   %p
     %label{:for=>"short_description"} Short Description
     %textarea{:name=>"short_description", :id=>"short_description", :style=>"width: 99.5%; height: 7em"}
