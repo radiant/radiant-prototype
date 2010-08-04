@@ -94,8 +94,10 @@ Event.addBehavior({
 });
 
 document.observe('dom:loaded', function(){
-  $('uploader').down('input[type=submit]').hide()
-  $('uploader').hide()
+  if($('uploader')){
+    $('uploader').down('input[type=submit]').hide()
+    $('uploader').hide()
+  }
 })
 
 // Toolbars
