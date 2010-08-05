@@ -1284,17 +1284,20 @@ body.reversed h1 {
   right: 0;
   bottom: 0;
   background: #777777;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #444444), color-stop(33.333%, #777777), color-stop(66.667%, #777777), color-stop(100%, #777777));
+  background-image: -moz-linear-gradient(top, #444444 0%, #777777 33.333%, #777777 66.667%, #777777 100%);
+  background-image: linear-gradient(top, #444444 0%, #777777 33.333%, #777777 66.667%, #777777 100%);
 }
-/* line 12, ../../../sass/admin/partials/_actions.sass */
+/* line 13, ../../../sass/admin/partials/_actions.sass */
 #actions ul {
   padding: 14px 8px;
 }
-/* line 14, ../../../sass/admin/partials/_actions.sass */
+/* line 15, ../../../sass/admin/partials/_actions.sass */
 #actions li {
   display: inline;
   margin-right: 5px;
 }
-/* line 17, ../../../sass/admin/partials/_actions.sass */
+/* line 18, ../../../sass/admin/partials/_actions.sass */
 #actions a {
   background: #eeeeee url('../../images/admin/buttons_background.png?1280995573') repeat-x;
   color: #333333;
@@ -1308,30 +1311,30 @@ body.reversed h1 {
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  -moz-box-shadow: #333333 1px 2px 4px 0;
-  -webkit-box-shadow: #333333 1px 2px 4px 0;
-  -o-box-shadow: #333333 1px 2px 4px 0;
-  box-shadow: #333333 1px 2px 4px 0;
+  -moz-box-shadow: #555555 1px 2px 3px 0;
+  -webkit-box-shadow: #555555 1px 2px 3px 0;
+  -o-box-shadow: #555555 1px 2px 3px 0;
+  box-shadow: #555555 1px 2px 3px 0;
 }
-/* line 26, ../../../sass/admin/partials/_actions.sass */
+/* line 27, ../../../sass/admin/partials/_actions.sass */
 #actions a:hover {
   color: #0076a3;
   text-shadow: 1px 1px 1px white;
 }
-/* line 29, ../../../sass/admin/partials/_actions.sass */
+/* line 30, ../../../sass/admin/partials/_actions.sass */
 #actions a:active {
   background: white;
-  -moz-box-shadow: #333333 0 0 0 0;
-  -webkit-box-shadow: #333333 0 0 0 0;
-  -o-box-shadow: #333333 0 0 0 0;
-  box-shadow: #333333 0 0 0 0;
+  -moz-box-shadow: #555555 0 0 0 0;
+  -webkit-box-shadow: #555555 0 0 0 0;
+  -o-box-shadow: #555555 0 0 0 0;
+  box-shadow: #555555 0 0 0 0;
   color: black;
 }
-/* line 33, ../../../sass/admin/partials/_actions.sass */
+/* line 34, ../../../sass/admin/partials/_actions.sass */
 #actions a img {
   vertical-align: -20%;
 }
-/* line 36, ../../../sass/admin/partials/_actions.sass */
+/* line 37, ../../../sass/admin/partials/_actions.sass */
 #actions .pagination {
   position: relative;
   overflow: hidden;
@@ -1339,7 +1342,7 @@ body.reversed h1 {
   margin-right: 24px;
   padding: 0 5px 5px 0;
 }
-/* line 42, ../../../sass/admin/partials/_actions.sass */
+/* line 43, ../../../sass/admin/partials/_actions.sass */
 #actions .pagination a, #actions .pagination span.current, #actions .pagination span.disabled {
   display: block;
   float: left;
@@ -1374,74 +1377,77 @@ body.reversed h1 {
   -khtml-border-top-right-radius: 0;
   border-top-right-radius: 0;
 }
-/* line 53, ../../../sass/admin/partials/_actions.sass */
+/* line 54, ../../../sass/admin/partials/_actions.sass */
 #actions .pagination a {
   text-shadow: 1px 1px 1px #eeeeee;
 }
-/* line 55, ../../../sass/admin/partials/_actions.sass */
+/* line 56, ../../../sass/admin/partials/_actions.sass */
 #actions .pagination a:hover {
   background: white url('../../images/admin/buttons_background.png?1280995573') repeat-x;
   color: #0076a3;
-  -moz-box-shadow: #333333 1px 2px 4px 0;
-  -webkit-box-shadow: #333333 1px 2px 4px 0;
-  -o-box-shadow: #333333 1px 2px 4px 0;
-  box-shadow: #333333 1px 2px 4px 0;
+  -moz-box-shadow: #555555 1px 2px 3px 0;
+  -webkit-box-shadow: #555555 1px 2px 3px 0;
+  -o-box-shadow: #555555 1px 2px 3px 0;
+  box-shadow: #555555 1px 2px 3px 0;
 }
-/* line 59, ../../../sass/admin/partials/_actions.sass */
+/* line 60, ../../../sass/admin/partials/_actions.sass */
 #actions .pagination a:active {
   background: white url('../../images/admin/shadow.png?1278508191') repeat-x;
   color: black;
-  -moz-box-shadow: #333333 0 0 0 0;
-  -webkit-box-shadow: #333333 0 0 0 0;
-  -o-box-shadow: #333333 0 0 0 0;
-  box-shadow: #333333 0 0 0 0;
+  -moz-box-shadow: #555555 0 0 0 0;
+  -webkit-box-shadow: #555555 0 0 0 0;
+  -o-box-shadow: #555555 0 0 0 0;
+  box-shadow: #555555 0 0 0 0;
 }
-/* line 63, ../../../sass/admin/partials/_actions.sass */
+/* line 64, ../../../sass/admin/partials/_actions.sass */
 #actions .pagination span.disabled {
   color: #666666;
   background-color: #999999;
   background-image: none;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #444444), color-stop(33.333%, #999999), color-stop(66.667%, #999999), color-stop(100%, #999999));
+  background-image: -moz-linear-gradient(top, #444444 0%, #999999 33.333%, #999999 66.667%, #999999 100%);
+  background-image: linear-gradient(top, #444444 0%, #999999 33.333%, #999999 66.667%, #999999 100%);
 }
-/* line 67, ../../../sass/admin/partials/_actions.sass */
+/* line 69, ../../../sass/admin/partials/_actions.sass */
 #actions .pagination span.current {
   color: black;
   font-weight: bold;
   background-image: none;
-  -moz-box-shadow: #333333 1px 2px 4px 0;
-  -webkit-box-shadow: #333333 1px 2px 4px 0;
-  -o-box-shadow: #333333 1px 2px 4px 0;
-  box-shadow: #333333 1px 2px 4px 0;
+  -moz-box-shadow: #555555 1px 2px 3px 0;
+  -webkit-box-shadow: #555555 1px 2px 3px 0;
+  -o-box-shadow: #555555 1px 2px 3px 0;
+  box-shadow: #555555 1px 2px 3px 0;
 }
-/* line 72, ../../../sass/admin/partials/_actions.sass */
+/* line 74, ../../../sass/admin/partials/_actions.sass */
 #actions .pagination span.gap {
   display: block;
   float: left;
   padding: 6px;
   color: #cccccc;
 }
-/* line 77, ../../../sass/admin/partials/_actions.sass */
+/* line 79, ../../../sass/admin/partials/_actions.sass */
 #actions .depaginate {
   float: right;
   padding: 6px 12px;
 }
-/* line 80, ../../../sass/admin/partials/_actions.sass */
+/* line 82, ../../../sass/admin/partials/_actions.sass */
 #actions .depaginate a {
-  -moz-box-shadow: #333333 0 0 0 0;
-  -webkit-box-shadow: #333333 0 0 0 0;
-  -o-box-shadow: #333333 0 0 0 0;
-  box-shadow: #333333 0 0 0 0;
+  -moz-box-shadow: #555555 0 0 0 0;
+  -webkit-box-shadow: #555555 0 0 0 0;
+  -o-box-shadow: #555555 0 0 0 0;
+  box-shadow: #555555 0 0 0 0;
   background: none;
   font-size: 80%;
   color: #cccccc;
   text-shadow: none;
   text-decoration: none;
 }
-/* line 87, ../../../sass/admin/partials/_actions.sass */
+/* line 89, ../../../sass/admin/partials/_actions.sass */
 #actions .depaginate a:hover {
   color: white;
 }
 
-/* line 90, ../../../sass/admin/partials/_actions.sass */
+/* line 92, ../../../sass/admin/partials/_actions.sass */
 .button_form {
   display: inline;
   font-size: 80%;
