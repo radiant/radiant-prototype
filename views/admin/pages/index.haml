@@ -17,7 +17,8 @@
               %span.title Home Page
             %img#busy_1.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status 
+            %a{:href => "/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
@@ -30,7 +31,8 @@
             %span.info (File Not Found)
             %img#busy_2.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status 
+            %a{:href => "/file-not-found/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
@@ -42,7 +44,8 @@
               %span.title About
             %img#busy_9.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status
+            %a{:href => "/about/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
@@ -56,7 +59,8 @@
             %span.info (Archive)
             %img#busy_4.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status 
+            %a{:href => "/articles/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
@@ -69,7 +73,8 @@
             %span.info (Archive Month Index)
             %img#busy_10.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status 
+            %a{:href => "/articles/2008/02/21/monthly-archives/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
@@ -81,7 +86,8 @@
               %span.title First Post
             %img#busy_5.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status 
+            %a{:href => "/articles/2006/06/09/first-post/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
@@ -93,7 +99,8 @@
               %span.title Second Post
             %img#busy_6.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status
+            %a{:href => "/articles/2006/06/10/second-post/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
@@ -105,7 +112,8 @@
               %span.title Third Post
             %img#busy_8.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status 
+            %a{:href => "/articles/2008/02/21/third-post/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
@@ -141,7 +149,8 @@
               %span.title RSS Feed
             %img#busy_3.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status
+            %a{:href => "/rss/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
@@ -153,7 +162,8 @@
               %span.title Styles
             %img#busy_7.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
         %td.status
-          %span.status.published_status Published
+          %span.status.published_status
+            %a{:href => "/styles.css/"} Published
         %td.actions
           = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
           = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"

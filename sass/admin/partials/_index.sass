@@ -1,4 +1,4 @@
-=status-badge($background, $color: white, $width: 4.5em)
+=status-badge($background, $color: white, $width: 5em)
   color: $color
   background: $background
   display: block
@@ -55,6 +55,7 @@ table.index
       padding: 3em
       text-align: center
     &.name
+      display: block
       font-size: 115%
       font-weight: bold
       img
@@ -114,15 +115,17 @@ table.index#pages
         position: absolute
         padding: 6px 3px
   td.status
-    font-size: 85%
+    font-size: 80%
     .status
       &.draft_status
         +status-badge(#cc494c)
       &.published_status
-        color: #666
-        font-size: 110%
+        +status-badge(#8ec283)
       &.hidden_status
         +status-badge(#9eb3bf)
+      a
+        color: white
+        text-decoration: none
 
 table.index#users
   td.name
