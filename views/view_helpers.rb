@@ -32,6 +32,7 @@ module ViewHelpers
   def nav_tabs
     content = NavTab.new(:content, "Content")
     content << NavSubItem.new(:pages, "Pages", "/admin/pages/")
+    content << NavSubItem.new(:feeds, "News Feeds", "/admin/feeds")
     
     design = NavTab.new(:design, "Design")
     design << NavSubItem.new(:layouts, "Layouts", "/admin/layouts/")
