@@ -116,16 +116,18 @@ table.index#pages
         padding: 6px 3px
   td.status
     font-size: 80%
-    .status
-      &.draft_status
-        +status-badge(#cc494c)
-      &.published_status
-        +status-badge(#8ec283)
-      &.hidden_status
-        +status-badge(#9eb3bf)
-      a
-        color: white
-        text-decoration: none
+    
+.status
+  a
+    color: #9eb3bf
+    text-decoration: none
+.draft_status
+  +status-badge(#cc494c)
+.published_status
+  +status-badge(white, #999999)
+  text-shadow: none
+.hidden_status
+  +status-badge(#9eb3bf)
 
 table.index#users
   td.name
