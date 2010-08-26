@@ -55,7 +55,6 @@ table.index
       padding: 3em
       text-align: center
     &.name
-      display: block
       font-size: 115%
       font-weight: bold
       img
@@ -69,13 +68,9 @@ table.index
     &.actions
       font-size: 85%
   tr
-    &:first-child
-      border-top: 1px solid white
     &.hover, &:hover
       td
         background: #c5dff5 image_url('admin/row_highlight.png') repeat-x center top
-        border-top: 1px solid #d5f0ff
-        border-bottom: 1px solid #c5dff5
         +linear-gradient(color_stops(#e5f5ff, #c5dff5))
 
 table.index#pages
