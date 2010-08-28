@@ -377,10 +377,10 @@ img.avatar.avatar_32x32 {
 .dropdown_wrapper {
   border: 1px solid #b3b3b3;
   border-top: 1px solid #c3c3c3;
-  -moz-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35) 0;
-  -webkit-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35) 0;
-  -o-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35) 0;
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.35) 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 25px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 25px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 25px 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 25px 0;
   -moz-border-radius-topright: 5px;
   -webkit-border-top-right-radius: 5px;
   -o-border-top-right-radius: 5px;
@@ -803,10 +803,10 @@ body.reversed #content form .buttons {
   -ms-border-radius: 8px;
   -khtml-border-radius: 8px;
   border-radius: 8px;
-  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
-  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
-  -o-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
 }
 /* line 222, ../../../sass/admin/partials/_forms.sass */
 body.reversed #content form fieldset {
@@ -814,10 +814,10 @@ body.reversed #content form fieldset {
   padding: 20px 15px;
   margin-bottom: 20px;
   overflow: hidden;
-  -moz-box-shadow: 1px 1px 0 #ababab 0;
-  -webkit-box-shadow: 1px 1px 0 #ababab 0;
-  -o-box-shadow: 1px 1px 0 #ababab 0;
-  box-shadow: 1px 1px 0 #ababab 0;
+  -moz-box-shadow: #ababab 1px 1px 0 0;
+  -webkit-box-shadow: #ababab 1px 1px 0 0;
+  -o-box-shadow: #ababab 1px 1px 0 0;
+  box-shadow: #ababab 1px 1px 0 0;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   -o-border-radius: 8px;
@@ -847,10 +847,10 @@ body.reversed #content textarea {
 }
 /* line 241, ../../../sass/admin/partials/_forms.sass */
 body.reversed #content .box {
-  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
-  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
-  -o-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
 }
 
 /* line 246, ../../../sass/admin/partials/_forms.sass */
@@ -1701,10 +1701,10 @@ div.popup .reference table h2, div.popup .reference table h3, div.popup .referen
 #tab_control .pages .page {
   padding: 12px 20px 20px;
   background: url('../../images/admin/vertical_tan_gradient.png?1253158620') top left repeat-x #f5f1e2;
-  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
-  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
-  -o-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15) 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px 0;
 }
 /* line 37, ../../../sass/admin/partials/_tabcontrol.sass */
 #tab_control .pages .page p {
