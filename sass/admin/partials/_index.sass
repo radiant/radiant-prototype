@@ -68,8 +68,12 @@ table.index
     &.actions
       font-size: 85%
   tr
+    &:first-child
+      border-top: 1px solid white
     &.hover, &:hover
       td
+        border-top: 1px solid #d5f0ff
+        border-bottom: 1px solid #c5dff5
         background: #c5dff5 image_url('admin/row_highlight.png') repeat-x center top
         +linear-gradient(color_stops(#e5f5ff, #c5dff5))
 
@@ -114,12 +118,9 @@ table.index#pages
     
 .status
   a
-    color: #9eb3bf
-    text-decoration: none
+    +plain-link
 .draft_status
   +status-badge(#cc494c)
-.published_status
-  +status-badge(white, #999999)
   text-shadow: none
 .hidden_status
   +status-badge(#9eb3bf)
