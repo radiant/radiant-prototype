@@ -58,13 +58,13 @@ a img {
   border: none;
 }
 
-/* line 1, ../../../sass/admin/partials/_base.sass */
+/* line 1, ../../../sass/admin/partials/_typography.sass */
 body {
   font-size: 95%;
   font-family: "Lucida Grande", "Bitstream Vera Sans", Helvetica, Verdana, Arial, sans-serif;
 }
 
-/* line 5, ../../../sass/admin/partials/_base.sass */
+/* line 5, ../../../sass/admin/partials/_typography.sass */
 a {
   color: #0066cc;
   text-decoration: underline;
@@ -73,7 +73,7 @@ a {
 a:hover {
   text-decoration: none;
 }
-/* line 7, ../../../sass/admin/partials/_base.sass */
+/* line 7, ../../../sass/admin/partials/_typography.sass */
 a.alt {
   color: red;
   text-decoration: underline;
@@ -83,19 +83,19 @@ a.alt:hover {
   text-decoration: none;
 }
 
-/* line 10, ../../../sass/admin/partials/_base.sass */
+/* line 10, ../../../sass/admin/partials/_typography.sass */
 big {
   font-size: 110%;
 }
 
-/* line 13, ../../../sass/admin/partials/_base.sass */
+/* line 13, ../../../sass/admin/partials/_typography.sass */
 h1 {
   font-size: 180%;
   font-weight: bold;
   margin: 0.75em 0;
 }
 
-/* line 18, ../../../sass/admin/partials/_base.sass */
+/* line 18, ../../../sass/admin/partials/_typography.sass */
 h3 {
   font-weight: bold;
   font-size: 130%;
@@ -103,61 +103,61 @@ h3 {
   margin-bottom: 0.5em;
 }
 
-/* line 24, ../../../sass/admin/partials/_base.sass */
+/* line 24, ../../../sass/admin/partials/_typography.sass */
 h4 {
   font-weight: bold;
 }
 
-/* line 27, ../../../sass/admin/partials/_base.sass */
+/* line 27, ../../../sass/admin/partials/_typography.sass */
 p {
   margin: 1em 0;
 }
 
-/* line 30, ../../../sass/admin/partials/_base.sass */
+/* line 30, ../../../sass/admin/partials/_typography.sass */
 td {
   vertical-align: middle;
 }
 
-/* line 33, ../../../sass/admin/partials/_base.sass */
+/* line 33, ../../../sass/admin/partials/_typography.sass */
 caption, th, td {
   text-align: left;
   font-weight: normal;
 }
 
-/* line 37, ../../../sass/admin/partials/_base.sass */
+/* line 37, ../../../sass/admin/partials/_typography.sass */
 img {
   border: none;
   vertical-align: middle;
 }
 
-/* line 41, ../../../sass/admin/partials/_base.sass */
+/* line 41, ../../../sass/admin/partials/_typography.sass */
 input[type=image] {
   border: none;
   vertical-align: middle;
 }
 
-/* line 45, ../../../sass/admin/partials/_base.sass */
+/* line 45, ../../../sass/admin/partials/_typography.sass */
 input.big {
   font-size: 120%;
 }
 
-/* line 48, ../../../sass/admin/partials/_base.sass */
+/* line 48, ../../../sass/admin/partials/_typography.sass */
 #change_password span, span.info, span.error {
   font-size: 80%;
 }
 
-/* line 51, ../../../sass/admin/partials/_base.sass */
+/* line 51, ../../../sass/admin/partials/_typography.sass */
 .clear {
   font-size: 1px;
   clear: both;
 }
 
-/* line 55, ../../../sass/admin/partials/_base.sass */
+/* line 55, ../../../sass/admin/partials/_typography.sass */
 .warning {
   color: red;
 }
 
-/* line 58, ../../../sass/admin/partials/_base.sass */
+/* line 58, ../../../sass/admin/partials/_typography.sass */
 table {
   border-collapse: collapse;
 }
@@ -970,14 +970,14 @@ body.edit_user #avatar p.caption, body.edit_personal_preferences #avatar p.capti
   line-height: 1.3;
 }
 
-/* line 11, ../../../sass/admin/partials/_index.sass */
+/* line 10, ../../../sass/admin/partials/_index.sass */
 table.index {
   font-size: 90%;
   margin-bottom: 2em;
   width: 100%;
   border-bottom: 1px solid white;
 }
-/* line 16, ../../../sass/admin/partials/_index.sass */
+/* line 15, ../../../sass/admin/partials/_index.sass */
 table.index th {
   text-align: left;
   background-color: #9e9e9e;
@@ -986,31 +986,31 @@ table.index th {
   font-weight: normal;
   padding: 2px 9px;
 }
-/* line 23, ../../../sass/admin/partials/_index.sass */
+/* line 22, ../../../sass/admin/partials/_index.sass */
 table.index th.actions {
   padding-left: 15px;
 }
-/* line 25, ../../../sass/admin/partials/_index.sass */
+/* line 24, ../../../sass/admin/partials/_index.sass */
 table.index td {
   text-align: left;
   padding: 4px 9px;
   border-top: 1px solid #f0f0f0;
 }
-/* line 29, ../../../sass/admin/partials/_index.sass */
+/* line 28, ../../../sass/admin/partials/_index.sass */
 table.index td a.action, table.index td span.action.disabled {
   padding: 6px;
   margin: 0 25px 0 1px;
 }
-/* line 32, ../../../sass/admin/partials/_index.sass */
+/* line 31, ../../../sass/admin/partials/_index.sass */
 table.index td a.action img, table.index td span.action.disabled img {
   vertical-align: -18%;
 }
-/* line 34, ../../../sass/admin/partials/_index.sass */
+/* line 33, ../../../sass/admin/partials/_index.sass */
 table.index td a.action {
   color: black;
   text-decoration: none;
 }
-/* line 37, ../../../sass/admin/partials/_index.sass */
+/* line 36, ../../../sass/admin/partials/_index.sass */
 table.index td a.action:hover {
   background: #eeeeee url('../../images/admin/buttons_background.png?1253158620') repeat-x;
   border: 1px solid #a5c9df;
@@ -1022,7 +1022,7 @@ table.index td a.action:hover {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 42, ../../../sass/admin/partials/_index.sass */
+/* line 41, ../../../sass/admin/partials/_index.sass */
 table.index td a.action.selected {
   background: #c5e0f5;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e5f5ff), color-stop(100%, #c5e0ff));
@@ -1055,11 +1055,11 @@ table.index td a.action.selected {
   -khtml-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 49, ../../../sass/admin/partials/_index.sass */
+/* line 48, ../../../sass/admin/partials/_index.sass */
 table.index td span.action.disabled {
   color: #cccccc;
 }
-/* line 51, ../../../sass/admin/partials/_index.sass */
+/* line 50, ../../../sass/admin/partials/_index.sass */
 table.index td.empty {
   color: silver;
   font-size: 85%;
@@ -1067,34 +1067,34 @@ table.index td.empty {
   padding: 3em;
   text-align: center;
 }
-/* line 57, ../../../sass/admin/partials/_index.sass */
+/* line 56, ../../../sass/admin/partials/_index.sass */
 table.index td.name {
   font-size: 115%;
   font-weight: bold;
 }
-/* line 60, ../../../sass/admin/partials/_index.sass */
+/* line 59, ../../../sass/admin/partials/_index.sass */
 table.index td.name img {
   vertical-align: center;
 }
-/* line 62, ../../../sass/admin/partials/_index.sass */
+/* line 61, ../../../sass/admin/partials/_index.sass */
 table.index td.name a {
   color: black;
   text-decoration: none;
 }
-/* line 65, ../../../sass/admin/partials/_index.sass */
+/* line 64, ../../../sass/admin/partials/_index.sass */
 table.index td.name a:hover {
   color: #0066cc;
   text-decoration: underline;
 }
-/* line 68, ../../../sass/admin/partials/_index.sass */
+/* line 67, ../../../sass/admin/partials/_index.sass */
 table.index td.actions {
   font-size: 85%;
 }
-/* line 71, ../../../sass/admin/partials/_index.sass */
+/* line 70, ../../../sass/admin/partials/_index.sass */
 table.index tr:first-child {
   border-top: 1px solid white;
 }
-/* line 74, ../../../sass/admin/partials/_index.sass */
+/* line 73, ../../../sass/admin/partials/_index.sass */
 table.index tr.hover td, table.index tr:hover td {
   border-top: 1px solid #d5f0ff;
   border-bottom: 1px solid #c5dff5;
@@ -1104,69 +1104,69 @@ table.index tr.hover td, table.index tr:hover td {
   background-image: linear-gradient(top, #e5f5ff 0%, #c5dff5 100%);
 }
 
-/* line 82, ../../../sass/admin/partials/_index.sass */
+/* line 81, ../../../sass/admin/partials/_index.sass */
 table.index#pages tr.page.level_0 td.name {
   font-size: 120%;
   font-weight: bold;
 }
-/* line 85, ../../../sass/admin/partials/_index.sass */
+/* line 84, ../../../sass/admin/partials/_index.sass */
 table.index#pages tr.page.level_1 td.name {
   font-size: 115%;
   font-weight: bold;
 }
-/* line 88, ../../../sass/admin/partials/_index.sass */
+/* line 87, ../../../sass/admin/partials/_index.sass */
 table.index#pages tr.page.level_2 td.name {
   font-size: 115%;
 }
-/* line 90, ../../../sass/admin/partials/_index.sass */
+/* line 89, ../../../sass/admin/partials/_index.sass */
 table.index#pages tr.page.level_3 td.name {
   font-size: 105%;
 }
-/* line 92, ../../../sass/admin/partials/_index.sass */
+/* line 91, ../../../sass/admin/partials/_index.sass */
 table.index#pages td.name {
   font-size: 105%;
 }
-/* line 94, ../../../sass/admin/partials/_index.sass */
+/* line 93, ../../../sass/admin/partials/_index.sass */
 table.index#pages td.name a {
   text-decoration: none;
 }
-/* line 96, ../../../sass/admin/partials/_index.sass */
+/* line 95, ../../../sass/admin/partials/_index.sass */
 table.index#pages td.name a .title {
   color: black;
   text-decoration: none;
 }
-/* line 99, ../../../sass/admin/partials/_index.sass */
+/* line 98, ../../../sass/admin/partials/_index.sass */
 table.index#pages td.name a:hover .title {
   color: #0066cc;
   text-decoration: underline;
 }
-/* line 102, ../../../sass/admin/partials/_index.sass */
+/* line 101, ../../../sass/admin/partials/_index.sass */
 table.index#pages td.name .info {
   color: #9eb3bf;
   font-style: italic;
   font-weight: normal;
   font-size: 90%;
 }
-/* line 107, ../../../sass/admin/partials/_index.sass */
+/* line 106, ../../../sass/admin/partials/_index.sass */
 table.index#pages tr.page.virtual td.name a .title {
   color: #9eb3bf;
 }
-/* line 110, ../../../sass/admin/partials/_index.sass */
+/* line 109, ../../../sass/admin/partials/_index.sass */
 table.index#pages td.name .w1 {
   position: relative;
 }
-/* line 112, ../../../sass/admin/partials/_index.sass */
+/* line 111, ../../../sass/admin/partials/_index.sass */
 table.index#pages td.name .w1 img.expander {
   left: -25px;
   position: absolute;
   padding: 6px 3px;
 }
-/* line 116, ../../../sass/admin/partials/_index.sass */
+/* line 115, ../../../sass/admin/partials/_index.sass */
 table.index#pages td.status {
   font-size: 80%;
 }
 
-/* line 120, ../../../sass/admin/partials/_index.sass */
+/* line 119, ../../../sass/admin/partials/_index.sass */
 .status a {
   color: #333333;
   text-decoration: none;
@@ -1177,14 +1177,13 @@ table.index#pages td.status {
   color: #0066cc;
 }
 
-/* line 122, ../../../sass/admin/partials/_index.sass */
+/* line 121, ../../../sass/admin/partials/_index.sass */
 .draft_status {
   color: white;
   background: #cc494c;
   display: block;
   padding: 0 6px;
   width: 5em;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   text-align: center;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -1192,17 +1191,15 @@ table.index#pages td.status {
   -ms-border-radius: 100px;
   -khtml-border-radius: 100px;
   border-radius: 100px;
-  text-shadow: none;
 }
 
-/* line 125, ../../../sass/admin/partials/_index.sass */
+/* line 123, ../../../sass/admin/partials/_index.sass */
 .hidden_status {
   color: white;
   background: #9eb3bf;
   display: block;
   padding: 0 6px;
   width: 5em;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   text-align: center;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -1212,17 +1209,17 @@ table.index#pages td.status {
   border-radius: 100px;
 }
 
-/* line 129, ../../../sass/admin/partials/_index.sass */
+/* line 127, ../../../sass/admin/partials/_index.sass */
 table.index#users td.name {
   padding-top: 8px;
   padding-bottom: 8px;
 }
-/* line 132, ../../../sass/admin/partials/_index.sass */
+/* line 130, ../../../sass/admin/partials/_index.sass */
 table.index#users td.name img.avatar {
   margin-right: 4px;
   vertical-align: center;
 }
-/* line 135, ../../../sass/admin/partials/_index.sass */
+/* line 133, ../../../sass/admin/partials/_index.sass */
 table.index#users td.name .login {
   color: #9eb3bf;
   font-size: 90%;
