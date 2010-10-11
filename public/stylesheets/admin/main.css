@@ -1,4 +1,4 @@
-/* line 14, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 14, /Users/jlong/.rvm/gems/ruby-1.8.7-p302@serve/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,42 +18,42 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
 }
 
-/* line 17, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, /Users/jlong/.rvm/gems/ruby-1.8.7-p302@serve/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
   color: black;
   background: white;
 }
 
-/* line 19, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 19, /Users/jlong/.rvm/gems/ruby-1.8.7-p302@serve/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 21, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 21, /Users/jlong/.rvm/gems/ruby-1.8.7-p302@serve/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
 }
 
-/* line 23, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 23, /Users/jlong/.rvm/gems/ruby-1.8.7-p302@serve/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 25, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 25, /Users/jlong/.rvm/gems/ruby-1.8.7-p302@serve/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: "" "";
 }
-/* line 96, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 96, /Users/jlong/.rvm/gems/ruby-1.8.7-p302@serve/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
 }
 
-/* line 27, /usr/local/lib/ruby/gems/1.8/gems/compass-0.10.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 27, /Users/jlong/.rvm/gems/ruby-1.8.7-p302@serve/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
@@ -178,33 +178,48 @@ body.single_form #content #single_form {
   text-align: left;
 }
 
-/* line 1, ../../../sass/admin/partials/_header.sass */
+/* line 5, ../../../sass/admin/partials/_header.sass */
 #header {
   font-size: 90%;
-  background: #cc0000 url('../../images/admin/navigation_background.gif?1253158620') repeat-x;
-  width: 100%;
+  background: #ca0000;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #8d0000), color-stop(50%, #ca0000), color-stop(100%, #ca0000));
+  background-image: -moz-linear-gradient(top, #8d0000 0%, #ca0000 50%, #ca0000 100%);
+  background-image: linear-gradient(top, #8d0000 0%, #ca0000 50%, #ca0000 100%);
   position: relative;
-  height: auto;
+}
+/* line 10, ../../../sass/admin/partials/_header.sass */
+#header:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  overflow: hidden;
+  height: 2px;
+  margin-bottom: -2px;
+  width: 100%;
+  position: absolute;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(0, 0, 0, 0.6)), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
-/* line 8, ../../../sass/admin/partials/_header.sass */
+/* line 21, ../../../sass/admin/partials/_header.sass */
 #site_links {
-  color: #f5cbcb;
+  color: #f7d8d8;
   font-size: 80%;
   float: right;
   padding: 15px 80px 0 5px;
   height: 16px;
 }
-/* line 14, ../../../sass/admin/partials/_header.sass */
-#site_links a, #site_links a:visited {
+/* line 27, ../../../sass/admin/partials/_header.sass */
+#site_links a {
   color: white;
 }
-/* line 16, ../../../sass/admin/partials/_header.sass */
+/* line 29, ../../../sass/admin/partials/_header.sass */
 #site_links a:hover, #site_links strong a {
   text-decoration: none;
 }
 
-/* line 19, ../../../sass/admin/partials/_header.sass */
+/* line 32, ../../../sass/admin/partials/_header.sass */
 #view_site {
   font-size: 90%;
   background: url('../../images/admin/view_site.png?1253158620') no-repeat;
@@ -220,24 +235,22 @@ body.single_form #content #single_form {
   text-decoration: none;
 }
 
-/* line 33, ../../../sass/admin/partials/_header.sass */
+/* line 46, ../../../sass/admin/partials/_header.sass */
 ul#navigation {
-  font-size: 100%;
   float: left;
   margin-top: 6px;
-  postion: relative;
 }
-/* line 38, ../../../sass/admin/partials/_header.sass */
+/* line 49, ../../../sass/admin/partials/_header.sass */
 ul#navigation li {
   float: left;
   height: 30px;
   margin: 4px 0 0 8px;
   white-space: nowrap;
 }
-/* line 43, ../../../sass/admin/partials/_header.sass */
+/* line 54, ../../../sass/admin/partials/_header.sass */
 ul#navigation li a {
-  background: url('../../images/admin/navigation_tabs.png?1253158620') left top repeat-x;
-  color: #eedddd;
+  background: rgba(255, 255, 255, 0.3);
+  color: #f7d8d8;
   display: block;
   height: 30px;
   line-height: 30px;
@@ -257,89 +270,75 @@ ul#navigation li a {
   -khtml-border-top-right-radius: 6px;
   border-top-right-radius: 6px;
 }
-/* line 53, ../../../sass/admin/partials/_header.sass */
+/* line 64, ../../../sass/admin/partials/_header.sass */
 ul#navigation li:hover a {
-  background-position: left -48px;
+  background: rgba(255, 255, 255, 0.5);
   color: white;
 }
-/* line 56, ../../../sass/admin/partials/_header.sass */
+/* line 67, ../../../sass/admin/partials/_header.sass */
 ul#navigation li.current a {
-  background-position: left -96px;
+  background: white;
   color: #333333;
   font-weight: bold;
 }
-/* line 60, ../../../sass/admin/partials/_header.sass */
+/* line 71, ../../../sass/admin/partials/_header.sass */
 ul#navigation li.dimmed a {
-  background-position: 0 -48px;
+  background: red;
 }
-/* line 62, ../../../sass/admin/partials/_header.sass */
-ul#navigation ul#nav_sub {
-  background: url('../../images/admin/navigation_secondary_background.png?1253158620') repeat-x;
+
+/* line 74, ../../../sass/admin/partials/_header.sass */
+ul#secondary_navigation {
+  background: white;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(50%, #f2f2f2), color-stop(100%, #cccccc));
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #cccccc 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #cccccc 100%);
   font-size: 95%;
   clear: both;
-  left: 0;
-  bottom: 0;
   margin: 0;
-  padding: 0;
-  position: absolute;
   width: 100%;
   height: 38px;
-  z-index: 10;
 }
-/* line 74, ../../../sass/admin/partials/_header.sass */
-ul#navigation ul#nav_sub li {
-  margin: 0;
-}
-/* line 76, ../../../sass/admin/partials/_header.sass */
-ul#navigation ul#nav_sub li a {
-  background: url('../../images/admin/navigation_secondary_background.png?1253158620') repeat-x;
-  color: #555555;
-  display: -moz-inline-stack;
-  display: inline-block;
-  font-weight: normal;
-  line-height: 38px;
-  margin: 0;
-  padding: 0;
-  height: 38px;
-}
-/* line 86, ../../../sass/admin/partials/_header.sass */
-ul#navigation ul#nav_sub li a:hover {
-  background-position: left -40px;
-  color: #444444;
-}
-/* line 89, ../../../sass/admin/partials/_header.sass */
-ul#navigation ul#nav_sub li a.current {
-  background: url('../../images/admin/navigation_secondary_background.png?1253158620') left -80px repeat-x;
-  color: #333333;
-  font-weight: bold;
-}
-/* line 93, ../../../sass/admin/partials/_header.sass */
-ul#navigation ul#nav_sub li a.current:hover {
-  background-position: left -120px;
-  color: #222222;
-}
-/* line 96, ../../../sass/admin/partials/_header.sass */
-ul#navigation ul#nav_sub li a span {
-  background: url('../../images/admin/navigation_secondary_separator.gif?1253158620') right bottom no-repeat;
+/* line 82, ../../../sass/admin/partials/_header.sass */
+ul#secondary_navigation li {
+  float: left;
   display: block;
+  background: url('../../images/admin/navigation_secondary_separator.gif?1253158620') bottom right no-repeat;
+  padding-right: 2px;
+}
+/* line 87, ../../../sass/admin/partials/_header.sass */
+ul#secondary_navigation li a {
+  color: #555555;
+  display: block;
+  font-weight: normal;
+  float: left;
+  line-height: 38px;
   margin: 0;
   padding: 0 26px;
   height: 38px;
+  text-decoration: none;
 }
-
-/* line 103, ../../../sass/admin/partials/_header.sass */
-#header_bottom {
-  clear: both;
-  height: 38px;
-  position: relative;
+/* line 97, ../../../sass/admin/partials/_header.sass */
+ul#secondary_navigation li a:hover {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e4f9ff), color-stop(30%, #d2ebfd), color-stop(50%, #b1d1f1), color-stop(50%, #9bc5ed), color-stop(100%, #caecff));
+  background-image: -moz-linear-gradient(top, #e4f9ff 0%, #d2ebfd 30%, #b1d1f1 50%, #9bc5ed 50%, #caecff 100%);
+  background-image: linear-gradient(top, #e4f9ff 0%, #d2ebfd 30%, #b1d1f1 50%, #9bc5ed 50%, #caecff 100%);
+  color: #444444;
 }
-/* line 107, ../../../sass/admin/partials/_header.sass */
-#header_bottom div {
-  background: url('../../images/admin/navigation_shadow.png?1253158620') repeat-x;
-  position: absolute;
-  top: 38px;
-  width: 100%;
-  height: 4px;
+/* line 100, ../../../sass/admin/partials/_header.sass */
+ul#secondary_navigation li a.current {
+  background: #dddddd;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(35%, #e6e6e6), color-stop(50%, #d9d9d9), color-stop(50%, #cccccc), color-stop(100%, #d9d9d9));
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #e6e6e6 35%, #d9d9d9 50%, #cccccc 50%, #d9d9d9 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #e6e6e6 35%, #d9d9d9 50%, #cccccc 50%, #d9d9d9 100%);
+  color: #333333;
+  font-weight: bold;
+}
+/* line 105, ../../../sass/admin/partials/_header.sass */
+ul#secondary_navigation li a.current:hover {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e0f9fe), color-stop(30%, #c4e2f8), color-stop(50%, #98c3e7), color-stop(50%, #79aedb), color-stop(100%, #b1ddef));
+  background-image: -moz-linear-gradient(top, #e0f9fe 0%, #c4e2f8 30%, #98c3e7 50%, #79aedb 50%, #b1ddef 100%);
+  background-image: linear-gradient(top, #e0f9fe 0%, #c4e2f8 30%, #98c3e7 50%, #79aedb 50%, #b1ddef 100%);
+  color: #222222;
 }
 
 /* line 1, ../../../sass/admin/partials/_avatars.sass */
@@ -1840,7 +1839,7 @@ input.date {
 .calendar_popup table.calendar a {
   color: black;
   display: block;
-  font-family: "Lucida Grande", Tahoma, sans-serif;
+  font-family: "Lucida Grande", "Bitstream Vera Sans", Helvetica, Verdana, Arial, sans-serif;
   text-decoration: none;
   text-align: center;
   width: 2.25em;

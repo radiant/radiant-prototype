@@ -33,19 +33,13 @@
             &nbsp;
             %a{:href=>"#view_site_popup", :id=>"view_site", :onclick=>"return false"} View Site
           %ul#navigation
-            - nav_tabs.each do |primary_item|
-              %li{:class=>(primary_item[@selected] ? 'current' : nil)}
-                %a{:href=>(primary_item.first.url unless primary_item.first.nil?)}
-                  = primary_item.proper_name
-                - if primary_item[@selected]
-                  %ul#nav_sub
-                    - primary_item.each do |sub_item|
-                      %li
-                        %a{:href=>sub_item.url, :class=>(sub_item.name == @selected ? 'current' : nil)}>
-                          %span
-                            = sub_item.proper_name
-          #header_bottom
-            %div
+            - tabs.each do |tab|
+              %li{:class=>(tab[@selected] ? 'current' : nil)}
+                = link_to tab.proper_name, (tab.first.url unless tab.first.nil?)
+          - if tabs[@selected]
+            %ul#secondary_navigation
+              - tabs[@selected].each do |tab|
+                %li= link_to tab.proper_name, tab.url, :class=>(tab.name == @selected ? 'current' : nil)
       #main
         = yield :flash_message
         #content

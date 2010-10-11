@@ -2,21 +2,24 @@ gem 'activesupport', ">= 2.3.2"
 require 'active_support'
 
 module ViewHelpers
+  class TabSet < Array
+    def [](id)
+      unless id.kind_of? Fixnum
+        self.find {|item| (item.name.to_s == id.to_s) or (item.respond_to?(:[]) and item[id]) }
+      else
+        super
+      end
+    end
+  end
+  
+  
   # The NavTab Class holds the structure of a navigation tab (including
   # its sub-nav items).
-  class NavTab < Array
+  class NavTab < TabSet
     attr_reader :name, :proper_name
     
     def initialize(name, proper_name)
       @name, @proper_name = name, proper_name
-    end
-    
-    def [](id)
-      unless id.kind_of? Fixnum
-        self.find {|subnav_item| subnav_item.name.to_s == id.to_s }
-      else
-        super
-      end
     end
   end
   
@@ -29,7 +32,7 @@ module ViewHelpers
     end
   end
   
-  def nav_tabs
+  def tabs
     content = NavTab.new(:content, "Content")
     content << NavSubItem.new(:pages, "Pages", "/admin/pages/")
     content << NavSubItem.new(:feeds, "News Feeds", "/admin/feeds")
@@ -56,7 +59,7 @@ module ViewHelpers
     settings << NavSubItem.new(:users, "Users", "/admin/users/")
     settings << NavSubItem.new(:extensions, "Extensions", "/admin/extensions/")
     
-    [content, design, assets, custom, settings]
+    TabSet.new << content << design << assets << custom << settings
   end
   
   def body_classes
