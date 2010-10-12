@@ -1,6 +1,3 @@
-gem 'activesupport', ">= 2.3.2"
-require 'active_support'
-
 module ViewHelpers
   class TabSet < Array
     def [](id)
