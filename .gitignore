@@ -1,3 +1,5 @@
 .DS_Store
 .sass-cache
 .rvmrc
+public/stylesheets/*.css
+public/stylesheets/admin/*.css
