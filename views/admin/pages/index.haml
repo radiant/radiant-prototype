@@ -1,6 +1,11 @@
 - @selected = :pages
 - @title = 'Pages - Radiant CMS - Publishing for Small Teams'
 
+- content_for :toolbar do
+  .right
+    %form.search
+      %input{:type=>"search", :name=>"q", :placeholder=>"Search", :results=>0, :size=>30}/
+
 .outset
   %table.index#pages
     %thead

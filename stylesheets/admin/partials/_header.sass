@@ -62,7 +62,7 @@ ul#navigation
       color: #333
       font-weight: bold
 
-ul#secondary_navigation
+#toolbar
   background: white
   +linear-gradient(color-stops(white, darken(white, 5%), darken(white, 20%)))
   font-size: 95%
@@ -70,10 +70,30 @@ ul#secondary_navigation
   margin: 0
   width: 100%
   height: 38px
+  +pie-clearfix
+  .right
+    float: right
+  form.search
+    padding: 8px 8px 0
+    input[type=search]
+      font-size: 12px
+      +border-radius(100px)
+      border: 1px solid #ccc
+      border-top-color: #999
+      border-left-color: #b0b0b0
+      border-right-color: #bbb
+      background: white inline-image('admin/search.png') 4px center no-repeat
+      +box-shadow(rgba(black, 0.2), 0, 1px, 0, inset)
+      width: 180px
+      padding: 2px 8px 2px 20px
+
+ul#secondary_navigation
+  float: left
+  margin-right: 8px
   li
     float: left
     display: block
-    background: image_url('admin/navigation_secondary_separator.gif') bottom right no-repeat
+    background: image-url('admin/navigation_secondary_separator.gif') bottom right no-repeat
     padding-right: 2px
     a
       color: #555

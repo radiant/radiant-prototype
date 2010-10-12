@@ -36,10 +36,12 @@
             - tabs.each do |tab|
               %li{:class=>(tab[@selected] ? 'current' : nil)}
                 = link_to tab.proper_name, (tab.first.url unless tab.first.nil?)
-          - if tabs[@selected]
-            %ul#secondary_navigation
-              - tabs[@selected].each do |tab|
-                %li= link_to tab.proper_name, tab.url, :class=>(tab.name == @selected ? 'current' : nil)
+          #toolbar
+            - if tabs[@selected]
+              %ul#secondary_navigation
+                - tabs[@selected].each do |tab|
+                  %li= link_to tab.proper_name, tab.url, :class=>(tab.name == @selected ? 'current' : nil)
+            = yield :toolbar
       #main
         = yield :flash_message
         #content
