@@ -281,12 +281,8 @@ ul#navigation li.current a {
   color: #333333;
   font-weight: bold;
 }
-/* line 71, ../../../sass/admin/partials/_header.sass */
-ul#navigation li.dimmed a {
-  background: red;
-}
 
-/* line 74, ../../../sass/admin/partials/_header.sass */
+/* line 72, ../../../sass/admin/partials/_header.sass */
 ul#secondary_navigation {
   background: white;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(50%, #f2f2f2), color-stop(100%, #cccccc));
@@ -298,14 +294,14 @@ ul#secondary_navigation {
   width: 100%;
   height: 38px;
 }
-/* line 82, ../../../sass/admin/partials/_header.sass */
+/* line 80, ../../../sass/admin/partials/_header.sass */
 ul#secondary_navigation li {
   float: left;
   display: block;
   background: url('../../images/admin/navigation_secondary_separator.gif?1253158620') bottom right no-repeat;
   padding-right: 2px;
 }
-/* line 87, ../../../sass/admin/partials/_header.sass */
+/* line 85, ../../../sass/admin/partials/_header.sass */
 ul#secondary_navigation li a {
   color: #555555;
   display: block;
@@ -317,14 +313,14 @@ ul#secondary_navigation li a {
   height: 38px;
   text-decoration: none;
 }
-/* line 97, ../../../sass/admin/partials/_header.sass */
+/* line 95, ../../../sass/admin/partials/_header.sass */
 ul#secondary_navigation li a:hover {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e4f9ff), color-stop(30%, #d2ebfd), color-stop(50%, #b1d1f1), color-stop(50%, #9bc5ed), color-stop(100%, #caecff));
   background-image: -moz-linear-gradient(top, #e4f9ff 0%, #d2ebfd 30%, #b1d1f1 50%, #9bc5ed 50%, #caecff 100%);
   background-image: linear-gradient(top, #e4f9ff 0%, #d2ebfd 30%, #b1d1f1 50%, #9bc5ed 50%, #caecff 100%);
   color: #444444;
 }
-/* line 100, ../../../sass/admin/partials/_header.sass */
+/* line 98, ../../../sass/admin/partials/_header.sass */
 ul#secondary_navigation li a.current {
   background: #dddddd;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(35%, #e6e6e6), color-stop(50%, #d9d9d9), color-stop(50%, #cccccc), color-stop(100%, #d9d9d9));
@@ -333,7 +329,7 @@ ul#secondary_navigation li a.current {
   color: #333333;
   font-weight: bold;
 }
-/* line 105, ../../../sass/admin/partials/_header.sass */
+/* line 103, ../../../sass/admin/partials/_header.sass */
 ul#secondary_navigation li a.current:hover {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e0f9fe), color-stop(30%, #c4e2f8), color-stop(50%, #98c3e7), color-stop(50%, #79aedb), color-stop(100%, #b1ddef));
   background-image: -moz-linear-gradient(top, #e0f9fe 0%, #c4e2f8 30%, #98c3e7 50%, #79aedb 50%, #b1ddef 100%);
