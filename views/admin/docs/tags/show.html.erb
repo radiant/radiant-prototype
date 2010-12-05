@@ -1,23 +1,24 @@
 <div class="popup" id="tag_reference_popup">
+  
 <h3 class="title">Available Tags for Page</h3>
 <p>
   <label for="search_tag_reference" class="inline">Filter Tags</label>
   <input type="search" name="search_tag_reference" id="search_tag_reference" value="" />
   <span id="tag_search_found_count" class="info"></span>
 </p>
-
+<p>Select a tag to toggle details.</p>
 <div class="reference">
 <div class="tag_description">
-  <h4>&lt;r:author /&gt;</h4>
-  <div><p>Renders the name of the author of the current page.</p></div>
+  <h4 class="tag">&lt;r:author /&gt;</h4>
+  <div class="tag_details"><p>Renders the name of the author of the current page.</p></div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:breadcrumb /&gt;</h4>
-  <div><p>Renders the <code>breadcrumb</code> attribute of the current page.</p></div>
+  <h4 class="tag">&lt;r:breadcrumb /&gt;</h4>
+  <div class="tag_details"><p>Renders the <code>breadcrumb</code> attribute of the current page.</p></div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:breadcrumbs /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:breadcrumbs /&gt;</h4>
+  <div class="tag_details">
     <p>Renders a trail of breadcrumbs to the current page. The separator attribute
     specifies the <span class="caps">HTML</span> fragment that is inserted between each of the breadcrumbs. By
     default it is set to <code>&gt;</code>. The boolean nolinks attribute can be specified to render
@@ -29,8 +30,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:children /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:children /&gt;</h4>
+  <div class="tag_details">
     <p>Gives access to a page&#8217;s children.</p>
     
     
@@ -39,12 +40,12 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:children:count /&gt;</h4>
-  <div><p>Renders the total number of children.</p></div>
+  <h4 class="tag">&lt;r:children:count /&gt;</h4>
+  <div class="tag_details"><p>Renders the total number of children.</p></div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:children:each /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:children:each /&gt;</h4>
+  <div class="tag_details">
     <p>Cycles through each of the children. Inside this tag all page attribute tags
     are mapped to the current child page.</p>
     
@@ -58,8 +59,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:children:each:child /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:children:each:child /&gt;</h4>
+  <div class="tag_details">
     <p>Page attribute tags inside of this tag refer to the current child. This is occasionally
     useful if you are inside of another tag (like &lt;r:find&gt;) and need to refer back to the
     current child.</p>
@@ -73,8 +74,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:children:each:header /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:children:each:header /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the tag contents only if the contents do not match the previous header. This
     is extremely useful for rendering date headers for a list of child pages.</p>
     
@@ -99,8 +100,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:children:first /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:children:first /&gt;</h4>
+  <div class="tag_details">
     <p>Returns the first child. Inside this tag all page attribute tags are mapped to
     the first child. Takes the same ordering options as <code>&lt;r:children:each&gt;</code>.</p>
     
@@ -110,8 +111,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:children:last /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:children:last /&gt;</h4>
+  <div class="tag_details">
     <p>Returns the last child. Inside this tag all page attribute tags are mapped to
     the last child. Takes the same ordering options as <code>&lt;r:children:each&gt;</code>.</p>
     
@@ -121,8 +122,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:comment /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:comment /&gt;</h4>
+  <div class="tag_details">
     <p>Nothing inside a set of comment tags is rendered.</p>
     
     
@@ -131,8 +132,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:content /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:content /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the main content of a page. Use the <code>part</code> attribute to select a specific
     page part. By default the <code>part</code> attribute is set to body. Use the <code>inherit</code>
     attribute to specify that if a page does not have a content part by that name that
@@ -147,8 +148,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:cycle /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:cycle /&gt;</h4>
+  <div class="tag_details">
     <p>Renders one of the passed values based on a global cycle counter.  Use the <code>reset</code>
     attribute to reset the cycle to the beginning.  Use the <code>name</code> attribute to track 
     multiple cycles; the default is <code>cycle</code>.</p>
@@ -159,8 +160,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:date /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:date /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the date based on the current page (by default when it was published or created). 
     The format attribute uses the same formating codes used by the Ruby <code>strftime</code> function. By
     default it&#8217;s set to <code>%A, %B %d, %Y</code>.  The <code>for</code> attribute selects which date to render.  Valid
@@ -173,8 +174,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:escape_html /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:escape_html /&gt;</h4>
+  <div class="tag_details">
     <p>Escapes angle brackets, etc. for rendering in an <span class="caps">HTML</span> document.</p>
     
     
@@ -183,8 +184,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:find /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:find /&gt;</h4>
+  <div class="tag_details">
     <p>Inside this tag all page related tags refer to the page found at the <code>url</code> attribute.  
     @url@s may be relative or absolute paths.</p>
     
@@ -194,8 +195,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:if_ancestor_or_self /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:if_ancestor_or_self /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the contained elements if the current contextual page is either the actual page or one of its parents.</p>
     
     
@@ -207,8 +208,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:if_children /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:if_children /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the contained elements only if the current contextual page has one or
     more child pages.  The <code>status</code> attribute limits the status of found child pages
     to the given status, the default is <code>"published"</code>. <code>status="all"</code> includes all
@@ -220,8 +221,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:if_content /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:if_content /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the containing elements only if the part exists on a page. By default the
     <code>part</code> attribute is set to <code>body</code>.</p>
     
@@ -231,8 +232,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:if_dev /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:if_dev /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the containing elements only if Radiant in is development mode.</p>
     
     
@@ -241,8 +242,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:if_parent /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:if_parent /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the contained elements only if the current contextual page has a parent, i.e. 
     is not the root page.</p>
     
@@ -252,8 +253,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:if_self /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:if_self /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the contained elements if the current contextual page is also the actual page.</p>
     
     
@@ -265,8 +266,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:if_url /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:if_url /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the containing elements only if the page&#8217;s url matches the regular expression
     given in the <code>matches</code> attribute. If the <code>ignore_case</code> attribute is set to false, the
     match is case sensitive. By default, <code>ignore_case</code> is set to true.</p>
@@ -277,8 +278,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:link /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:link /&gt;</h4>
+  <div class="tag_details">
     <p>Renders a link to the page. When used as a single tag it uses the page&#8217;s title
     for the link name. When used as a double tag the part in between both tags will
     be used as the link text. The link tag passes all attributes over to the <span class="caps">HTML</span>
@@ -295,8 +296,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:meta /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:meta /&gt;</h4>
+  <div class="tag_details">
     <p>The namespace for &#8216;meta&#8217; attributes.  If used as a singleton tag, both the description
     and keywords fields will be output as &lt;meta /&gt; tags unless the attribute &#8216;tag&#8217; is set to &#8216;false&#8217;.</p>
     
@@ -313,8 +314,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:meta:description /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:meta:description /&gt;</h4>
+  <div class="tag_details">
     <p>Emits the page description field in a meta tag, unless attribute
     &#8216;tag&#8217; is set to &#8216;false&#8217;.</p>
     
@@ -326,8 +327,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:meta:keywords /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:meta:keywords /&gt;</h4>
+  <div class="tag_details">
     <p>Emits the page keywords field in a meta tag, unless attribute
     &#8216;tag&#8217; is set to &#8216;false&#8217;.</p>
     
@@ -339,8 +340,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:navigation /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:navigation /&gt;</h4>
+  <div class="tag_details">
     <p>Renders a list of links specified in the <code>urls</code> attribute according to three
     states:</p>
     
@@ -368,8 +369,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:page /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:page /&gt;</h4>
+  <div class="tag_details">
     <p>Causes the tags referring to a page&#8217;s attributes to refer to the current page.</p>
     
     
@@ -378,8 +379,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:parent /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:parent /&gt;</h4>
+  <div class="tag_details">
     <p>Page attribute tags inside this tag refer to the parent of the current page.</p>
     
     
@@ -388,8 +389,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:random /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:random /&gt;</h4>
+  <div class="tag_details">
     <p>Randomly renders one of the options specified by the <code>option</code> tags.</p>
     
     
@@ -403,8 +404,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:rfc1123_date /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:rfc1123_date /&gt;</h4>
+  <div class="tag_details">
     <p>Outputs the published date using the format mandated by <span class="caps">RFC 1123</span>. (Ideal for <span class="caps">RSS</span> feeds.)</p>
     
     
@@ -413,12 +414,12 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:slug /&gt;</h4>
-  <div><p>Renders the <code>slug</code> attribute of the current page.</p></div>
+  <h4 class="tag">&lt;r:slug /&gt;</h4>
+  <div class="tag_details"><p>Renders the <code>slug</code> attribute of the current page.</p></div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:snippet /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:snippet /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the snippet specified in the <code>name</code> attribute within the context of a page.</p>
     
     
@@ -427,8 +428,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:status /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:status /&gt;</h4>
+  <div class="tag_details">
     <p>Prints the page&#8217;s status as a string.  Optional attribute &#8216;downcase&#8217; 
     will cause the status to be all lowercase.</p>
     
@@ -438,12 +439,12 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:title /&gt;</h4>
-  <div><p>Renders the <code>title</code> attribute of the current page.</p></div>
+  <h4 class="tag">&lt;r:title /&gt;</h4>
+  <div class="tag_details"><p>Renders the <code>title</code> attribute of the current page.</p></div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:unless_children /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:unless_children /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the contained elements only if the current contextual page has no children.
     The <code>status</code> attribute limits the status of found child pages to the given status,
     the default is <code>"published"</code>. <code>status="all"</code> includes all non-virtual pages 
@@ -455,8 +456,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:unless_content /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:unless_content /&gt;</h4>
+  <div class="tag_details">
     <p>The opposite of the <code>if_content</code> tag.</p>
     
     
@@ -465,8 +466,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:unless_dev /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:unless_dev /&gt;</h4>
+  <div class="tag_details">
     <p>The opposite of the <code>if_dev</code> tag.</p>
     
     
@@ -475,8 +476,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:unless_parent /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:unless_parent /&gt;</h4>
+  <div class="tag_details">
     <p>Renders the contained elements only if the current contextual page has no parent, i.e. 
     is the root page.</p>
     
@@ -486,8 +487,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:unless_url /&gt;</h4>
-  <div>
+  <h4 class="tag">&lt;r:unless_url /&gt;</h4>
+  <div class="tag_details">
     <p>The opposite of the <code>if_url</code> tag.</p>
     
     
@@ -496,8 +497,8 @@
   </div>
 </div>
 <div class="tag_description">
-  <h4>&lt;r:url /&gt;</h4>
-  <div><p>Renders the <code>url</code> attribute of the current page.</p></div>
+  <h4 class="tag">&lt;r:url /&gt;</h4>
+  <div class="tag_details"><p>Renders the <code>url</code> attribute of the current page.</p></div>
 </div>
 </div>
 
@@ -522,6 +523,15 @@
         div[div.hasWord(value) ? 'show' : 'hide']();
       });
       $('tag_search_found_count').update('Found '+found_count+' tags').highlight();
+    }
+  });
+  $$('div.tag_details').each(function(d){
+    d.hide();
+  })
+  $('tag_reference_popup').observe('click',function(){
+    var clicked_tag = event.findElement('.tag')
+    if(clicked_tag){
+      clicked_tag.next('.tag_details').toggle();
     }
   });
 </script>
