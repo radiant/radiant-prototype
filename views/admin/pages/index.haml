@@ -1,10 +1,6 @@
 - @selected = :pages
 - @title = 'Pages - Radiant CMS - Publishing for Small Teams'
 
-- content_for :toolbar do
-  .right
-    %form.search
-      %input{:type=>"search", :name=>"q", :placeholder=>"Search", :results=>0, :size=>30, :value=>params[:q]}/
 
 .outset
   %table.index#pages
@@ -231,19 +227,14 @@
             = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
             = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
 
-%ul.menu#add_child_dropdown{:style=>"display: none"}
-  %li
-    %a{:href=>"/admin/pages/new"} Normal Page
-  %li.separator
-  %li
-    %a{:href=>"/admin/pages/new"} Archive
-  %li
-    %a{:href=>"/admin/pages/new"} Archive Day Index
-  %li
-    %a{:href=>"/admin/pages/new"} Archive Month Index
-  %li
-    %a{:href=>"/admin/pages/new"} Archive Year Index
-  %li
-    %a{:href=>"/admin/pages/new"} File Not Found
+%div{:style=>"display: none"}
+  %ul.menu#add_child_dropdown
+    %li= link_to "Normal Page", "/admin/pages/new"
+    %li.separator
+    %li= link_to "Archive", "/admin/pages/new"
+    %li= link_to "Archive Day Index", "/admin/pages/new"
+    %li= link_to "Archive Month Index", "/admin/pages/new"
+    %li= link_to "Archive Year Index", "/admin/pages/new"
+    %li= link_to "File Not Found", "/admin/pages/new"
 
 - sleep(1)
