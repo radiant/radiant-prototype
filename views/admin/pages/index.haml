@@ -4,7 +4,7 @@
 - content_for :toolbar do
   .right
     %form.search
-      %input{:type=>"search", :name=>"q", :placeholder=>"Search", :results=>0, :size=>30}/
+      %input{:type=>"search", :name=>"q", :placeholder=>"Search", :results=>0, :size=>30, :value=>params[:q]}/
 
 .outset
   %table.index#pages
@@ -14,166 +14,224 @@
         %th.status{:style=>"width:8em"} Status
         %th.actions{:style=>"width:18em"} Modify
     %tbody
-      %tr.page.level_0.children_visible#page_1
-        %td.name{:style=>"padding-left: 9px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title Home Page
-            %img#busy_1.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status 
-            %a{:href => "/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_1.no_children.virtual#page_2
-        %td.name{:style=>"padding-left: 32px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/file-not-found/"}
-              %img{:title=>"", :src=>"/images/admin/virtual_page.png", :alt=>""}/
-              %span.title File Not Found
-            %span.info (File Not Found)
-            %img#busy_2.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status 
-            %a{:href => "/file-not-found/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_1.no_children#page_3
-        %td.name{:style=>"padding-left: 32px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/about/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title About
-            %img#busy_9.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status
-            %a{:href => "/about/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_1.children_visible#page_4
-        %td.name{:style=>"padding-left: 32px"}
-          %span.w1
-            %img.expander{:title=>"", :src=>"/images/admin/collapse.png", :alt=>"toggle children"}/
-            %a{:href=>"/admin/pages/edit", :title=>"/articles/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title Articles
-            %span.info (Archive)
-            %img#busy_4.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status 
-            %a{:href => "/articles/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_2.no_children.virtual#page_5
-        %td.name{:style=>"padding-left: 55px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/monthly-archives/"}
-              %img{:title=>"", :src=>"/images/admin/virtual_page.png", :alt=>""}/
-              %span.title %B %Y Archives
-            %span.info (Archive Month Index)
-            %img#busy_10.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status 
-            %a{:href => "/articles/2008/02/21/monthly-archives/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_2.no_children#page_6
-        %td.name{:style=>"padding-left: 55px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/09/first-post/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title First Post
-            %img#busy_5.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status 
-            %a{:href => "/articles/2006/06/09/first-post/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_2.no_children#page_7
-        %td.name{:style=>"padding-left: 55px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/10/second-post/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title Second Post
-            %img#busy_6.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status
-            %a{:href => "/articles/2006/06/10/second-post/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_2.no_children#page_8
-        %td.name{:style=>"padding-left: 55px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/third-post/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title Third Post
-            %img#busy_8.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status 
-            %a{:href => "/articles/2008/02/21/third-post/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_2.no_children#page_9
-        %td.name{:style=>"padding-left: 55px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/fourth-post/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title Fourth Post
-            %img#busy_9.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.draft_status Draft
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_1.no_children#page_9
-        %td.name{:style=>"padding-left: 32px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/fourth-post/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title Hidden Page
-            %img#busy_9.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.hidden_status Hidden
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_1.no_children#page_10
-        %td.name{:style=>"padding-left: 32px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/rss/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title RSS Feed
-            %img#busy_3.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status
-            %a{:href => "/rss/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
-      %tr.page.level_1.no_children#page_11
-        %td.name{:style=>"padding-left: 32px"}
-          %span.w1
-            %a{:href=>"/admin/pages/edit", :title=>"/styles.css/"}
-              %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
-              %span.title Styles
-            %img#busy_7.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
-        %td.status
-          %span.status.published_status
-            %a{:href => "/styles.css/"} Published
-        %td.actions
-          = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-          = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+      - case
+      - when params[:q].to_s.downcase == "post"
+        %tr.page.level_0.children_visible#page_1
+          %td.name{:style=>"padding-left: 9px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/09/first-post/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title First Post
+              %img#busy_1.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status 
+              %a{:href => "/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_0.children_visible#page_1
+          %td.name{:style=>"padding-left: 9px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/10/second-post/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Second Post
+              %img#busy_1.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status 
+              %a{:href => "/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_0.children_visible#page_1
+          %td.name{:style=>"padding-left: 9px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/third-post/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Third Post
+              %img#busy_1.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status 
+              %a{:href => "/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_0.children_visible#page_1
+          %td.name{:style=>"padding-left: 9px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/fourth-post/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Fourth Post
+              %img#busy_1.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.draft_status 
+              Draft
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+      - when params[:q]
+        %tr
+          %td{:class=>"empty", :colspan=>"3"} No Results
+      - else
+        %tr.page.level_0.children_visible#page_1
+          %td.name{:style=>"padding-left: 9px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Home Page
+              %img#busy_1.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status 
+              %a{:href => "/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_1.no_children.virtual#page_2
+          %td.name{:style=>"padding-left: 32px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/file-not-found/"}
+                %img{:title=>"", :src=>"/images/admin/virtual_page.png", :alt=>""}/
+                %span.title File Not Found
+              %span.info (File Not Found)
+              %img#busy_2.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status 
+              %a{:href => "/file-not-found/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_1.no_children#page_3
+          %td.name{:style=>"padding-left: 32px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/about/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title About
+              %img#busy_9.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status
+              %a{:href => "/about/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_1.children_visible#page_4
+          %td.name{:style=>"padding-left: 32px"}
+            %span.w1
+              %img.expander{:title=>"", :src=>"/images/admin/collapse.png", :alt=>"toggle children"}/
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Articles
+              %span.info (Archive)
+              %img#busy_4.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status 
+              %a{:href => "/articles/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_2.no_children.virtual#page_5
+          %td.name{:style=>"padding-left: 55px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/monthly-archives/"}
+                %img{:title=>"", :src=>"/images/admin/virtual_page.png", :alt=>""}/
+                %span.title %B %Y Archives
+              %span.info (Archive Month Index)
+              %img#busy_10.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status 
+              %a{:href => "/articles/2008/02/21/monthly-archives/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_2.no_children#page_6
+          %td.name{:style=>"padding-left: 55px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/09/first-post/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title First Post
+              %img#busy_5.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status 
+              %a{:href => "/articles/2006/06/09/first-post/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_2.no_children#page_7
+          %td.name{:style=>"padding-left: 55px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2006/06/10/second-post/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Second Post
+              %img#busy_6.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status
+              %a{:href => "/articles/2006/06/10/second-post/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_2.no_children#page_8
+          %td.name{:style=>"padding-left: 55px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/third-post/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Third Post
+              %img#busy_8.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status 
+              %a{:href => "/articles/2008/02/21/third-post/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_2.no_children#page_9
+          %td.name{:style=>"padding-left: 55px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/fourth-post/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Fourth Post
+              %img#busy_9.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.draft_status Draft
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_1.no_children#page_9
+          %td.name{:style=>"padding-left: 32px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/articles/2008/02/21/fourth-post/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Hidden Page
+              %img#busy_9.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.hidden_status Hidden
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_1.no_children#page_10
+          %td.name{:style=>"padding-left: 32px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/rss/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title RSS Feed
+              %img#busy_3.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status
+              %a{:href => "/rss/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
+        %tr.page.level_1.no_children#page_11
+          %td.name{:style=>"padding-left: 32px"}
+            %span.w1
+              %a{:href=>"/admin/pages/edit", :title=>"/styles.css/"}
+                %img{:title=>"", :src=>"/images/admin/page.png", :alt=>"", :width=>25, :height=>30}/
+                %span.title Styles
+              %img#busy_7.busy{:title=>"", :src=>"/images/admin/spinner.gif", :alt=>"", :style=>"display: none;"}/
+          %td.status
+            %span.status.published_status
+              %a{:href => "/styles.css/"} Published
+          %td.actions
+            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
 
-%ul.menu#add_child_dropdown
+%ul.menu#add_child_dropdown{:style=>"display: none"}
   %li
     %a{:href=>"/admin/pages/new"} Normal Page
   %li.separator
