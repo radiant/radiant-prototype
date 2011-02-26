@@ -23,10 +23,24 @@
     specifies the <span class="caps">HTML</span> fragment that is inserted between each of the breadcrumbs. By
     default it is set to <code>&gt;</code>. The boolean nolinks attribute can be specified to render
     breadcrumbs in plain text, without any links (useful when generating title tag).</p>
-    
-    
-    <strong>Usage:</strong> 
-    <pre><code>&lt;r:breadcrumbs [separator="separator_string"] [nolinks="true"] /&gt;</code></pre>
+    <h5>Example Usage</h5>
+    <pre><code>&lt;r:breadcrumbs separator="separator_string" nolinks="true" /&gt;</code></pre>
+    <h5>Tag Attributes</h5>
+    <ul class="tag_options">
+      <li>
+        <h6>separator</h6>
+        <div class="tag_option_values"><strong>values:</strong> <span class="tag_option_value_type">text</span> <em class="tag_option_default">default <code>&gt;</code></em></div>
+      </li>
+      <li>
+        <h6>nolinks</h6>
+        <div class="tag_option_values"><strong>values:</strong> <em class="tag_option_default">default <code>false</code></em>
+          <ul class="tag_option_value_list">
+            <li><code>true</code></li>
+            <li><code>false</code></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 <div class="tag_description">
@@ -48,14 +62,78 @@
   <div class="tag_details">
     <p>Cycles through each of the children. Inside this tag all page attribute tags
     are mapped to the current child page.</p>
-    
-    
-    <strong>Usage:</strong>
-    <pre><code>&lt;r:children:each [offset="number"] [limit="number"] [by="attribute"] [order="asc|desc"] 
-     [status="draft|reviewed|published|hidden|all"]&gt;
+    <h5>Example Usage</h5>
+    <pre><code>&lt;r:children:each offset="10" limit="50" by="attribute" order="desc"
+     status="published"&gt;
      ...
-    &lt;/r:children:each&gt;
-    </code></pre>
+    &lt;/r:children:each&gt;</code></pre>
+    <h5>Tag Attributes</h5>
+    <ul class="tag_options">
+      <li>
+        <h6>offset</h6>
+        <div class="tag_option_values"><strong>values:</strong> <span class="tag_option_value_type">number</span></div>
+      </li>
+      <li>
+        <h6>limit</h6>
+        <div class="tag_option_values"><strong>values:</strong> <span class="tag_option_value_type">number</span></div>
+      </li>
+      <li>
+        <h6>by</h6>
+        <div class="tag_option_values"><strong>values:</strong> <em class="tag_option_default">default <code>published_at</code></em>
+          <ul class="tag_option_value_list">
+            <li><code>id</code></li>
+            <li><code>title</code></li>
+            <li><code>slug</code></li>
+            <li><code>breadcrumb</code></li>
+            <li><code>class_name</code></li>
+            <li><code>status_id</code></li>
+            <li><code>parent_id</code></li>
+            <li><code>layout_id</code></li>
+            <li><code>created_at</code></li>
+            <li><code>updated_at</code></li>
+            <li><code>published_at</code></li>
+            <li><code>created_by_id</code></li>
+            <li><code>updated_by_id</code></li>
+            <li><code>virtual</code></li>
+            <li><code>lock_version</code></li>
+          </ul></div>
+      </li>
+      <li>
+        <h6>order</h6>
+        <div class="tag_option_values"><strong>values:</strong> <em class="tag_option_default">default <code>desc</code></em>
+          <ul class="tag_option_value_list">
+            <li><code>asc</code></li>
+            <li><code>desc</code></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <h6>status</h6>
+        <div class="tag_option_values"><strong>values:</strong> <em class="tag_option_default">default <code>published</code></em>
+          <ul class="tag_option_value_list">
+            <li><code>draft</code></li>
+            <li><code>reviewed</code></li>
+            <li><code>published</code></li>
+            <li><code>scheduled</code></li>
+            <li><code>hidden</code></li>
+            <li><code>all</code></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <h6>paginated</h6>
+        <div class="tag_option_values"><strong>values:</strong> <em class="tag_option_default">default <code>false</code></em>
+          <ul class="tag_option_value_list">
+            <li><code>true</code></li>
+            <li><code>false</code></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <h6>per_page</h6>
+        <div class="tag_option_values"><strong>values:</strong> <span class="tag_option_value_type">number</span></div>
+      </li>
+    </ul>
   </div>
 </div>
 <div class="tag_description">
