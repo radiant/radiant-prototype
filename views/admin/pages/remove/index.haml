@@ -1,0 +1,42 @@
+- popup_id = "remove_pages_popup_#{Time.now.to_i}"
+
+.popup.textured{:id=>popup_id}
+  %form{:method=>"post", :action=>"/admin/pages/index_after_pages_removed.haml"}
+    %h3.title.warn Remove Pages
+    
+    .head
+      %p Are you sure you want to <strong class="warning">permanently remove</strong> the following pages?
+    
+    .viewport{:style=>"height: 200px"}
+      %table.index
+        %tbody
+          %tr.page.level_0.children_visible#page_4
+            %td.name{:style=>"padding-left: 4px"}
+              %span.w1
+                %img.icon{:src=>"/images/admin/page.png", :alt=>"", :title=>""}/
+                %span.title Articles
+          %tr.page.level_1.no_children.virtual#page_10
+            %td.name{:style=>"padding-left: 26px"}
+              %span.w1
+                %img.icon{:src=>"/images/admin/virtual_page.png", :alt=>"", :title=>""}/
+                %span.title %B %Y Archives
+          %tr.page.level_1.no_children#page_5
+            %td.name{:style=>"padding-left: 26px"}
+              %span.w1
+                %img.icon{:src=>"/images/admin/page.png", :alt=>"", :title=>""}/
+                %span.title First Post
+          %tr.page.level_1.no_children#page_6
+            %td.name{:style=>"padding-left: 26px"}
+              %span.w1
+                %img.icon{:src=>"/images/admin/page.png", :alt=>"", :title=>""}/
+                %span.title Second Post
+          %tr.page.level_1.no_children#page_8
+            %td.name{:style=>"padding-left: 26px"}
+              %span.w1
+                %img.icon{:src=>"/images/admin/page.png", :alt=>"", :title=>""}/
+                %span.title Third Post
+    
+    .buttons
+      %input.button{:type=>"submit", :value=>"Delete Pages"}/
+      or
+      %a.cancel{:href=>"javascript: Element.closePopup('#{popup_id}')"} Cancel

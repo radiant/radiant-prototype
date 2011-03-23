@@ -13,17 +13,14 @@
           %img{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
           %a{:href=>"/admin/snippets/edit"} footer
         %td.actions
-          %a.action{:href=>"/admin/snippets/remove"}
-            = image('minus.png')
-            Remove
+          = link_to image('minus.png') + " Remove", "/admin/snippets/remove", :class => "action popup"
+            
       %tr.snippet
         %td.name
           %img{:title=>"", :src=>"/images/admin/snippet.png", :alt=>""}/
           %a{:href=>"/admin/snippets/edit"} header
         %td.actions
-          %a.action{:href=>"/admin/snippets/remove"}
-            = image('minus.png')
-            Remove
+          = link_to image('minus.png') + " Remove", "/admin/snippets/remove", :class => "action popup"
 
 #actions
   %ul

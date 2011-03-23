@@ -1,0 +1,21 @@
+- popup_id = "remove_stylesheet_popup_#{Time.now.to_i}"
+
+.popup.textured{:id=>popup_id}
+  %form{:method=>"post", :action=>"/admin/javascripts/", "data-onsubmit_status"=>"Removing javascript&#8230;"}
+    %h3.title Remove Javascript
+    
+    .head
+      %p Are you sure you want to <strong class="warning">permanently remove</strong> the following javascript?
+    
+    .viewport{:style=>"height: 100px"}
+      %table.index
+        %tbody
+          %tr.javascript#javascript_4
+            %td.name
+              %img{:src=>"/images/admin/javascript.png", :alt=>"javascript_icon", :title=>""}/
+              controls.js
+    
+    %p.buttons
+      %input.button{:type=>"submit", :value=>"Delete Javascript"}/
+      or
+      %a.cancel{:href=>"javascript: Element.closePopup('#{popup_id}')"} Cancel

@@ -13,25 +13,19 @@
           %img{:title=>"", :src=>"/images/admin/layout.png", :alt=>"" }/
           %a{:href=>"/admin/layouts/edit" } Two Column
         %td.actions
-          %a.action{:href=>"/admin/layouts/remove" }
-            = image('minus.png')
-            Remove
+          = link_to image('minus.png') + " Remove", "/admin/layouts/remove", :class => "action popup"
       %tr.layout#layout_2
         %td.name
           %img{:title=>"", :src=>"/images/admin/layout.png", :alt=>"" }/
           %a{:href=>"/admin/layouts/edit" } Three Column
         %td.actions
-          %a.action{:href=>"/admin/layouts/remove" }
-            = image('minus.png')
-            Remove
+          = link_to image('minus.png') + " Remove", "/admin/layouts/remove", :class => "action popup"
       %tr.layout#layout_3
         %td.name
           %img{:title=>"", :src=>"/images/admin/layout.png", :alt=>"" }/
           %a{:href=>"/admin/layouts/edit" } XML Feed
         %td.actions
-          %a.action{:href=>"/admin/layouts/remove" }
-            = image('minus.png')
-            Remove
+          = link_to image('minus.png') + " Remove", "/admin/layouts/remove", :class => "action popup"
 
 #actions
   %ul
