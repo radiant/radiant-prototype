@@ -33,15 +33,18 @@ module ViewHelpers
     content = NavTab.new(:content, "Content")
     content << NavSubItem.new(:pages, "Pages", "/admin/pages/")
     
+    assets = NavTab.new(:assets, "Assets")
+    assets << NavSubItem.new(:all, "All", "/admin/assets/")
+    assets << NavSubItem.new(:images, "Images", "/admin/images/")
+    assets << NavSubItem.new(:audio, "Audio", "/admin/audio/")
+    assets << NavSubItem.new(:media, "Media", "/admin/others/")
+    assets << NavSubItem.new(:others, "Others", "/admin/others/")
+    
     design = NavTab.new(:design, "Design")
     design << NavSubItem.new(:layouts, "Layouts", "/admin/layouts/")
     design << NavSubItem.new(:snippets, "Snippets", "/admin/snippets/")
     design << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
     design << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
-    
-    assets = NavTab.new(:assets, "Assets")
-    assets << NavSubItem.new(:images, "Images", "/admin/images/")
-    assets << NavSubItem.new(:files, "Other Files", "/admin/files/")
     
     custom = NavTab.new(:acme, "Acme")
     custom << NavSubItem.new(:acme_intro, "Intro", "/admin/acme/")
@@ -55,7 +58,7 @@ module ViewHelpers
     settings << NavSubItem.new(:users, "Users", "/admin/users/")
     settings << NavSubItem.new(:extensions, "Extensions", "/admin/extensions/")
     
-    TabSet.new << content << design << assets << custom << settings
+    TabSet.new << content << assets << design << custom << settings
   end
   
   def body_classes
