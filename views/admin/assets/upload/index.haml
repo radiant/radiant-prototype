@@ -1,0 +1,21 @@
+#upload_asset_popup.popup.textured{:style=>"width: 28em"}
+  %h3.title Upload Asset
+
+  %form
+    .head
+      %p
+        <strong>Select a file below.</strong> Thumbnails will be automatically created for
+        uploaded images.
+  
+    %p
+      %label Choose File
+      %input{:type=>"file", :name=>"upload"}/
+  
+    %p
+      %label Alt-Text or Title <span class="hint">(optional)</span>
+      %input.textbox.big{:type=>"text", :size=>40}/
+
+    %p.buttons
+      %input.button{:type=>"Submit", :value=>"Upload"}/
+      or
+      = link_to_function "Cancel", "$(this).closePopup()", :class=>"cancel"
