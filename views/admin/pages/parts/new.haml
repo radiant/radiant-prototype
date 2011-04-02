@@ -1,7 +1,7 @@
 #add_part_popup.popup
   #add_part_busy.busy{:style=>"display: none"}
     %img{:src=>"/images/admin/spinner.gif", :alt=>"Spinner"}/
-  %h3.title Add Part
+  .popup_title Add Part
   %form{:action=>"/admin/pages/parts/create/", :method=>"post", :onsubmit=>"Event.stop(event); addPart(this)"}
     %p
       %label{:for=>"part_name_field"} Name
@@ -10,4 +10,4 @@
     %p.buttons
       %input.button#add_part_button{:name=>"commit", :type=>"submit", :value=>"Add Part"}/
       or
-      %a{:href=>"javascript: Element.closePopup('add_part_popup')"} Cancel
+      %a.cancel{:href=>"javascript: Element.closePopup('add_part_popup')"} Cancel

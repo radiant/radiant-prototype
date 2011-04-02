@@ -1,7 +1,7 @@
 #add_attribute_popup.popup
   #add_attribute_busy.busy{:style=>"display: none"}
     %img{:src=>"/images/admin/spinner.gif", :alt=>"Spinner"}/
-  %h3.title Add Attribute
+  .popup_title Add Attribute
   %form{:action=>"/admin/pages/attributes/create/", :method=>"post", :onsubmit=>"event.stop(); addAttribute(this)"}
     %p
       %label{:for=>"attribute_name_field"} Name
@@ -10,4 +10,4 @@
     %p.buttons
       %input.button#add_attribute_button{:name=>"commit", :type=>"submit", :value=>"Add Attribute"}/
       or
-      %a{:href => "#add_attribute_popup", :onclick=>"event.stop(); this.up('.popup').closePopup()"} Cancel
+      %a.cancel{:href => "#add_attribute_popup", :onclick=>"event.stop(); this.up('.popup').closePopup()"} Cancel
