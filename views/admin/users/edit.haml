@@ -9,13 +9,13 @@
   = render "avatar"
   = render "fields"
   
-  %p.buttons
+  .buttons
     %input.button{:type=>"submit", :value=>"Save Changes"}/
     %input.button{:type=>"submit", :value=>"Save and Continue Editing"}/
     or
     %a{:href=>"/admin/users/"} Cancel
   
-  %p{:class=>"updated_line"}
+  %p.updated_line
     Last updated by
     %strong
       Administrator

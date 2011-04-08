@@ -7,7 +7,7 @@
       %label{:for=>"part_name_field"} Name
       %input.textbox.big#part_name_field{:name=>"part[name]", :type=>"text", :value=>"", :maxlength=>"100", :style=>"width: 15em"}/
       %input#part_index_field{:name=>"index", :type=>"hidden", :value=>"2"}/
-    %p.buttons
+    .buttons
       %input.button#add_part_button{:name=>"commit", :type=>"submit", :value=>"Add Part"}/
       or
       %a.cancel{:href=>"javascript: Element.closePopup('add_part_popup')"} Cancel

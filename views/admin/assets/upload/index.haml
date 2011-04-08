@@ -15,7 +15,7 @@
       %label Alt-Text or Title <span class="hint">(optional)</span>
       %input.textbox.big{:type=>"text", :size=>40}/
 
-    %p.buttons
+    .buttons
       %input.button{:type=>"Submit", :value=>"Upload"}/
       or
       = link_to_function "Cancel", "$(this).closePopup()", :class=>"cancel"
