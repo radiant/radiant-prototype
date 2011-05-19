@@ -92,8 +92,9 @@
             %span.status.published_status 
               %a{:href => "/file-not-found/"} Published
           %td.actions
-            = link_to image('plus.png') + " Add Child", "#add_child_dropdown", :class=>"action dropdown"
-            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action popup"
+            %span.action.disabled
+              = image('plus_disabled.png') + " Add Child"
+            = link_to image('minus.png') + " Remove", "/admin/pages/remove", :class=>"action"
         %tr.page.level_1.no_children#page_3
           %td.name{:style=>"padding-left: 32px"}
             %span.w1
