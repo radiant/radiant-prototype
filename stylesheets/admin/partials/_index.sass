@@ -26,6 +26,7 @@ table.index
       width: 100%
     &.status
       min-width: 8em
+      text-indent: 6px
   td
     text-align: left
     padding: 4px 9px
@@ -34,7 +35,7 @@ table.index
       padding: 6px
       margin: 0 25px 0 1px
       img
-        vertical-align: -18%
+        vertical-align: -25%
     a.action
       color: black
       text-decoration: none
@@ -128,6 +129,8 @@ table.index#pages
 .status
   a
     +plain-link
+.published_status
+  padding: 0 6px
 .draft_status
   +status-badge(#cc494c)
 .hidden_status
