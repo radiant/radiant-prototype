@@ -132,10 +132,10 @@ module ViewHelpers
     end
   end
   include FixtureHelper
-  
+
   def image(name, options = {})
-    image_tag(append_image_extension("/images/admin/#{name}"), options)
+    image_tag(ensure_path(ensure_extension(name, 'png'), 'images/admin'), options)
   end
-  
+
 end
 

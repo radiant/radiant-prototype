@@ -9,7 +9,7 @@
   right: 0
   bottom: 0
   background: #777
-  +linear-gradient(color-stops(#555, #666, #777, #777))
+  +background-image(linear-gradient(#555, #666, #777, #777))
   ul
     padding: 14px 8px
   li
@@ -17,7 +17,7 @@
     margin-right: 5px
   a
     background: #d8d8d8
-    +linear-gradient(color-stops(#fff, #ccc))
+    +background-image(linear-gradient(#fff, #ccc))
     color: #333
     font-size: 80%
     padding: 8px 12px
@@ -47,7 +47,7 @@
       padding: 6px 12px 6px 12px
       margin-right: 1px
       background: #ddd
-      +linear-gradient(color-stops(#c5c5c5, #f0f0f0 20%, #fff 35%, #fff))
+      +background-image(linear-gradient(#c5c5c5, #f0f0f0 20%, #fff 35%, #fff))
       color: #999
       font-size: 80%
       text-decoration: none
@@ -57,7 +57,7 @@
       text-shadow: 1px 1px 1px #eee
       &:hover
         background: #d8d8d8
-        +linear-gradient(color-stops(#fff, #fff, #ddd))
+        +background-image(linear-gradient(#fff, #fff, #ddd))
         color: #0076a3
         +button-shadow
       &:active
@@ -66,7 +66,7 @@
     span.disabled
       color: #666
       background-color: #999
-      +linear-gradient(color-stops(#888, #999, #999, #999))
+      +background-image(linear-gradient(#888, #999, #999, #999))
     span.current
       color: #000
       background: white

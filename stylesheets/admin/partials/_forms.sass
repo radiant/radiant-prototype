@@ -87,7 +87,7 @@
     content: "\0020"
     display: block
     width: 100%
-    +linear-gradient(color-stops(rgba(black,0.3), rgba(black, 0)))
+    +background-image(linear-gradient(rgba(black,0.3), rgba(black, 0)))
     height: 3px
     margin-bottom: -3px
   table.fieldset
@@ -155,7 +155,7 @@
   *
     position: relative
   &:before
-    +linear-gradient(color-stops(white, #f5f1e2 50%, #f5f1e2))
+    +background-image(linear-gradient(white, #f5f1e2 50%, #f5f1e2))
     +border-top-radius(10px)
     content: "\0020"
     display: block
@@ -257,7 +257,7 @@ body.single_form
   #content
     #single_form
       background: #f5f1e2
-      +linear-gradient(color-stops(#fdfcf9, #f5f1e2 25%, #f5f1e2))
+      +background-image(linear-gradient(#fdfcf9, #f5f1e2 25%, #f5f1e2))
       border: 0.35em solid #efead3
       padding: 0.5em 1.5em
       padding-right: 22px
