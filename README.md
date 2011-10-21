@@ -55,7 +55,7 @@ Compass gem depends on Sass, you can install them both with one command:
 
 Learn more about Sass:
 
-<http://sass-lang.org>
+<http://sass-lang.com>
 
 Learn more about Compass:
 
