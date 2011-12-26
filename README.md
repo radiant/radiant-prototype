@@ -76,7 +76,7 @@ information about using Serve and Passenger see:
 Exporting
 ---------
 
-To export your project, use the new "export" command:
+To export your project, use the "export" command:
 
     serve export <project> <output>
 
