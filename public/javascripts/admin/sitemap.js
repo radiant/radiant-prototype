@@ -138,7 +138,7 @@
       spinner.show();
       $.ajax({
         url: '/admin/pages/' + id + '/children?level=' + level,
-        method: 'get',
+        dataType: 'html',
         success: function(data) {
           row.after(data);
           spinner.fadeOut('slow');
@@ -171,7 +171,6 @@
       ,   children = false
       ,   expandLevels = [level + 1]
       ;
-
 
       while (isRow(row)) {
         var currentLevel = extractLevel(row);
