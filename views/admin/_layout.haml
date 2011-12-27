@@ -5,25 +5,6 @@
     %title= @title || "Radiant CMS - Publishing for Small Teams"
     %link{:href=>"/stylesheets/admin/main.css", :media=>"screen", :rel=>"stylesheet", :type=>"text/css"}/
     %script{:type =>"text/javascript"}= "var relative_url_root = '';"
-    %script{:src=>"/javascripts/admin/prototype.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/effects.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/dragdrop.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/lowpro.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/cookie.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/dropdown.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/popup.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/status.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/utility.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/codearea.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/dateinput.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/pagestatus.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/tabcontrol.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/ruledtable.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/sitemap.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/toggle.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/shortcuts.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/toolbar.js", :type=>"text/javascript"}
-    %script{:src=>"/javascripts/admin/application.js", :type=>"text/javascript"}
     = yield :meta
   %body{:class=>body_classes.join(" ")}
     #page
@@ -51,3 +32,19 @@
         = yield :flash_message
         #content
           = yield
+    %script{:src=>"/javascripts/admin/jquery-1.7.1.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/cookie.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/dropdown.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/popup.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/status.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/utility.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/codearea.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/dateinput.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/pagestatus.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/tabcontrol.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/ruledtable.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/sitemap.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/toggle.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/shortcuts.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/toolbar.js", :type=>"text/javascript"}
+    %script{:src=>"/javascripts/admin/application.js", :type=>"text/javascript"}
