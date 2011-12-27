@@ -119,7 +119,7 @@ if(typeof(relative_url_root) === 'undefined'){ relative_url_root = ''}
       if (e) {
         var tab = findTabByElement(e);
         if (tab) {
-          if ($(e).hasClass('close')) {
+          if (target.hasClass('close')) {
             if (confirm('Remove the "' + tab.caption + '" part?')) {
               var lastSelected = selected;
               select(tab);
