@@ -73,10 +73,6 @@ module ViewHelpers
   def widget(name, short_description, attributes={})
     fixture(attributes.merge(:name => name, :short_description => short_description), WidgetFixtureMethods)
   end
-
-  def faux_children?
-    request.cookies['expanded_rows'] == '4'
-  end
   
   module WidgetFixtureMethods
   end
